@@ -1,0 +1,2 @@
+- Configurar Webhooks
+- Configurar App en Shopify para subir este codigo
