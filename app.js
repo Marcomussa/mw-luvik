@@ -1,62 +1,116 @@
 const express = require("express")
 const axios = require("axios")
 const bodyParser = require("body-parser")
+const dotenv = require('dotenv');
+const Shopify = require('shopify-api-node')
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT
 
-// Configuración del ERP
-const ERP_API_URL = ""
-const ERP_API_KEY = ""
-
-// Configuración de Shopify
-const SHOPIFY_STORE_URL = ""
-const SHOPIFY_API_KEY = ""
-const SHOPIFY_API_PASSWORD = ""
-
+dotenv.config()
 app.use(bodyParser.json())
 
-// Endpoint para obtener inventario desde el ERP
-app.get('/inventory', async (req, res) => {
+const ERP_API_URL = process.env.ERP_API_URL
+const ERP_API_KEY = process.env.ERP_API_KEY
+
+const SHOPIFY_STORE_NAME = process.env.SHOPIFY_STORE_NAME
+const SHOPIFY_STORE_URL = process.env.SHOPIFY_STORE_URL
+const SHOPIFY_DOMAIN = process.env.SHOPIFY_DOMAIN
+
+const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY
+const SHOPIFY_API_SECRET_KEY = process.env.SHOPIFY_API_SECRET_KEY
+const SHOPIFY_ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN
+const SHOPIFY_PASSWORD = process.env.SHOPIFY_PASSWORD
+
+const shopify = new Shopify({
+    shopName: SHOPIFY_STORE_NAME,
+    apiKey: SHOPIFY_API_KEY,
+    accessToken: SHOPIFY_ACCESS_TOKEN,
+    password: SHOPIFY_PASSWORD,
+    autoLimit: true
+})
+
+//! Endpoint para obtener inventario desde el ERP
+app.get('/productos-erp', async (req, res) => {
     try {
-        const productId = req.query.product_id
-        const response = await axios.get(`${ERP_API_URL}?product_id=${productId}`, {
-            headers: { 'Authorization': `Bearer ${ERP_API_KEY}` }
+        const response = await axios.get('URL_DEL_ERP/api/productos')
+        const products = response.data
+        res.json(products)
+    } catch (error) {
+        console.error(error)
+        res.status(500).json({ 
+            error: 'Error al leer productos del ERP', errCode: error
         })
-        res.json(response.data)
-    } catch (error) {
-        res.status(500).send(`Error Obteniendo Productos del ERP. Codigo de Error: ${error}`)
     }
 })
 
-// Endpoint para actualizar inventario en Shopify
-app.post('/update_inventory', async (req, res) => {
+//! Endpoint para actualizar todo el inventario en Shopify
+app.post('/sync-products', async (req, res) => {
     try {
-        const products = req.body.products // Lista de productos a actualizar
-
-        for (const product of products) {
-            const { id, inventory_quantity } = product
-            await axios.put(`${SHOPIFY_STORE_URL}/admin/api/2021-07/products/${id}.json`, {
-                product: {
-                    id,
-                    variants: [
-                        {
-                            inventory_quantity
-                        }
-                    ]
-                }
-            }, {
-                auth: {
-                    username: SHOPIFY_API_KEY,
-                    password: SHOPIFY_API_PASSWORD
-                }
-            })
+      const response = await axios.get('https://erp.example.com/api/products')
+      const products = response.data
+  
+      for (const product of products) {
+        const shopifyProduct = {
+          title: product.name,
+          //! Resto de la informacion
         }
-        res.status(200).send('Inventario Actualizado Exitosamente')
+  
+        await shopify.post('/products.json', { product: shopifyProduct })
+      }
+
+      res.json({ message: 'Productos sincronizados con éxito' })
+
     } catch (error) {
-        res.status(500).send(`Error Actualizando Error. Erros Logs: ${error}`)
+        console.error(error)
+        res.status(500).json({
+            message: 'Error al sincronizar productos', errCode: error
+        })
     }
 })
 
+//todo: Metodo Para Actualizar Datos de Productos Seleccionados
+async function getProductFromERP(id) {
+    const response = await axios.get(`https://erp-url.com/products/${id}`)
+    return response.data
+}
+
+async function updateProductInShopify(shopifyProductId, updatedProduct) {
+    const response = await axios.put(`https://${SHOPIFY_DOMAIN}/admin/api/2022-01/products/${shopifyProductId}.json`, {
+      product: {
+        title: updatedProduct.name,
+        //! Resto de la informacion
+      }
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Shopify-Access-Token': SHOPIFY_ACCESS_TOKEN
+      }
+    })
+  
+    return response.data.product
+}
+
+app.post('/update-selected-products', async (req, res) => {
+    const productsToUpdate = req.body.products
+    const updatedProducts = []
+  
+    for (const product of productsToUpdate) {
+      try {
+        const erpProduct = await getProductFromERP(product.id)
+  
+        const shopifyProduct = await updateProductInShopify(product.shopifyId, erpProduct)
+  
+        updatedProducts.push(shopifyProduct)
+      } catch (error) {
+        console.error(`Error Actualizando Producto: ${product.id}:`, error.message)
+      }
+    }
+  
+    res.json(updatedProducts)
+})
+
+
+//! SERVER
 app.listen(PORT, () => {
-    console.log(`Server Online on Port ${PORT}`)
+    console.log(`Servidor en Linea. Puerto: ${PORT}`)
 })
