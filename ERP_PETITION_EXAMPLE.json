@@ -1,22 +1,31 @@
 {
-    "created": [
-      {
-        "id": "p12345",
-        "name": "Nuevo Producto 1",
-        "description": "Descripción del nuevo producto 1",
-        "price": 29.99,
-        "quantity": 100,
-        "category": "Electronics"
-      },
-      {
-        "id": "p12346",
-        "name": "Nuevo Producto 2",
-        "description": "Descripción del nuevo producto 2",
-        "price": 49.99,
-        "quantity": 200,
-        "category": "Home Appliances"
+  "created": [
+    {
+      "product": {
+        "title": "TEST DEFINITIVO 1"
       }
-    ],
+    },
+    {
+      "product": {
+        "title": "TEST DEFINITIVO 2"
+      }
+    },
+    {
+      "product": {
+        "title": "TEST DEFINITIVO 3"
+      }
+    },
+    {
+      "product": {
+        "title": "TEST DEFINITIVO 4"
+      }
+    },
+    {
+      "product": {
+        "title": "TEST DEFINITIVO 5"
+      }
+    }
+  ],
     "updated": [
       {
         "id": "p12340",
