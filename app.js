@@ -3,11 +3,14 @@ const axios = require("axios")
 const bodyParser = require("body-parser")
 const dotenv = require('dotenv');
 const Shopify = require('shopify-api-node')
+const productRoutes = require('./routes/products');
 const app = express()
-const PORT = process.env.PORT
+const PORT = 3000
 
 dotenv.config()
 app.use(bodyParser.json())
+app.use('/products', productRoutes);
+
 
 const ERP_API_URL = process.env.ERP_API_URL
 const ERP_API_KEY = process.env.ERP_API_KEY
@@ -21,14 +24,7 @@ const SHOPIFY_API_SECRET_KEY = process.env.SHOPIFY_API_SECRET_KEY
 const SHOPIFY_ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN
 const SHOPIFY_PASSWORD = process.env.SHOPIFY_PASSWORD
 
-const shopify = new Shopify({
-    shopName: SHOPIFY_STORE_NAME,
-    apiKey: SHOPIFY_API_KEY,
-    accessToken: SHOPIFY_ACCESS_TOKEN,
-    password: SHOPIFY_PASSWORD,
-    autoLimit: true
-})
-
+//!!! NO ES NECESARIO. NO SE BORRA  XLAS DUDAS
 //! Endpoint para obtener inventario desde el ERP
 app.get('/productos-erp', async (req, res) => {
     try {

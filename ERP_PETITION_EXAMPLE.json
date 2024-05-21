@@ -1,0 +1,43 @@
+{
+    "created": [
+      {
+        "id": "p12345",
+        "name": "Nuevo Producto 1",
+        "description": "Descripción del nuevo producto 1",
+        "price": 29.99,
+        "quantity": 100,
+        "category": "Electronics"
+      },
+      {
+        "id": "p12346",
+        "name": "Nuevo Producto 2",
+        "description": "Descripción del nuevo producto 2",
+        "price": 49.99,
+        "quantity": 200,
+        "category": "Home Appliances"
+      }
+    ],
+    "updated": [
+      {
+        "id": "p12340",
+        "name": "Producto Actualizado 1",
+        "description": "Descripción actualizada del producto 1",
+        "price": 19.99,
+        "quantity": 150,
+        "category": "Toys"
+      },
+      {
+        "id": "p12341",
+        "name": "Producto Actualizado 2",
+        "description": "Descripción actualizada del producto 2",
+        "price": 99.99,
+        "quantity": 300,
+        "category": "Furniture"
+      }
+    ],
+    "deleted": [
+      "p12330",
+      "p12331"
+    ]
+  }
+  
