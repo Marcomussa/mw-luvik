@@ -1,13 +1,12 @@
+require('dotenv').config()
 const express = require("express")
 const axios = require("axios")
 const bodyParser = require("body-parser")
-const dotenv = require('dotenv');
 const Shopify = require('shopify-api-node')
 const productRoutes = require('./routes/products');
 const app = express()
 const PORT = 3000
 
-dotenv.config()
 app.use(bodyParser.json())
 app.use('/products', productRoutes);
 

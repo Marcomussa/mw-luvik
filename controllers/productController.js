@@ -6,6 +6,6 @@ exports.handleBatch = async (req, res) => {
     await productService.handleBatch(created, updated, deleted);
     res.status(200).json({ message: 'Batch Ok' });
   } catch (error) {
-    res.status(500).json({ message: 'osea hellou' });
+    res.status(500).json({ message: error});
   }
 };
