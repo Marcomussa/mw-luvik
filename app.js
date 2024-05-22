@@ -2,7 +2,6 @@ require('dotenv').config()
 const express = require("express")
 const axios = require("axios")
 const bodyParser = require("body-parser")
-const Shopify = require('shopify-api-node')
 const productRoutes = require('./routes/products');
 const app = express()
 const PORT = 3000

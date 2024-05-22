@@ -4,4 +4,6 @@ const productController = require('../controllers/productController');
 
 router.post('/batch', productController.handleBatch);
 
+router.get('/list', productController.listProducts)
+
 module.exports = router;

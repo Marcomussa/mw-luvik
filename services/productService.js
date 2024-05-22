@@ -11,7 +11,7 @@ exports.handleBatch = async (created, updated, deleted) => {
   // Procesar productos actualizados
   if (updated && updated.length > 0) {
     await Promise.all(updated.map(async (product) => {
-      await shopifyClient.updateProduct(product.id, product);
+      await shopifyClient.updateProduct(product.product.id, product);
     }));
   }
 
@@ -22,3 +22,4 @@ exports.handleBatch = async (created, updated, deleted) => {
     }));
   }
 };
+

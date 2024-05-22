@@ -28,20 +28,16 @@
   ],
     "updated": [
       {
-        "id": "p12340",
-        "name": "Producto Actualizado 1",
-        "description": "Descripción actualizada del producto 1",
-        "price": 19.99,
-        "quantity": 150,
-        "category": "Toys"
+        "product": {
+          "title": "TEST DEFINITIVO 1 NUEVO VALOR",
+          "id": "7235272966230"
+        }
       },
       {
-        "id": "p12341",
-        "name": "Producto Actualizado 2",
-        "description": "Descripción actualizada del producto 2",
-        "price": 99.99,
-        "quantity": 300,
-        "category": "Furniture"
+        "product": {
+          "title": "TEST DEFINITIVO 2 NUEVO VALOR",
+          "id": "7235273064534"
+        }
       }
     ],
     "deleted": [
