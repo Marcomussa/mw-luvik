@@ -50,8 +50,31 @@ exports.updateProduct = async (id, productData) => {
   return response.data
 }
 
-exports.updateProductStock = async (id, productData) => {
-  // Completar
+exports.updateProductStock = async (productId, newStock) => {
+  try {
+    // Obtener el ID del item de inventario y location_id
+    const product = await shopify.product.get(productId)
+    const inventoryItemId = product.variants[0].inventory_item_id
+
+    // Obtener todas las locations de la tienda
+    const locationsResponse = await axios.get(`${SHOPIFY_STORE_URL}/locations.json`, { headers });
+    const locationId = locationsResponse.data.locations[0].id;
+
+    // Actualizar el inventario
+    const inventoryUpdateResponse = await axios.post(
+      `${SHOPIFY_STORE_URL}/inventory_levels/set.json`,
+      {
+        location_id: locationId,
+        inventory_item_id: inventoryItemId,
+        available: newStock
+      },
+      { headers }
+    );
+
+    return inventoryUpdateResponse.data;
+  } catch (error) {
+    console.error('Error Actualizando Stock. Error Provieniente de shopifyClient.js', error.message);
+  }
 }
 
 exports.deleteProduct = async (id) => {
