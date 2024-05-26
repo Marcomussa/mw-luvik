@@ -1,0 +1,73 @@
+{
+  "created": [
+    {
+      "product": {
+        "id": "1",
+        "title": "Title",
+        "variants": [{
+          "price": "100"
+        }],
+        "business_price": "200"
+      }
+    },
+    {
+      "product": {
+        "id": "2",
+        "title": "Title",
+        "variants": [{
+          "price": "100"
+        }],
+        "business_price": "200"
+      }
+    },
+    {
+      "product": {
+        "id": "3",
+        "title": "Title",
+        "variants": [{
+          "price": "100"
+        }],
+        "business_price": "200"
+      }
+    },
+    {
+      "product": {
+        "id": "4",
+        "title": "Title",
+        "variants": [{
+          "price": "100"
+        }],
+        "business_price": "200"
+      }
+    },
+    {
+      "product": {
+        "id": "5",
+        "title": "Title",
+        "variants": [{
+          "price": "100"
+        }],
+        "business_price": "200"
+      }
+    }
+  ],
+    "updated": [
+      {
+        "product": {
+          "title": "New Title",
+          "id": "1"
+        }
+      },
+      {
+        "product": {
+          "title": "New Title",
+          "id": "2"
+        }
+      }
+    ],
+    "deleted": [
+      "1",
+      "2"
+    ]
+  }
+  

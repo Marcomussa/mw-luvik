@@ -1,3 +1,4 @@
+require('dotenv').config()
 const axios = require('axios');
 const Shopify = require('shopify-api-node');
 
@@ -20,40 +21,87 @@ const shopify = new Shopify({
 });
 
 exports.listProducts = async () => {
-  shopify.product.list()
-  .then(products => {
-    console.log(`Total products: ${products.length}`);
-    console.log('Product details:');
+  try {
+    const products = await shopify.product.list();
+    const productDetails = await Promise.all(products.map(async product => {
+      const metafields = await axios.get(`${SHOPIFY_STORE_URL}/products/${product.id}/metafields.json`, { headers });
+      return {
+        ...product,
+        metafields: metafields.data.metafields
+      };
+    }));
 
-    //* Iterar Productos
-    //? products.forEach(product => {
-    //?   console.log(`ID: ${product.id}, Title: ${product.title}`);
-    //? });
+    productDetails.forEach(product => {
+      const businessPrice = product.metafields.find(field => field.key === 'business_price');
+      console.log(`ID: ${product.id}, Title: ${product.title}, Price: ${product.variants[0].price}, Business Price: ${businessPrice ? businessPrice.value : 'N/A'}`);
+    });
 
-    //! Acceso Para Modificar Stock
-    products.forEach( product => {
-      console.log(product.variants[0].inventory_quantity)
-    })
-  })
-  .catch(err => {
+    return productDetails;
+  } catch (err) {
     console.error(err);
-  });
+    throw err;
+  }
 }
 
 exports.createProduct = async (productData) => {
-  const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
-  return response.data
+  try {
+    const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers });
+    const productId = response.data.product.id;
+    const businessPrice = productData.product.business_price; // Agrega este campo en tu `productData`
+
+    // Agregar precio para empresas como un metafield
+    await addPriceMetafields(productId, businessPrice);
+
+    return response.data;
+  } catch (error) {
+    console.error('Error creating product:', error.message);
+    throw error;
+  }
+};
+
+const addPriceMetafields = async (productId, priceForBusiness) => {
+  try {
+    const metafieldData = {
+      namespace: 'custom_prices',
+      key: 'business_price',
+      value: priceForBusiness.toString(),
+      type: 'number_decimal'
+    };
+
+    const response = await axios.post(
+      `${SHOPIFY_STORE_URL}/products/${productId}/metafields.json`,
+      { metafield: metafieldData },
+      { headers }
+    );
+
+    return response.data
+  } catch (error) {
+    console.error('Error adding metafield:', error.message)
+    throw error
+  }
 }
 
 exports.updateProduct = async (id, productData) => {
-  const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
-  return response.data
+  try {
+    // Crear el producto
+    const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers });
+    const productId = response.data.product.id;
+    const businessPrice = productData.product.business_price; // Agrega este campo en tu `productData`
+
+    // Agregar precio para empresas como un metafield
+    await addPriceMetafields(productId, businessPrice);
+
+    return response.data;
+  } catch (error) {
+    console.error('Error creating product:', error.message);
+    throw error;
+  }
 }
 
-exports.updateProductStock = async (productId, newStock) => {
+exports.updateProductStock = async (id, newStock) => {
   try {
     // Obtener el ID del item de inventario y location_id
-    const product = await shopify.product.get(productId)
+    const product = await shopify.product.get(id)
     const inventoryItemId = product.variants[0].inventory_item_id
 
     // Obtener todas las locations de la tienda

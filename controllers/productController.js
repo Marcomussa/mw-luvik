@@ -1,7 +1,6 @@
 const productService = require('../services/productService')
 const shopifyClient = require('../clients/shopifyClient')
 
-
 exports.handleBatch = async (req, res) => {
   try {
     const { created, updated, deleted } = req.body
@@ -25,8 +24,8 @@ exports.listProducts = async (req, res) => {
 
 exports.updateProductStock = async (req, res) => {
   try {
-    const { productId, newStock } = req.body 
-    const result = await shopifyClient.updateProductStock(productId, newStock)
+    const { id, newStock } = req.body 
+    const result = await shopifyClient.updateProductStock(id, newStock)
     res.status(200).json(result)
   } catch (error) {
     console.log('Error Actualizando Stock. productController.js', error.message)

@@ -8,5 +8,4 @@ router.post('/update-stock', productController.updateProductStock)
 
 router.get('/list', productController.listProducts)
 
-
 module.exports = router;
