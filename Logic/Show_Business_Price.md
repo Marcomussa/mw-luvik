@@ -1,4 +1,4 @@
-Mostrar los precios de business_price al iniciar sesión como empresa:
+Mostrar los precios de business_price al iniciar sesión como empresa. APP PERSONALIZADA EN SHOPIFY
 
 **Añadir un campo adicional al perfil del usuario para indicar si es un "Consumidor Final" o una "Empresa".**
 **Modificar la lógica para verificar el tipo de usuario durante el inicio de sesión.**
