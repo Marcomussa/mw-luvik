@@ -15,18 +15,22 @@ exports.handleBatch = async (req, res) => {
 
 exports.listProducts = async (req, res) => {
   try {
-    await shopifyClient.listProducts()
-    res.status(200)
+    const response = await shopifyClient.listProducts()
+    res.status(200).json(response)
   } catch (error) {
     console.log('Error Listando Productos. productController.js', error.message)
   }
 }
 
+//* PRE: El Producto Debe Tener Seguimiento Activado
+//* "inventory_management" = "shopify"
 exports.updateProductStock = async (req, res) => {
   try {
-    const { id, newStock } = req.body 
-    const result = await shopifyClient.updateProductStock(id, newStock)
-    res.status(200).json(result)
+    const { id, newStock } = req.params
+    const newStockParsed = parseInt(newStock, 10); // Convertir newStock a número
+
+    const response = await shopifyClient.updateProductStock(id, newStockParsed)
+    res.status(200).json(response)
   } catch (error) {
     console.log('Error Actualizando Stock. productController.js', error.message)
     res.status(500).json({ error: error.message })

@@ -1,6 +1,6 @@
 Mostrar los precios de business_price al iniciar sesión como empresa. APP PERSONALIZADA EN SHOPIFY
 
-**Añadir un campo adicional al perfil del usuario para indicar si es un "Consumidor Final" o una "Empresa".**
+**Añadir un campo adicional al perfil del usuario para indicar si es un "Consumidor Final" o una "Empresa". Para hacer esto utilizar "customer tags"**
 **Modificar la lógica para verificar el tipo de usuario durante el inicio de sesión.**
 **Mostrar el precio adecuado según el tipo de usuario.**
 
