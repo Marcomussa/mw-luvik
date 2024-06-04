@@ -34,13 +34,18 @@ exports.listProducts = async () => {
 
     productDetails.forEach(product => {
       const businessPrice = product.metafields.find(field => field.key === 'business_price')
-      console.log(`ID: ${product.id}, Title: ${product.title}, Price: ${product.variants[0].price}, Business Price: ${businessPrice ? businessPrice.value : 'N/A'}`)
+      console.log(`ID: ${product.id}, 
+                  Title: ${product.title}, 
+                  Price: ${product.variants[0].price}, 
+                  Business Price: ${businessPrice ? businessPrice.value : 'N/A'}`
+                  // Demas Propiedades a Buscar...
+                  )
     })
 
     return productDetails
-  } catch (err) {
-    console.error(err)
-    throw err
+  } catch (error) {
+    console.log(error.message)
+    throw error.message
   }
 }
 
@@ -48,14 +53,14 @@ exports.createProduct = async (productData) => {
   try {
     const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
     const productId = response.data.product.id
-    const businessPrice = productData.product.business_price // Agrega este campo en tu `productData`
+    const businessPrice = productData.product.business_price
 
-    // Agregar precio para empresas como un metafield
+    // Esto Agrega precio para empresas como un metafield
     await addPriceMetafields(productId, businessPrice)
 
     return response.data
   } catch (error) {
-    console.error('Error creating product:', error.message)
+    console.log('Error Creando Producto. shopifyClient. ', error.message)
     throw error
   }
 }
@@ -77,7 +82,7 @@ const addPriceMetafields = async (productId, priceForBusiness) => {
 
     return response.data
   } catch (error) {
-    console.error('Error adding metafield:', error.message)
+    console.log('Error Agregando Metafield de Precio. Shopifyclient ', error.message)
     throw error
   }
 }
@@ -94,7 +99,7 @@ exports.updateProduct = async (id, productData) => {
 
     return response.data
   } catch (error) {
-    console.error('Error creating product:', error.message)
+    console.log('Error Actualizando Producto. Shopifyclient ', error.message)
     throw error
   }
 }
@@ -122,7 +127,7 @@ exports.updateProductStock = async (id, newStock) => {
 
     return inventoryUpdateResponse.data
   } catch (error) {
-    console.error('Error actualizando stock. Error proveniente de shopifyClient.js:', error.message)
+    console.error('Error actualizando stock. shopifyClient ', error.message)
     throw error
   }
 }
