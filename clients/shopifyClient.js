@@ -139,8 +139,20 @@ exports.deleteProduct = async (id) => {
 
 //* -- -- Customers -- -- */
 exports.listUsers = async () => {
-  const response = await axios.get(`${SHOPIFY_STORE_URL}/customers.json`, { headers })
-  return response.data
+  try {
+    const customers = await shopify.customer.list();
+    const customersWithMetafields = await Promise.all(customers.map(async customer => {
+      const metafields = await shopify.metafield.list({ metafield: { owner_resource: 'customer', owner_id: customer.id } });
+      return { 
+        ...customer, 
+        metafields 
+      };
+    }));
+    return customersWithMetafields;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 }
 
 exports.listUserByID = async (userId) => {

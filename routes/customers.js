@@ -6,6 +6,6 @@ router.get("/list", customerController.listUsers)
 
 router.get("/list/:id", customerController.listUserByID)
 
-router.post("/delete/:id", customerController.deleteUser)
+router.post("/delete/:id", customerController.deleteUser)   
 
 module.exports = router;
