@@ -21,50 +21,50 @@ const shopify = new Shopify({
 })
 
 //* -- -- Product -- -- */
-exports.listProductsWithMetafields = async () => {
-  try {
-    const products = await shopify.product.list()
-    const productDetails = await Promise.all(products.map(async product => {
-      const metafields = await axios.get(`${SHOPIFY_STORE_URL}/products/${product.id}/metafields.json`, { headers })
-      return {
-        ...product,
-        metafields: metafields.data.metafields
-      }
-    }))
-
-    productDetails.forEach(product => {
-      const businessPrice = product.metafields.find(field => field.key === 'business_price')
-      console.log(`ID: ${product.id}, 
-                  Title: ${product.title}, 
-                  Price: ${product.variants[0].price}, 
-                  Business Price: ${businessPrice ? businessPrice.value : 'N/A'}`
-                  // Demas Propiedades a Buscar...
-                  )
-    })
-
-    return productDetails
-  } catch (error) {
-    console.log(error.message)
-    throw error.message
-  }
-}
-
 exports.listProducts = async () => {
   try {
     const products = await shopify.product.list()
     
     products.forEach(product => {
-      console.log(`ID: ${product.id}, 
-                  Title: ${product.title}, 
-                  Price: ${product.variants[0].price}`
-                  // Demas Propiedades a Buscar...
-                  )
+      console.log(`ID: ${product.id}, Title: ${product.title}, Price: ${product.variants[0].price}`)
     })
 
     return products
   } catch (error) {
     console.log(error.message)
     throw error.message
+  }
+}
+
+exports.listProductsWithMetafields = async () => {
+  try {
+    // Fetch all products
+    const response = await axios.get(`${SHOPIFY_STORE_URL}/admin/api/2023-07/products.json`, { headers });
+    const products = response.data.products;
+
+    // Fetch metafields for each product
+    const productDetails = await Promise.all(products.map(async product => {
+      const metafieldsResponse = await axios.get(`${SHOPIFY_STORE_URL}/admin/api/2023-07/products/${product.id}/metafields.json`, { headers });
+      return {
+        ...product,
+        metafields: metafieldsResponse.data.metafields
+      }
+    }));
+
+    // Log product details including metafields
+    productDetails.forEach(product => {
+      console.log(`ID: ${product.id}, 
+                  Title: ${product.title}, 
+                  Price: ${product.variants[0].price}, 
+                  Metafields: ${JSON.stringify(product.metafields, null, 2)}`
+                  // Additional properties can be added here...
+                  );
+    });
+
+    return productDetails;
+  } catch (error) {
+    console.error('Error fetching products or metafields:', error);
+    throw new Error('Error fetching products or metafields');
   }
 }
 
@@ -105,28 +105,6 @@ exports.createProduct = async (productData) => {
     return response.data
   } catch (error) {
     console.log('Error Creando Producto. shopifyClient. ', error.message)
-    throw error
-  }
-}
-
-const addPriceMetafields = async (productId, priceForBusiness) => {
-  try {
-    const metafieldData = {
-      namespace: 'custom_prices',
-      key: 'business_price',
-      value: priceForBusiness.toString(),
-      type: 'number_decimal'
-    }
-
-    const response = await axios.post(
-      `${SHOPIFY_STORE_URL}/products/${productId}/metafields.json`,
-      { metafield: metafieldData },
-      { headers }
-    )
-
-    return response.data
-  } catch (error) {
-    console.log('Error Agregando Metafield de Precio. Shopifyclient ', error.message)
     throw error
   }
 }
@@ -180,18 +158,88 @@ exports.deleteProduct = async (id) => {
   await axios.delete(`${SHOPIFY_STORE_URL}/products/${id}.json`, { headers })
 }
 
+// AUX:
+const addPriceMetafields = async (productId, priceForBusiness) => {
+  //TODO
+  try {
+    const metafieldData = {
+      namespace: 'custom_prices',
+      key: 'business_price',
+      value: priceForBusiness.toString(),
+      type: 'number_decimal'
+    }
+
+    const response = await axios.post(
+      `${SHOPIFY_STORE_URL}/products/${productId}/metafields.json`,
+      { metafield: metafieldData },
+      { headers }
+    )
+
+    return response.data
+  } catch (error) {
+    console.log('Error Agregando Metafield de Precio. Shopifyclient ', error.message)
+    throw error
+  }
+}
+
 //* -- -- Customers -- -- */
 exports.listUsers = async () => {
   const response = await axios.get(`${SHOPIFY_STORE_URL}/customers.json`, { headers })
   return response.data
 }
 
-exports.listUserByID = async (userId) => {
+exports.getUserByID = async (userId) => {
   const response = await axios.get(`${SHOPIFY_STORE_URL}/customers/${userId}.json`, { headers })
   return response.data
+}
+
+exports.getUserIDByName = async (customerName) => {
+  try {
+    const response = await shopify.customer.list()
+    const customer = response
+
+    const sanitizedCustomertName = customerName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '[\\s_-]');
+    const productRegex = new RegExp(sanitizedCustomertName, 'i');
+
+    // Evaluar Coincidencias
+    const matchedCustomers = customer.filter(customer => productRegex.test(customer.first_name));
+
+    if (matchedCustomers.length > 0) {
+      return matchedCustomers.map(customer => ({
+        id: customer.id,
+        title: customer.first_name
+        // Demas datos que se quieran mostrar
+      }))
+    } else {
+      return `No se encontraron clientes que coincidan con el nombre: ${customerName}`
+    }
+  } catch (error) {
+    console.error(error.message)
+    throw new Error(`Error al obtener los ID de ${customerName}`)
+  }
+}
+
+//TODO
+exports.updateUser = async (userId, userData) => {
+  console.log(...userData)
+  try {
+    const response = await axios.put(`${SHOPIFY_STORE_URL}/customers/${userId}.json`, { 
+      customer: {
+        id: userId,
+        ...userData
+      }}, {
+      headers
+    })
+    console.log(`Usuario ${userId} Actualizado Correctamente`)
+    return response.data
+  } catch (error) {
+    console.log(`Error Actualizando Usuario, ID: ${userId}`)
+  }
 }
 
 exports.deleteUser = async (userId) => {
   const response = await axios.delete(`${SHOPIFY_STORE_URL}/customers/${userId}.json`, { headers })
   return response.data
 }
+ 
+//* -- -- Order -- -- */

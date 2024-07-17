@@ -10,17 +10,13 @@ Data:
 Hecho: 
 - Leer (todos) [products/list] [GET]
 - Carga (masiva) ¯¯¯¯¯¯¯¯¯¯| 
-- Edicion (masiva) --------->  Ya es posible hacerlo en una misma peticion. [ERP_CUD_PETITION_EXAMPLE.json] [products/batch] [POST] 
+- Edicion (masiva) --------->  Ya es posible hacerlo en una misma peticion. [ERP_CUD_PETITION_EXAMPLE.json] [products/batch] [POST] (Los titulos no pueden coincidir)
 - Eliminacion (masiva) ____|
-- Actualizar Stock [ERP_UPDATE_STOCK_PETITION_PETITION_EXAMPLE.json] [products/update-stock] [POST]
-- Precios Consumidor Final y Empresa
+TODO
 
-En Proceso: 
-- Leer por grupo de productos, por parametros seleccionados
-- Etapa Users, implementacion y relacion con products
-
-To-Do:
-- Configurar Server para subir este codigo
-- Defnir Template
-- Pruebas mas grandes y precisas
-- App Shopify para mostrar precio x cliente
+Headers: 
+- Accept-Encoding: gzip, defilate, br
+- Cache-Control: no-cache
+- Content-Type: application/json
+- Connection: keep-alive
+- x-auth-key: process.env.AUTH_KEY
