@@ -22,6 +22,16 @@ exports.listProducts = async (req, res) => {
   }
 }
 
+exports.getProductIDsByName = async (req, res) => {
+  const { name } = req.params
+  try {
+    const response = await shopifyClient.getProductIDsByName(name)
+    res.status(200).json(response)
+  } catch (error) {
+    console.log(`Error Obteniendo ID de ${name}. productController.js`, error.message)
+  }
+}
+
 //* PRE: El Producto Debe Tener Seguimiento Activado
 //* "inventory_management" = "shopify"
 exports.updateProductStock = async (req, res) => {

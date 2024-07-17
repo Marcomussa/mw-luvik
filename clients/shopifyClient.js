@@ -21,7 +21,7 @@ const shopify = new Shopify({
 })
 
 //* -- -- Product -- -- */
-exports.listProducts = async () => {
+exports.listProductsWithMetafields = async () => {
   try {
     const products = await shopify.product.list()
     const productDetails = await Promise.all(products.map(async product => {
@@ -49,14 +49,58 @@ exports.listProducts = async () => {
   }
 }
 
+exports.listProducts = async () => {
+  try {
+    const products = await shopify.product.list()
+    
+    products.forEach(product => {
+      console.log(`ID: ${product.id}, 
+                  Title: ${product.title}, 
+                  Price: ${product.variants[0].price}`
+                  // Demas Propiedades a Buscar...
+                  )
+    })
+
+    return products
+  } catch (error) {
+    console.log(error.message)
+    throw error.message
+  }
+}
+
+exports.getProductIDsByName = async (productName) => {
+  try {
+    const response = await shopify.product.list()
+    const products = response
+
+    const sanitizedProductName = productName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '[\\s_-]');
+    const productRegex = new RegExp(sanitizedProductName, 'i');
+
+    // Evaluar Coincidencias
+    const matchedProducts = products.filter(product => productRegex.test(product.title));
+
+    if (matchedProducts.length > 0) {
+      return matchedProducts.map(product => ({
+        id: product.id,
+        title: product.title
+        // Demas datos que se quieran mostrar
+      }))
+    } else {
+      return `No se encontraron productos que coincidan con el nombre: ${productName}`
+    }
+  } catch (error) {
+    console.error(error.message)
+    throw new Error('Error al obtener los IDs de los productos.')
+  }
+}
+
 exports.createProduct = async (productData) => {
   try {
     const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
     const productId = response.data.product.id
-    const businessPrice = productData.product.business_price
 
     // Esto Agrega precio para empresas como un metafield
-    await addPriceMetafields(productId, businessPrice)
+    // await addPriceMetafields(productId, businessPrice)
 
     return response.data
   } catch (error) {
@@ -92,10 +136,10 @@ exports.updateProduct = async (id, productData) => {
     // Crear el producto
     const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
     const productId = response.data.product.id
-    const businessPrice = productData.product.business_price // Agrega este campo en tu `productData`
 
+    //const businessPrice = productData.product.business_price // Agrega este campo en tu `productData`
     // Agregar precio para empresas como un metafield
-    await addPriceMetafields(productId, businessPrice)
+    //await addPriceMetafields(productId, businessPrice)
 
     return response.data
   } catch (error) {
@@ -135,7 +179,6 @@ exports.updateProductStock = async (id, newStock) => {
 exports.deleteProduct = async (id) => {
   await axios.delete(`${SHOPIFY_STORE_URL}/products/${id}.json`, { headers })
 }
-
 
 //* -- -- Customers -- -- */
 exports.listUsers = async () => {
