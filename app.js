@@ -10,6 +10,7 @@ const PORT = 3000
 app.use(bodyParser.json())
 app.use('/products', auth, productRoutes)
 app.use("/customers", auth, userRoutes)
+//TODO: app.use("/orders", auth, orderRoutes)
 
 //* SERVER *//
 app.listen(PORT, () => {

@@ -154,6 +154,11 @@ exports.updateProductStock = async (id, newStock) => {
   }
 }
 
+//TODO: (Shopify Webhook)
+exports.updateProductStockWebhook = async () => {
+  
+}
+
 exports.deleteProduct = async (id) => {
   await axios.delete(`${SHOPIFY_STORE_URL}/products/${id}.json`, { headers })
 }
