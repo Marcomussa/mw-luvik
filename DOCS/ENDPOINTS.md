@@ -29,6 +29,7 @@ Estructura de Datos:
 - Created: Conjunto de Productos a ser creado en Shopify. 
 productData required --> productData Producto
 No pasar ID. Este es creado automaticamente en Shopify
+No repetir titulos. Devuelve estado 422
 
 - Updated: Conjunto de Productos a ser editados. 
 id required
@@ -72,13 +73,16 @@ Ejemplo + detallado:
     ]
 }
   
-***POST /update-stock/:id/:newStock***
+***POST /update-stock/:id/:newStock*** --> ERP a Shopify
 Descripción: Actualiza el stock de un producto específico.
 Parámetros en la URL:
 id (number): El ID del producto cuyo stock se va a actualizar.
 newStock (number): La nueva cantidad de stock.
 Datos a Enviar: No se requiere un cuerpo en la solicitud, ya que los datos necesarios están en los parámetros de la URL.
 Controlador: productController.updateProductStock
+
+***POST /update-stock-webhook/:id/:newStock*** --> Shopify a ERP
+PENDIENTE
 
 ***GET /list***
 Descripción: Obtiene y lista todos los productos de la tienda.

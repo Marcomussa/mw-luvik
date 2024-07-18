@@ -95,12 +95,24 @@ exports.getProductIDsByName = async (productName) => {
 }
 
 exports.createProduct = async (productData) => {
+  //TODO: Logica de agregado de colecciones
+
+  productData.product.collections.forEach(collection => {
+    console.log(collection)
+    return collection
+  })
+
+  console.log(productData.product.collections)
+  console.log('--- --- ---')
+
+  for(let i = 0; i < productData.product.length; i++){
+    console.log(productData.product.collections[i])
+    console.log('--- --- ---')
+  }
+
   try {
     const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
     const productId = response.data.product.id
-
-    // Esto Agrega precio para empresas como un metafield
-    // await addPriceMetafields(productId, businessPrice)
 
     return response.data
   } catch (error) {
@@ -115,9 +127,7 @@ exports.updateProduct = async (id, productData) => {
     const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
     const productId = response.data.product.id
 
-    //const businessPrice = productData.product.business_price // Agrega este campo en tu `productData`
-    // Agregar precio para empresas como un metafield
-    //await addPriceMetafields(productId, businessPrice)
+    //TODO: Logica de agregado de colecciones
 
     return response.data
   } catch (error) {
