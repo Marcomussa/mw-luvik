@@ -95,15 +95,12 @@ exports.getProductIDsByName = async (productName) => {
 }
 
 exports.createProduct = async (productData) => {
+  //productData.product.images[0].src = `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${product.sku}?v=1721305623`
+
   //TODO: Logica de agregado de colecciones
 
-  productData.product.collections.forEach(collection => {
-    console.log(collection)
-    return collection
-  })
-
-  console.log(productData.product.collections)
-  console.log('--- --- ---')
+  //console.log(productData.product.collections)
+  //console.log('--- --- ---')
 
   for(let i = 0; i < productData.product.length; i++){
     console.log(productData.product.collections[i])
@@ -174,13 +171,12 @@ exports.deleteProduct = async (id) => {
 }
 
 // AUX:
-const addPriceMetafields = async (productId, priceForBusiness) => {
-  //TODO
+const addPriceMetafields = async (productId, unitPerBult) => {
   try {
     const metafieldData = {
-      namespace: 'custom_prices',
-      key: 'business_price',
-      value: priceForBusiness.toString(),
+      namespace: 'bult',
+      key: 'units_per_bult',
+      value: unitPerBult.toString(),
       type: 'number_decimal'
     }
 
@@ -192,7 +188,7 @@ const addPriceMetafields = async (productId, priceForBusiness) => {
 
     return response.data
   } catch (error) {
-    console.log('Error Agregando Metafield de Precio. Shopifyclient ', error.message)
+    console.log('Error Agregando Metafield. Shopifyclient ', error.message)
     throw error
   }
 }
