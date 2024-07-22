@@ -2,10 +2,12 @@
   "created": [
     {
       "product": {
+        "collection": "id collection",
         "title": "Title",
         "variants": [{
           "compare_at_price": "150",
-          "price": "100"
+          "price": "100",
+          "sku": "1000101" 
         }]
       }
     },

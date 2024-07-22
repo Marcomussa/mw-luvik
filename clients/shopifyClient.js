@@ -36,15 +36,25 @@ exports.listProducts = async () => {
   }
 }
 
+exports.listProductByID = async (productId) => {
+  try {
+    const response = await axios.get(`${SHOPIFY_STORE_URL}/products/${productId}.json`, { headers })
+    return response.data.product
+  } catch (error) {
+    console.error('Error al obtener los detalles del producto:', error.message)
+    throw error
+  }
+}
+
 exports.listProductsWithMetafields = async () => {
   try {
     // Fetch all products
-    const response = await axios.get(`${SHOPIFY_STORE_URL}/admin/api/2023-07/products.json`, { headers });
+    const response = await axios.get(`${SHOPIFY_STORE_URL}/products.json`, { headers });
     const products = response.data.products;
 
     // Fetch metafields for each product
     const productDetails = await Promise.all(products.map(async product => {
-      const metafieldsResponse = await axios.get(`${SHOPIFY_STORE_URL}/admin/api/2023-07/products/${product.id}/metafields.json`, { headers });
+      const metafieldsResponse = await axios.get(`${SHOPIFY_STORE_URL}/products/${product.id}/metafields.json`, { headers });
       return {
         ...product,
         metafields: metafieldsResponse.data.metafields
@@ -94,22 +104,47 @@ exports.getProductIDsByName = async (productName) => {
   }
 }
 
-exports.createProduct = async (productData) => {
-  //productData.product.images[0].src = `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${product.sku}?v=1721305623`
-
-  //TODO: Logica de agregado de colecciones
-
-  //console.log(productData.product.collections)
-  //console.log('--- --- ---')
-
-  for(let i = 0; i < productData.product.length; i++){
-    console.log(productData.product.collections[i])
-    console.log('--- --- ---')
-  }
-
+const assignProductToCollection = async (productId, collectionId) => {
   try {
+    const collectData = {
+      collect: {
+        product_id: productId,
+        collection_id: collectionId
+      }
+    }
+
+    const response = await axios.post(`${SHOPIFY_STORE_URL}/collects.json`, collectData, { headers });
+    return response.data;
+  } catch (error) {
+    console.error('Error asignando el producto a la colección:', error.message);
+    throw error;
+  }
+}
+
+//todo
+exports.listCollections = async () => {
+  try {
+    const response = await axios.get(`${SHOPIFY_STORE_URL}/collection_listings.json`, { headers })
+    const collections = response.data.collections
+
+    console.log(collections)
+
+  } catch (error) {
+    console.error('Error fetching collections:', error)
+    throw new Error('Error fetching collections')
+  }
+}
+
+exports.createProduct = async (productData) => {
+  //TODO: Pasar la coleccion como nombre y no como id
+  try {
+    productData.product.images = [{}]
+    productData.product.images[0].src = `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}?v=1721305623`
+
     const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
     const productId = response.data.product.id
+
+    await assignProductToCollection(productId, productData.product.collection)
 
     return response.data
   } catch (error) {

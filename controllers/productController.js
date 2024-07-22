@@ -22,6 +22,16 @@ exports.listProducts = async (req, res) => {
   }
 }
 
+exports.listProductByID = async (req, res) => {
+  const { id } = req.params
+  try {
+    const response = await shopifyClient.listProductByID(id)
+    res.status(200).json(response)
+  } catch (error) {
+    console.log('Error Listando Productos. productController.js', error.message)
+  }
+}
+
 exports.getProductIDsByName = async (req, res) => {
   const { name } = req.params
   try {
@@ -29,6 +39,15 @@ exports.getProductIDsByName = async (req, res) => {
     res.status(200).json(response)
   } catch (error) {
     console.log(`Error Obteniendo ID de ${name}. productController.js`, error.message)
+  }
+}
+
+exports.listCollections = async (req, res) => {
+  try {
+    const response = await shopifyClient.listCollections()
+    res.status(200).json(response)
+  } catch (error) {
+    console.log('Error Listando Productos. productController.js', error.message)
   }
 }
 
