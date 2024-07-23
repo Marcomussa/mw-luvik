@@ -32,10 +32,10 @@ exports.listProductByID = async (req, res) => {
   }
 }
 
-exports.getProductIDsByName = async (req, res) => {
+exports.listProductIDsByName = async (req, res) => {
   const { name } = req.params
   try {
-    const response = await shopifyClient.getProductIDsByName(name)
+    const response = await shopifyClient.listProductIDsByName(name)
     res.status(200).json(response)
   } catch (error) {
     console.log(`Error Obteniendo ID de ${name}. productController.js`, error.message)

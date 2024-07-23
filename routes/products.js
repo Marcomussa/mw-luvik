@@ -12,6 +12,6 @@ router.get('/list', productController.listProducts)
 
 router.get('/list-collections', productController.listCollections)
 
-router.get('/get-id-by-name/:name', productController.getProductIDsByName)
+router.get('/get-id-by-name/:name', productController.listProductIDsByName)
 
 module.exports = router
