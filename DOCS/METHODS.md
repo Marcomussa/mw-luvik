@@ -5,6 +5,11 @@ Obtiene y lista todos los productos de la tienda.
 Parámetros: No recibe parámetros.
 Retorno: Devuelve un arreglo de productos.
 
+- ListCollections()
+Obtiene y lista los ID`s y Nombres de las colecciones de la tienda.
+Parámetros: No recibe parámetros.
+Retorno: Devuelve un arreglo de productos.
+
 - listProductsWithMetafields()
 Obtiene todos los productos de la tienda junto con sus metafields.
 Parámetros: No recibe parámetros.

@@ -2,7 +2,7 @@
   "created": [
     {
       "product": {
-        "collection": "id collection",
+        "collection": [1,2,3],
         "title": "Title",
         "variants": [{
           "compare_at_price": "150",
@@ -23,6 +23,7 @@
     "updated": [
       {
         "product": {
+          "collection": [4,5,6],
           "title": "New Title",
           "id": "1"
         }

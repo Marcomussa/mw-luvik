@@ -1,4 +1,7 @@
 *Documentacion de Endpoints*
+
+URL: https://mw-luvik.onrender.com
+
 **Autenticacion**
 Cada peticion a realizar debera ser realizada enviando una clave en los headers de cada una de estas. 
 Headers: 
@@ -40,14 +43,14 @@ id required
 
 Importante: Esta peticion maneja las 3 operaciones de manera simultanea. No es necesario realizarlas de manera simultanea. Se pueden realizar de manera independiente unicamente especificando la operacion junto a sus datos. 
 
-El scope de Product de la API de Shopify no incluye la propiedad "collections". Igualmente es posible asignarle la coleccion pasando la propiedad "collection" junto al ID de la coleccion. 
+El scope de Product de la API de Shopify no incluye la propiedad "collections". Igualmente es posible asignarle la coleccion pasando la propiedad "collection" junto al ID de la coleccion. Esta propiedad recibe un [] de IDs de colecciones tanto en Created como en Updated. Si se desea actualizar las colecciones de un producto, se debera pasar todas las colecciones resultantes y NO solo las nuevas ya que el metodo elimina las colecciones anteriores. Esto para evitar duplicaciones. 
 
 Ejemplo + detallado:
 {
   "created": [
     {
       "product": {
-        "collection": "collection_id"
+        "collection": ["collection ID`s"]
         "title": "Title",
         // ... product keys
         "variants": [{
@@ -63,7 +66,8 @@ Ejemplo + detallado:
     "updated": [
       {
         "product": {
-          "id": "1"
+          "collection": ["collection ID`s"]
+          "id": "1" 
           "title": "New Title",
           // ...product keys
         }
@@ -148,4 +152,5 @@ Datos a Enviar:
 }
 Controlador: customerController.updateUser
 
-
+**Orders**
+Esta etapa queda pendiente. Se configurara un webhook desde Shopify para cada vez que ingrese una orden, se cargue automaticamente en una DB sin necesidad de estar consultando constantemente por nuevas ordenes. 

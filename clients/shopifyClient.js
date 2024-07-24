@@ -93,7 +93,7 @@ exports.listCollections = async () => {
       console.log(`ID: ${collection.id}, Name: ${collection.title}`)
     });
 
-    return allCollections.length
+    return allCollections
   } catch (error) {
     console.error('Error fetching collections:', error.message)
     throw new Error('Error fetching collections')
@@ -127,15 +127,17 @@ exports.listProductIDsByName = async (productName) => {
 }
 
 exports.createProduct = async (productData) => {
-  //TODO: Pasar la coleccion como nombre y no como id
   try {
-    productData.product.images = [{}]
-    productData.product.images[0].src = `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}?v=1721305623`
+    productData.product.images = [{
+      src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}?v=1721305623`
+    }]
 
     const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
     const productId = response.data.product.id
 
-    await assignProductToCollection(productId, productData.product.collection)
+    if (productData.product.collection && productData.product.collection.length > 0) {
+      await assignProductToCollections(productId, productData.product.collection)
+    }
 
     return response.data
   } catch (error) {
@@ -146,11 +148,12 @@ exports.createProduct = async (productData) => {
 
 exports.updateProduct = async (id, productData) => {
   try {
-    // Crear el producto
     const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
     const productId = response.data.product.id
 
-    //TODO: Logica de agregado de colecciones
+    if (productData.product.collection && productData.product.collection.length > 0) {
+      await assignProductToCollections(productId, productData.product.collection)
+    }
 
     return response.data
   } catch (error) {
@@ -197,22 +200,31 @@ exports.updateProductStockWebhook = async () => {
 }
 
 // Aux's 
-const assignProductToCollection = async (productId, collectionId) => {
+const assignProductToCollections = async (productId, newCollectionIds) => {
   try {
-    const collectData = {
-      collect: {
-        product_id: productId,
-        collection_id: collectionId
-      }
-    }
+    // Obtener todas las colecciones actuales del producto
+    const collects = await shopify.collect.list({ product_id: productId });
+    const currentCollectionIds = collects.map(collect => collect.collection_id);
 
-    const response = await axios.post(`${SHOPIFY_STORE_URL}/collects.json`, collectData, { headers });
-    return response.data;
+    // Eliminar las colecciones que ya no están en newCollectionIds
+    const collectionsToRemove = currentCollectionIds.filter(id => !newCollectionIds.includes(id));
+    await Promise.all(collectionsToRemove.map(collectionId => {
+      const collect = collects.find(c => c.collection_id === collectionId);
+      return shopify.collect.delete(collect.id);
+    }));
+
+    // Asignar el producto a las nuevas colecciones
+    const collectionsToAdd = newCollectionIds.filter(id => !currentCollectionIds.includes(id));
+    await Promise.all(collectionsToAdd.map(collectionId => shopify.collect.create({
+      product_id: productId,
+      collection_id: collectionId
+    })));
   } catch (error) {
-    console.error('Error asignando el producto a la colección:', error.message);
+    console.log('Error Asignando Producto a Colecciones: ', error.message);
     throw error;
   }
 }
+
 const addPriceMetafields = async (productId, unitPerBult) => {
   try {
     const metafieldData = {
