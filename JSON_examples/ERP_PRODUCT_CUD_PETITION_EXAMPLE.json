@@ -1,0 +1,42 @@
+{
+  "created": [
+    {
+      "product": {
+        "collection": "id collection",
+        "title": "Title",
+        "variants": [{
+          "compare_at_price": "150",
+          "price": "100",
+          "sku": "1000101" 
+        }]
+      }
+    },
+    {
+      "product": {
+        "title": "Title",
+        "variants": [{
+          "price": "100"
+        }]
+      }
+    }
+  ],
+    "updated": [
+      {
+        "product": {
+          "title": "New Title",
+          "id": "1"
+        }
+      },
+      {
+        "product": {
+          "title": "New Title",
+          "id": "2"
+        }
+      }
+    ],
+    "deleted": [
+      "1",
+      "2"
+    ]
+  }
+  

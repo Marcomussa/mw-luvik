@@ -22,6 +22,35 @@ exports.listProducts = async (req, res) => {
   }
 }
 
+exports.listProductByID = async (req, res) => {
+  const { id } = req.params
+  try {
+    const response = await shopifyClient.listProductByID(id)
+    res.status(200).json(response)
+  } catch (error) {
+    console.log('Error Listando Productos. productController.js', error.message)
+  }
+}
+
+exports.listProductIDsByName = async (req, res) => {
+  const { name } = req.params
+  try {
+    const response = await shopifyClient.listProductIDsByName(name)
+    res.status(200).json(response)
+  } catch (error) {
+    console.log(`Error Obteniendo ID de ${name}. productController.js`, error.message)
+  }
+}
+
+exports.listCollections = async (req, res) => {
+  try {
+    const response = await shopifyClient.listCollections()
+    res.status(200).json(response)
+  } catch (error) {
+    console.log('Error Listando Productos. productController.js', error.message)
+  }
+}
+
 //* PRE: El Producto Debe Tener Seguimiento Activado
 //* "inventory_management" = "shopify"
 exports.updateProductStock = async (req, res) => {

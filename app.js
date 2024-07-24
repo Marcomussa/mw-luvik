@@ -4,11 +4,13 @@ const app = express()
 const bodyParser = require("body-parser")
 const productRoutes = require('./routes/products')
 const userRoutes = require("./routes/customers")
+const auth = require('./middleware/auth')
 const PORT = 3000
 
 app.use(bodyParser.json())
-app.use('/products', productRoutes)
-app.use("/customers", userRoutes)
+app.use('/products', auth, productRoutes)
+app.use("/customers", auth, userRoutes)
+//TODO: app.use("/orders", auth, orderRoutes)
 
 //* SERVER *//
 app.listen(PORT, () => {
