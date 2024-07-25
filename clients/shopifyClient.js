@@ -86,7 +86,7 @@ exports.listCollections = async () => {
 
     allCollections.forEach(collection => {
       console.log(`ID: ${collection.id}, Name: ${collection.title}`)
-    });
+    })
 
     return allCollections
   } catch (error) {
@@ -123,6 +123,7 @@ exports.listProductIDsByName = async (productName) => {
 
 exports.createProduct = async (productData) => {
   try {
+    //todo: Cargar mas de una imagen
     productData.product.images = [{
       src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}?v=1721305623`
     }]
@@ -132,6 +133,10 @@ exports.createProduct = async (productData) => {
 
     if (productData.product.collection && productData.product.collection.length > 0) {
       await assignProductToCollections(productId, productData.product.collection)
+    }
+
+    if (productData.product.lumps) {
+      await addBultMetafield(productId, productData.product.lumps)
     }
 
     return response.data
@@ -220,20 +225,22 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
   }
 }
 
-const addPriceMetafields = async (productId, unitPerBult) => {
+//todo
+const addBultMetafield = async (productId, unitPerBult) => {
   try {
     const metafieldData = {
-      namespace: 'bult',
-      key: 'units_per_bult',
-      value: unitPerBult.toString(),
+      namespace: 'custom',
+      key: 'bultos',
+      value: Number(unitPerBult),
       type: 'number_decimal'
     }
 
-    const response = await axios.post(
-      `${SHOPIFY_STORE_URL}/products/${productId}/metafields.json`,
+    const response = await axios.post(`${SHOPIFY_STORE_URL}/products/${productId}/metafields.json`,
       { metafield: metafieldData },
       { headers }
     )
+
+    console.log(response.data)
 
     return response.data
   } catch (error) {

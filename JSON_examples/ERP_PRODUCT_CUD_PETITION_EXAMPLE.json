@@ -2,12 +2,14 @@
   "created": [
     {
       "product": {
+        "lumps": 5,
         "collection": [1,2,3],
         "title": "Title",
         "variants": [{
           "compare_at_price": "150",
-          "price": "100",
-          "sku": "1000101" 
+          "price": 100,
+          "sku": "1000101",
+          "stock": 100
         }]
       }
     },
