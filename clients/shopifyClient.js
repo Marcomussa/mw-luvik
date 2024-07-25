@@ -63,30 +63,25 @@ exports.listProductsWithMetafields = async () => {
 
     // Log product details including metafields
     productDetails.forEach(product => {
-      console.log(`ID: ${product.id}, 
-                  Title: ${product.title}, 
-                  Price: ${product.variants[0].price}, 
-                  Metafields: ${JSON.stringify(product.metafields, null, 2)}`
-                  // Additional properties can be added here...
-                  );
-    });
+      console.log(`ID: ${product.id}, Title: ${product.title}, Price: ${product.variants[0].price}, Metafields: ${JSON.stringify(product.metafields, null, 2)}`)
+    })
 
     return productDetails;
   } catch (error) {
-    console.error('Error fetching products or metafields:', error);
-    throw new Error('Error fetching products or metafields');
+    console.error('Error fetching products or metafields:', error)
+    throw new Error('Error fetching products or metafields')
   }
 }
 
 exports.listCollections = async () => {
   try {
-    let allCollections = [];
+    let allCollections = []
     let params = { limit: 250 }
 
     do {
-      const customCollections = await shopify.customCollection.list(params);
+      const customCollections = await shopify.customCollection.list(params)
       allCollections = allCollections.concat(customCollections)
-      params = customCollections.nextPageParameters;
+      params = customCollections.nextPageParameters
     } while (params !== undefined)
 
     allCollections.forEach(collection => {

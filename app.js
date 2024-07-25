@@ -2,15 +2,16 @@ require('dotenv').config()
 const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
+const auth = require('./middleware/auth')
+const PORT = process.env.PORT
 const productRoutes = require('./routes/products')
 const userRoutes = require("./routes/customers")
-const auth = require('./middleware/auth')
-const PORT = 3000
+const orderRoutes = require('./routes/orders')
 
 app.use(bodyParser.json())
 app.use('/products', auth, productRoutes)
 app.use("/customers", auth, userRoutes)
-//TODO: app.use("/orders", auth, orderRoutes)
+app.use("/orders", auth, orderRoutes)
 
 //* SERVER *//
 app.listen(PORT, () => {

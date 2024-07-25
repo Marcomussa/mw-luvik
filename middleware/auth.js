@@ -1,5 +1,4 @@
 const AUTH_KEY = process.env.AUTH_KEY 
-console.log(AUTH_KEY)
 
 const authenticate = (req, res, next) => {
   const authKey = req.headers['x-auth-key']
