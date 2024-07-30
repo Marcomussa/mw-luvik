@@ -1,5 +1,4 @@
 *Documentacion de Endpoints*
-
 URL: https://mw-luvik.onrender.com
 
 **Autenticacion**
@@ -61,11 +60,13 @@ Ejemplo + detallado:
           "compare_at_price": "150",
           "price": "100",
           "sku": "ABC123"
+          "inventory_managment": "shopify", --> required. sin esto, no es posible manejar stock
+          "stock": 10,
           // ... product variant keys
         }]
       }
     },
-    //  ...product
+    //  ...product props
   ],
     "updated": [
       {
@@ -75,7 +76,7 @@ Ejemplo + detallado:
           "title": "New Title",
           // ...product keys
         }
-        // ...product
+        // ...product props
       }
     ],
     "deleted": [
@@ -85,7 +86,7 @@ Ejemplo + detallado:
     ]
 }
   
-***POST /update-stock/:id/:newStock*** --> ERP a Shopify
+***POST /products/update-stock/:id/:newStock*** --> ERP a Shopify
 Descripción: Actualiza el stock de un producto específico.
 Parámetros en la URL:
 id (number): El ID del producto cuyo stock se va a actualizar.
@@ -93,20 +94,25 @@ newStock (number): La nueva cantidad de stock.
 Datos a Enviar: No se requiere un cuerpo en la solicitud, ya que los datos necesarios están en los parámetros de la URL.
 Controlador: productController.updateProductStock
 
-***POST /update-stock-webhook/:id/:newStock*** --> Shopify a ERP
+***POST /products/update-stock-webhook/:id/:newStock*** --> Shopify a ERP
 PENDIENTE
 
-***GET /list***
+***GET /products/list***
 Descripción: Obtiene y lista todos los productos de la tienda.
 Datos a Enviar: No se requiere un cuerpo en la solicitud.
 Controlador: productController.listProducts
 
-***GET /list-collections***
+***GET /products/list-by-id/:id***
+Descripción: Obtiene y lista un producto en especifico
+Datos a Enviar: ID Producto.
+Controlador: productController.listProductById
+
+***GET /products/list-collections***
 Descripción: Obtiene y lista ID y Nombre todas las colecciones de la tienda. 
 Datos a Enviar: No se requiere un cuerpo en la solicitud.
 Controlador: productController.listCollections
 
-***GET /get-id-by-name/:name***
+***GET /products/get-id-by-name/:name***
 Descripción: Busca productos por nombre y devuelve los IDs de los productos coincidentes.
 Parámetros en la URL: 
 name (string): El nombre del producto a buscar.
@@ -114,20 +120,12 @@ Datos a Enviar: No se requiere un cuerpo en la solicitud, ya que el nombre del p
 Controlador: productController.getProductIDsByName
 
 **Usuarios**
-***GET /list***
+***GET /customers/list***
 Descripción: Obtiene y lista todos los usuarios de la tienda.
 Datos a Enviar: No se requiere un cuerpo en la solicitud.
 Controlador: customerController.listUsers
 
-***GET /get-id-by-name/:name***
-Descripción: Busca usuarios por nombre y devuelve los IDs de los usuarios coincidentes.
-Tipo de Petición: GET
-Parámetros en la URL:
-name (string): El nombre del usuario a buscar.
-Datos a Enviar: No se requiere un cuerpo en la solicitud, ya que el nombre del usuario está en el parámetro de la URL.
-Controlador: customerController.getUserIDByName
-
-***GET /list/:id***
+***GET /customers/list/:id***
 Descripción: Obtiene los detalles de un usuario específico por ID.
 Tipo de Petición: GET
 Parámetros en la URL:
@@ -135,7 +133,15 @@ id (number): El ID del usuario cuyos detalles se van a obtener.
 Datos a Enviar: No se requiere un cuerpo en la solicitud, ya que el ID del usuario está en el parámetro de la URL.
 Controlador: customerController.getUserByID
 
-***POST /delete/:id***
+***GET /customers/get-id-by-name/:name***
+Descripción: Busca usuarios por nombre y devuelve los IDs de los usuarios coincidentes.
+Tipo de Petición: GET
+Parámetros en la URL:
+name (string): El nombre del usuario a buscar.
+Datos a Enviar: No se requiere un cuerpo en la solicitud, ya que el nombre del usuario está en el parámetro de la URL.
+Controlador: customerController.getUserIDByName
+
+***POST /customers/delete/:id***
 Descripción: Elimina un usuario específico por ID.
 Tipo de Petición: POST
 Parámetros en la URL:
@@ -143,7 +149,7 @@ id (number): El ID del usuario que se va a eliminar.
 Datos a Enviar: No se requiere un cuerpo en la solicitud, ya que el ID del usuario está en el parámetro de la URL.
 Controlador: customerController.deleteUser
 
-***POST /update/:id***
+***POST /customers/update/:id (Pendiente de arreglar bugs) ***
 Descripción: Actualiza los detalles de un usuario específico por ID.
 Tipo de Petición: POST
 Parámetros en la URL:

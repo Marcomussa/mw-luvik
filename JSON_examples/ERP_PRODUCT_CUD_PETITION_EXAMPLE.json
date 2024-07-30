@@ -9,6 +9,7 @@
           "compare_at_price": "150",
           "price": 100,
           "sku": "1000101",
+          "inventory_managment": "shopify",
           "stock": 100
         }]
       }
