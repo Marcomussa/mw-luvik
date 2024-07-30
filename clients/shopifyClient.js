@@ -128,6 +128,16 @@ exports.createProduct = async (productData) => {
       src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}?v=1721305623`
     }]
 
+    // No existe oferta
+    if (productData.product.lumps) {
+      productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps
+    }
+
+    // Existe oferta
+    if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
+      productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps
+    }
+
     const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
     const productId = response.data.product.id
 
@@ -225,13 +235,13 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
   }
 }
 
-//todo
-const addBultMetafield = async (productId, unitPerBult) => {
+//! Crea un nuevo metafield u asigna el valor asociado para cada producto "bultos.custom". NO matchea con el metafield ya existente
+const addBultMetafield = async (productId, unitsPerBult) => {
   try {
     const metafieldData = {
-      namespace: 'custom',
-      key: 'bultos',
-      value: Number(unitPerBult),
+      namespace: 'bultos',
+      key: 'custom',
+      value: unitsPerBult,
       type: 'number_decimal'
     }
 
@@ -239,8 +249,6 @@ const addBultMetafield = async (productId, unitPerBult) => {
       { metafield: metafieldData },
       { headers }
     )
-
-    console.log(response.data)
 
     return response.data
   } catch (error) {

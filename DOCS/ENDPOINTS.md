@@ -43,7 +43,11 @@ id required
 
 Importante: Esta peticion maneja las 3 operaciones de manera simultanea. No es necesario realizarlas de manera simultanea. Se pueden realizar de manera independiente unicamente especificando la operacion junto a sus datos. 
 
-El scope de Product de la API de Shopify no incluye la propiedad "collections". Igualmente es posible asignarle la coleccion pasando la propiedad "collection" junto al ID de la coleccion. Esta propiedad recibe un [] de IDs de colecciones tanto en Created como en Updated. Si se desea actualizar las colecciones de un producto, se debera pasar todas las colecciones resultantes y NO solo las nuevas ya que el metodo elimina las colecciones anteriores. Esto para evitar duplicaciones. 
+El scope de Product de la API de Shopify no incluye la propiedad "collections". Igualmente es posible asignarle la coleccion pasando la propiedad "collection" junto al ID de la colecciones. Esta propiedad recibe un [] de IDs de colecciones tanto en Created como en Updated. Si se desea actualizar las colecciones de un producto, se debera pasar todas las colecciones resultantes y NO solo las nuevas ya que el metodo elimina las colecciones anteriores. Esto para evitar duplicaciones. 
+
+Manejo de datos de precios y ofertas: 
+- Si existe oferta se debe cargar el precio de oferta en price y el precio real en compare_at_price
+- Caso contrario, se carga el precio en price
 
 Ejemplo + detallado:
 {
