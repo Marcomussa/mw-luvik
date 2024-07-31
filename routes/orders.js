@@ -10,7 +10,6 @@ app.use(bodyParser.json({
   }
 }))
 
-// Verificar el webhook de Shopify
 function verifyShopifyWebhook(req, res, buf) {
   const secret = process.env.SHOPIFY_WEBHOOK_SECRET;
   const hmac = req.get('X-Shopify-Hmac-Sha256')
@@ -31,7 +30,6 @@ router.post('/new', (req, res) => {
         const order = req.body
         console.log('Orden creada: ', order)
     
-        // Procesar la orden según sea necesario
         res.status(200).send('Webhook recibido exitosamente')
       } catch (error) {
         console.error('Error procesando el webhook: ', error)

@@ -33,11 +33,10 @@ exports.getUserIDByName = async (req, res) => {
 }
 
 exports.updateUser = async (req, res) => {
-  const { data } = req.body
+  const { userData } = req.body
   const { id } = req.params
-  console.log(data)
   try {
-    const response = await shopifyClient.updateUser(id, data)
+    const response = await shopifyClient.updateUser(id, userData)
     res.status(200).json(response)
   } catch (error) {
     console.log(`Error Actualizando Usuario: ${id}. customerController.js`, error.message)

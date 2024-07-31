@@ -149,6 +149,8 @@ exports.createProduct = async (productData) => {
       await addBultMetafield(productId, productData.product.lumps)
     }
 
+    //todo: Mostrar marca por metacampo
+
     return response.data
   } catch (error) {
     console.log('Error Creando Producto. shopifyClient. ', error.message)
@@ -235,7 +237,7 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
   }
 }
 
-//! Crea un nuevo metafield u asigna el valor asociado para cada producto "bultos.custom". NO matchea con el metafield ya existente
+//! Crea un nuevo metafield y asigna el valor asociado para cada producto "bultos.custom". NO matchea con el metafield ya existente
 const addBultMetafield = async (productId, unitsPerBult) => {
   try {
     const metafieldData = {
@@ -306,21 +308,21 @@ exports.getUserIDByName = async (customerName) => {
   }
 }
 
-//TODO
 exports.updateUser = async (userId, userData) => {
-  console.log(...userData)
   try {
-    const response = await axios.put(`${SHOPIFY_STORE_URL}/customers/${userId}.json`, { 
-      customer: {
-        id: userId,
-        ...userData
-      }}, {
-      headers
-    })
-    console.log(`Usuario ${userId} Actualizado Correctamente`)
-    return response.data
+    const existingUser = await shopify.customer.get(userId);
+
+    const updatedUserData = {
+      ...existingUser,
+      ...userData
+    }
+
+    const response = await shopify.customer.update(userId, updatedUserData);
+
+    return response;
   } catch (error) {
-    console.log(`Error Actualizando Usuario, ID: ${userId}`)
+    console.error('Error actualizando el usuario:', error.message)
+    throw new Error('Error actualizando el usuario')
   }
 }
 

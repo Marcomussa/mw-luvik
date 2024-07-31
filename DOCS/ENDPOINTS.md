@@ -156,8 +156,8 @@ Parámetros en la URL:
 id (number): El ID del usuario cuyos detalles se van a actualizar.
 Datos a Enviar:
 {
-  "userData": {
-    // Estructura de los datos del usuario a actualizar
+  userData: {
+    // Estructura de los datos del usuario a actualizar 
   }
 }
 Controlador: customerController.updateUser
