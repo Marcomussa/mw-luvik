@@ -28,10 +28,11 @@ const verifyShopifyWebhook = (req, res, next) => {
 
 router.post('/new', verifyShopifyWebhook, (req, res) => {
   const orderData = req.body
+  console.log(orderData)
 
   console.log('Nueva orden recibida:', orderData)
 
-  // Logic
+  //! Logic
 
   res.status(200).send('Webhook recibido correctamente')
 })
