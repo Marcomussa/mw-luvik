@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const router = express.Router()
@@ -11,7 +12,8 @@ app.use(bodyParser.json({
 }))
 
 function verifyShopifyWebhook(req, res, buf) {
-  const secret = process.env.SHOPIFY_WEBHOOK_SECRET;
+  const secret = process.env.WEBHOOK_SECRET
+  console.log(secret)
   const hmac = req.get('X-Shopify-Hmac-Sha256')
   const generatedHmac = crypto
     .createHmac('sha256', secret)
