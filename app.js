@@ -11,7 +11,7 @@ const orderRoutes = require('./routes/orders')
 app.use(bodyParser.json())
 app.use('/products', auth, productRoutes)
 app.use("/customers", auth, userRoutes)
-app.use("/orders", auth, orderRoutes)
+app.use("/orders", orderRoutes)
 
 //* SERVER *//
 app.listen(PORT, () => {

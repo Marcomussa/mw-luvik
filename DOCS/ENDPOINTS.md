@@ -53,6 +53,7 @@ Ejemplo + detallado:
   "created": [
     {
       "product": {
+        "lumps": 10,
         "collection": ["collection ID`s"]
         "title": "Title",
         // ... product keys
@@ -65,15 +66,20 @@ Ejemplo + detallado:
           // ... product variant keys
         }]
       }
-    },
-    //  ...product props
+    }
   ],
     "updated": [
       {
         "product": {
           "collection": ["collection ID`s"]
-          "id": "1" 
+          "id": "1" --> required
           "title": "New Title",
+           "variants": [{
+              "compare_at_price": "150",
+              "price": "100",
+              "stock": 10
+              // ... product variant keys
+            }]
           // ...product keys
         }
         // ...product props

@@ -167,6 +167,10 @@ exports.updateProduct = async (id, productData) => {
       await assignProductToCollections(productId, productData.product.collection)
     }
 
+    if (productData.product.lumps) {
+      await addBultMetafield(productId, productData.product.lumps)
+    }
+
     return response.data
   } catch (error) {
     console.log('Error Actualizando Producto. Shopifyclient ', error.message)
