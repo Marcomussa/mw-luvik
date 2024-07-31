@@ -4,9 +4,8 @@ const app = express()
 const router = express.Router()
 const bodyParser = require('body-parser')
 const crypto = require('crypto')
-const SHOPIFY_SECRET = "6b62086837a63bb49b3e44e45b7eac4aa1db77e9be0e88c7f6f7a03632b88412"
+const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
-// Middleware para parsear el cuerpo de la solicitud y almacenar el cuerpo sin procesar
 app.use(bodyParser.json({
   verify: (req, res, buf) => {
     req.rawBody = buf;
@@ -32,7 +31,7 @@ router.post('/new', verifyShopifyWebhook, (req, res) => {
 
   console.log('Nueva orden recibida:', orderData)
 
-  // Logica
+  // Logic
 
   res.status(200).send('Webhook recibido correctamente')
 })
