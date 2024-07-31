@@ -27,7 +27,7 @@ const verifyShopifyWebhook = (req, res, next) => {
 
 router.post('/new', async (req, res) => {
   const hmac = req.get('X-Shopify-Hmac-Sha256')
-  const body = await getRawBody(req)
+  const body = req.body
   const hash = crypto.createHmac('sha256', SHOPIFY_SECRET).update(body, 'utf8', 'hex').digest('base64')
 
   if (hash === hmac) {
