@@ -8,18 +8,17 @@ const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
 app.use(express.raw({ type: 'application/json' }));
 
-function validateSignature(req, res, next) {
+async function validateSignature(req, res, next) {
   const receivedSignature = req.headers['x-shopify-hmac-sha256'];
   if (!receivedSignature) {
     console.log("No se encontró la firma en los encabezados")
     return res.status(400)
   }
 
-  const rawBody = Buffer.isBuffer(req.body) ? req.body : Buffer.from(req.body)
-  console.log(typeof rawBody)
+  console.log(typeof req.body)
   const generatedSignature = crypto
       .createHmac('sha256', SHOPIFY_SECRET)
-      .update(rawBody)
+      .update(req.body, "utf8", "hex")
       .digest('base64');
 
   console.log('Firma generada:', generatedSignature);
