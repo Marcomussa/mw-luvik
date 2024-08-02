@@ -13,6 +13,7 @@ const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 app.use('/products', bodyParser.json(), auth, productRoutes)
 app.use("/customers", bodyParser.json(), auth, userRoutes)
 
+//! Webhook Validation
 function validateSignature(req, res, next) {
     const receivedSignature = req.headers['x-shopify-hmac-sha256'];
     if (!receivedSignature) {
@@ -21,8 +22,6 @@ function validateSignature(req, res, next) {
   
     try {
         const rawBody = req.body;
-        console.log(typeof rawBody)
-  
         const generatedSignature = crypto
             .createHmac('sha256', SHOPIFY_SECRET)
             .update(rawBody)
