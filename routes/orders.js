@@ -6,20 +6,8 @@ const bodyParser = require('body-parser')
 const crypto = require('crypto')
 const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
-app.use('/new', bodyParser.raw({ type: 'application/json' }));
-
 router.post('/new', async (req, res) => {
-  const body = req.body
-  const hmac = req.headers["x-shopify-hmac-sha256"];
-    
-  const genHash = crypto
-  .createHmac("sha256", process.env.WEBHOOK_SECRET)
-  .update(JSON.stringify(req.body), "utf8", "hex")
-  .digest("base64");
-
-  if (genHash !== hmac) {
-    return res.status(401).send("Couldn't verify incoming Webhook request!");
-  }
+  console.log('me ejecute')
   
   //! Logic
   console.log(body)
