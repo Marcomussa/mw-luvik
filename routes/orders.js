@@ -10,20 +10,28 @@ app.use(bodyParser.raw({ type: 'application/json' }));
 
 function validateSignature(req, res, next) {
   const receivedSignature = req.headers['x-shopify-hmac-sha256'];
+  if (!receivedSignature) {
+    return res.status(400).send('No se encontró la firma en los encabezados');
+  }
+
+  const rawBody = Buffer.isBuffer(req.body) ? req.body : Buffer.from(req.body);
   const generatedSignature = crypto
       .createHmac('sha256', SHOPIFY_SECRET)
-      .update(req.body, "utf8", "hex")
+      .update(rawBody)
       .digest('base64');
 
-  console.log(generatedSignature)
-  console.log(receivedSignature)
+  console.log('Firma generada:', generatedSignature);
+  console.log('Firma recibida:', receivedSignature);
 
-  if (generatedSignature === receivedSignature) {
-      console.log("Firma valida")
-      next(); // La firma es válida
+  const bufferReceivedSignature = Buffer.from(receivedSignature, 'base64');
+  const bufferGeneratedSignature = Buffer.from(generatedSignature, 'base64');
+
+  if (crypto.timingSafeEqual(bufferReceivedSignature, bufferGeneratedSignature)) {
+    console.log('Firma válida');
+    next();
   } else {
-      console.log("Firma invalida")
-      res.status(401);
+    console.log('Firma inválida');
+    res.status(401).send('Firma no válida');
   }
 }
 
