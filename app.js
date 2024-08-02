@@ -15,7 +15,7 @@ app.use('/orders/new', bodyParser.raw({ type: 'application/json' }), async (req,
     
     const genHash = crypto
     .createHmac("sha256", process.env.WEBHOOK_SECRET)
-    .update(req.body, "utf8", "hex")
+    .update(JSON.stringify(req.body), "utf8", "hex")
     .digest("base64");
     
     console.log(hmac);
