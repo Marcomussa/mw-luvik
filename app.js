@@ -10,10 +10,9 @@ const userRoutes = require("./routes/customers")
 const orderRoutes = require('./routes/orders')
 
 app.use(bodyParser.json())
-
-app.use('/products', auth, productRoutes)
-app.use("/customers", auth, userRoutes)
-app.use("/orders", orderRoutes)
+app.use('/products', bodyParser.json(), auth, productRoutes)
+app.use("/customers", bodyParser.json(), auth, userRoutes)
+app.use("/orders", bodyParser.raw({ type: 'application/json' }), orderRoutes)
 
 //* SERVER *//
 app.listen(PORT, () => {
