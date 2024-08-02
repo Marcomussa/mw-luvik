@@ -6,10 +6,28 @@ const bodyParser = require('body-parser')
 const crypto = require('crypto')
 const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
-router.post('/new', async (req, res) => {
-  console.log('me ejecute')
-  
-  //! Logic
+app.use(bodyParser.raw({ type: 'application/json' }));
+
+function validateSignature(req, res, next) {
+  const receivedSignature = req.headers['x-shopify-hmac-sha256'];
+  const generatedSignature = crypto
+      .createHmac('sha256', SHOPIFY_SECRET)
+      .update(JSON.stringify(req.body))
+      .digest('base64');
+
+  console.log(generatedSignature)
+  console.log(receivedSignature)
+
+  if (generatedSignature === receivedSignature) {
+      next(); // La firma es válida
+  } else {
+      res.status(401).send('Firma no válida');
+  }
+}
+
+router.post('/new', validateSignature,(req, res) => {
+  const data = JSON.parse(req.body);
+  console.log('Webhook recibido:', data);
   res.status(200).send('Webhook recibido correctamente')
 })
 
