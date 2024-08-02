@@ -12,7 +12,7 @@ function validateSignature(req, res, next) {
   const receivedSignature = req.headers['x-shopify-hmac-sha256'];
   const generatedSignature = crypto
       .createHmac('sha256', SHOPIFY_SECRET)
-      .update(JSON.stringify(req.body), "utf8", "hex")
+      .update(req.body, "utf8", "hex")
       .digest('base64');
 
   console.log(generatedSignature)
