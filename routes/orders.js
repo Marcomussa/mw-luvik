@@ -15,10 +15,9 @@ async function validateSignature(req, res, next) {
     return res.status(400)
   }
 
-  console.log(typeof req.body)
   const generatedSignature = crypto
       .createHmac('sha256', SHOPIFY_SECRET)
-      .update(req.body, "utf8", "hex")
+      .update(JSON.stringify(req.body), "utf8", "hex")
       .digest('base64');
 
   console.log('Firma generada:', generatedSignature);
