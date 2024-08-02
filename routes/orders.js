@@ -40,7 +40,7 @@ function validateSignature(req, res, next) {
   }
 }
 
-router.post('/new', validateSignature,(req, res) => {
+router.post('/new', (req, res) => {
   const data = JSON.parse(req.body);
   console.log('Webhook recibido:', data);
   res.status(200).send('Webhook recibido correctamente')
