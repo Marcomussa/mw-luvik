@@ -10,25 +10,6 @@ const userRoutes = require("./routes/customers")
 const orderRoutes = require('./routes/orders')
 
 app.use(bodyParser.json())
-app.use('/orders/new', bodyParser.raw({ type: 'application/json' }), async (req, res, next) => {
-    const hmac = req.headers["x-shopify-hmac-sha256"];
-    
-    const genHash = crypto
-    .createHmac("sha256", process.env.WEBHOOK_SECRET)
-    .update(JSON.stringify(req.body), "utf8", "hex")
-    .digest("base64");
-    
-    console.log(hmac);
-    console.log(genHash);
-    
-    if (genHash !== hmac) {
-    return res.status(401).send("Couldn't verify incoming Webhook request!");
-    }
-    
-    req.body = JSON.parse(req.body);
-    
-    next();
-});
 app.use('/products', auth, productRoutes)
 app.use("/customers", auth, userRoutes)
 app.use("/orders", orderRoutes)
