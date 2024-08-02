@@ -12,16 +12,18 @@ function validateSignature(req, res, next) {
   const receivedSignature = req.headers['x-shopify-hmac-sha256'];
   const generatedSignature = crypto
       .createHmac('sha256', SHOPIFY_SECRET)
-      .update(JSON.stringify(req.body))
+      .update(JSON.stringify(req.body), "utf8", "hex")
       .digest('base64');
 
   console.log(generatedSignature)
   console.log(receivedSignature)
 
   if (generatedSignature === receivedSignature) {
+      console.log("Firma valida")
       next(); // La firma es válida
   } else {
-      res.status(401).send('Firma no válida');
+      console.log("Firma invalida")
+      res.status(401);
   }
 }
 
