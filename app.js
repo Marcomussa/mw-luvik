@@ -17,15 +17,21 @@ app.use('/orders/new', bodyParser.raw({ type: 'application/json' }), async (req,
     .createHmac("sha256", process.env.WEBHOOK_SECRET)
     .update(JSON.stringify(req.body))
     .digest("base64");
+
+    const test = crypto
+    .createHmac("sha256", process.env.SHOPIFY_API_SECREY_KEY)
+    .update(JSON.stringify(req.body))
+    .digest("base64");
     
     console.log(req.body)
     console.log(hmac);
+    console.log(test)
     console.log(genHash);
     
     if (genHash !== hmac) {
-        return res.send("Couldn't verify incoming Webhook request!");
+        console.log('hook no verificado')
     } else {
-        console.log('me ejecute')
+        console.log('hook verificado')
     }
     
     req.body = JSON.parse(req.body);

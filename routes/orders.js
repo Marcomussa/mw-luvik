@@ -10,7 +10,6 @@ router.post('/new', async (req, res) => {
   console.log('me ejecute')
   
   //! Logic
-  console.log(body)
   res.status(200).send('Webhook recibido correctamente')
 })
 
