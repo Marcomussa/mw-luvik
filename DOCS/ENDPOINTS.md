@@ -42,6 +42,8 @@ id required
 
 Importante: Esta peticion maneja las 3 operaciones de manera simultanea. No es necesario realizarlas de manera simultanea. Se pueden realizar de manera independiente unicamente especificando la operacion junto a sus datos. 
 
+Siempre se debe pasar el precio mas alto de los 3 tipos de cliente. --> Super importante
+
 El scope de Product de la API de Shopify no incluye la propiedad "collections". Igualmente es posible asignarle la coleccion pasando la propiedad "collection" junto al ID de la colecciones. Esta propiedad recibe un [] de IDs de colecciones tanto en Created como en Updated. Si se desea actualizar las colecciones de un producto, se debera pasar todas las colecciones resultantes y NO solo las nuevas ya que el metodo elimina las colecciones anteriores. Esto para evitar duplicaciones. 
 
 Manejo de datos de precios y ofertas: 
@@ -100,9 +102,6 @@ newStock (number): La nueva cantidad de stock.
 Datos a Enviar: No se requiere un cuerpo en la solicitud, ya que los datos necesarios están en los parámetros de la URL.
 Controlador: productController.updateProductStock
 
-***POST /products/update-stock-webhook/:id/:newStock*** --> Shopify a ERP
-PENDIENTE
-
 ***GET /products/list***
 Descripción: Obtiene y lista todos los productos de la tienda.
 Datos a Enviar: No se requiere un cuerpo en la solicitud.
@@ -155,7 +154,7 @@ id (number): El ID del usuario que se va a eliminar.
 Datos a Enviar: No se requiere un cuerpo en la solicitud, ya que el ID del usuario está en el parámetro de la URL.
 Controlador: customerController.deleteUser
 
-***POST /customers/update/:id (Pendiente de arreglar bugs) ***
+***POST /customers/update/:id***
 Descripción: Actualiza los detalles de un usuario específico por ID.
 Tipo de Petición: POST
 Parámetros en la URL:
@@ -169,4 +168,7 @@ Datos a Enviar:
 Controlador: customerController.updateUser
 
 **Orders**
-Esta etapa queda pendiente. Se configurara un webhook desde Shopify para cada vez que ingrese una orden, se cargue automaticamente en una DB sin necesidad de estar consultando constantemente por nuevas ordenes. 
+***WEBHOOK POST /orders/new/***
+Descripción: Cada vez que se crea una orden, Shopify envia una notificacion con todos los datos de esta. La firma del Webhook ha sido cifrada correctamente, esto con el objetivo de evitar una posible vulnerabilidad. Este dato es posible utilizarlo al gusto del ERP, con este pueden cargarlo en una db, analizarlo, etc. 
+Tipo de Petición: POST
+Datos que recibe: Order Data

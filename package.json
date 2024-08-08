@@ -15,6 +15,7 @@
     "express": "^4.19.2",
     "nodemon": "^3.1.0",
     "raw-body": "^3.0.0",
-    "shopify-api-node": "^3.13.1"
+    "shopify-api-node": "^3.13.1",
+    "xlsx": "^0.18.5"
   }
 }

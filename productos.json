@@ -1,0 +1,64 @@
+{
+  "created": [
+    {
+      "product": {
+        "title": 1,
+        "lumps": 5,
+        "tags": "test,test,test",
+        "collection": [
+          278874259542,
+          278874554454
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 10,
+            "price": 100,
+            "compare_at_price": 150,
+            "sku": 10
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": 2,
+        "lumps": 5,
+        "tags": "test,test,test",
+        "collection": [
+          278874259542,
+          278874554454
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 10,
+            "price": 100,
+            "compare_at_price": 150,
+            "sku": 10
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": 3,
+        "lumps": 5,
+        "tags": "test,test,test",
+        "collection": [
+          278874259542,
+          278874554454
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 10,
+            "price": 100,
+            "compare_at_price": 150,
+            "sku": 10
+          }
+        ]
+      }
+    }
+  ]
+}
