@@ -10,7 +10,7 @@ const data = xlsx.utils.sheet_to_json(worksheet);
 
 const parseCollection = (collectionStr) => {
   const cleanedStr = collectionStr.replace(/^"|"$/g, '');
-  return cleanedStr.split(',').map(id => parseInt(id.trim(), 10));
+  return cleanedStr.split(';').map(id => parseInt(id.trim(), 10));
 };
 
 const buildShopifyProduct = (row) => {
@@ -18,6 +18,7 @@ const buildShopifyProduct = (row) => {
 
   if (row.title) product.title = row.title;
   if (row.lumps) product.lumps = row.lumps;
+  if (row.vendor) product.vendor = row.vendor;
   if (row.tags) product.tags = row.tags;
   if (row.collection) product.collection = parseCollection(row.collection),
 

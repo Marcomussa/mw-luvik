@@ -2,60 +2,509 @@
   "created": [
     {
       "product": {
-        "title": 1,
-        "lumps": 5,
-        "tags": "test,test,test",
+        "title": "PATE SWIFT 90 Grs                   ",
+        "lumps": 24,
+        "vendor": "SWIFT",
         "collection": [
-          278874259542,
-          278874554454
+          278875177046,
+          278874521686,
+          278872457302,
+          282093977686,
+          282098106454,
+          282098204758
         ],
         "variants": [
           {
             "inventory_management": "shopify",
-            "inventory_quantity": 10,
-            "price": 100,
-            "compare_at_price": 150,
-            "sku": 10
+            "inventory_quantity": 1085,
+            "price": 479,
+            "compare_at_price": 519.99992,
+            "sku": 20012
           }
         ]
       }
     },
     {
       "product": {
-        "title": 2,
-        "lumps": 5,
-        "tags": "test,test,test",
+        "title": "PICADILLO SWIFT 90 Grs              ",
+        "lumps": 24,
+        "vendor": "SWIFT",
         "collection": [
-          278874259542,
-          278874554454
+          278875177046,
+          278874521686,
+          278872457302,
+          282093977686,
+          282098106454,
+          282098204758
         ],
         "variants": [
           {
             "inventory_management": "shopify",
-            "inventory_quantity": 10,
-            "price": 100,
-            "compare_at_price": 150,
-            "sku": 10
+            "inventory_quantity": 1038,
+            "price": 479,
+            "compare_at_price": 519.99992,
+            "sku": 20015
           }
         ]
       }
     },
     {
       "product": {
-        "title": 3,
-        "lumps": 5,
-        "tags": "test,test,test",
+        "title": "ACEITE MAIZ ARCOR 890 CC.           ",
+        "lumps": 12,
+        "vendor": "ARCOR",
         "collection": [
-          278874259542,
-          278874554454
+          278872784982,
+          278872490070,
+          278872457302,
+          282093977686,
+          282098106454,
+          282098204758
         ],
         "variants": [
           {
             "inventory_management": "shopify",
-            "inventory_quantity": 10,
-            "price": 100,
-            "compare_at_price": 150,
-            "sku": 10
+            "inventory_quantity": 85,
+            "price": 3860,
+            "compare_at_price": 3860,
+            "sku": 90098
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "ATUN DESM. NOEL ACEITE 170 Grs      ",
+        "lumps": 24,
+        "vendor": "NOEL",
+        "collection": [
+          279078928470,
+          279078862934,
+          278872457302,
+          282093977686,
+          282098106454
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 4,
+            "price": 1790,
+            "compare_at_price": 1790,
+            "sku": 160083
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "ATUN DESM. NOEL NATURAL 170 Grs     ",
+        "lumps": 24,
+        "vendor": "NOEL",
+        "collection": [
+          279078928470,
+          279078862934,
+          278872457302,
+          282093977686,
+          282098106454
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 6,
+            "price": 1790,
+            "compare_at_price": 1790,
+            "sku": 160084
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "ATUN ENTERO CAMPAGNOLA Aceite 170 G ",
+        "lumps": 24,
+        "vendor": "CAMPAGNOLA",
+        "collection": [
+          279078928470,
+          279078862934,
+          278872457302,
+          282093977686,
+          282098106454
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 219,
+            "price": 3690,
+            "compare_at_price": 3690,
+            "sku": 160085
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "ATUN ENTERO CAMPAGNOLA Natural 170  ",
+        "lumps": 24,
+        "vendor": "CAMPAGNOLA",
+        "collection": [
+          279078928470,
+          279078862934,
+          278872457302,
+          282093977686,
+          282098106454
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 598,
+            "price": 3690,
+            "compare_at_price": 3690,
+            "sku": 160086
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "DULCE MEMBRILLO ARCOR SACHET 500 Gr ",
+        "lumps": 12,
+        "vendor": "ARCOR",
+        "collection": [
+          278875078742,
+          278874521686,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 11,
+            "price": 1548,
+            "compare_at_price": 1720,
+            "sku": 130082
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "FLAN NOEL VAINILLA 25 Grs           ",
+        "lumps": 8,
+        "vendor": "ARCOR",
+        "collection": [
+          278875078742,
+          278874521686,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": "",
+            "price": 110,
+            "compare_at_price": 110,
+            "sku": 130126
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "GELAT. NOEL CEREZA 25 Grs           ",
+        "lumps": 8,
+        "vendor": "ARCOR",
+        "collection": [
+          278875078742,
+          278874521686,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": "",
+            "price": 180,
+            "compare_at_price": 180,
+            "sku": 130129
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "GELAT. NOEL FRUTILLA 25 Grs         ",
+        "lumps": 8,
+        "vendor": "ARCOR",
+        "collection": [
+          278875078742,
+          278874521686,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": "",
+            "price": 180,
+            "compare_at_price": 180,
+            "sku": 130141
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "POLENTA PRESTOPRONTA 490 Grs        ",
+        "lumps": 30,
+        "vendor": "PRESTOPRONTA",
+        "collection": [
+          279078436950,
+          279077847126,
+          278872457302,
+          282093977686,
+          282098106454
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 300,
+            "price": 1090,
+            "compare_at_price": 1090,
+            "sku": 90095
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "POLENTA PRESTOPRONTA 730 Grs        ",
+        "lumps": 24,
+        "vendor": "PRESTOPRONTA",
+        "collection": [
+          279078436950,
+          279077847126,
+          278872457302,
+          282093977686,
+          282098106454
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 84,
+            "price": 1550,
+            "compare_at_price": 1550,
+            "sku": 90096
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "PURE TOMATE ARCOR 520 Grs           ",
+        "lumps": 12,
+        "vendor": "ARCOR",
+        "collection": [
+          279079977046,
+          279079845974,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 415,
+            "price": 619,
+            "compare_at_price": 730,
+            "sku": 90104
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "PURE TOMATE CAMPAGNOLA 520 Grs      ",
+        "lumps": 12,
+        "vendor": "CAMPAGNOLA",
+        "collection": [
+          279079977046,
+          279079845974,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 387,
+            "price": 870,
+            "compare_at_price": 870,
+            "sku": 130060
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "PURE TOMATE NOEL 520 CC.            ",
+        "lumps": 12,
+        "vendor": "NOEL",
+        "collection": [
+          279079977046,
+          279079845974,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 167,
+            "price": 650,
+            "compare_at_price": 650,
+            "sku": 130058
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "SALSA NOEL FILETTO 340 Grs          ",
+        "lumps": 24,
+        "vendor": "NOEL",
+        "collection": [
+          279079977046,
+          279079845974,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 1,
+            "price": 700,
+            "compare_at_price": 700,
+            "sku": 130023
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "SALSA NOEL PIZZA 340 Grs            ",
+        "lumps": 24,
+        "vendor": "NOEL",
+        "collection": [
+          279079977046,
+          279079845974,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 384,
+            "price": 700,
+            "compare_at_price": 700,
+            "sku": 130020
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "SALSA NOEL POMAROLA 340 Grs         ",
+        "lumps": 24,
+        "vendor": "NOEL",
+        "collection": [
+          279079977046,
+          279079845974,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 18,
+            "price": 700,
+            "compare_at_price": 700,
+            "sku": 130022
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "SALSA NOEL PORTUGUESA 340 Grs       ",
+        "lumps": 24,
+        "vendor": "NOEL",
+        "collection": [
+          279079977046,
+          279079845974,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 2,
+            "price": 700,
+            "compare_at_price": 700,
+            "sku": 130021
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "TOMATE ENTERO CAMPAGNOLA 400 Grs    ",
+        "lumps": 24,
+        "vendor": "CAMPAGNOLA",
+        "collection": [
+          279079977046,
+          279079845974,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 34,
+            "price": 1150,
+            "compare_at_price": 1150,
+            "sku": 160001
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "title": "TOMATE ENTERO NOEL 400 Grs          ",
+        "lumps": 12,
+        "vendor": "NOEL",
+        "collection": [
+          279079977046,
+          279079845974,
+          278872457302,
+          282098106454,
+          282093977686
+        ],
+        "variants": [
+          {
+            "inventory_management": "shopify",
+            "inventory_quantity": 123,
+            "price": 950,
+            "compare_at_price": 950,
+            "sku": 130057
           }
         ]
       }

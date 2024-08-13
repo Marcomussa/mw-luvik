@@ -20,6 +20,8 @@ const shopify = new Shopify({
   autoLimit: true,
 })
 
+const waitFor = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 //* -- -- Product -- -- */
 exports.listProducts = async () => {
   try {
@@ -123,7 +125,6 @@ exports.listProductIDsByName = async (productName) => {
 
 exports.createProduct = async (productData) => {
   try {
-    //todo: Cargar mas de una imagen
     productData.product.images = [{
       src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}?v=1721305623`
     }]
@@ -142,14 +143,14 @@ exports.createProduct = async (productData) => {
     const productId = response.data.product.id
 
     if (productData.product.collection && productData.product.collection.length > 0) {
+      await waitFor(2000);
       await assignProductToCollections(productId, productData.product.collection)
     }
 
     if (productData.product.lumps) {
+      await waitFor(2000);
       await addBultMetafield(productId, productData.product.lumps)
     }
-
-    //todo: Mostrar marca por metacampo
 
     return response.data
   } catch (error) {
@@ -164,10 +165,12 @@ exports.updateProduct = async (id, productData) => {
     const productId = response.data.product.id
 
     if (productData.product.collection && productData.product.collection.length > 0) {
+      await waitFor(2000);
       await assignProductToCollections(productId, productData.product.collection)
     }
 
     if (productData.product.lumps) {
+      await waitFor(2000);
       await addBultMetafield(productId, productData.product.lumps)
     }
 
