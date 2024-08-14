@@ -20,8 +20,6 @@ const shopify = new Shopify({
   autoLimit: true,
 })
 
-const waitFor = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
 //* -- -- Product -- -- */
 exports.listProducts = async () => {
   try {
@@ -143,12 +141,10 @@ exports.createProduct = async (productData) => {
     const productId = response.data.product.id
 
     if (productData.product.collection && productData.product.collection.length > 0) {
-      await waitFor(2000);
       await assignProductToCollections(productId, productData.product.collection)
     }
 
     if (productData.product.lumps) {
-      await waitFor(2000);
       await addBultMetafield(productId, productData.product.lumps)
     }
 
@@ -165,12 +161,10 @@ exports.updateProduct = async (id, productData) => {
     const productId = response.data.product.id
 
     if (productData.product.collection && productData.product.collection.length > 0) {
-      await waitFor(2000);
       await assignProductToCollections(productId, productData.product.collection)
     }
 
     if (productData.product.lumps) {
-      await waitFor(2000);
       await addBultMetafield(productId, productData.product.lumps)
     }
 
@@ -221,28 +215,22 @@ exports.updateProductStockWebhook = async () => {
 // Aux's 
 const assignProductToCollections = async (productId, newCollectionIds) => {
   try {
-    // Obtener todas las colecciones actuales del producto
-    const collects = await shopify.collect.list({ product_id: productId });
-    const currentCollectionIds = collects.map(collect => collect.collection_id);
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-    // Eliminar las colecciones que ya no están en newCollectionIds
-    const collectionsToRemove = currentCollectionIds.filter(id => !newCollectionIds.includes(id));
-    await Promise.all(collectionsToRemove.map(collectionId => {
-      const collect = collects.find(c => c.collection_id === collectionId);
-      return shopify.collect.delete(collect.id);
-    }));
-
-    // Asignar el producto a las nuevas colecciones
-    const collectionsToAdd = newCollectionIds.filter(id => !currentCollectionIds.includes(id));
-    await Promise.all(collectionsToAdd.map(collectionId => shopify.collect.create({
-      product_id: productId,
-      collection_id: collectionId
-    })));
+    for (const collectionId of newCollectionIds) {
+      await shopify.collect.create({
+        product_id: productId,
+        collection_id: collectionId
+      });
+      await delay(500)
+      console.log(`Asignado a colección ${collectionId}`);
+    }
   } catch (error) {
     console.log('Error Asignando Producto a Colecciones: ', error.message);
     throw error;
   }
-}
+};
+
 
 //! Crea un nuevo metafield y asigna el valor asociado para cada producto "bultos.custom". NO matchea con el metafield ya existente
 const addBultMetafield = async (productId, unitsPerBult) => {
