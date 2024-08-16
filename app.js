@@ -10,8 +10,8 @@ const userRoutes = require("./routes/customers")
 const orderRoutes = require('./routes/orders')
 const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
-app.use('/products', bodyParser.json(), auth, productRoutes)
-app.use("/customers", bodyParser.json(), auth, userRoutes)
+app.use('/products', bodyParser.json({limit: '50mb', type: 'application/json'}), auth, productRoutes)
+app.use("/customers", bodyParser.json({limit: '50mb', type: 'application/json'}), auth, userRoutes)
 
 //! Webhook Validation
 function validateSignature(req, res, next) {

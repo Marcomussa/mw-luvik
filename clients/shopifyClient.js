@@ -124,7 +124,7 @@ exports.listProductIDsByName = async (productName) => {
 exports.createProduct = async (productData) => {
   try {
     productData.product.images = [{
-      src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}?v=1721305623`
+      src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}.jpg`
     }]
 
     // No existe oferta
@@ -160,12 +160,12 @@ exports.updateProduct = async (id, productData) => {
     const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
     const productId = response.data.product.id
 
-    if (productData.product.collection && productData.product.collection.length > 0) {
-      await assignProductToCollections(productId, productData.product.collection)
+    if (productData.product.newCollection && productData.product.newCollection.length > 0) {
+      await assignProductToCollections(productId, productData.product.newCollection)
     }
 
-    if (productData.product.lumps) {
-      await addBultMetafield(productId, productData.product.lumps)
+    if (productData.product.deleteCollection && productData.product.deleteCollection.length > 0) {
+      await removeProductFromCollections(productId, productData.product.deleteCollection)
     }
 
     return response.data
@@ -212,7 +212,7 @@ exports.updateProductStockWebhook = async () => {
   
 }
 
-// Aux's 
+//! Asignar Colecciones
 const assignProductToCollections = async (productId, newCollectionIds) => {
   try {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -222,11 +222,37 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
         product_id: productId,
         collection_id: collectionId
       });
-      await delay(500)
+      await delay(250)
       console.log(`Asignado a colección ${collectionId}`);
     }
   } catch (error) {
     console.log('Error Asignando Producto a Colecciones: ', error.message);
+    throw error;
+  }
+};
+
+//! Eliminar Colecciones
+const removeProductFromCollections = async (productId, collectionIdsToRemove) => {
+  try {
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    for (const collectionId of collectionIdsToRemove) {
+      const collects = await shopify.collect.list({
+        product_id: productId,
+        collection_id: collectionId
+      });
+
+      if (collects.length > 0) {
+        await shopify.collect.delete(collects[0].id);
+        console.log(`Eliminado de la colección ${collectionId}`);
+      } else {
+        console.log(`No se encontró relación para eliminar entre el producto ${productId} y la colección ${collectionId}`);
+      }
+
+      await delay(250);
+    }
+  } catch (error) {
+    console.log('Error Eliminando Producto de Colecciones: ', error.message);
     throw error;
   }
 };
