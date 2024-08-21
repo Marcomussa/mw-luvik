@@ -2,7 +2,7 @@ const xlsx = require('xlsx');
 const fs = require('fs');
 const path = require("path")
 
-const workbook = xlsx.readFile(path.join(__dirname, "../files/excel.xlsx"));
+const workbook = xlsx.readFile(path.join(__dirname, "../files/created.xlsx"));
 const sheetName = workbook.SheetNames[0];
 const worksheet = workbook.Sheets[sheetName];
 

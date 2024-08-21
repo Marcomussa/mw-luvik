@@ -137,6 +137,8 @@ exports.createProduct = async (productData) => {
       productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps
     }
 
+    //todo: Implementar validacion de producto existente
+
     const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
     const productId = response.data.product.id
 
@@ -207,10 +209,29 @@ exports.deleteProduct = async (id) => {
   await axios.delete(`${SHOPIFY_STORE_URL}/products/${id}.json`, { headers })
 }
 
-//TODO: (Shopify Webhook)
-exports.updateProductStockWebhook = async () => {
-  
-}
+//! Checkiar si un producto ya existe
+const checkIfProductIsCreated = async (sku) => {
+  try {
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    const products = await shopifyClient.product.list();
+
+    for (const product of products) {
+      const variant = product.variants.find(variant => variant.sku === sku);
+      if (variant) {
+        console.log(`Producto con SKU ${sku} ya existe. ID de producto: ${product.id}`);
+        return true; 
+      }
+      await delay(250)
+    }
+    console.log(`Producto con SKU ${sku} no existe.`);
+    return false; 
+
+  } catch (error) {
+    console.log('Error al verificar si el producto existe: ', error.message);
+    throw error;
+  }
+};
 
 //! Asignar Colecciones
 const assignProductToCollections = async (productId, newCollectionIds) => {
