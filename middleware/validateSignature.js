@@ -1,6 +1,6 @@
 require('dotenv').config()
 const crypto = require('crypto')
-const SHOPIFY_SECRET = process.env.WEBHOOK_SECRE
+const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
 function validateSignature(req, res, next) {
     const receivedSignature = req.headers['x-shopify-hmac-sha256'];
