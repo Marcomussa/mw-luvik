@@ -2,7 +2,7 @@ require('dotenv').config()
 const crypto = require('crypto')
 const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
-function validateSignature(req, res, next) {
+const validateSignature = (req, res, next) => {
     const receivedSignature = req.headers['x-shopify-hmac-sha256'];
     if (!receivedSignature) {
         return res.status(400).send('No se encontró la firma en los encabezados');
@@ -32,6 +32,8 @@ function validateSignature(req, res, next) {
         console.error('Error al validar la firma:', error);
         res.status(500).send('Error interno del servidor');
     }
+
+    next()
 }
 
 module.exports = validateSignature;
