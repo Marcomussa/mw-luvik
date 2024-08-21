@@ -10,10 +10,7 @@ const userRoutes = require("./routes/customers")
 const orderRoutes = require('./routes/orders')
 const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
-app.use('/products', bodyParser.json({limit: '50mb', type: 'application/json'}), auth, productRoutes)
-app.use("/customers", bodyParser.json({limit: '50mb', type: 'application/json'}), auth, userRoutes)
-
-//! Webhook Validation
+//! Webhook Validation. SI se modulariza no funciona. NI IDEA POR QUE
 function validateSignature(req, res, next) {
     const receivedSignature = req.headers['x-shopify-hmac-sha256'];
     if (!receivedSignature) {
@@ -45,6 +42,16 @@ function validateSignature(req, res, next) {
         res.status(500).send('Error interno del servidor');
     }
 }
+app.use('/products', bodyParser.json({limit: '50mb', type: 'application/json'}), auth, productRoutes)
+
+app.use("/customers", bodyParser.json({limit: '50mb', type: 'application/json'}), auth, userRoutes)
+
+app.use("/customer/new", express.raw({ type: 'application/json' }), validateSignature, (req, res) => {
+    const data = JSON.parse(req.body);
+    console.log('Webhook recibido:', data);
+    //! Logic
+    res.status(200).send('Webhook de USUARIO recibido correctamente')
+})
 
 app.use("/orders", express.raw({ type: 'application/json' }), validateSignature, orderRoutes)
 

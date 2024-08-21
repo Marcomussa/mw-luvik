@@ -8,7 +8,7 @@ router.post('/new', (req, res) => {
 
   //! Logic
 
-  res.status(200).send('Webhook recibido correctamente')
+  res.status(200).send('Webhook de ORDEN recibido correctamente')
 })
 
 module.exports = router

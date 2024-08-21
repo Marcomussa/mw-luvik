@@ -278,7 +278,6 @@ const removeProductFromCollections = async (productId, collectionIdsToRemove) =>
   }
 };
 
-
 //! Crea un nuevo metafield y asigna el valor asociado para cada producto "bultos.custom". NO matchea con el metafield ya existente
 const addBultMetafield = async (productId, unitsPerBult) => {
   try {
