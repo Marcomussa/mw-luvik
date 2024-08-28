@@ -8,6 +8,7 @@ const crypto = require('crypto')
 const productRoutes = require('./routes/products')
 const userRoutes = require("./routes/customers")
 const orderRoutes = require('./routes/orders')
+const axios = require('axios')
 const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
 //! Webhook Validation. SI se modulariza no funciona. NI IDEA POR QUE
