@@ -7,12 +7,10 @@ Data:
 - Tests: Trendy
 - Producccion: Alpha X
 
-Hecho: 
-- Leer (todos) [products/list] [GET]
-- Carga (masiva) ¯¯¯¯¯¯¯¯¯¯| 
-- Edicion (masiva) --------->  Ya es posible hacerlo en una misma peticion. [ERP_CUD_PETITION_EXAMPLE.json] [products/batch] [POST] (Los titulos no pueden coincidir)
-- Eliminacion (masiva) ____|
-TODO
+Tod-Do:
+- Create solo, literalmente, va a cargar. Una vez que hace la carga y esta termina, devuelve state 200. Hecho eso, realizara la carga de bultos y colecciones
+- Se valida el JSON si existen productos en createExcelToJSON. Implementar SDK de Shopify  en este y realizar los metodos GETS. El JSON a create le debe llegar limpio
+- ENDPOINTS de carga de Webhooks
 
 Headers: 
 - Accept-Encoding: gzip, defilate, br

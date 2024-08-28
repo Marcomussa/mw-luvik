@@ -1,14 +1,15 @@
 require('dotenv').config()
 const express = require('express')
+const axios = require('axios')
 const router = express.Router()
 
-router.post('/new', (req, res) => {
+router.post('/new', async (req, res) => {
   const data = JSON.parse(req.body);
   console.log('Webhook recibido:', data);
 
-  //! Logic
+  const response = await axios.post("http://informes.luvik.com.ar/shopify.php", data)
 
-  res.status(200).send('Webhook de ORDEN recibido correctamente')
+  return response
 })
 
 module.exports = router

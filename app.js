@@ -46,11 +46,13 @@ app.use('/products', bodyParser.json({limit: '50mb', type: 'application/json'}),
 
 app.use("/customers", bodyParser.json({limit: '50mb', type: 'application/json'}), auth, userRoutes)
 
-app.use("/customer/new", express.raw({ type: 'application/json' }), validateSignature, (req, res) => {
+app.use("/customer/new", express.raw({ type: 'application/json' }), validateSignature, async (req, res) => {
     const data = JSON.parse(req.body);
     console.log('Webhook recibido:', data);
-    //! Logic
-    res.status(200).send('Webhook de USUARIO recibido correctamente')
+
+    const response = await axios.post("http://informes.luvik.com.ar/shopify.php", data)
+
+    return response
 })
 
 app.use("/orders", express.raw({ type: 'application/json' }), validateSignature, orderRoutes)
