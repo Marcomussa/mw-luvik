@@ -6,7 +6,8 @@ const router = express.Router();
 router.post("/new", async (req, res) => {
   try {
     const data = JSON.parse(req.body);
-    
+
+
     delete data.app_id;
     delete data.cart_token;
     delete data.checkout_id;
@@ -64,37 +65,44 @@ router.post("/new", async (req, res) => {
     delete data.payment_terms;
     delete data.refunds;
 
-    const {
-      note,
-      multipass_identifier,
-      ax_exempt,
-      sms_marketing_consent,
-      tax_exemptions,
-    } = data.customer;
+    delete data.customer.multipass_identifier
+    delete data.customer.tax_exempt
+    delete data.customer.sms_marketing_consent
+    delete data.customer.tax_exemptions
+    delete data.customer.email_marketing_consent
+    delete data.customer.phone
 
     data.line_items.forEach((item) => {
-      const {
-        attributed_staffs,
-        current_quantity,
-        fulfillable_quantity,
-        fulfillment_service,
-        fulfillment_status,
-        gift_card,
-        grams,
-        price_set,
-        properties,
-        total_discount,
-        total_discount_set,
-        variant_id,
-        variant_inventory_management,
-        variant_title,
-        tax_lines,
-        duties,
-        discount_allocations,
-      } = item;
+      delete item.attributed_staffs
+      delete item.current_quantity
+      delete item.fulfillable_quantity
+      delete item.fulfillment_service
+      delete item.fulfillment_status
+      delete item.gift_card
+      delete item.grams
+      delete item.price_set
+      delete item.properties
+      delete item.total_discount
+      delete item.total_discount_set
+      delete item.variant_id
+      delete item.variant_inventory_management
+      delete item.variant_title
+      delete item.tax_lines
+      delete item.duties
+      delete item.discount_allocations
     });
 
-    const lines = note.split("\n");
+    delete data.shipping_lines[0].discounted_price
+    delete data.shipping_lines[0].discounted_price_set
+    delete data.shipping_lines[0].price
+    delete data.shipping_lines[0].price_set
+    delete data.shipping_lines[0].tax_lines
+    delete data.shipping_lines[0].discount_allocations
+    delete data.shipping_lines[0].requested_fulfillment_service_id
+    delete data.shipping_lines[0].phone
+    delete data.shipping_lines[0].is_removed
+
+    const lines = data.customer.note.split("\n");
     const extractedData = {};
 
     lines.forEach((line) => {
@@ -105,7 +113,9 @@ router.post("/new", async (req, res) => {
       }
     });
 
-    note = extractedData;
+    data.customer.note = extractedData;
+
+    console.log(data)
 
     await axios.post("http://informes.luvik.com.ar/shopify.php", data);
 
