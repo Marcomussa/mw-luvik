@@ -48,12 +48,17 @@ app.use('/products', bodyParser.json({limit: '50mb', type: 'application/json'}),
 app.use("/customers", bodyParser.json({limit: '50mb', type: 'application/json'}), auth, userRoutes)
 
 app.use("/customer/new", express.raw({ type: 'application/json' }), validateSignature, async (req, res) => {
-    const data = JSON.parse(req.body);
-    console.log('Webhook recibido:', data);
+    try {
+        const data = JSON.parse(req.body);
+        console.log('Webhook recibido:', data);
 
-    const response = await axios.post("http://informes.luvik.com.ar/shopify.php", data)
+        await axios.post("http://informes.luvik.com.ar/shopify.php", data)
 
-    return response
+        res.status(200).json({ message: 'Webhook procesado correctamente' });
+    } catch (error) {
+        console.error('Error procesando el webhook:', error.message);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
 })
 
 app.use("/orders", express.raw({ type: 'application/json' }), validateSignature, orderRoutes)
