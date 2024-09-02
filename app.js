@@ -50,8 +50,6 @@ app.use("/customers", bodyParser.json({limit: '50mb', type: 'application/json'})
 app.use("/customer/new", express.raw({ type: 'application/json' }), validateSignature, async (req, res) => {
     try {
         const data = JSON.parse(req.body);
-        console.log('Webhook recibido:', data);
-
         delete data.tax_exemptions
         delete data.email_marketing_consent
         delete data.sms_marketing_consent
@@ -70,6 +68,8 @@ app.use("/customer/new", express.raw({ type: 'application/json' }), validateSign
         });
 
         data.note = extractedData
+
+        console.log('Webhook recibido:', data);
 
         await axios.post("http://informes.luvik.com.ar/shopify.php", data)
 
