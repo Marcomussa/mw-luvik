@@ -6,121 +6,63 @@ const router = express.Router();
 router.post("/new", async (req, res) => {
   try {
     const data = JSON.parse(req.body);
-    const {
-      app_id,
-      cart_token,
-      checkout_id,
-      checkout_token,
-      client_details,
-      closed_at,
-      current_subtotal_price_set,
-      current_total_additional_fees_set,
-      current_total_discounts,
-      current_total_discounts_set,
-      current_total_duties_set,
-      current_subtotal_price,
-      current_total_price_set,
-      current_total_tax,
-      current_total_tax_set,
-      device_id,
-      discount_codes,
-      fulfillment_status,
-      landing_site,
-      landing_site_ref,
-      location_id,
-      merchant_business_entity_id,
-      merchant_of_record_app_id,
-      note_attributes,
-      number,
-      name,
-      original_total_additional_fees_set,
-      original_total_duties_set,
-      phone,
-      po_number,
-      referring_site,
-      source_identifier,
-      source_name,
-      source_url,
-      subtotal_price,
-      subtotal_price_set,
-      tax_exempt,
-      tax_lines,
-      taxes_included,
-      test,
-      token,
-      total_discounts,
-      total_discounts_set,
-      total_line_items_price,
-      total_line_items_price_set,
-      total_outstanding,
-      total_price_set,
-      total_shipping_price_set,
-      total_tax,
-      total_tax_set,
-      total_tip_received,
-      user_id,
-      fulfillments,
-      discount_applications,
-      payment_terms,
-      refunds,
-    } = data;
-
-    delete app_id;
-    delete cart_token;
-    delete checkout_id;
-    delete checkout_token;
-    delete client_details;
-    delete closed_at;
-    delete current_subtotal_price_set;
-    delete current_total_additional_fees_set;
-    delete current_total_discounts;
-    delete current_total_discounts_set;
-    delete current_total_duties_set;
-    delete current_subtotal_price;
-    delete current_total_price_set;
-    delete current_total_tax;
-    delete current_total_tax_set;
-    delete device_id;
-    delete discount_codes;
-    delete fulfillment_status;
-    delete landing_site;
-    delete landing_site_ref;
-    delete location_id;
-    delete merchant_business_entity_id;
-    delete merchant_of_record_app_id;
-    delete note_attributes;
-    delete number;
-    delete name;
-    delete original_total_additional_fees_set;
-    delete original_total_duties_set;
-    delete phone;
-    delete po_number;
-    delete referring_site;
-    delete source_identifier;
-    delete source_name;
-    delete source_url;
-    delete subtotal_price;
-    delete subtotal_price_set;
-    delete tax_exempt;
-    delete tax_lines;
-    delete taxes_included;
-    delete test;
-    delete token;
-    delete total_discounts;
-    delete total_discounts_set;
-    delete total_line_items_price;
-    delete total_line_items_price_set;
-    delete total_outstanding;
-    delete total_price_set;
-    delete total_shipping_price_set;
-    delete total_tax;
-    delete total_tax_set;
-    delete total_tip_received;
-    delete user_id;
-    delete fulfillments;
-    delete discount_applications;
-    delete payment_terms;
-    delete refunds;
+    
+    delete data.app_id;
+    delete data.cart_token;
+    delete data.checkout_id;
+    delete data.checkout_token;
+    delete data.client_details;
+    delete data.closed_at;
+    delete data.current_subtotal_price_set;
+    delete data.current_total_additional_fees_set;
+    delete data.current_total_discounts;
+    delete data.current_total_discounts_set;
+    delete data.current_total_duties_set;
+    delete data.current_subtotal_price;
+    delete data.current_total_price_set;
+    delete data.current_total_tax;
+    delete data.current_total_tax_set;
+    delete data.device_id;
+    delete data.discount_codes;
+    delete data.fulfillment_status;
+    delete data.landing_site;
+    delete data.landing_site_ref;
+    delete data.location_id;
+    delete data.merchant_business_entity_id;
+    delete data.merchant_of_record_app_id;
+    delete data.note_attributes;
+    delete data.number;
+    delete data.name;
+    delete data.original_total_additional_fees_set;
+    delete data.original_total_duties_set;
+    delete data.phone;
+    delete data.po_number;
+    delete data.referring_site;
+    delete data.source_identifier;
+    delete data.source_name;
+    delete data.source_url;
+    delete data.subtotal_price;
+    delete data.subtotal_price_set;
+    delete data.tax_exempt;
+    delete data.tax_lines;
+    delete data.taxes_included;
+    delete data.test;
+    delete data.token;
+    delete data.total_discounts;
+    delete data.total_discounts_set;
+    delete data.total_line_items_price;
+    delete data.total_line_items_price_set;
+    delete data.total_outstanding;
+    delete data.total_price_set;
+    delete data.total_shipping_price_set;
+    delete data.total_tax;
+    delete data.total_tax_set;
+    delete data.total_tip_received;
+    delete data.user_id;
+    delete data.fulfillments;
+    delete data.discount_applications;
+    delete data.payment_terms;
+    delete data.refunds;
 
     const {
       note,
@@ -129,11 +71,6 @@ router.post("/new", async (req, res) => {
       sms_marketing_consent,
       tax_exemptions,
     } = data.customer;
-
-    delete multipass_identifier
-    delete ax_exempt
-    delete sms_marketing_consent
-    delete tax_exemptions
 
     data.line_items.forEach((item) => {
       const {
@@ -155,24 +92,6 @@ router.post("/new", async (req, res) => {
         duties,
         discount_allocations,
       } = item;
-
-      delete attributed_staffs
-      delete current_quantity
-      delete fulfillable_quantity
-      delete fulfillment_service
-      delete fulfillment_status
-      delete gift_card
-      delete grams
-      delete price_set
-      delete properties
-      delete total_discount
-      delete total_discount_set
-      delete variant_id
-      delete variant_inventory_management
-      delete variant_title
-      delete tax_lines
-      delete duties
-      delete discount_allocations
     });
 
     const lines = note.split("\n");
@@ -188,10 +107,9 @@ router.post("/new", async (req, res) => {
 
     note = extractedData;
 
-    console.log("Webhook recibido:", data);
-
     await axios.post("http://informes.luvik.com.ar/shopify.php", data);
 
+    console.log("Webhook recibido:", data);
     res.status(200).json({ message: "Webhook procesado correctamente" });
   } catch (error) {
     console.error("Error procesando el webhook:", error.message);
