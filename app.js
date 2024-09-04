@@ -48,12 +48,37 @@ app.use('/products', bodyParser.json({limit: '50mb', type: 'application/json'}),
 app.use("/customers", bodyParser.json({limit: '50mb', type: 'application/json'}), auth, userRoutes)
 
 app.use("/customer/new", express.raw({ type: 'application/json' }), validateSignature, async (req, res) => {
-    const data = JSON.parse(req.body);
-    console.log('Webhook recibido:', data);
+    try {
+        const data = JSON.parse(req.body);
+        delete data.tax_exemptions
+        delete data.email_marketing_consent
+        delete data.sms_marketing_consent
+        delete data.multipass_identifier
 
-    const response = await axios.post("http://informes.luvik.com.ar/shopify.php", data)
+        const note = data.note
+        const lines = note.split('\n');
+        const extractedData = {};
 
-    return response
+        lines.forEach(line => {
+            const trimmedLine = line.trim(); 
+            if (trimmedLine && trimmedLine.includes(':')) { 
+                const [key, value] = trimmedLine.split(/:(.+)/); 
+                extractedData[key.trim()] = value.trim(); 
+            }
+        });
+
+        data.note = extractedData
+
+        console.log('Webhook recibido:', data);
+
+        await axios.post("http://informes.luvik.com.ar/shopify.php", data)
+
+        res.status(200).json({ message: 'Webhook procesado correctamente' });
+
+    } catch (error) {
+        console.error('Error procesando el webhook:', error.message);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
 })
 
 app.use("/orders", express.raw({ type: 'application/json' }), validateSignature, orderRoutes)
