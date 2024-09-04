@@ -86,29 +86,22 @@ exports.listCollections = async () => {
       params = customCollections.nextPageParameters;
     } while (params !== undefined);
 
-    // Crear un nuevo libro de trabajo (workbook)
     const workbook = XLSX.utils.book_new();
 
-    // Crear datos para la hoja
     const data = [['Title', 'ID']]; // Encabezados de la hoja
 
-    // Insertar cada colección en una fila del Excel
     allCollections.forEach(collection => {
       console.log(`ID: ${collection.id}, Name: ${collection.title}`);
 
-      // Agregar cada colección como una fila en los datos
       data.push([collection.title, collection.id]);
     });
 
-    // Crear una nueva hoja
     const worksheet = XLSX.utils.aoa_to_sheet(data);
 
-    // Agregar la hoja al libro de trabajo con el nombre 'Collections'
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Collections');
 
     console.log(allCollections.length);
 
-    // Guardar el libro de trabajo en un archivo Excel
     XLSX.writeFile(workbook, 'collections.xlsx');
 
     return allCollections;
