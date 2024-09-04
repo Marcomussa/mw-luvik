@@ -1,6 +1,8 @@
 require('dotenv').config()
 const axios = require('axios')
 const Shopify = require('shopify-api-node')
+const XLSX = require('xlsx');
+const fs = require('fs');
 
 const SHOPIFY_STORE_URL = `https://${process.env.SHOPIFY_STORE_URL}/admin/api/2024-04`
 const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY 
@@ -75,25 +77,46 @@ exports.listProductsWithMetafields = async () => {
 
 exports.listCollections = async () => {
   try {
-    let allCollections = []
-    let params = { limit: 250 }
+    let allCollections = [];
+    let params = { limit: 250 };
 
     do {
-      const customCollections = await shopify.customCollection.list(params)
-      allCollections = allCollections.concat(customCollections)
-      params = customCollections.nextPageParameters
-    } while (params !== undefined)
+      const customCollections = await shopify.customCollection.list(params);
+      allCollections = allCollections.concat(customCollections);
+      params = customCollections.nextPageParameters;
+    } while (params !== undefined);
 
+    // Crear un nuevo libro de trabajo (workbook)
+    const workbook = XLSX.utils.book_new();
+
+    // Crear datos para la hoja
+    const data = [['Title', 'ID']]; // Encabezados de la hoja
+
+    // Insertar cada colección en una fila del Excel
     allCollections.forEach(collection => {
-      console.log(`ID: ${collection.id}, Name: ${collection.title}`)
-    })
+      console.log(`ID: ${collection.id}, Name: ${collection.title}`);
 
-    return allCollections
+      // Agregar cada colección como una fila en los datos
+      data.push([collection.title, collection.id]);
+    });
+
+    // Crear una nueva hoja
+    const worksheet = XLSX.utils.aoa_to_sheet(data);
+
+    // Agregar la hoja al libro de trabajo con el nombre 'Collections'
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Collections');
+
+    console.log(allCollections.length);
+
+    // Guardar el libro de trabajo en un archivo Excel
+    XLSX.writeFile(workbook, 'collections.xlsx');
+
+    return allCollections;
   } catch (error) {
-    console.error('Error fetching collections:', error.message)
-    throw new Error('Error fetching collections')
+    console.error('Error fetching collections:', error.message);
+    throw new Error('Error fetching collections');
   }
-}
+};
 
 exports.listProductIDsByName = async (productName) => {
   try {
