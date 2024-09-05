@@ -88,7 +88,7 @@ exports.listCollections = async () => {
 
     const workbook = XLSX.utils.book_new();
 
-    const data = [['Title', 'ID']]; // Encabezados de la hoja
+    const data = [['Title', 'ID']]; 
 
     allCollections.forEach(collection => {
       console.log(`ID: ${collection.id}, Name: ${collection.title}`);
@@ -137,6 +137,7 @@ exports.listProductIDsByName = async (productName) => {
   }
 }
 
+//todo: Implementar validacion de producto existente
 exports.createProduct = async (productData) => {
   try {
     productData.product.images = [{
@@ -153,10 +154,13 @@ exports.createProduct = async (productData) => {
       productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps
     }
 
-    //todo: Implementar validacion de producto existente
-
     const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
     const productId = response.data.product.id
+
+    // Asignacion automatica de coleccion oferta
+    if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
+      await assignProductToCollections(productId, [282433814614])
+    }
 
     if (productData.product.collection && productData.product.collection.length > 0) {
       await assignProductToCollections(productId, productData.product.collection)
@@ -175,8 +179,28 @@ exports.createProduct = async (productData) => {
 
 exports.updateProduct = async (id, productData) => {
   try {
+    // No existe oferta
+    if (productData.product.lumps) {
+      productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps
+    }
+
+    // Existe oferta
+    if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
+      productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps
+    }
+
     const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
     const productId = response.data.product.id
+
+    const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, 282433814614)
+
+    if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
+      await assignProductToCollections(productId, [282433814614])
+    } 
+
+    if (isCollectionInProduct && !productData.product.variants[0].compare_at_price) {
+      await removeProductFromCollections(productId, [282433814614])
+    } 
 
     if (productData.product.newCollection && productData.product.newCollection.length > 0) {
       await assignProductToCollections(productId, productData.product.newCollection)
@@ -267,6 +291,25 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
     throw error;
   }
 };
+
+//! Checkiar si una coleccion ya esta en un producto
+const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
+  try {
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    const customCollections = await shopify.customCollection.list({ product_id: productId });
+    const isInCollection = customCollections.some(
+      (collection) => collection.id.toString() === collectionId.toString()
+    );
+
+    await delay(250)
+
+    return isInCollection;
+  } catch (error) {
+    console.error('Error al consultar el producto:', error.message);
+    return false; 
+  }
+}
 
 //! Eliminar Colecciones
 const removeProductFromCollections = async (productId, collectionIdsToRemove) => {
