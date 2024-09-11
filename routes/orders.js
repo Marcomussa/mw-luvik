@@ -6,8 +6,6 @@ const router = express.Router();
 router.post("/new", async (req, res) => {
   try {
     const data = JSON.parse(req.body);
-
-
     delete data.app_id;
     delete data.cart_token;
     delete data.checkout_id;

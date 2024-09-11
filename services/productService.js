@@ -3,18 +3,26 @@ const shopifyClient = require('../clients/shopifyClient');
 exports.handleBatch = async (created, updated, deleted) => {
   // Procesar productos creados
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+  const createdProductIds = [];
 
   // Procesar productos creados
   if (created && created.length > 0) {
     for (const product of created) {
       try {
-        await shopifyClient.createProduct(product);
+        const response = await shopifyClient.createProduct(product);
+
+        if (response && response.product && response.product.id) {
+          createdProductIds.push(response.product.id);
+        }
+
         console.log(`Producto creado: ${product.product.title}`);
       } catch (error) {
         console.log(`Error al crear producto ${product.product.title}: ${error.message}`);
       }
       await delay(500);
     }
+
+    return createdProductIds;
   }
 
   // Procesar productos actualizados

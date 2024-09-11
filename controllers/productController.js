@@ -4,8 +4,17 @@ const shopifyClient = require('../clients/shopifyClient')
 exports.handleBatch = async (req, res) => {
   try {
     const { created, updated, deleted } = req.body
-    await productService.handleBatch(created, updated, deleted)
-    res.status(200).json({ message: 'Batch Ok' })
+    const createdProductIds = await productService.handleBatch(created, updated, deleted);
+
+    // Determina si se han creado nuevos productos para incluir en la respuesta
+    const response = {
+      message: 'Batch Ok'
+    };
+
+    if (created && created.length > 0) {
+      response.createdProductIds = createdProductIds;
+    }
+    res.status(200).json(response);
   } catch (error) {
     res.status(500).json({ message: error})
     console.log('Error en Batch (Productos). productController.js')

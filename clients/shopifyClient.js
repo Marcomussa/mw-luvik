@@ -192,6 +192,7 @@ exports.updateProduct = async (id, productData) => {
     const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
     const productId = response.data.product.id
 
+    // Coleccion de Oferta
     const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, 282433814614)
 
     if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
