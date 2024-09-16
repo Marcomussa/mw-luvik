@@ -99,6 +99,7 @@ router.post("/new", async (req, res) => {
     delete data.shipping_lines[0].requested_fulfillment_service_id
     delete data.shipping_lines[0].phone
     delete data.shipping_lines[0].is_removed
+    delete data.shipping_lines[0].current_discounted_price_set
 
     const lines = data.customer.note.split("\n");
     const extractedData = {};
