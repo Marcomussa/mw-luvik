@@ -116,7 +116,7 @@ router.post("/new", async (req, res) => {
 
     console.log(data)
 
-    await axios.post("http://informes.luvik.com.ar/shopify.php", data);
+    await axios.post("http://informes.luvik.com.ar/shopify_pedido.php", data);
 
     console.log("Webhook recibido:", data);
     res.status(200).json({ message: "Webhook procesado correctamente" });

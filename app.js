@@ -71,7 +71,7 @@ app.use("/customer/new", express.raw({ type: 'application/json' }), validateSign
 
         console.log('Webhook recibido:', data);
 
-        await axios.post("http://informes.luvik.com.ar/shopify.php", data)
+        await axios.post("http://informes.luvik.com.ar/shopify_cliente.php", data)
 
         res.status(200).json({ message: 'Webhook procesado correctamente' });
 
