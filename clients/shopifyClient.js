@@ -25,18 +25,51 @@ const shopify = new Shopify({
 //* -- -- Product -- -- */
 exports.listProducts = async () => {
   try {
-    const products = await shopify.product.list()
-    
-    products.forEach(product => {
-      console.log(`ID: ${product.id}, Title: ${product.title}, Price: ${product.variants[0].price}`)
-    })
+    let allProducts = [];
+    let hasMoreProducts = true;
+    let lastId = null; 
 
-    return products
+    while (hasMoreProducts) {
+      const params = {
+        limit: 250,
+      };
+
+      if (lastId) {
+        params.since_id = lastId;
+      }
+
+      const products = await shopify.product.list(params);
+      
+      allProducts = allProducts.concat(products); 
+
+      if (products.length < 250) {
+        hasMoreProducts = false;
+      } else {
+        lastId = products[products.length - 1].id;
+      }
+    }
+
+    const productDetails = allProducts.map(product => ({
+      id: product.id,
+      title: product.title,
+      sku: product.variants[0].sku
+    }));
+
+    return {
+      success: true,
+      data: productDetails
+    };
   } catch (error) {
-    console.log(error.message)
-    throw error.message
+    console.error(`Error Listando Productos. productController.js: ${error.message}`);
+
+    // Lanzar un error con un mensaje claro
+    throw {
+      success: false,
+      message: `Error Listando Productos. productController.js: ${error.message}`
+    };
   }
-}
+};
+
 
 exports.listProductByID = async (productId) => {
   try {
