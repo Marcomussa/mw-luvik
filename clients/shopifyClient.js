@@ -326,6 +326,7 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
             product_id: productId,
             collection_id: collectionId
           });
+          await delay(500);
           console.log(`Asignado exitosamente a colección ${collectionId}`, response);
         } else {
           console.log(`Producto ya existente en coleccion ${collectionId}`)
@@ -345,6 +346,7 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
 
 
 //! Checkiar si una coleccion ya esta en un producto
+//todo: Pasarlo a una DB externa
 const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
   try {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -369,6 +371,7 @@ const removeProductFromCollections = async (productId, collectionIdsToRemove) =>
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     for (const collectionId of collectionIdsToRemove) {
+      //todo: Pasarlo a una DB externa
       const collects = await shopify.collect.list({
         product_id: productId,
         collection_id: collectionId
