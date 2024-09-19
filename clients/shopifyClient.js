@@ -244,6 +244,7 @@ exports.updateProduct = async (id, productData) => {
       await removeProductFromCollections(productId, productData.product.deleteCollection)
     }
 
+    console.log(`Producto ${productId} Actualizado`)
     return response.data
   } catch (error) {
     console.log('Error Actualizando Producto. Shopifyclient ', error.message)
