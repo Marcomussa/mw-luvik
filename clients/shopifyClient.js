@@ -244,7 +244,6 @@ exports.updateProduct = async (id, productData) => {
       await removeProductFromCollections(productId, productData.product.deleteCollection)
     }
 
-    console.log(`Producto ${productId} Actualizado`)
     return response.data
   } catch (error) {
     console.log('Error Actualizando Producto. Shopifyclient ', error.message)
@@ -310,22 +309,39 @@ const checkIfProductIsCreated = async (sku) => {
 
 //! Asignar Colecciones
 const assignProductToCollections = async (productId, newCollectionIds) => {
+  console.log(`Producto ID: ${productId}`);
+  console.log('Colecciones:', newCollectionIds);
+
   try {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     for (const collectionId of newCollectionIds) {
-      await shopify.collect.create({
-        product_id: productId,
-        collection_id: collectionId
-      });
-      await delay(250)
-      console.log(`Asignado a colección ${collectionId}`);
+      console.log(`Asignando producto ${productId} a colección ${collectionId}`);
+      try {
+        const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, collectionId)
+       
+        if(!isCollectionInProduct){
+          const response = await shopify.collect.create({
+            product_id: productId,
+            collection_id: collectionId
+          });
+          console.log(`Asignado exitosamente a colección ${collectionId}`, response);
+        } else {
+          console.log(`Producto ya existente en coleccion ${collectionId}`)
+        }
+
+      } catch (err) {
+        console.log(`Error al asignar a colección ${collectionId}:`, err.response ? err.response.data : err.message);
+        throw err;
+      }
+      await delay(500);  // Aumentar el delay a 500ms
     }
   } catch (error) {
-    console.log('Error Asignando Producto a Colecciones: ', error.message);
+    console.log('Error asignando producto a colecciones:', error.message);
     throw error;
   }
 };
+
 
 //! Checkiar si una coleccion ya esta en un producto
 const checkIfCollectionIsOnProduct = async (productId, collectionId) => {

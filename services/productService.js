@@ -27,10 +27,16 @@ exports.handleBatch = async (created, updated, deleted) => {
 
   // Procesar productos actualizados
   if (updated && updated.length > 0) {
-    await Promise.all(updated.map(async (product) => {
-      await shopifyClient.updateProduct(product.product.id, product);
+    for (const product of updated) {
+      try {
+        await shopifyClient.updateProduct(product.product.id, product);
+        console.log(`Producto ${product.product.id} Actualizado Correctamente`)
+
+      } catch (error) {
+        console.log(`Error al actualizar producto ${product.product.title}: ${error.message}`);
+      }
       await delay(500);
-    }));
+    }
   }
 
   // Procesar productos eliminados

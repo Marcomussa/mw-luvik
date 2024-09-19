@@ -1,0 +1,4208 @@
+{
+    "update": [
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413442445398",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 568
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413442478166",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413442510934",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 280
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413442543702",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413442609238",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 194
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413442642006",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 45,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413442674774",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 8490
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413442740310",
+                "variants": [
+                    {
+                        "compare_at_price": "1915.24",
+                        "price": "1741.12",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1010
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413442773078",
+                "variants": [
+                    {
+                        "compare_at_price": "539.96",
+                        "price": "490.88",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 13056
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 20,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413442805846",
+                "variants": [
+                    {
+                        "compare_at_price": "427.24",
+                        "price": "388.40",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2473
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 16,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413442838614",
+                "variants": [
+                    {
+                        "compare_at_price": "1126.15",
+                        "price": "1023.77",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 992
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413442871382",
+                "variants": [
+                    {
+                        "compare_at_price": "1464.33",
+                        "price": "1331.21",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1376
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 36,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413442904150",
+                "variants": [
+                    {
+                        "compare_at_price": "990.87",
+                        "price": "900.79",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 8184
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 36,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413442936918",
+                "variants": [
+                    {
+                        "compare_at_price": "844.33",
+                        "price": "767.57",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 36,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413442969686",
+                "variants": [
+                    {
+                        "compare_at_price": "900.69",
+                        "price": "818.81",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 902
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 36,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443002454",
+                "variants": [
+                    {
+                        "compare_at_price": "652.69",
+                        "price": "593.36",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 4824
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 60,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443035222",
+                "variants": [
+                    {
+                        "compare_at_price": "900.69",
+                        "price": "818.81",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 5020
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 54,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443067990",
+                "variants": [
+                    {
+                        "compare_at_price": "438.51",
+                        "price": "398.64",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1150
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413443100758",
+                "variants": [
+                    {
+                        "compare_at_price": "528.69",
+                        "price": "480.63",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3792
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413443133526",
+                "variants": [
+                    {
+                        "compare_at_price": "528.69",
+                        "price": "480.63",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3488
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 20,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443166294",
+                "variants": [
+                    {
+                        "compare_at_price": "8678.87",
+                        "price": "7889.88",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 800
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443199062",
+                "variants": [
+                    {
+                        "compare_at_price": "3718.87",
+                        "price": "3380.79",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 13614
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443231830",
+                "variants": [
+                    {
+                        "compare_at_price": "2366.15",
+                        "price": "2151.04",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 8007
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443264598",
+                "variants": [
+                    {
+                        "compare_at_price": "1126.15",
+                        "price": "1023.77",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3352
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443297366",
+                "variants": [
+                    {
+                        "compare_at_price": "2760.69",
+                        "price": "2509.72",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 473
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413443330134",
+                "variants": [
+                    {
+                        "compare_at_price": "2478.87",
+                        "price": "2253.52",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3777
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413443362902",
+                "variants": [
+                    {
+                        "compare_at_price": "1351.60",
+                        "price": "1228.73",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2796
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413443395670",
+                "variants": [
+                    {
+                        "compare_at_price": "3042.51",
+                        "price": "2765.92",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3520
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 1,
+                "newCollection": [
+                    278872457302,
+                    279989911638,
+                    279990370390,
+                    279993548886
+                ],
+                "id": "7413443428438",
+                "variants": [
+                    {
+                        "compare_at_price": "16569.78",
+                        "price": "15063.44",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 60,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413443526742",
+                "variants": [
+                    {
+                        "compare_at_price": "731.60",
+                        "price": "665.09",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3420
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413443592278",
+                "variants": [
+                    {
+                        "compare_at_price": "2253.42",
+                        "price": "2048.56",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 328
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    279990894678
+                ],
+                "id": "7413443625046",
+                "variants": [
+                    {
+                        "compare_at_price": "5747.96",
+                        "price": "5225.42",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 224
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    279990894678
+                ],
+                "id": "7413443690582",
+                "variants": [
+                    {
+                        "compare_at_price": "5747.96",
+                        "price": "5225.42",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 104
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413443723350",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 23498
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443756118",
+                "variants": [
+                    {
+                        "compare_at_price": "1577.05",
+                        "price": "1433.69",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2672
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413443821654",
+                "variants": [
+                    {
+                        "compare_at_price": "2084.33",
+                        "price": "1894.84",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 940
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413443854422",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 824
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443919958",
+                "variants": [
+                    {
+                        "compare_at_price": "878.15",
+                        "price": "798.31",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 8249
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 30,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413443952726",
+                "variants": [
+                    {
+                        "compare_at_price": "630.15",
+                        "price": "572.86",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 15766
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 30,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444051030",
+                "variants": [
+                    {
+                        "compare_at_price": "630.15",
+                        "price": "572.86",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 17470
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413444083798",
+                "variants": [
+                    {
+                        "compare_at_price": "2873.42",
+                        "price": "2612.20",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 744
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413444116566",
+                "variants": [
+                    {
+                        "compare_at_price": "1464.33",
+                        "price": "1331.21",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 5512
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413444149334",
+                "variants": [
+                    {
+                        "compare_at_price": "8227.96",
+                        "price": "7479.97",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 84
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413444182102",
+                "variants": [
+                    {
+                        "compare_at_price": "4846.15",
+                        "price": "4405.59",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 64
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413444214870",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 732
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 16,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413444247638",
+                "variants": [
+                    {
+                        "compare_at_price": "731.60",
+                        "price": "665.09",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 512
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444280406",
+                "variants": [
+                    {
+                        "compare_at_price": "1126.15",
+                        "price": "1023.77",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3102
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444313174",
+                "variants": [
+                    {
+                        "compare_at_price": "1915.24",
+                        "price": "1741.12",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1986
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 9,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444345942",
+                "variants": [
+                    {
+                        "compare_at_price": "1577.05",
+                        "price": "1433.69",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3144
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 9,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444378710",
+                "variants": [
+                    {
+                        "compare_at_price": "2478.87",
+                        "price": "2253.52",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2586
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444444246",
+                "variants": [
+                    {
+                        "compare_at_price": "2366.15",
+                        "price": "2151.04",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3509
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444477014",
+                "variants": [
+                    {
+                        "compare_at_price": "1126.15",
+                        "price": "1023.77",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2694
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444509782",
+                "variants": [
+                    {
+                        "compare_at_price": "900.69",
+                        "price": "818.81",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1658
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 9,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444542550",
+                "variants": [
+                    {
+                        "compare_at_price": "1802.51",
+                        "price": "1638.64",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2784
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 9,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444575318",
+                "variants": [
+                    {
+                        "compare_at_price": "1464.33",
+                        "price": "1331.21",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2856
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 21,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444608086",
+                "variants": [
+                    {
+                        "compare_at_price": "2704.33",
+                        "price": "2458.48",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 315
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 21,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444673622",
+                "variants": [
+                    {
+                        "compare_at_price": "2704.33",
+                        "price": "2458.48",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 259
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 21,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444706390",
+                "variants": [
+                    {
+                        "compare_at_price": "2704.33",
+                        "price": "2458.48",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 258
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413444739158",
+                "variants": [
+                    {
+                        "compare_at_price": "844.33",
+                        "price": "767.57",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 8200
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 3,
+                "newCollection": [
+                    278872457302,
+                    279989911638,
+                    279990534230,
+                    279993712726
+                ],
+                "id": "7413444804694",
+                "variants": [
+                    {
+                        "compare_at_price": "2140.69",
+                        "price": "1946.08",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 717
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 2,
+                "newCollection": [
+                    278872457302,
+                    279989911638,
+                    279990534230,
+                    279993712726
+                ],
+                "id": "7413444870230",
+                "variants": [
+                    {
+                        "compare_at_price": "2140.69",
+                        "price": "1946.08",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 756
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413444902998",
+                "variants": [
+                    {
+                        "compare_at_price": "517.42",
+                        "price": "470.38",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 556
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413444935766",
+                "variants": [
+                    {
+                        "compare_at_price": "2535.24",
+                        "price": "2304.76",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 948
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 1,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413444968534",
+                "variants": [
+                    {
+                        "compare_at_price": "6198.87",
+                        "price": "5635.34",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1617
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445001302",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 400
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445034070",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1844
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445066838",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 240
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445099606",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 600
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445165142",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 705
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413445197910",
+                "variants": [
+                    {
+                        "compare_at_price": "2084.33",
+                        "price": "1894.84",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1028
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 30,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413445230678",
+                "variants": [
+                    {
+                        "compare_at_price": "1126.15",
+                        "price": "1023.77",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 960
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 36,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413445263446",
+                "variants": [
+                    {
+                        "compare_at_price": "844.33",
+                        "price": "767.57",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1140
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 36,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413445296214",
+                "variants": [
+                    {
+                        "compare_at_price": "612.44",
+                        "price": "556.76",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 900
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 30,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413445328982",
+                "variants": [
+                    {
+                        "compare_at_price": "1126.15",
+                        "price": "1023.77",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1510
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413445361750",
+                "variants": [
+                    {
+                        "compare_at_price": "1689.78",
+                        "price": "1536.17",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1522
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445394518",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3808
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445460054",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 696
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445492822",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1906
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445525590",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3616
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445558358",
+                "variants": [
+                    {
+                        "compare_at_price": "630.15",
+                        "price": "572.86",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 18552
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 18,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445591126",
+                "variants": [
+                    {
+                        "compare_at_price": "382.15",
+                        "price": "347.40",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 4138
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445623894",
+                "variants": [
+                    {
+                        "compare_at_price": "1520.69",
+                        "price": "1382.45",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1040
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445656662",
+                "variants": [
+                    {
+                        "compare_at_price": "1520.69",
+                        "price": "1382.45",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 317
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445722198",
+                "variants": [
+                    {
+                        "compare_at_price": "1520.69",
+                        "price": "1382.45",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1179
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445754966",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 13064
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445787734",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 290
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445820502",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 450
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413445853270",
+                "variants": [
+                    {
+                        "compare_at_price": "1520.69",
+                        "price": "1382.45",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 170
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445886038",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 23244
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 21,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413445951574",
+                "variants": [
+                    {
+                        "compare_at_price": "1577.05",
+                        "price": "1433.69",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1316
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413445984342",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 180
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446017110",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 356
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446049878",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 488
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446082646",
+                "variants": [
+                    {
+                        "compare_at_price": "731.60",
+                        "price": "665.09",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2152
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446115414",
+                "variants": [
+                    {
+                        "compare_at_price": "787.96",
+                        "price": "716.33",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 200
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446148182",
+                "variants": [
+                    {
+                        "compare_at_price": "968.33",
+                        "price": "880.30",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 64240
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446180950",
+                "variants": [
+                    {
+                        "compare_at_price": "1238.87",
+                        "price": "1126.25",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 34834
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446246486",
+                "variants": [
+                    {
+                        "compare_at_price": "449.78",
+                        "price": "408.89",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 920
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446279254",
+                "variants": [
+                    {
+                        "compare_at_price": "731.60",
+                        "price": "665.09",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 512
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446312022",
+                "variants": [
+                    {
+                        "compare_at_price": "787.96",
+                        "price": "716.33",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 652
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413446344790",
+                "variants": [
+                    {
+                        "compare_at_price": "2027.96",
+                        "price": "1843.60",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 888
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446377558",
+                "variants": [
+                    {
+                        "compare_at_price": "506.15",
+                        "price": "460.13",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 4296
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446410326",
+                "variants": [
+                    {
+                        "compare_at_price": "641.42",
+                        "price": "583.11",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 7509
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446475862",
+                "variants": [
+                    {
+                        "compare_at_price": "1002.15",
+                        "price": "911.04",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 4745
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 16,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446541398",
+                "variants": [
+                    {
+                        "compare_at_price": "821.78",
+                        "price": "747.07",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 4938
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446574166",
+                "variants": [
+                    {
+                        "compare_at_price": "562.51",
+                        "price": "511.37",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1816
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446606934",
+                "variants": [
+                    {
+                        "compare_at_price": "1858.87",
+                        "price": "1689.88",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3789
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446639702",
+                "variants": [
+                    {
+                        "compare_at_price": "742.87",
+                        "price": "675.34",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 9196
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 16,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446672470",
+                "variants": [
+                    {
+                        "compare_at_price": "1058.51",
+                        "price": "962.28",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 16,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446705238",
+                "variants": [
+                    {
+                        "compare_at_price": "1058.51",
+                        "price": "962.28",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 16,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446770774",
+                "variants": [
+                    {
+                        "compare_at_price": "1058.51",
+                        "price": "962.28",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 437
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 16,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446803542",
+                "variants": [
+                    {
+                        "compare_at_price": "1058.51",
+                        "price": "962.28",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 5
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 16,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446836310",
+                "variants": [
+                    {
+                        "compare_at_price": "1058.51",
+                        "price": "962.28",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446869078",
+                "variants": [
+                    {
+                        "compare_at_price": "772.80",
+                        "price": "702.55",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2259
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446901846",
+                "variants": [
+                    {
+                        "compare_at_price": "890.83",
+                        "price": "809.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 7786
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413446934614",
+                "variants": [
+                    {
+                        "compare_at_price": "787.96",
+                        "price": "716.33",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 16
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413446967382",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 416
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447065686",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 705
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413447098454",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 186
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413447131222",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 1,
+                "newCollection": [
+                    279989911638,
+                    279990403158,
+                    279993679958,
+                    280600281174
+                ],
+                "id": "7413447163990",
+                "variants": [
+                    {
+                        "compare_at_price": "11271.60",
+                        "price": "10246.91",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 364
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447196758",
+                "variants": [
+                    {
+                        "compare_at_price": "539.96",
+                        "price": "490.88",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 996
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447262294",
+                "variants": [
+                    {
+                        "compare_at_price": "562.51",
+                        "price": "511.37",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447295062",
+                "variants": [
+                    {
+                        "compare_at_price": "562.51",
+                        "price": "511.37",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447360598",
+                "variants": [
+                    {
+                        "compare_at_price": "562.51",
+                        "price": "511.37",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447393366",
+                "variants": [
+                    {
+                        "compare_at_price": "562.51",
+                        "price": "511.37",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447426134",
+                "variants": [
+                    {
+                        "compare_at_price": "562.51",
+                        "price": "511.37",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447458902",
+                "variants": [
+                    {
+                        "compare_at_price": "562.51",
+                        "price": "511.37",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413447524438",
+                "variants": [
+                    {
+                        "compare_at_price": "1464.33",
+                        "price": "1331.21",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 800
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447557206",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1013
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447589974",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1355
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447622742",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1220
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447688278",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 8518
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447721046",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447753814",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1803
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 20,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447786582",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 6693
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 20,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447884886",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3240
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447917654",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2055
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447950422",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 564
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413447983190",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 436
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413448048726",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1168
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 20,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413448081494",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3629
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 20,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413448114262",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 4553
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413448147030",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 371
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413448179798",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2342
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 24,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413448245334",
+                "variants": [
+                    {
+                        "compare_at_price": "742.87",
+                        "price": "675.34",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3096
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413448310870",
+                "variants": [
+                    {
+                        "compare_at_price": "844.33",
+                        "price": "767.57",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 40
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413448343638",
+                "variants": [
+                    {
+                        "compare_at_price": "1238.87",
+                        "price": "1126.25",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 904
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413448376406",
+                "variants": [
+                    {
+                        "compare_at_price": "507.27",
+                        "price": "461.16",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 11
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413448409174",
+                "variants": [
+                    {
+                        "compare_at_price": "1182.51",
+                        "price": "1075.01",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 546
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 8,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413448441942",
+                "variants": [
+                    {
+                        "compare_at_price": "1520.69",
+                        "price": "1382.45",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 32
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413448474710",
+                "variants": [
+                    {
+                        "compare_at_price": "1013.42",
+                        "price": "921.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 980
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413448540246",
+                "variants": [
+                    {
+                        "compare_at_price": "1610.87",
+                        "price": "1464.43",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413448573014",
+                "variants": [
+                    {
+                        "compare_at_price": "945.78",
+                        "price": "859.80",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 18,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413448605782",
+                "variants": [
+                    {
+                        "compare_at_price": "528.69",
+                        "price": "480.63",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 882
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413448671318",
+                "variants": [
+                    {
+                        "compare_at_price": "675.24",
+                        "price": "613.85",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 252
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    280600281174
+                ],
+                "id": "7413448704086",
+                "variants": [
+                    {
+                        "compare_at_price": "1351.60",
+                        "price": "1228.73",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2336
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413448736854",
+                "variants": [
+                    {
+                        "compare_at_price": "1317.78",
+                        "price": "1197.98",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 112
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413448802390",
+                "variants": [
+                    {
+                        "compare_at_price": "2366.15",
+                        "price": "2151.04",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 52
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 1,
+                "newCollection": [
+                    279989911638,
+                    279990403158,
+                    279993679958,
+                    280600281174
+                ],
+                "id": "7413448835158",
+                "variants": [
+                    {
+                        "compare_at_price": "15780.69",
+                        "price": "14346.08",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 30
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [],
+                "id": "7413448867926",
+                "variants": [
+                    {
+                        "compare_at_price": "1238.87",
+                        "price": "1126.25",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 420
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [],
+                "id": "7413448900694",
+                "variants": [
+                    {
+                        "compare_at_price": "1238.87",
+                        "price": "1126.25",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 12
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [],
+                "id": "7413448933462",
+                "variants": [
+                    {
+                        "compare_at_price": "1238.87",
+                        "price": "1126.25",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 596
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 25,
+                "newCollection": [],
+                "id": "7413448966230",
+                "variants": [
+                    {
+                        "compare_at_price": "291.96",
+                        "price": "265.42",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 450
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302,
+                    279989911638,
+                    279990566998,
+                    279993745494
+                ],
+                "id": "7413448998998",
+                "variants": [
+                    {
+                        "compare_at_price": "1689.78",
+                        "price": "1536.17",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 64
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413449031766",
+                "variants": [
+                    {
+                        "compare_at_price": "1689.78",
+                        "price": "1536.17",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 4
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278872457302,
+                    279989911638,
+                    279990566998,
+                    279993745494
+                ],
+                "id": "7413449064534",
+                "variants": [
+                    {
+                        "compare_at_price": "1689.78",
+                        "price": "1536.17",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 60
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    278872457302,
+                    279989911638,
+                    279990566998,
+                    279993745494
+                ],
+                "id": "7413449130070",
+                "variants": [
+                    {
+                        "compare_at_price": "2478.87",
+                        "price": "2253.52",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 46
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 1,
+                "newCollection": [
+                    278872457302,
+                    279989911638,
+                    279990566998,
+                    279993811030
+                ],
+                "id": "7413449162838",
+                "variants": [
+                    {
+                        "compare_at_price": "10144.33",
+                        "price": "9222.12",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 35
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 1,
+                "newCollection": [
+                    279989911638
+                ],
+                "id": "7413449195606",
+                "variants": [
+                    {
+                        "compare_at_price": "28180.69",
+                        "price": "25618.81",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 11
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413449228374",
+                "variants": [
+                    {
+                        "compare_at_price": "900.69",
+                        "price": "818.81",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 7529
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 4,
+                "newCollection": [
+                    278872457302
+                ],
+                "id": "7413449392214",
+                "variants": [
+                    {
+                        "compare_at_price": "2140.69",
+                        "price": "1946.08",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 453
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 1,
+                "newCollection": [
+                    278872457302,
+                    279989911638,
+                    279990730838,
+                    279994007638
+                ],
+                "id": "7413449588822",
+                "variants": [
+                    {
+                        "compare_at_price": "14653.42",
+                        "price": "13321.29",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 50,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413449621590",
+                "variants": [
+                    {
+                        "compare_at_price": "754.15",
+                        "price": "685.59",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 4416
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 50,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413449654358",
+                "variants": [
+                    {
+                        "compare_at_price": "754.15",
+                        "price": "685.59",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 683
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 50,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413449687126",
+                "variants": [
+                    {
+                        "compare_at_price": "754.15",
+                        "price": "685.59",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1033
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 40,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413449719894",
+                "variants": [
+                    {
+                        "compare_at_price": "1002.15",
+                        "price": "911.04",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 826
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413449785430",
+                "variants": [
+                    {
+                        "compare_at_price": "2422.51",
+                        "price": "2202.28",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 176
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413449818198",
+                "variants": [
+                    {
+                        "compare_at_price": "2422.51",
+                        "price": "2202.28",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 232
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413449850966",
+                "variants": [
+                    {
+                        "compare_at_price": "2140.69",
+                        "price": "1946.08",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 172
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 21,
+                "newCollection": [
+                    278925312086
+                ],
+                "id": "7413449916502",
+                "variants": [
+                    {
+                        "compare_at_price": "2005.42",
+                        "price": "1823.11",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 336
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 10,
+                "newCollection": [
+                    278925312086
+                ],
+                "id": "7413449949270",
+                "variants": [
+                    {
+                        "compare_at_price": "2140.69",
+                        "price": "1946.08",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 15889
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    278925312086
+                ],
+                "id": "7413449982038",
+                "variants": [
+                    {
+                        "compare_at_price": "1295.24",
+                        "price": "1177.49",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 6704
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 21,
+                "newCollection": [
+                    278925312086
+                ],
+                "id": "7413450014806",
+                "variants": [
+                    {
+                        "compare_at_price": "1791.24",
+                        "price": "1628.40",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 217
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 20,
+                "newCollection": [
+                    279990894678
+                ],
+                "id": "7413450047574",
+                "variants": [
+                    {
+                        "compare_at_price": "3042.51",
+                        "price": "2765.92",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 480
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 20,
+                "newCollection": [
+                    279990894678
+                ],
+                "id": "7413450080342",
+                "variants": [
+                    {
+                        "compare_at_price": "3042.51",
+                        "price": "2765.92",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 593
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 18,
+                "newCollection": [
+                    279990894678
+                ],
+                "id": "7413450113110",
+                "variants": [
+                    {
+                        "compare_at_price": "3042.51",
+                        "price": "2765.92",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 432
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    279990894678
+                ],
+                "id": "7413450145878",
+                "variants": [
+                    {
+                        "compare_at_price": "3042.51",
+                        "price": "2765.92",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 615
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 15,
+                "newCollection": [
+                    279990894678
+                ],
+                "id": "7413450244182",
+                "variants": [
+                    {
+                        "compare_at_price": "3042.51",
+                        "price": "2765.92",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 440
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 54,
+                "newCollection": [
+                    278925410390
+                ],
+                "id": "7413450309718",
+                "variants": [
+                    {
+                        "compare_at_price": "742.87",
+                        "price": "675.34",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1764
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450342486",
+                "variants": [
+                    {
+                        "compare_at_price": "3606.15",
+                        "price": "3278.31",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 246
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450408022",
+                "variants": [
+                    {
+                        "compare_at_price": "3155.24",
+                        "price": "2868.40",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2098
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450440790",
+                "variants": [
+                    {
+                        "compare_at_price": "2027.96",
+                        "price": "1843.60",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1146
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450473558",
+                "variants": [
+                    {
+                        "compare_at_price": "2027.96",
+                        "price": "1843.60",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 542
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450506326",
+                "variants": [
+                    {
+                        "compare_at_price": "1238.87",
+                        "price": "1126.25",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 294
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450539094",
+                "variants": [
+                    {
+                        "compare_at_price": "1238.87",
+                        "price": "1126.25",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 3625
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450571862",
+                "variants": [
+                    {
+                        "compare_at_price": "4879.96",
+                        "price": "4436.33",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 338
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450604630",
+                "variants": [
+                    {
+                        "compare_at_price": "4879.96",
+                        "price": "4436.33",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 170
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450637398",
+                "variants": [
+                    {
+                        "compare_at_price": "2084.33",
+                        "price": "1894.84",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 944
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450670166",
+                "variants": [
+                    {
+                        "compare_at_price": "2084.33",
+                        "price": "1894.84",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 6848
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450702934",
+                "variants": [
+                    {
+                        "compare_at_price": "5184.33",
+                        "price": "4713.02",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 64
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450735702",
+                "variants": [
+                    {
+                        "compare_at_price": "5184.33",
+                        "price": "4713.02",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1434
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450768470",
+                "variants": [
+                    {
+                        "compare_at_price": "5184.33",
+                        "price": "4713.02",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 304
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450801238",
+                "variants": [
+                    {
+                        "compare_at_price": "5184.33",
+                        "price": "4713.02",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1688
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450899542",
+                "variants": [
+                    {
+                        "compare_at_price": "7551.60",
+                        "price": "6865.09",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 304
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450932310",
+                "variants": [
+                    {
+                        "compare_at_price": "7551.60",
+                        "price": "6865.09",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 244
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413450997846",
+                "variants": [
+                    {
+                        "compare_at_price": "7551.60",
+                        "price": "6865.09",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 356
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451096150",
+                "variants": [
+                    {
+                        "compare_at_price": "7551.60",
+                        "price": "6865.09",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 434
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 12,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451227222",
+                "variants": [
+                    {
+                        "compare_at_price": "1689.78",
+                        "price": "1536.17",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 1744
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 4,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451292758",
+                "variants": [
+                    {
+                        "compare_at_price": "19162.51",
+                        "price": "17420.46",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 397
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451325526",
+                "variants": [
+                    {
+                        "compare_at_price": "2230.87",
+                        "price": "2028.07",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 294
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451423830",
+                "variants": [
+                    {
+                        "compare_at_price": "2230.87",
+                        "price": "2028.07",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 502
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451489366",
+                "variants": [
+                    {
+                        "compare_at_price": "5635.24",
+                        "price": "5122.94",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 18
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451522134",
+                "variants": [
+                    {
+                        "compare_at_price": "5635.24",
+                        "price": "5122.94",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 184
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451587670",
+                "variants": [
+                    {
+                        "compare_at_price": "5635.24",
+                        "price": "5122.94",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 612
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451620438",
+                "variants": [
+                    {
+                        "compare_at_price": "5635.24",
+                        "price": "5122.94",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 4158
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451653206",
+                "variants": [
+                    {
+                        "compare_at_price": "5635.24",
+                        "price": "5122.94",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 228
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451882582",
+                "variants": [
+                    {
+                        "compare_at_price": "5635.24",
+                        "price": "5122.94",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 230
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413451948118",
+                "variants": [
+                    {
+                        "compare_at_price": "3324.33",
+                        "price": "3022.12",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 302
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452013654",
+                "variants": [
+                    {
+                        "compare_at_price": "5184.33",
+                        "price": "4713.02",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 394
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452079190",
+                "variants": [
+                    {
+                        "compare_at_price": "7551.60",
+                        "price": "6865.09",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 240
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452177494",
+                "variants": [
+                    {
+                        "compare_at_price": "1238.87",
+                        "price": "1126.25",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452374102",
+                "variants": [
+                    {
+                        "compare_at_price": "2704.33",
+                        "price": "2458.48",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 756
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452439638",
+                "variants": [
+                    {
+                        "compare_at_price": "4846.15",
+                        "price": "4405.59",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 38
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452505174",
+                "variants": [
+                    {
+                        "compare_at_price": "4846.15",
+                        "price": "4405.59",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 60
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452537942",
+                "variants": [
+                    {
+                        "compare_at_price": "5297.05",
+                        "price": "4815.50",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452570710",
+                "variants": [
+                    {
+                        "compare_at_price": "1498.15",
+                        "price": "1361.95",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 636
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452603478",
+                "variants": [
+                    {
+                        "compare_at_price": "2760.69",
+                        "price": "2509.72",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 482
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452669014",
+                "variants": [
+                    {
+                        "compare_at_price": "3155.24",
+                        "price": "2868.40",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 616
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452767318",
+                "variants": [
+                    {
+                        "compare_at_price": "4338.87",
+                        "price": "3944.43",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 498
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452800086",
+                "variants": [
+                    {
+                        "compare_at_price": "5297.05",
+                        "price": "4815.50",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 62
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452898390",
+                "variants": [
+                    {
+                        "compare_at_price": "3155.24",
+                        "price": "2868.40",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 680
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452931158",
+                "variants": [
+                    {
+                        "compare_at_price": "1520.69",
+                        "price": "1382.45",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 116
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413452996694",
+                "variants": [
+                    {
+                        "compare_at_price": "2760.69",
+                        "price": "2509.72",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 152
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453029462",
+                "variants": [
+                    {
+                        "compare_at_price": "2760.69",
+                        "price": "2509.72",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 168
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453094998",
+                "variants": [
+                    {
+                        "compare_at_price": "2760.69",
+                        "price": "2509.72",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 120
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453160534",
+                "variants": [
+                    {
+                        "compare_at_price": "2005.42",
+                        "price": "1823.11",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 0
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453226070",
+                "variants": [
+                    {
+                        "compare_at_price": "2817.05",
+                        "price": "2560.96",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 26
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453258838",
+                "variants": [
+                    {
+                        "compare_at_price": "2817.05",
+                        "price": "2560.96",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 160
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453291606",
+                "variants": [
+                    {
+                        "compare_at_price": "5297.05",
+                        "price": "4815.50",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 422
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453422678",
+                "variants": [
+                    {
+                        "compare_at_price": "2760.69",
+                        "price": "2509.72",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 136
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453455446",
+                "variants": [
+                    {
+                        "compare_at_price": "5297.05",
+                        "price": "4815.50",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 542
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453586518",
+                "variants": [
+                    {
+                        "compare_at_price": "3042.51",
+                        "price": "2765.92",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 2132
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453619286",
+                "variants": [
+                    {
+                        "compare_at_price": "3042.51",
+                        "price": "2765.92",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 780
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453652054",
+                "variants": [
+                    {
+                        "compare_at_price": "2817.05",
+                        "price": "2560.96",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 68
+                    }
+                ]
+            }
+        },
+        {
+            "product": {
+                "lumps": 6,
+                "newCollection": [
+                    282437976150
+                ],
+                "id": "7413453684822",
+                "variants": [
+                    {
+                        "compare_at_price": "2817.05",
+                        "price": "2560.96",
+                        "inventory_management": "shopify",
+                        "inventory_quantity:": 132
+                    }
+                ]
+            }
+        }
+    ]
+}
