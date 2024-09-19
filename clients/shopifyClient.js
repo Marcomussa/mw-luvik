@@ -319,7 +319,8 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
       console.log(`Asignando producto ${productId} a colección ${collectionId}`);
       try {
         const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, collectionId)
-       
+        await delay(500);  // Aumentar el delay a 500ms
+
         if(!isCollectionInProduct){
           const response = await shopify.collect.create({
             product_id: productId,
@@ -353,7 +354,7 @@ const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
       (collection) => collection.id.toString() === collectionId.toString()
     );
 
-    await delay(250)
+    await delay(500)
 
     return isInCollection;
   } catch (error) {
