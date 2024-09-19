@@ -283,7 +283,7 @@ exports.deleteProduct = async (id) => {
   await axios.delete(`${SHOPIFY_STORE_URL}/products/${id}.json`, { headers })
 }
 
-//! Checkiar si un producto ya existe
+//! Checkiar si un producto ya existe. TODO!!!
 const checkIfProductIsCreated = async (sku) => {
   try {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));

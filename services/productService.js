@@ -29,6 +29,7 @@ exports.handleBatch = async (created, updated, deleted) => {
   if (updated && updated.length > 0) {
     await Promise.all(updated.map(async (product) => {
       await shopifyClient.updateProduct(product.product.id, product);
+      await delay(500);
     }));
   }
 
@@ -36,6 +37,7 @@ exports.handleBatch = async (created, updated, deleted) => {
   if (deleted && deleted.length > 0) {
     await Promise.all(deleted.map(async (productId) => {
       await shopifyClient.deleteProduct(productId);
+      await delay(500);
     }));
   }
 };
