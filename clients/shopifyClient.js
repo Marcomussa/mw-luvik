@@ -211,6 +211,8 @@ exports.createProduct = async (productData) => {
 }
 
 exports.updateProduct = async (id, productData) => {
+  console.log(id)
+  console.log(productData)
   try {
     // No existe oferta
     if (productData.product.lumps) {
@@ -228,13 +230,13 @@ exports.updateProduct = async (id, productData) => {
     // Coleccion de Oferta
     const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, 282433814614)
 
-    if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
-      await assignProductToCollections(productId, [282433814614])
-    } 
+    // if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
+    //   await assignProductToCollections(productId, [282433814614])
+    // } 
 
-    if (isCollectionInProduct && !productData.product.variants[0].compare_at_price) {
-      await removeProductFromCollections(productId, [282433814614])
-    } 
+    // if (isCollectionInProduct && !productData.product.variants[0].compare_at_price) {
+    //   await removeProductFromCollections(productId, [282433814614])
+    // } 
 
     if (productData.product.newCollection && productData.product.newCollection.length > 0) {
       await assignProductToCollections(productId, productData.product.newCollection)
@@ -280,7 +282,9 @@ exports.updateProductStock = async (id, newStock) => {
 }
 
 exports.deleteProduct = async (id) => {
+  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
   await axios.delete(`${SHOPIFY_STORE_URL}/products/${id}.json`, { headers })
+  await delay(250)
 }
 
 //! Checkiar si un producto ya existe. TODO!!!
@@ -319,14 +323,14 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
       console.log(`Asignando producto ${productId} a colección ${collectionId}`);
       try {
         const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, collectionId)
-        await delay(500);  // Aumentar el delay a 500ms
+        await delay(200);  // Aumentar el delay a 500ms
 
         if(!isCollectionInProduct){
           const response = await shopify.collect.create({
             product_id: productId,
             collection_id: collectionId
           });
-          await delay(500);
+          await delay(200);
           console.log(`Asignado exitosamente a colección ${collectionId}`, response);
         } else {
           console.log(`Producto ya existente en coleccion ${collectionId}`)
@@ -336,7 +340,7 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
         console.log(`Error al asignar a colección ${collectionId}:`, err.response ? err.response.data : err.message);
         throw err;
       }
-      await delay(500);  // Aumentar el delay a 500ms
+      await delay(200);  // Aumentar el delay a 500ms
     }
   } catch (error) {
     console.log('Error asignando producto a colecciones:', error.message);
@@ -356,7 +360,7 @@ const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
       (collection) => collection.id.toString() === collectionId.toString()
     );
 
-    await delay(500)
+    await delay(200)
 
     return isInCollection;
   } catch (error) {

@@ -35,16 +35,22 @@ exports.handleBatch = async (created, updated, deleted) => {
       } catch (error) {
         console.log(`Error al actualizar producto ${product.product.title}: ${error.message}`);
       }
-      await delay(500);
+      await delay(300);
     }
   }
 
   // Procesar productos eliminados
   if (deleted && deleted.length > 0) {
-    await Promise.all(deleted.map(async (productId) => {
-      await shopifyClient.deleteProduct(productId);
-      await delay(500);
-    }));
+    for (const productId of deleted){
+      try {
+        await shopifyClient.deleteProduct(productId)
+        console.log(`Producto ${productId} Eliminado Correctamente`)
+      } catch (error) {
+        console.log(`Error eliminando producto ${error}`)
+        throw error
+      }
+    }
+    await delay(500)
   }
 };
 
