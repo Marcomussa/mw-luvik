@@ -6,7 +6,7 @@ exports.handleBatch = async (created, updated, deleted) => {
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
   const createdProductIds = [];
 
-  if (created && created.length > 0 || updated && updated.length > 0) {
+  if (created || updated ) {
     await productController.postCollectionsToDB()
   }
 
@@ -18,6 +18,7 @@ exports.handleBatch = async (created, updated, deleted) => {
 
         if (response && response.product && response.product.id) {
           createdProductIds.push(response.product.id);
+          await productController.postProductToDB(response, product.product.collection);
         }
 
         console.log(`Producto creado: ${product.product.title}`);

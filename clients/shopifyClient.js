@@ -3,6 +3,8 @@ const axios = require('axios')
 const Shopify = require('shopify-api-node')
 const XLSX = require('xlsx');
 const fs = require('fs');
+const Product = require("../models/Product")
+const mongoose = require("mongoose")
 
 const SHOPIFY_STORE_URL = `https://${process.env.SHOPIFY_STORE_URL}/admin/api/2024-04`
 const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY
@@ -19,7 +21,7 @@ const shopify = new Shopify({
   shopName: process.env.SHOPIFY_STORE_URL,
   apiKey: process.env.SHOPIFY_API_KEY,
   password: SHOPIFY_ACCESS_TOKEN,
-  autoLimit : { calls: 2, interval: 1000, bucketSize: 30 }
+  autoLimit: { calls: 2, interval: 1000, bucketSize: 30 }
 })
 
 //* -- -- Product -- -- */
@@ -129,7 +131,6 @@ exports.listCollections = async () => {
     //const worksheet = XLSX.utils.aoa_to_sheet(data);
     //XLSX.utils.book_append_sheet(workbook, worksheet, 'Collections');
     //XLSX.writeFile(workbook, 'collections.xlsx');
-    console.log(allCollections.length);
 
     return allCollections;
   } catch (error) {
@@ -224,13 +225,25 @@ exports.updateProduct = async (id, productData) => {
     // Coleccion de Oferta
     const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, 282433814614)
 
-    // if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
-    //   await assignProductToCollections(productId, [282433814614])
-    // } 
+    if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
+      await Product.updateOne(
+        { id: productId },
+        { $push: { collections: {
+          "id": 282433814614
+        }}} 
+      );
+      await assignProductToCollections(productId, [282433814614])
+    } 
 
-    // if (isCollectionInProduct && !productData.product.variants[0].compare_at_price) {
-    //   await removeProductFromCollections(productId, [282433814614])
-    // } 
+    if (isCollectionInProduct && !productData.product.variants[0].compare_at_price) {
+      await Product.updateOne(
+        { id: productId },
+        { $pull: { collections: {
+          "id": 282433814614
+        }}} 
+      );
+      await removeProductFromCollections(productId, [282433814614])
+    } 
 
     if (productData.product.newCollection && productData.product.newCollection.length > 0) {
       await assignProductToCollections(productId, productData.product.newCollection)
@@ -306,7 +319,6 @@ const checkIfProductIsCreated = async (sku) => {
 };
 
 //! GET de Productos junto a sus colecciones
-//todo
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 exports.getProductsWithCollections = async () => {
@@ -315,54 +327,51 @@ exports.getProductsWithCollections = async () => {
     let hasMoreProducts = true;
     let lastId = null;
 
-    // Obtener todos los productos con paginación
     while (hasMoreProducts) {
-        const params = {
-            limit: 250,
-        };
+      const params = {
+        limit: 250,
+      };
 
-        if (lastId) {
-            params.since_id = lastId;
-        }
+      if (lastId) {
+        params.since_id = lastId;
+      }
 
-        const products = await shopify.product.list(params);
-        allProducts = allProducts.concat(products);
+      const products = await shopify.product.list(params);
+      allProducts = allProducts.concat(products);
 
-        if (products.length < 250) {
-            hasMoreProducts = false;
-        } else {
-            lastId = products[products.length - 1].id;
-        }
-        console.log("A")
-        await delay(4000)
+      if (products.length < 250) {
+        hasMoreProducts = false;
+      } else {
+        lastId = products[products.length - 1].id;
+      }
+
+      await delay(1000)
     }
 
-    // Obtener colecciones asociadas a cada producto
     const productsWithCollections = await Promise.all(allProducts.map(async (product) => {
-        const collections = await shopify.customCollection.list({
-            product_id: product.id,
-        });
+      const collections = await shopify.customCollection.list({
+        product_id: product.id,
+      });
 
-        // Filtrar solo id y title de las colecciones
-        const filteredCollections = collections.map(collection => ({
-            id: collection.id,
-            title: collection.title,
-        }));
+      const filteredCollections = collections.map(collection => ({
+        id: collection.id,
+        title: collection.title,
+      }));
 
-        console.log(filteredCollections)
+      console.log(filteredCollections)
 
-        return {
-            id: product.id,
-            title: product.title,
-            collections: filteredCollections,
-        };
+      return {
+        id: product.id,
+        title: product.title,
+        collections: filteredCollections,
+      };
     }));
 
     return productsWithCollections;
-} catch (error) {
+  } catch (error) {
     console.error('Error al obtener productos y colecciones:', error);
     throw error;
-}
+  }
 }
 
 //! Asignar Colecciones
@@ -377,15 +386,13 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
       console.log(`Asignando producto ${productId} a colección ${collectionId}`);
       try {
         const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, collectionId)
-        await delay(200);  // Aumentar el delay a 500ms
 
         if (!isCollectionInProduct) {
-          const response = await shopify.collect.create({
+          await shopify.collect.create({
             product_id: productId,
             collection_id: collectionId
           });
-          await delay(200);
-          console.log(`Asignado exitosamente a colección ${collectionId}`, response);
+          console.log(`Asignado exitosamente a colección ${collectionId}`);
         } else {
           console.log(`Producto ya existente en coleccion ${collectionId}`)
         }
@@ -394,7 +401,6 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
         console.log(`Error al asignar a colección ${collectionId}:`, err.response ? err.response.data : err.message);
         throw err;
       }
-      await delay(200);  // Aumentar el delay a 500ms
     }
   } catch (error) {
     console.log('Error asignando producto a colecciones:', error.message);
@@ -402,10 +408,21 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
   }
 };
 
-
 //! Checkiar si una coleccion ya esta en un producto
-//todo: Pasarlo a una DB externa
 const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
+  try {
+    const product = await Product.findOne({ id: productId });
+    const collectionExists = product.collections.some(collection => collection.id == collectionId);
+
+    return collectionExists; 
+  } catch (error) {
+    console.error(`Error buscando el producto con ID ${productId} y la colección con ID ${collectionId}:`, error);
+    throw error; 
+  }
+};
+
+//! DEPRECATED !//
+const checkIfCollectionIsOnProductUsingAPI = async (productId, collectionId) => {
   try {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 

@@ -1,6 +1,50 @@
 const productService = require('../services/productService')
 const shopifyClient = require('../clients/shopifyClient')
+const Product = require("../models/Product")
+const Collection = require("../models/Collection")
 const mongoose = require('mongoose');
+
+
+exports.postCollectionsToDB = async () => {
+  try {
+    const response = await shopifyClient.listCollections();
+    const collections = response;
+    
+    await Collection.deleteMany({});
+    await Collection.insertMany(collections, { ordered: false }); 
+
+    console.log(`Colecciones insertadas correctamente.`);
+  } catch (error) {
+    console.error('Error guardando producto en la base de datos:', error);
+  }
+};
+
+exports.postProductToDB = async (response, collection) => {
+  try {
+    const productId = response.product.id
+    const productTitle = response.product.title
+    const collections = collection.map(id => ({
+      id: id
+    }));
+
+    const newProduct = new Product({
+      id: productId,
+      title: productTitle,
+      collections: collections
+    });
+    
+    await newProduct.save();
+
+    console.log(`Producto ${productTitle} insertado correctamente en DB.`);
+  } catch (error) {
+    console.error('Error guardando colecciones en la base de datos:', error);
+  }
+};
+
+//TODO
+exports.updateProductToDB = async (response, collection) => {
+  
+};
 
 exports.handleBatch = async (req, res) => {
   try {
@@ -69,27 +113,6 @@ exports.listCollections = async (req, res) => {
     console.log('Error Listando Productos. productController.js', error.message)
   }
 }
-
-const collectionSchema = new mongoose.Schema({
-  id: { type: Number, required: true, unique: true },
-  title: { type: String, required: true },
-});
-
-const Collection = mongoose.model('Collection', collectionSchema, "collections");
-
-exports.postCollectionsToDB = async (req, res) => {
-  try {
-    const response = await shopifyClient.listCollections();
-    const collections = response;
-    
-    await Collection.deleteMany({});
-    await Collection.insertMany(collections, { ordered: false }); 
-
-    console.log(`Colecciones insertadas correctamente.`);
-  } catch (error) {
-    console.error('Error guardando colecciones en la base de datos:', error);
-  }
-};
 
 //! "inventory_management" = "shopify"
 exports.updateProductStock = async (req, res) => {
