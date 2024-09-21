@@ -5,21 +5,21 @@ const XLSX = require('xlsx');
 const fs = require('fs');
 
 const SHOPIFY_STORE_URL = `https://${process.env.SHOPIFY_STORE_URL}/admin/api/2024-04`
-const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY 
-const SHOPIFY_API_SECRET_KEY = process.env.SHOPIFY_API_SECRET_KEY 
+const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY
+const SHOPIFY_API_SECRET_KEY = process.env.SHOPIFY_API_SECRET_KEY
 const SHOPIFY_ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN
 
 const headers = {
-    'Content-Type': 'application/json',
-    '6e169eac360293c61f1ab3b856359293': SHOPIFY_API_SECRET_KEY,
-    'X-Shopify-Access-Token': SHOPIFY_ACCESS_TOKEN
+  'Content-Type': 'application/json',
+  '6e169eac360293c61f1ab3b856359293': SHOPIFY_API_SECRET_KEY,
+  'X-Shopify-Access-Token': SHOPIFY_ACCESS_TOKEN
 }
 
 const shopify = new Shopify({
   shopName: process.env.SHOPIFY_STORE_URL,
   apiKey: process.env.SHOPIFY_API_KEY,
   password: SHOPIFY_ACCESS_TOKEN,
-  autoLimit: true,
+  autoLimit : { calls: 2, interval: 1000, bucketSize: 30 }
 })
 
 //* -- -- Product -- -- */
@@ -27,7 +27,7 @@ exports.listProducts = async () => {
   try {
     let allProducts = [];
     let hasMoreProducts = true;
-    let lastId = null; 
+    let lastId = null;
 
     while (hasMoreProducts) {
       const params = {
@@ -39,8 +39,7 @@ exports.listProducts = async () => {
       }
 
       const products = await shopify.product.list(params);
-      
-      allProducts = allProducts.concat(products); 
+      allProducts = allProducts.concat(products);
 
       if (products.length < 250) {
         hasMoreProducts = false;
@@ -61,8 +60,6 @@ exports.listProducts = async () => {
     };
   } catch (error) {
     console.error(`Error Listando Productos. productController.js: ${error.message}`);
-
-    // Lanzar un error con un mensaje claro
     throw {
       success: false,
       message: `Error Listando Productos. productController.js: ${error.message}`
@@ -121,21 +118,18 @@ exports.listCollections = async () => {
 
     const workbook = XLSX.utils.book_new();
 
-    const data = [['Title', 'ID']]; 
+    const data = [['Title', 'ID']];
 
     allCollections.forEach(collection => {
-      console.log(`ID: ${collection.id}, Name: ${collection.title}`);
+      //console.log(`ID: ${collection.id}, Name: ${collection.title}`);
 
       data.push([collection.title, collection.id]);
     });
 
-    const worksheet = XLSX.utils.aoa_to_sheet(data);
-
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'Collections');
-
+    //const worksheet = XLSX.utils.aoa_to_sheet(data);
+    //XLSX.utils.book_append_sheet(workbook, worksheet, 'Collections');
+    //XLSX.writeFile(workbook, 'collections.xlsx');
     console.log(allCollections.length);
-
-    XLSX.writeFile(workbook, 'collections.xlsx');
 
     return allCollections;
   } catch (error) {
@@ -298,18 +292,78 @@ const checkIfProductIsCreated = async (sku) => {
       const variant = product.variants.find(variant => variant.sku === sku);
       if (variant) {
         console.log(`Producto con SKU ${sku} ya existe. ID de producto: ${product.id}`);
-        return true; 
+        return true;
       }
       await delay(250)
     }
     console.log(`Producto con SKU ${sku} no existe.`);
-    return false; 
+    return false;
 
   } catch (error) {
     console.log('Error al verificar si el producto existe: ', error.message);
     throw error;
   }
 };
+
+//! GET de Productos junto a sus colecciones
+//todo
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+exports.getProductsWithCollections = async () => {
+  try {
+    let allProducts = [];
+    let hasMoreProducts = true;
+    let lastId = null;
+
+    // Obtener todos los productos con paginación
+    while (hasMoreProducts) {
+        const params = {
+            limit: 250,
+        };
+
+        if (lastId) {
+            params.since_id = lastId;
+        }
+
+        const products = await shopify.product.list(params);
+        allProducts = allProducts.concat(products);
+
+        if (products.length < 250) {
+            hasMoreProducts = false;
+        } else {
+            lastId = products[products.length - 1].id;
+        }
+        console.log("A")
+        await delay(4000)
+    }
+
+    // Obtener colecciones asociadas a cada producto
+    const productsWithCollections = await Promise.all(allProducts.map(async (product) => {
+        const collections = await shopify.customCollection.list({
+            product_id: product.id,
+        });
+
+        // Filtrar solo id y title de las colecciones
+        const filteredCollections = collections.map(collection => ({
+            id: collection.id,
+            title: collection.title,
+        }));
+
+        console.log(filteredCollections)
+
+        return {
+            id: product.id,
+            title: product.title,
+            collections: filteredCollections,
+        };
+    }));
+
+    return productsWithCollections;
+} catch (error) {
+    console.error('Error al obtener productos y colecciones:', error);
+    throw error;
+}
+}
 
 //! Asignar Colecciones
 const assignProductToCollections = async (productId, newCollectionIds) => {
@@ -325,7 +379,7 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
         const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, collectionId)
         await delay(200);  // Aumentar el delay a 500ms
 
-        if(!isCollectionInProduct){
+        if (!isCollectionInProduct) {
           const response = await shopify.collect.create({
             product_id: productId,
             collection_id: collectionId
@@ -365,7 +419,7 @@ const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
     return isInCollection;
   } catch (error) {
     console.error('Error al consultar el producto:', error.message);
-    return false; 
+    return false;
   }
 }
 
@@ -424,9 +478,9 @@ exports.listUsers = async () => {
     const customers = await shopify.customer.list();
     const customersWithMetafields = await Promise.all(customers.map(async customer => {
       const metafields = await shopify.metafield.list({ metafield: { owner_resource: 'customer', owner_id: customer.id } });
-      return { 
-        ...customer, 
-        metafields 
+      return {
+        ...customer,
+        metafields
       };
     }));
     return customersWithMetafields;
@@ -489,5 +543,5 @@ exports.deleteUser = async (userId) => {
   const response = await axios.delete(`${SHOPIFY_STORE_URL}/customers/${userId}.json`, { headers })
   return response.data
 }
- 
+
 //* -- -- Order -- -- */

@@ -1,9 +1,14 @@
 const shopifyClient = require('../clients/shopifyClient');
+const productController = require("../controllers/productController")
 
 exports.handleBatch = async (created, updated, deleted) => {
   // Procesar productos creados
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
   const createdProductIds = [];
+
+  if (created && created.length > 0 || updated && updated.length > 0) {
+    await productController.postCollectionsToDB()
+  }
 
   // Procesar productos creados
   if (created && created.length > 0) {
@@ -19,7 +24,7 @@ exports.handleBatch = async (created, updated, deleted) => {
       } catch (error) {
         console.log(`Error al crear producto ${product.product.title}: ${error.message}`);
       }
-      await delay(500);
+      await delay(300);
     }
 
     return createdProductIds;
