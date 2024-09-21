@@ -289,7 +289,13 @@ exports.updateProductStock = async (id, newStock) => {
 
 exports.deleteProduct = async (id) => {
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-  await axios.delete(`${SHOPIFY_STORE_URL}/products/${id}.json`, { headers })
+  try {
+    await shopify.product.delete(id);
+    console.log(`${id} eliminado correctamente.`);
+  } catch (error) {
+    console.error(`Error eliminando el producto con ID ${id}:`, error.message);
+    throw error; // Lanza el error para manejarlo más arriba si es necesario
+  }
   await delay(250)
 }
 

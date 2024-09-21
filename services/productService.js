@@ -53,14 +53,19 @@ exports.handleBatch = async (created, updated, deleted) => {
   if (deleted && deleted.length > 0) {
     for (const productId of deleted){
       try {
-        await shopifyClient.deleteProduct(productId)
+        const response = await shopifyClient.deleteProduct(productId)
+        
+        if(response){
+          await productController.deleteProductToDB(productId);
+        }
+
         console.log(`Producto ${productId} Eliminado Correctamente`)
       } catch (error) {
         console.log(`Error eliminando producto ${error}`)
         throw error
       }
     }
-    await delay(500)
+    await delay(200)
   }
 };
 

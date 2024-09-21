@@ -41,7 +41,6 @@ exports.postProductToDB = async (product) => {
   }
 };
 
-//TODO
 exports.updateProductToDB = async (product) => {
   try {
     const productId = product.product.id
@@ -86,6 +85,20 @@ exports.updateProductToDB = async (product) => {
     console.log(`Producto ${productId} Actualizado Correctamente en DB.`);
   } catch (error) {
     console.error('Error guardando colecciones en la base de datos:', error);
+  }
+};
+
+exports.deleteProductToDB = async (productId) => {
+  try {
+    const result = await Product.deleteOne({ id: productId });
+
+    if (result.deletedCount === 0) {
+      console.log(`No se encontró un producto con ID ${id}.`);
+    } else {
+      console.log(`Producto con ID ${id} eliminado correctamente.`);
+    }
+  } catch (error) {
+    console.error(`Error al eliminar el producto con ID ${id}:`, error);
   }
 };
 
