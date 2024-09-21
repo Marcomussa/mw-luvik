@@ -35,9 +35,13 @@ exports.handleBatch = async (created, updated, deleted) => {
   if (updated && updated.length > 0) {
     for (const product of updated) {
       try {
-        await shopifyClient.updateProduct(product.product.id, product);
-        console.log(`Producto ${product.product.id} Actualizado Correctamente`)
+        const response = await shopifyClient.updateProduct(product.product.id, product);
 
+        if(response){
+          await productController.updateProductToDB(product);
+        }
+
+        console.log(`Producto ${product.product.id} Actualizado Correctamente`)
       } catch (error) {
         console.log(`Error al actualizar producto ${product.product.title}: ${error.message}`);
       }

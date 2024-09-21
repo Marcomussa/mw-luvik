@@ -19,9 +19,9 @@ exports.postCollectionsToDB = async () => {
   }
 };
 
-exports.postProductToDB = async (response, collection) => {
+exports.postProductToDB = async (product) => {
   try {
-    const productId = response.product.id
+    const productId = product.id
     const productTitle = response.product.title
     const collections = collection.map(id => ({
       id: id
@@ -42,8 +42,51 @@ exports.postProductToDB = async (response, collection) => {
 };
 
 //TODO
-exports.updateProductToDB = async (response, collection) => {
+exports.updateProductToDB = async (product) => {
+  try {
+    const productId = product.product.id
+    const newCollection = product.product.newCollection
+    const deleteCollection = product.product.deleteCollection
   
+    const existingProduct = await Product.findOne({ id: productId });
+
+    if (!existingProduct) {
+      console.error(`Producto con ID ${productId} no encontrado.`);
+      return;
+    }
+
+    if (newCollection && newCollection.length > 0) {
+      await Product.updateOne(
+        { id: productId },
+        { 
+          $addToSet: { 
+            collections: { 
+              $each: newCollection.map(id => ({ id })) 
+            } 
+          } 
+        }  
+      );
+    }
+
+    if (deleteCollection && deleteCollection.length > 0) {
+      await Product.updateOne(
+        { id: productId },
+        { 
+          $pull: { 
+            collections: { 
+              id: { 
+                $in: deleteCollection 
+              } 
+            } 
+          } 
+        } 
+      );
+    }
+
+    console.log(`Producto ${productId} Actualizado Correctamente en DB.`);
+  } catch (error) {
+    console.error('Error guardando colecciones en la base de datos:', error);
+  }
 };
 
 exports.handleBatch = async (req, res) => {

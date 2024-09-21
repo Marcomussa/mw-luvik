@@ -206,8 +206,6 @@ exports.createProduct = async (productData) => {
 }
 
 exports.updateProduct = async (id, productData) => {
-  console.log(id)
-  console.log(productData)
   try {
     // No existe oferta
     if (productData.product.lumps) {
@@ -224,25 +222,26 @@ exports.updateProduct = async (id, productData) => {
 
     // Coleccion de Oferta
     const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, 282433814614)
+    console.log(isCollectionInProduct)
 
     if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
+      await assignProductToCollections(productId, [282433814614])
       await Product.updateOne(
         { id: productId },
         { $push: { collections: {
           "id": 282433814614
         }}} 
       );
-      await assignProductToCollections(productId, [282433814614])
     } 
 
     if (isCollectionInProduct && !productData.product.variants[0].compare_at_price) {
+      await removeProductFromCollections(productId, [282433814614])
       await Product.updateOne(
         { id: productId },
         { $pull: { collections: {
           "id": 282433814614
         }}} 
       );
-      await removeProductFromCollections(productId, [282433814614])
     } 
 
     if (productData.product.newCollection && productData.product.newCollection.length > 0) {
@@ -393,6 +392,7 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
             collection_id: collectionId
           });
           console.log(`Asignado exitosamente a colección ${collectionId}`);
+          await delay(200)
         } else {
           console.log(`Producto ya existente en coleccion ${collectionId}`)
         }
