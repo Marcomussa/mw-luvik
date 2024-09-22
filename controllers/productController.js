@@ -67,7 +67,6 @@ exports.updateProductToDB = async (product) => {
     }
 
     if (deleteCollection && deleteCollection.length > 0) {
-      console.log(deleteCollection)
       await Product.updateOne(
         { id: productId },
         { 
@@ -88,17 +87,17 @@ exports.updateProductToDB = async (product) => {
   }
 };
 
-exports.deleteProductToDB = async (productId) => {
+exports.deleteProductFromDB = async (productId) => {
   try {
     const result = await Product.deleteOne({ id: productId });
 
     if (result.deletedCount === 0) {
-      console.log(`No se encontró un producto con ID ${id}.`);
+      console.log(`No se encontró un producto con ID ${productId}.`);
     } else {
-      console.log(`Producto con ID ${id} eliminado correctamente.`);
+      console.log(`Producto con ID ${productId} eliminado correctamente.`);
     }
   } catch (error) {
-    console.error(`Error al eliminar el producto con ID ${id}:`, error);
+    console.error(`Error al eliminar el producto con ID ${productId}:`, error);
   }
 };
 

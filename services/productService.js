@@ -40,7 +40,6 @@ exports.handleBatch = async (created, updated, deleted) => {
           await productController.updateProductToDB(product);
         }
 
-        console.log(`Producto ${product.product.id} Actualizado Correctamente`)
       } catch (error) {
         console.log(`Error al actualizar producto ${product.product.title}: ${error.message}`);
       }
@@ -55,10 +54,9 @@ exports.handleBatch = async (created, updated, deleted) => {
         const response = await shopifyClient.deleteProduct(productId)
         
         if(response){
-          await productController.deleteProductToDB(productId);
+          await productController.deleteProductFromDB(productId);
         }
 
-        console.log(`Producto ${productId} Eliminado Correctamente`)
       } catch (error) {
         console.log(`Error eliminando producto ${error}`)
         throw error

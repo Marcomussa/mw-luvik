@@ -216,41 +216,54 @@ exports.updateProduct = async (id, productData) => {
       productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps
     }
 
-    const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
-    const productId = response.data.product.id
+    const productExists = await checkIfProductIsCreated(productData.product.id);
 
-    // Coleccion de Oferta
-    const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, 282433814614)
+    if (productExists) {
+      const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
+      const productId = response.data.product.id
+      // Coleccion de Oferta
+      const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, 282433814614)
 
-    if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
-      await assignProductToCollections(productId, [282433814614])
-      await Product.updateOne(
-        { id: productId },
-        { $push: { collections: {
-          "id": 282433814614
-        }}} 
-      );
-    } 
+      if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
+        await assignProductToCollections(productId, [282433814614])
+        await Product.updateOne(
+          { id: productId },
+          {
+            $push: {
+              collections: {
+                "id": 282433814614
+              }
+            }
+          }
+        );
+      }
 
-    if (isCollectionInProduct && !productData.product.variants[0].compare_at_price) {
-      await removeProductFromCollections(productId, [282433814614])
-      await Product.updateOne(
-        { id: productId },
-        { $pull: { collections: {
-          "id": 282433814614
-        }}} 
-      );
-    } 
+      if (isCollectionInProduct && !productData.product.variants[0].compare_at_price) {
+        await removeProductFromCollections(productId, [282433814614])
+        await Product.updateOne(
+          { id: productId },
+          {
+            $pull: {
+              collections: {
+                "id": 282433814614
+              }
+            }
+          }
+        );
+      }
 
-    if (productData.product.newCollection && productData.product.newCollection.length > 0) {
-      await assignProductToCollections(productId, productData.product.newCollection)
+      if (productData.product.newCollection && productData.product.newCollection.length > 0) {
+        await assignProductToCollections(productId, productData.product.newCollection)
+      }
+
+      if (productData.product.deleteCollection && productData.product.deleteCollection.length > 0) {
+        await removeProductFromCollections(productId, productData.product.deleteCollection)
+      }
+
+      return response.data
+    } else {
+      console.log(`Producto ${productData.product.id} no existe`)
     }
-
-    if (productData.product.deleteCollection && productData.product.deleteCollection.length > 0) {
-      await removeProductFromCollections(productId, productData.product.deleteCollection)
-    }
-
-    return response.data
   } catch (error) {
     console.log('Error Actualizando Producto. Shopifyclient ', error.message)
     throw error
@@ -286,19 +299,27 @@ exports.updateProductStock = async (id, newStock) => {
 }
 
 exports.deleteProduct = async (id) => {
-  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
   try {
-    await shopify.product.delete(id);
-    console.log(`${id} eliminado correctamente.`);
+    const productExists = await checkIfProductIsCreated(id);
+
+    if (!productExists) {
+      console.log(`Producto con ID ${id} no existe en la base de datos.`);
+      return null;
+    }
+
+    const response = await shopify.product.delete(id);
+    console.log(`Producto con ID ${id} eliminado correctamente en Shopify.`);
+
+    return response;
   } catch (error) {
     console.error(`Error eliminando el producto con ID ${id}:`, error.message);
-    throw error; // Lanza el error para manejarlo más arriba si es necesario
+    throw error;
   }
-  await delay(250)
-}
+};
 
-//! Checkiar si un producto ya existe. TODO!!!
-const checkIfProductIsCreated = async (sku) => {
+//! Checkiar si un producto ya existe. 
+//! DEPRECATED
+const checkIfProductIsCreatedUsingAPI = async (sku) => {
   try {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -317,6 +338,17 @@ const checkIfProductIsCreated = async (sku) => {
 
   } catch (error) {
     console.log('Error al verificar si el producto existe: ', error.message);
+    throw error;
+  }
+};
+
+const checkIfProductIsCreated = async (productId) => {
+  try {
+    const product = await Product.findOne({ id: productId });
+
+    return !!product;
+  } catch (error) {
+    console.error(`Error buscando el producto con ID ${productId}:`, error);
     throw error;
   }
 };
@@ -445,10 +477,10 @@ const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
     const product = await Product.findOne({ id: productId });
     const collectionExists = product.collections.some(collection => collection.id == collectionId);
 
-    return collectionExists; 
+    return collectionExists;
   } catch (error) {
     console.error(`Error buscando el producto con ID ${productId} y la colección con ID ${collectionId}:`, error);
-    throw error; 
+    throw error;
   }
 };
 
