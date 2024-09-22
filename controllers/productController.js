@@ -13,16 +13,15 @@ exports.postCollectionsToDB = async () => {
     await Collection.deleteMany({});
     await Collection.insertMany(collections, { ordered: false }); 
 
-    console.log(`Colecciones insertadas correctamente.`);
   } catch (error) {
     console.error('Error guardando producto en la base de datos:', error);
   }
 };
 
-exports.postProductToDB = async (product) => {
+exports.postProductToDB = async (product, collection) => {
   try {
     const productId = product.id
-    const productTitle = response.product.title
+    const productTitle = product.title
     const collections = collection.map(id => ({
       id: id
     }));
@@ -46,7 +45,7 @@ exports.updateProductToDB = async (product) => {
     const productId = product.product.id
     const newCollection = product.product.newCollection
     const deleteCollection = product.product.deleteCollection
-  
+
     const existingProduct = await Product.findOne({ id: productId });
 
     if (!existingProduct) {
@@ -68,6 +67,7 @@ exports.updateProductToDB = async (product) => {
     }
 
     if (deleteCollection && deleteCollection.length > 0) {
+      console.log(deleteCollection)
       await Product.updateOne(
         { id: productId },
         { 

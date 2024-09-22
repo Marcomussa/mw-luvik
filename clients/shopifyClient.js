@@ -4,6 +4,7 @@ const Shopify = require('shopify-api-node')
 const XLSX = require('xlsx');
 const fs = require('fs');
 const Product = require("../models/Product")
+const productController = require("../controllers/productController")
 const mongoose = require("mongoose")
 
 const SHOPIFY_STORE_URL = `https://${process.env.SHOPIFY_STORE_URL}/admin/api/2024-04`
@@ -180,18 +181,16 @@ exports.createProduct = async (productData) => {
     // Existe oferta
     if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
       productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps
+      productData.product.collection.push(282433814614)
     }
 
     const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
     const productId = response.data.product.id
 
-    // Asignacion automatica de coleccion oferta
-    if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
-      await assignProductToCollections(productId, [282433814614])
-    }
+    await productController.postProductToDB(response.data.product, productData.product.collection);
 
     if (productData.product.collection && productData.product.collection.length > 0) {
-      await assignProductToCollections(productId, productData.product.collection)
+      await assignNewProductToCollections(productId, productData.product.collection)
     }
 
     if (productData.product.lumps) {
@@ -222,7 +221,6 @@ exports.updateProduct = async (id, productData) => {
 
     // Coleccion de Oferta
     const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, 282433814614)
-    console.log(isCollectionInProduct)
 
     if (!isCollectionInProduct && productData.product.variants[0].compare_at_price) {
       await assignProductToCollections(productId, [282433814614])
@@ -379,7 +377,7 @@ exports.getProductsWithCollections = async () => {
   }
 }
 
-//! Asignar Colecciones
+//! Asignar Colecciones 
 const assignProductToCollections = async (productId, newCollectionIds) => {
   console.log(`Producto ID: ${productId}`);
   console.log('Colecciones:', newCollectionIds);
@@ -403,6 +401,33 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
           console.log(`Producto ya existente en coleccion ${collectionId}`)
         }
 
+      } catch (err) {
+        console.log(`Error al asignar a colección ${collectionId}:`, err.response ? err.response.data : err.message);
+        throw err;
+      }
+    }
+  } catch (error) {
+    console.log('Error asignando producto a colecciones:', error.message);
+    throw error;
+  }
+};
+
+const assignNewProductToCollections = async (productId, newCollectionIds) => {
+  console.log(`Producto ID: ${productId}`);
+  console.log('Colecciones:', newCollectionIds);
+
+  try {
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    for (const collectionId of newCollectionIds) {
+      console.log(`Asignando producto ${productId} a colección ${collectionId}`);
+      try {
+        await shopify.collect.create({
+          product_id: productId,
+          collection_id: collectionId
+        });
+
+        console.log(`Asignado exitosamente a colección ${collectionId}`);
       } catch (err) {
         console.log(`Error al asignar a colección ${collectionId}:`, err.response ? err.response.data : err.message);
         throw err;

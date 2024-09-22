@@ -15,10 +15,9 @@ exports.handleBatch = async (created, updated, deleted) => {
     for (const product of created) {
       try {
         const response = await shopifyClient.createProduct(product);
-
+        
         if (response && response.product && response.product.id) {
           createdProductIds.push(response.product.id);
-          await productController.postProductToDB(response, product.product.collection);
         }
 
         console.log(`Producto creado: ${product.product.title}`);
