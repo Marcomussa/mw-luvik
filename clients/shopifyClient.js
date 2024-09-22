@@ -5,7 +5,6 @@ const XLSX = require('xlsx');
 const fs = require('fs');
 const Product = require("../models/Product")
 const productController = require("../controllers/productController")
-const mongoose = require("mongoose")
 
 const SHOPIFY_STORE_URL = `https://${process.env.SHOPIFY_STORE_URL}/admin/api/2024-04`
 const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY
@@ -124,8 +123,6 @@ exports.listCollections = async () => {
     const data = [['Title', 'ID']];
 
     allCollections.forEach(collection => {
-      //console.log(`ID: ${collection.id}, Name: ${collection.title}`);
-
       data.push([collection.title, collection.id]);
     });
 
@@ -355,7 +352,6 @@ const checkIfProductIsCreated = async (productId) => {
 
 //! GET de Productos junto a sus colecciones
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
 exports.getProductsWithCollections = async () => {
   try {
     let allProducts = [];
@@ -393,8 +389,6 @@ exports.getProductsWithCollections = async () => {
         title: collection.title,
       }));
 
-      console.log(filteredCollections)
-
       return {
         id: product.id,
         title: product.title,
@@ -411,9 +405,6 @@ exports.getProductsWithCollections = async () => {
 
 //! Asignar Colecciones 
 const assignProductToCollections = async (productId, newCollectionIds) => {
-  console.log(`Producto ID: ${productId}`);
-  console.log('Colecciones:', newCollectionIds);
-
   try {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -445,9 +436,6 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
 };
 
 const assignNewProductToCollections = async (productId, newCollectionIds) => {
-  console.log(`Producto ID: ${productId}`);
-  console.log('Colecciones:', newCollectionIds);
-
   try {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
