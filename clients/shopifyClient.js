@@ -3,6 +3,7 @@ const axios = require('axios')
 const Shopify = require('shopify-api-node')
 const XLSX = require('xlsx');
 const fs = require('fs');
+const path = require('path')
 const Product = require("../models/Product")
 const productController = require("../controllers/productController")
 
@@ -56,6 +57,11 @@ exports.listProducts = async () => {
       sku: product.variants[0].sku
     }));
 
+    const jsonFilePath = path.resolve(__dirname, '../JSON_examples/productList.json')
+    fs.writeFileSync(jsonFilePath, JSON.stringify(productDetails, null, 2), 'utf8'); 
+
+    console.log(productDetails.length)
+
     return {
       success: true,
       data: productDetails
@@ -68,7 +74,6 @@ exports.listProducts = async () => {
     };
   }
 };
-
 
 exports.listProductByID = async (productId) => {
   try {
@@ -388,10 +393,11 @@ exports.getProductsWithCollections = async () => {
         id: collection.id,
         title: collection.title,
       }));
-
+      
       return {
         id: product.id,
         title: product.title,
+        sku: product.variants[0].sku,
         collections: filteredCollections,
       };
     }));
