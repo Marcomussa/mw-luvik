@@ -218,6 +218,7 @@ exports.updateProduct = async (id, productData) => {
     if (productExists) {
       const response = await axios.put(`${SHOPIFY_STORE_URL}/products/${id}.json`, productData, { headers })
       const productId = response.data.product.id
+
       // Coleccion de Oferta
       const isCollectionInProduct = await checkIfCollectionIsOnProduct(productId, 282433814614)
 
@@ -342,7 +343,6 @@ const checkIfProductIsCreatedUsingAPI = async (sku) => {
 const checkIfProductIsCreated = async (productId) => {
   try {
     const product = await Product.findOne({ id: productId });
-
     return !!product;
   } catch (error) {
     console.error(`Error buscando el producto con ID ${productId}:`, error);
@@ -376,7 +376,7 @@ exports.getProductsWithCollections = async () => {
         lastId = products[products.length - 1].id;
       }
 
-      await delay(1000)
+      await delay(500)
     }
 
     const productsWithCollections = await Promise.all(allProducts.map(async (product) => {
@@ -437,8 +437,6 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
 
 const assignNewProductToCollections = async (productId, newCollectionIds) => {
   try {
-    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
     for (const collectionId of newCollectionIds) {
       console.log(`Asignando producto ${productId} a colección ${collectionId}`);
       try {

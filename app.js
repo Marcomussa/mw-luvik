@@ -14,7 +14,7 @@ const axios = require('axios')
 const mongoose = require("mongoose")
 const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
-//! DB Externa para reducir rate-limit de productos
+//! DB Externa para reducir rate-limit de validaciones de productos
 const connectToDatabase = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI);

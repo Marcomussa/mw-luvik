@@ -55,3 +55,5 @@ LOG [2024-09-22T17:47:19.846Z]: Asignado exitosamente a colección 279993286742
 LOG [2024-09-22T17:47:19.846Z]: Asignando producto 7414960324694 a colección 282433814614
 LOG [2024-09-22T17:47:20.366Z]: Asignado exitosamente a colección 282433814614
 LOG [2024-09-22T17:47:22.280Z]: Producto creado: AAAAATestinggg
+LOG [2024-09-23T13:41:36.113Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T13:41:36.854Z]: Conexión exitosa a MongoDB
