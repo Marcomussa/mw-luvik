@@ -330,3 +330,264 @@ LOG [2024-09-23T15:38:43.379Z]: Conexión exitosa a MongoDB
 LOG [2024-09-23T15:39:23.402Z]: Servidor en Linea. Puerto: 3000
 LOG [2024-09-23T15:39:24.343Z]: Conexión exitosa a MongoDB
 LOG [2024-09-23T15:44:36.478Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T17:04:16.162Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T17:04:16.987Z]: Conexión exitosa a MongoDB
+LOG [2024-09-23T17:04:53.975Z]: Eliminado de la colección 282433814614
+LOG [2024-09-23T17:04:54.305Z]: Producto 7413443199062 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:04:55.948Z]: Eliminado de la colección 282433814614
+LOG [2024-09-23T17:04:56.287Z]: Producto 7413443231830 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:04:57.982Z]: Eliminado de la colección 282433814614
+LOG [2024-09-23T17:04:58.309Z]: Producto 7413443297366 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:04:59.986Z]: Eliminado de la colección 282433814614
+LOG [2024-09-23T17:05:00.317Z]: Producto 7413443330134 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:07.904Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T17:06:08.587Z]: Conexión exitosa a MongoDB
+LOG [2024-09-23T17:06:10.759Z]: Producto 7413443199062 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:12.884Z]: Producto 7413443231830 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:14.173Z]: Producto 7413443297366 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:15.337Z]: Producto 7413443330134 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:16.463Z]: Producto 7413443362902 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:17.578Z]: Producto 7413443395670 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:18.747Z]: Producto 7413443428438 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:19.917Z]: Producto 7413443526742 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:21.055Z]: Producto 7413443756118 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:22.214Z]: Producto 7413443821654 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:23.461Z]: Producto 7413443854422 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:24.593Z]: Producto 7413443919958 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:25.673Z]: Producto 7413443952726 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:26.833Z]: Producto 7413444051030 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:28.725Z]: Producto 7413444083798 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:30.068Z]: Producto 7413444116566 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:31.251Z]: Producto 7413444214870 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:32.344Z]: Producto 7413444247638 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:33.473Z]: Producto 7413444280406 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:34.845Z]: Producto 7413444313174 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:35.953Z]: Producto 7413444345942 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:37.191Z]: Producto 7413444378710 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:38.388Z]: Producto 7413444444246 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:39.511Z]: Producto 7413444477014 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:40.713Z]: Producto 7413444509782 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:42.257Z]: Producto 7413444542550 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:43.394Z]: Producto 7413444575318 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:44.539Z]: Producto 7413444935766 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:45.670Z]: Producto 7413444968534 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:46.886Z]: Producto 7413445197910 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:48.059Z]: Producto 7413445361750 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:49.206Z]: Producto 7413446148182 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:50.702Z]: Producto 7413446180950 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:52.106Z]: Producto 7413446344790 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:53.318Z]: Producto 7413446377558 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:54.600Z]: Producto 7413446475862 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:56.857Z]: Producto 7413447163990 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:58.019Z]: Producto 7413447262294 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:06:59.112Z]: Producto 7413447295062 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:07:00.188Z]: Producto 7413447360598 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:07:01.318Z]: Producto 7413447393366 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:07:02.520Z]: Producto 7413447426134 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:05.025Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T17:14:05.676Z]: Conexión exitosa a MongoDB
+LOG [2024-09-23T17:14:22.595Z]: Asignando producto 7413443199062 a colección 282433814614
+LOG [2024-09-23T17:14:22.995Z]: Asignado exitosamente a colección 282433814614
+LOG [2024-09-23T17:14:23.275Z]: Producto 7413443199062 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:25.456Z]: Asignando producto 7413443231830 a colección 282433814614
+LOG [2024-09-23T17:14:25.822Z]: Asignado exitosamente a colección 282433814614
+LOG [2024-09-23T17:14:26.112Z]: Producto 7413443231830 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:28.361Z]: Asignando producto 7413443297366 a colección 282433814614
+LOG [2024-09-23T17:14:28.730Z]: Asignado exitosamente a colección 282433814614
+LOG [2024-09-23T17:14:29.005Z]: Producto 7413443297366 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:31.307Z]: Asignando producto 7413443330134 a colección 282433814614
+LOG [2024-09-23T17:14:31.691Z]: Asignado exitosamente a colección 282433814614
+LOG [2024-09-23T17:14:31.980Z]: Producto 7413443330134 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:35.172Z]: Producto 7413443362902 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:36.296Z]: Producto 7413443395670 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:37.498Z]: Producto 7413443428438 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:38.615Z]: Producto 7413443526742 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:39.801Z]: Producto 7413443756118 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:41.464Z]: Producto 7413443821654 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:42.644Z]: Producto 7413443854422 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:43.741Z]: Producto 7413443919958 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:44.856Z]: Producto 7413443952726 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:47.393Z]: Producto 7413444051030 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:48.548Z]: Producto 7413444083798 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:49.648Z]: Producto 7413444116566 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:50.722Z]: Producto 7413444214870 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:52.597Z]: Producto 7413444247638 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:53.706Z]: Producto 7413444280406 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:54.873Z]: Producto 7413444313174 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:56.260Z]: Producto 7413444345942 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:57.388Z]: Producto 7413444378710 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:14:59.328Z]: Producto 7413444444246 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:00.473Z]: Producto 7413444477014 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:24.568Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T17:15:25.229Z]: Conexión exitosa a MongoDB
+LOG [2024-09-23T17:15:30.271Z]: Producto 7413443199062 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:31.342Z]: Producto 7413443231830 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:32.490Z]: Producto 7413443297366 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:34.595Z]: Producto 7413443330134 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:36.525Z]: Producto 7413443362902 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:37.583Z]: Producto 7413443395670 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:38.618Z]: Producto 7413443428438 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:40.805Z]: Producto 7413443526742 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:41.926Z]: Producto 7413443756118 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:43.642Z]: Producto 7413443821654 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:44.729Z]: Producto 7413443854422 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:46.826Z]: Producto 7413443919958 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:47.932Z]: Producto 7413443952726 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:50.324Z]: Producto 7413444051030 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:52.089Z]: Producto 7413444083798 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:53.175Z]: Producto 7413444116566 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:54.253Z]: Producto 7413444214870 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:57.424Z]: Producto 7413444247638 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:58.741Z]: Producto 7413444280406 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:15:59.825Z]: Producto 7413444313174 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:01.166Z]: Producto 7413444345942 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:02.221Z]: Producto 7413444378710 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:03.506Z]: Producto 7413444444246 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:04.591Z]: Producto 7413444477014 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:05.833Z]: Producto 7413444509782 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:07.036Z]: Producto 7413444542550 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:08.167Z]: Producto 7413444575318 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:10.331Z]: Producto 7413444935766 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:12.130Z]: Producto 7413444968534 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:13.291Z]: Producto 7413445197910 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:14.579Z]: Producto 7413445361750 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:15.713Z]: Producto 7413446148182 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:21.827Z]: Producto 7413446180950 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:23.168Z]: Producto 7413446344790 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:25.291Z]: Producto 7413446377558 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:27.488Z]: Producto 7413446475862 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:29.322Z]: Producto 7413447163990 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:30.653Z]: Producto 7413447262294 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:31.775Z]: Producto 7413447295062 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:32.897Z]: Producto 7413447360598 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:34.091Z]: Producto 7413447393366 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:35.505Z]: Producto 7413447426134 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:36.711Z]: Producto 7413447458902 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:37.827Z]: Producto 7413447524438 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:38.851Z]: Producto 7413447557206 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:40.144Z]: Producto 7413447589974 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:41.217Z]: Producto 7413447622742 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:42.575Z]: Producto 7413447688278 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:43.673Z]: Producto 7413447721046 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:44.953Z]: Producto 7413447753814 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:47.014Z]: Producto 7413447786582 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:48.262Z]: Producto 7413447884886 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:49.384Z]: Producto 7413447917654 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:50.503Z]: Producto 7413447950422 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:51.661Z]: Producto 7413447983190 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:52.759Z]: Producto 7413448048726 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:56.070Z]: Producto 7413448081494 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:57.794Z]: Producto 7413448114262 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:16:58.921Z]: Producto 7413448147030 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:00.014Z]: Producto 7413448179798 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:01.045Z]: Producto 7413448245334 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:02.197Z]: Producto 7413448310870 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:03.963Z]: Producto 7413448343638 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:05.413Z]: Producto 7413448376406 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:06.587Z]: Producto 7413448409174 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:08.469Z]: Producto 7413448441942 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:10.622Z]: Producto 7413448474710 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:11.808Z]: Producto 7413448540246 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:12.866Z]: Producto 7413448573014 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:13.910Z]: Producto 7413448605782 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:14.953Z]: Producto 7413448671318 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:15.988Z]: Producto 7413448704086 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:17.329Z]: Producto 7413448736854 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:18.525Z]: Producto 7413448802390 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:19.659Z]: Producto 7413448835158 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:20.876Z]: Producto 7413448867926 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:21.911Z]: Producto 7413448900694 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:23.222Z]: Producto 7413448933462 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:25.310Z]: Producto 7413448966230 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:26.396Z]: Producto 7413448998998 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:27.537Z]: Producto 7413449031766 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:28.722Z]: Producto 7413449064534 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:29.719Z]: Producto 7413449130070 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:30.795Z]: Producto 7413449162838 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:32.110Z]: Producto 7413449195606 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:33.238Z]: Producto 7413449228374 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:34.404Z]: Producto 7413449392214 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:35.730Z]: Producto 7413449588822 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:36.845Z]: Producto 7413449621590 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:37.929Z]: Producto 7413449654358 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:39.499Z]: Producto 7413449687126 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:40.602Z]: Producto 7413449719894 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:41.854Z]: Producto 7413449785430 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:42.930Z]: Producto 7413449818198 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:44.023Z]: Producto 7413449850966 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:45.104Z]: Producto 7413449916502 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:46.448Z]: Producto 7413449949270 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:47.490Z]: Producto 7413449982038 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:48.702Z]: Producto 7413450014806 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:49.835Z]: Producto 7413450047574 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:50.970Z]: Producto 7413450080342 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:52.378Z]: Producto 7413450113110 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:53.427Z]: Producto 7413450145878 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:54.576Z]: Producto 7413450244182 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:55.859Z]: Producto 7413450309718 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:57.039Z]: Producto 7413450342486 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:58.522Z]: Producto 7413450408022 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:17:59.841Z]: Producto 7413450440790 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:00.898Z]: Producto 7413450473558 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:02.096Z]: Producto 7413450506326 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:03.293Z]: Producto 7413450539094 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:04.484Z]: Producto 7413450571862 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:06.908Z]: Producto 7413450604630 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:07.962Z]: Producto 7413450637398 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:09.198Z]: Producto 7413450670166 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:10.342Z]: Producto 7413450702934 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:11.404Z]: Producto 7413450735702 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:12.522Z]: Producto 7413450768470 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:14.028Z]: Producto 7413450801238 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:15.208Z]: Producto 7413450899542 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:16.252Z]: Producto 7413450932310 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:17.611Z]: Producto 7413450997846 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:18.610Z]: Producto 7413451096150 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:20.702Z]: Producto 7413451227222 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:22.859Z]: Producto 7413451292758 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:24.046Z]: Producto 7413451325526 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:25.137Z]: Producto 7413451423830 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:26.256Z]: Producto 7413451489366 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:27.384Z]: Producto 7413451522134 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:28.556Z]: Producto 7413451587670 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:29.614Z]: Producto 7413451620438 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:30.764Z]: Producto 7413451653206 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:32.430Z]: Producto 7413451882582 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:33.583Z]: Producto 7413451948118 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:35.688Z]: Producto 7413452013654 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:37.594Z]: Producto 7413452079190 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:39.416Z]: Producto 7413452177494 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:40.515Z]: Producto 7413452374102 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:41.801Z]: Producto 7413452439638 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:42.953Z]: Producto 7413452505174 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:44.469Z]: Producto 7413452537942 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:45.674Z]: Producto 7413452570710 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:46.907Z]: Producto 7413452603478 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:48.081Z]: Producto 7413452669014 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:49.405Z]: Producto 7413452767318 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:51.099Z]: Producto 7413452800086 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:52.178Z]: Producto 7413452898390 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:53.414Z]: Producto 7413452931158 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:54.523Z]: Producto 7413452996694 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:55.658Z]: Producto 7413453029462 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:56.822Z]: Producto 7413453094998 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:57.873Z]: Producto 7413453160534 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:18:58.936Z]: Producto 7413453226070 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:19:00.052Z]: Producto 7413453258838 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:19:02.254Z]: Producto 7413453291606 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:19:03.505Z]: Producto 7413453422678 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:19:04.658Z]: Producto 7413453455446 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:19:05.787Z]: Producto 7413453586518 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:19:06.878Z]: Producto 7413453619286 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:19:07.886Z]: Producto 7413453652054 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:19:09.187Z]: Producto 7413453684822 Actualizado Correctamente en DB.
+LOG [2024-09-23T17:20:05.648Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T17:20:06.302Z]: Conexión exitosa a MongoDB
+LOG [2024-09-23T17:21:23.291Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T17:21:23.986Z]: Conexión exitosa a MongoDB
+LOG [2024-09-23T17:21:28.680Z]: 872
+LOG [2024-09-23T17:21:29.587Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T17:21:29.987Z]: Conexión exitosa a MongoDB
+LOG [2024-09-23T17:22:15.112Z]: 872
+LOG [2024-09-23T17:22:15.959Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-23T17:22:16.358Z]: Conexión exitosa a MongoDB
