@@ -15120,3 +15120,9 @@ LOG [2024-09-26T02:59:03.817Z]: [object Object],[object Object],[object Object],
 LOG [2024-09-26T02:59:03.836Z]: Cantidad Productos Shopify 1054
 LOG [2024-09-26T03:00:09.195Z]: Servidor en Linea. Puerto: 3000
 LOG [2024-09-26T03:00:09.800Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T03:08:03.157Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T03:08:03.776Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T03:09:32.425Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T03:09:32.860Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T03:13:21.481Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T03:13:21.988Z]: Conexión exitosa a MongoDB
