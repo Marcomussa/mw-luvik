@@ -84,6 +84,7 @@ exports.listProducts = async () => {
             id: product.id,
             //lumps: metafields[0].value ? metafields[0].value : 0,
             title: product.title,
+            tags: product.tags,
             variants: [{
               sku: product.variants[0].sku,
               inventory_management: product.variants[0].inventory_management,
