@@ -16,4 +16,6 @@ router.get("/list-products-with-collections", productController.getProductsWithC
 
 router.get('/get-id-by-name/:name', productController.listProductIDsByName)
 
+router.get("/count",  productController.countProducts)
+
 module.exports = router

@@ -26,41 +26,77 @@ const shopify = new Shopify({
 })
 
 //* -- -- Product -- -- */
+exports.getTotalProducts = async () => {
+  try {
+    const response = await axios.get(`${SHOPIFY_STORE_URL}/products/count.json`, { headers });
+    return response.data.count
+  } catch (error) {
+    console.error('Error fetching product count from Shopify:', error.message);
+  }
+}
+
 exports.listProducts = async () => {
   try {
     let allProducts = [];
     let hasMoreProducts = true;
-    let lastId = null;
+    let nextPageInfo = null;
 
     while (hasMoreProducts) {
       const params = {
         limit: 250,
       };
 
-      if (lastId) {
-        params.since_id = lastId;
+      if (nextPageInfo) {
+        params.page_info = nextPageInfo;
       }
 
-      const products = await shopify.product.list(params);
+      const response = await shopify.product.list(params);
+      const products = response.products || response;
+
       allProducts = allProducts.concat(products);
 
-      if (products.length < 250) {
-        hasMoreProducts = false;
+      if (response.nextPageParameters) {
+        nextPageInfo = response.nextPageParameters.page_info;
       } else {
-        lastId = products[products.length - 1].id;
+        hasMoreProducts = false;
       }
     }
 
-    const productDetails = allProducts.map(product => ({
-      id: product.id,
-      title: product.title,
-      sku: product.variants[0].sku
+    //! Filtro Personalizado
+    // const filteredProducts = allProducts.filter(product => {
+    //   return product.variants.some(variant => variant.sku === "");
+    // });
+
+    const productDetails = await Promise.all(allProducts.map(async (product) => {
+      try {
+        //! Obtener metacampos para cada producto
+        // const metafields = await shopify.metafield.list({
+        //   metafield: {
+        //     owner_resource: 'product',
+        //     owner_id: product.id
+        //   }
+        // });
+        const metafields = [{}]
+
+        // Mostrar metacampos por consola
+        return {
+          product: {
+            id: product.id,
+            lumps: metafields[0].value ? metafields[0].value : 0,
+            title: product.title,
+            variants: [{
+              sku: product.variants[0].sku,
+              inventory_management: product.variants[0].inventory_management,
+              inventory_quantity: product.variants[0].inventory_quantity,
+              price: product.variants[0].price,
+              compare_at_price: product.variants[0].compare_at_price
+            }],
+          }
+        };
+      } catch (error) {
+        console.error("Error", product.id)
+      }
     }));
-
-    const jsonFilePath = path.resolve(__dirname, '../JSON_examples/productList.json')
-    fs.writeFileSync(jsonFilePath, JSON.stringify(productDetails, null, 2), 'utf8'); 
-
-    console.log(productDetails.length)
 
     return {
       success: true,
@@ -74,6 +110,7 @@ exports.listProducts = async () => {
     };
   }
 };
+
 
 exports.listProductByID = async (productId) => {
   try {
@@ -359,48 +396,56 @@ const checkIfProductIsCreated = async (productId) => {
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 exports.getProductsWithCollections = async () => {
   try {
+    //! CARGAR: 7413762359382, 7413726937174:
     let allProducts = [];
     let hasMoreProducts = true;
-    let lastId = null;
+    let nextPageInfo = null;
 
     while (hasMoreProducts) {
       const params = {
         limit: 250,
       };
 
-      if (lastId) {
-        params.since_id = lastId;
+      if (nextPageInfo) {
+        params.page_info = nextPageInfo;
       }
 
-      const products = await shopify.product.list(params);
+      const response = await shopify.product.list(params);
+      const products = response.products || response;
+
       allProducts = allProducts.concat(products);
 
-      if (products.length < 250) {
-        hasMoreProducts = false;
+      if (response.nextPageParameters) {
+        nextPageInfo = response.nextPageParameters.page_info;
       } else {
-        lastId = products[products.length - 1].id;
+        hasMoreProducts = false;
       }
-
-      await delay(500)
     }
 
-    const productsWithCollections = await Promise.all(allProducts.map(async (product) => {
-      const collections = await shopify.customCollection.list({
-        product_id: product.id,
-      });
+    const productsWithCollections = [];
+    for (const product of allProducts) {
+      try {
+        const collections = await shopify.customCollection.list({
+          product_id: product.id,
+        });
 
-      const filteredCollections = collections.map(collection => ({
-        id: collection.id,
-        title: collection.title,
-      }));
-      
-      return {
-        id: product.id,
-        title: product.title,
-        sku: product.variants[0].sku,
-        collections: filteredCollections,
-      };
-    }));
+        const filteredCollections = collections.map(collection => ({
+          id: collection.id,
+          title: collection.title,
+        }));
+
+        productsWithCollections.push({
+          id: product.id,
+          title: product.title,
+          sku: product.variants[0].sku,
+          collections: filteredCollections,
+        });
+
+        console.log(`Producto ID ${product.id} procesado`);
+      } catch (error) {
+        console.error(`Error al obtener colecciones para el producto ${product.id}:`, error);
+      }
+    }
 
     return productsWithCollections;
   } catch (error) {
@@ -425,7 +470,7 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
             collection_id: collectionId
           });
           console.log(`Asignado exitosamente a colección ${collectionId}`);
-          await delay(200)
+          await delay(100)
         } else {
           console.log(`Producto ya existente en coleccion ${collectionId}`)
         }

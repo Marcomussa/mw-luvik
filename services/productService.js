@@ -24,7 +24,7 @@ exports.handleBatch = async (created, updated, deleted) => {
       } catch (error) {
         console.log(`Error al crear producto ${product.product.title}: ${error.message}`);
       }
-      await delay(300);
+      await delay(100);
     }
 
     return createdProductIds;
@@ -43,7 +43,7 @@ exports.handleBatch = async (created, updated, deleted) => {
       } catch (error) {
         console.log(`Error al actualizar producto ${product.product.title}: ${error.message}`);
       }
-      await delay(300);
+      await delay(50);
     }
   }
 
