@@ -96,6 +96,20 @@ app.use("/customer/new", express.raw({ type: 'application/json' }), validateSign
     }
 })
 
+app.use("/products/delete", express.raw({ type: 'application/json' }), validateSignature, async (req, res) => {
+    try {
+        const data = JSON.parse(req.body);
+
+        console.log('Webhook recibido:', data);
+
+        res.status(200).json({ message: 'Webhook procesado correctamente' });
+
+    } catch (error) {
+        console.error('Error procesando el webhook:', error.message);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+})
+
 app.use("/orders", express.raw({ type: 'application/json' }), validateSignature, orderRoutes)
 
 //* SERVER *//
