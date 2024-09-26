@@ -135,23 +135,26 @@ exports.listProducts = async (req, res) => {
 exports.getProductsWithCollections = async (req, res) => {
   try {
     const response = await shopifyClient.getProductsWithCollections()
-    for (let i = 0; i < response.length; i++) {
-      const productId = response[i].id
-      const productTitle = response[i].title
-      const collections = response[i].collections.map(collection => ({
-        id: collection.id, // Extrae solo el ID de la colección
-        title: collection.title // Extrae solo el título de la colección
-      }));
+    //! POST Product a DB
+    // for (let i = 0; i < response.length; i++) {
+    //   const productId = response[i].id
+    //   const productTitle = response[i].title
+    //   const collections = response[i].collections.map(collection => ({
+    //     id: collection.id, 
+    //     title: collection.title 
+    //   }));
 
-      const newProduct = new Product({
-        id: productId,
-        title: productTitle,
-        collections: collections
-      });
+    //   const newProduct = new Product({
+    //     id: productId,
+    //     title: productTitle,
+    //     collections: collections
+    //   });
 
-      await newProduct.save();
-    }
+    //   await newProduct.save();
+    // }
 
+    console.log(response)
+    console.log("Cantidad Productos Shopify", response.length)
     res.status(200).json(response)
   } catch (error) {
     console.log('Error Listando Productos con Colecciones. productController.js', error.message)
@@ -166,16 +169,16 @@ async function countProducts() {
     console.log("DB:", productCountInDb)
     console.log("Shopify:", productCountInShopify)
 
-    return { productCountInDb, productCountInShopify }
+    return { "DB": productCountInDb, "SHOPIFY": productCountInShopify }
   } catch (error) {
     console.error('Error counting products:', error);
   }
 }
 
-exports.countProducts = async () => {
+exports.countProducts = async (req, res) => {
   try {
     const productCount = await countProducts()
-    return productCount
+    return res.status(200).json(productCount)
   } catch (error) {
     console.error('Error counting products:', error);
   }

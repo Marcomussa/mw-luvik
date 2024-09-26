@@ -12819,3 +12819,2304 @@ LOG [2024-09-26T02:07:48.036Z]: Producto 7413717631062 Actualizado Correctamente
 LOG [2024-09-26T02:08:32.762Z]: DB: 1051
 LOG [2024-09-26T02:08:32.763Z]: Shopify: 1053
 LOG [2024-09-26T02:08:44.827Z]: 1053
+LOG [2024-09-26T02:16:40.757Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:16:41.301Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:17:25.310Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:17:25.705Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:18:10.195Z]: DB: 1051
+LOG [2024-09-26T02:18:10.196Z]: Shopify: 1053
+ERROR [2024-09-26T02:18:10.197Z]: Error counting products: ReferenceError: res is not defined
+LOG [2024-09-26T02:18:52.038Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:18:52.687Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:19:02.635Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:19:03.055Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:19:04.791Z]: DB: 1051
+LOG [2024-09-26T02:19:04.791Z]: Shopify: 1053
+ERROR [2024-09-26T02:19:04.793Z]: Error counting products: ReferenceError: res is not defined
+LOG [2024-09-26T02:19:15.782Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:19:16.189Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:19:17.199Z]: DB: 1051
+LOG [2024-09-26T02:19:17.199Z]: Shopify: 1053
+LOG [2024-09-26T02:19:52.320Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:19:52.795Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:19:53.698Z]: DB: 1051
+LOG [2024-09-26T02:19:53.698Z]: Shopify: 1053
+LOG [2024-09-26T02:19:59.501Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:19:59.901Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:20:09.997Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:20:10.400Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:20:10.776Z]: DB: 1051
+LOG [2024-09-26T02:20:10.777Z]: Shopify: 1053
+LOG [2024-09-26T02:20:24.927Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:20:25.326Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:20:26.658Z]: DB: 1051
+LOG [2024-09-26T02:20:26.659Z]: Shopify: 1053
+ERROR [2024-09-26T02:30:25.614Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+LOG [2024-09-26T02:31:08.160Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:31:08.639Z]: Conexión exitosa a MongoDB
+ERROR [2024-09-26T02:34:22.187Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+ERROR [2024-09-26T02:34:46.111Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+ERROR [2024-09-26T02:35:47.194Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+ERROR [2024-09-26T02:36:22.228Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+ERROR [2024-09-26T02:36:23.912Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+ERROR [2024-09-26T02:36:35.866Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+ERROR [2024-09-26T02:36:37.180Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+LOG [2024-09-26T02:36:54.071Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:36:54.674Z]: Conexión exitosa a MongoDB
+ERROR [2024-09-26T02:36:55.438Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+ERROR [2024-09-26T02:37:00.349Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+ERROR [2024-09-26T02:38:14.039Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+ERROR [2024-09-26T02:38:19.800Z]: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Usuario\Desktop\mw-luvik\node_modules\body-parser\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+LOG [2024-09-26T02:38:50.961Z]: 1054
+LOG [2024-09-26T02:39:09.766Z]: DB: 1051
+LOG [2024-09-26T02:39:09.766Z]: Shopify: 1054
+LOG [2024-09-26T02:40:35.372Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:40:35.812Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:40:49.268Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:40:49.672Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:40:57.768Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:40:58.170Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:42:49.559Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:42:50.029Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:43:28.139Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:43:28.545Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:43:53.074Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:43:53.846Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:44:50.210Z]: 1054
+LOG [2024-09-26T02:45:37.262Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:45:37.845Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:45:45.763Z]: 1054
+LOG [2024-09-26T02:47:36.109Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T02:47:36.707Z]: Conexión exitosa a MongoDB
+LOG [2024-09-26T02:47:41.124Z]: Producto ID 7413720842326 procesado
+LOG [2024-09-26T02:47:41.124Z]: [object Object]
+LOG [2024-09-26T02:47:41.359Z]: Producto ID 7413779431510 procesado
+LOG [2024-09-26T02:47:41.360Z]: [object Object]
+LOG [2024-09-26T02:47:41.629Z]: Producto ID 7413779660886 procesado
+LOG [2024-09-26T02:47:41.629Z]: [object Object]
+LOG [2024-09-26T02:47:41.875Z]: Producto ID 7413779267670 procesado
+LOG [2024-09-26T02:47:41.876Z]: [object Object]
+LOG [2024-09-26T02:47:42.107Z]: Producto ID 7413720973398 procesado
+LOG [2024-09-26T02:47:42.107Z]: [object Object]
+LOG [2024-09-26T02:47:43.016Z]: Producto ID 7413779791958 procesado
+LOG [2024-09-26T02:47:43.016Z]: [object Object]
+LOG [2024-09-26T02:47:43.265Z]: Producto ID 7413734604886 procesado
+LOG [2024-09-26T02:47:43.266Z]: [object Object]
+LOG [2024-09-26T02:47:43.931Z]: Producto ID 7413734637654 procesado
+LOG [2024-09-26T02:47:43.931Z]: [object Object]
+LOG [2024-09-26T02:47:45.207Z]: Producto ID 7413734670422 procesado
+LOG [2024-09-26T02:47:45.207Z]: [object Object]
+LOG [2024-09-26T02:47:45.774Z]: Producto ID 7413734703190 procesado
+LOG [2024-09-26T02:47:45.774Z]: [object Object]
+LOG [2024-09-26T02:47:46.038Z]: Producto ID 7413721366614 procesado
+LOG [2024-09-26T02:47:46.038Z]: [object Object]
+LOG [2024-09-26T02:47:46.510Z]: Producto ID 7413734801494 procesado
+LOG [2024-09-26T02:47:46.511Z]: [object Object]
+LOG [2024-09-26T02:47:46.771Z]: Producto ID 7413734735958 procesado
+LOG [2024-09-26T02:47:46.771Z]: [object Object]
+LOG [2024-09-26T02:47:47.041Z]: Producto ID 7416500027478 procesado
+LOG [2024-09-26T02:47:47.041Z]: [object Object]
+LOG [2024-09-26T02:47:53.019Z]: Producto ID 7416500093014 procesado
+LOG [2024-09-26T02:47:53.019Z]: [object Object]
+LOG [2024-09-26T02:47:53.884Z]: Producto ID 7413449195606 procesado
+LOG [2024-09-26T02:47:53.885Z]: [object Object]
+LOG [2024-09-26T02:47:54.366Z]: Producto ID 7416502386774 procesado
+LOG [2024-09-26T02:47:54.366Z]: [object Object]
+LOG [2024-09-26T02:47:55.851Z]: Producto ID 7416500322390 procesado
+LOG [2024-09-26T02:47:55.851Z]: [object Object]
+LOG [2024-09-26T02:47:57.125Z]: Producto ID 7416502026326 procesado
+LOG [2024-09-26T02:47:57.125Z]: [object Object]
+LOG [2024-09-26T02:47:57.364Z]: Producto ID 7416500289622 procesado
+LOG [2024-09-26T02:47:57.364Z]: [object Object]
+LOG [2024-09-26T02:47:57.829Z]: Producto ID 7416501960790 procesado
+LOG [2024-09-26T02:47:57.829Z]: [object Object]
+LOG [2024-09-26T02:47:58.272Z]: Producto ID 7413444247638 procesado
+LOG [2024-09-26T02:47:58.272Z]: [object Object]
+LOG [2024-09-26T02:47:58.803Z]: Producto ID 7413444214870 procesado
+LOG [2024-09-26T02:47:58.803Z]: [object Object]
+LOG [2024-09-26T02:48:00.059Z]: Producto ID 7416500256854 procesado
+LOG [2024-09-26T02:48:00.059Z]: [object Object]
+LOG [2024-09-26T02:48:00.539Z]: Producto ID 7413448605782 procesado
+LOG [2024-09-26T02:48:00.539Z]: [object Object]
+LOG [2024-09-26T02:48:01.060Z]: Producto ID 7416500551766 procesado
+LOG [2024-09-26T02:48:01.060Z]: [object Object]
+LOG [2024-09-26T02:48:01.311Z]: Producto ID 7416500486230 procesado
+LOG [2024-09-26T02:48:01.311Z]: [object Object]
+LOG [2024-09-26T02:48:01.593Z]: Producto ID 7413448998998 procesado
+LOG [2024-09-26T02:48:01.594Z]: [object Object]
+LOG [2024-09-26T02:48:03.153Z]: Producto ID 7416503369814 procesado
+LOG [2024-09-26T02:48:03.153Z]: [object Object]
+LOG [2024-09-26T02:48:03.402Z]: Producto ID 7413735555158 procesado
+LOG [2024-09-26T02:48:03.403Z]: [object Object]
+LOG [2024-09-26T02:48:04.642Z]: Producto ID 7413748727894 procesado
+LOG [2024-09-26T02:48:04.642Z]: [object Object]
+LOG [2024-09-26T02:48:06.945Z]: Producto ID 7413748695126 procesado
+LOG [2024-09-26T02:48:06.945Z]: [object Object]
+LOG [2024-09-26T02:48:08.206Z]: Producto ID 7413748826198 procesado
+LOG [2024-09-26T02:48:08.207Z]: [object Object]
+LOG [2024-09-26T02:48:09.072Z]: Producto ID 7413778055254 procesado
+LOG [2024-09-26T02:48:09.072Z]: [object Object]
+LOG [2024-09-26T02:48:09.306Z]: Producto ID 7413778350166 procesado
+LOG [2024-09-26T02:48:09.306Z]: [object Object]
+LOG [2024-09-26T02:48:09.963Z]: Producto ID 7413778251862 procesado
+LOG [2024-09-26T02:48:09.963Z]: [object Object]
+LOG [2024-09-26T02:48:10.890Z]: Producto ID 7413778120790 procesado
+LOG [2024-09-26T02:48:10.890Z]: [object Object]
+LOG [2024-09-26T02:48:11.154Z]: Producto ID 7413749284950 procesado
+LOG [2024-09-26T02:48:11.154Z]: [object Object]
+LOG [2024-09-26T02:48:11.646Z]: Producto ID 7413749448790 procesado
+LOG [2024-09-26T02:48:11.646Z]: [object Object]
+LOG [2024-09-26T02:48:11.933Z]: Producto ID 7413749186646 procesado
+LOG [2024-09-26T02:48:11.933Z]: [object Object]
+LOG [2024-09-26T02:48:14.235Z]: Producto ID 7413749055574 procesado
+LOG [2024-09-26T02:48:14.235Z]: [object Object]
+LOG [2024-09-26T02:48:15.488Z]: Producto ID 7413749579862 procesado
+LOG [2024-09-26T02:48:15.488Z]: [object Object]
+LOG [2024-09-26T02:48:16.944Z]: Producto ID 7413748858966 procesado
+LOG [2024-09-26T02:48:16.944Z]: [object Object]
+LOG [2024-09-26T02:48:17.179Z]: Producto ID 7413748924502 procesado
+LOG [2024-09-26T02:48:17.179Z]: [object Object]
+LOG [2024-09-26T02:48:17.632Z]: Producto ID 7413448802390 procesado
+LOG [2024-09-26T02:48:17.632Z]: [object Object]
+LOG [2024-09-26T02:48:17.893Z]: Producto ID 7413448736854 procesado
+LOG [2024-09-26T02:48:17.893Z]: [object Object]
+LOG [2024-09-26T02:48:18.590Z]: Producto ID 7413443821654 procesado
+LOG [2024-09-26T02:48:18.590Z]: [object Object]
+LOG [2024-09-26T02:48:18.831Z]: Producto ID 7413443854422 procesado
+LOG [2024-09-26T02:48:18.831Z]: [object Object]
+LOG [2024-09-26T02:48:19.291Z]: Producto ID 7413444935766 procesado
+LOG [2024-09-26T02:48:19.291Z]: [object Object]
+LOG [2024-09-26T02:48:19.531Z]: Producto ID 7413447524438 procesado
+LOG [2024-09-26T02:48:19.532Z]: [object Object]
+LOG [2024-09-26T02:48:19.854Z]: Producto ID 7413446344790 procesado
+LOG [2024-09-26T02:48:19.854Z]: [object Object]
+LOG [2024-09-26T02:48:21.654Z]: Producto ID 7413448343638 procesado
+LOG [2024-09-26T02:48:21.655Z]: [object Object]
+LOG [2024-09-26T02:48:21.917Z]: Producto ID 7416495833174 procesado
+LOG [2024-09-26T02:48:21.917Z]: [object Object]
+LOG [2024-09-26T02:48:22.187Z]: Producto ID 7416492621910 procesado
+LOG [2024-09-26T02:48:22.187Z]: [object Object]
+LOG [2024-09-26T02:48:23.453Z]: Producto ID 7416497242198 procesado
+LOG [2024-09-26T02:48:23.454Z]: [object Object]
+LOG [2024-09-26T02:48:24.322Z]: Producto ID 7413443526742 procesado
+LOG [2024-09-26T02:48:24.322Z]: [object Object]
+LOG [2024-09-26T02:48:25.270Z]: Producto ID 7416497307734 procesado
+LOG [2024-09-26T02:48:25.270Z]: [object Object]
+LOG [2024-09-26T02:48:25.529Z]: Producto ID 7416497340502 procesado
+LOG [2024-09-26T02:48:25.529Z]: [object Object]
+LOG [2024-09-26T02:48:26.792Z]: Producto ID 7413729460310 procesado
+LOG [2024-09-26T02:48:26.792Z]: [object Object]
+LOG [2024-09-26T02:48:27.065Z]: Producto ID 7413729853526 procesado
+LOG [2024-09-26T02:48:27.065Z]: [object Object]
+LOG [2024-09-26T02:48:27.322Z]: Producto ID 7413729919062 procesado
+LOG [2024-09-26T02:48:27.323Z]: [object Object]
+LOG [2024-09-26T02:48:28.812Z]: Producto ID 7413730213974 procesado
+LOG [2024-09-26T02:48:28.812Z]: [object Object]
+LOG [2024-09-26T02:48:29.059Z]: Producto ID 7413730246742 procesado
+LOG [2024-09-26T02:48:29.059Z]: [object Object]
+LOG [2024-09-26T02:48:29.337Z]: Producto ID 7413730082902 procesado
+LOG [2024-09-26T02:48:29.337Z]: [object Object]
+LOG [2024-09-26T02:48:29.596Z]: Producto ID 7413730115670 procesado
+LOG [2024-09-26T02:48:29.597Z]: [object Object]
+LOG [2024-09-26T02:48:29.855Z]: Producto ID 7413730050134 procesado
+LOG [2024-09-26T02:48:29.856Z]: [object Object]
+LOG [2024-09-26T02:48:30.182Z]: Producto ID 7413729755222 procesado
+LOG [2024-09-26T02:48:30.182Z]: [object Object]
+LOG [2024-09-26T02:48:30.485Z]: Producto ID 7413729787990 procesado
+LOG [2024-09-26T02:48:30.486Z]: [object Object]
+LOG [2024-09-26T02:48:30.968Z]: Producto ID 7413730639958 procesado
+LOG [2024-09-26T02:48:30.968Z]: [object Object]
+LOG [2024-09-26T02:48:31.226Z]: Producto ID 7413729951830 procesado
+LOG [2024-09-26T02:48:31.226Z]: [object Object]
+LOG [2024-09-26T02:48:31.482Z]: Producto ID 7413729820758 procesado
+LOG [2024-09-26T02:48:31.483Z]: [object Object]
+LOG [2024-09-26T02:48:32.764Z]: Producto ID 7413730607190 procesado
+LOG [2024-09-26T02:48:32.764Z]: [object Object]
+LOG [2024-09-26T02:48:33.007Z]: Producto ID 7413730148438 procesado
+LOG [2024-09-26T02:48:33.008Z]: [object Object]
+LOG [2024-09-26T02:48:33.281Z]: Producto ID 7413730181206 procesado
+LOG [2024-09-26T02:48:33.281Z]: [object Object]
+LOG [2024-09-26T02:48:34.362Z]: Producto ID 7413729591382 procesado
+LOG [2024-09-26T02:48:34.363Z]: [object Object]
+LOG [2024-09-26T02:48:34.617Z]: Producto ID 7413729493078 procesado
+LOG [2024-09-26T02:48:34.617Z]: [object Object]
+LOG [2024-09-26T02:48:35.866Z]: Producto ID 7413729656918 procesado
+LOG [2024-09-26T02:48:35.866Z]: [object Object]
+LOG [2024-09-26T02:48:36.129Z]: Producto ID 7413730771030 procesado
+LOG [2024-09-26T02:48:36.130Z]: [object Object]
+LOG [2024-09-26T02:48:36.582Z]: Producto ID 7413729624150 procesado
+LOG [2024-09-26T02:48:36.582Z]: [object Object]
+LOG [2024-09-26T02:48:37.664Z]: Producto ID 7413715206230 procesado
+LOG [2024-09-26T02:48:37.664Z]: [object Object]
+LOG [2024-09-26T02:48:38.938Z]: Producto ID 7416499896406 procesado
+LOG [2024-09-26T02:48:38.939Z]: [object Object]
+LOG [2024-09-26T02:48:39.243Z]: Producto ID 7416491245654 procesado
+LOG [2024-09-26T02:48:39.243Z]: [object Object]
+LOG [2024-09-26T02:48:40.494Z]: Producto ID 7416491278422 procesado
+LOG [2024-09-26T02:48:40.494Z]: [object Object]
+LOG [2024-09-26T02:48:40.738Z]: Producto ID 7416491343958 procesado
+LOG [2024-09-26T02:48:40.738Z]: [object Object]
+LOG [2024-09-26T02:48:40.987Z]: Producto ID 7416491311190 procesado
+LOG [2024-09-26T02:48:40.987Z]: [object Object]
+LOG [2024-09-26T02:48:41.232Z]: Producto ID 7413755281494 procesado
+LOG [2024-09-26T02:48:41.233Z]: [object Object]
+LOG [2024-09-26T02:48:41.456Z]: Producto ID 7413777301590 procesado
+LOG [2024-09-26T02:48:41.456Z]: [object Object]
+LOG [2024-09-26T02:48:41.787Z]: Producto ID 7413752627286 procesado
+LOG [2024-09-26T02:48:41.787Z]: [object Object]
+LOG [2024-09-26T02:48:42.038Z]: Producto ID 7413753151574 procesado
+LOG [2024-09-26T02:48:42.038Z]: [object Object]
+LOG [2024-09-26T02:48:42.383Z]: Producto ID 7413753249878 procesado
+LOG [2024-09-26T02:48:42.383Z]: [object Object]
+LOG [2024-09-26T02:48:43.633Z]: Producto ID 7413752987734 procesado
+LOG [2024-09-26T02:48:43.633Z]: [object Object]
+LOG [2024-09-26T02:48:43.906Z]: Producto ID 7413752758358 procesado
+LOG [2024-09-26T02:48:43.906Z]: [object Object]
+LOG [2024-09-26T02:48:44.360Z]: Producto ID 7413752889430 procesado
+LOG [2024-09-26T02:48:44.360Z]: [object Object]
+LOG [2024-09-26T02:48:45.894Z]: Producto ID 7413730869334 procesado
+LOG [2024-09-26T02:48:45.894Z]: [object Object]
+LOG [2024-09-26T02:48:46.142Z]: Producto ID 7413730705494 procesado
+LOG [2024-09-26T02:48:46.142Z]: [object Object]
+LOG [2024-09-26T02:48:46.835Z]: Producto ID 7413729362006 procesado
+LOG [2024-09-26T02:48:46.835Z]: [object Object]
+LOG [2024-09-26T02:48:47.294Z]: Producto ID 7413716648022 procesado
+LOG [2024-09-26T02:48:47.294Z]: [object Object]
+LOG [2024-09-26T02:48:47.755Z]: Producto ID 7413716615254 procesado
+LOG [2024-09-26T02:48:47.755Z]: [object Object]
+LOG [2024-09-26T02:48:48.013Z]: Producto ID 7413716811862 procesado
+LOG [2024-09-26T02:48:48.013Z]: [object Object]
+LOG [2024-09-26T02:48:48.466Z]: Producto ID 7413716779094 procesado
+LOG [2024-09-26T02:48:48.466Z]: [object Object]
+LOG [2024-09-26T02:48:48.723Z]: Producto ID 7413716746326 procesado
+LOG [2024-09-26T02:48:48.724Z]: [object Object]
+LOG [2024-09-26T02:48:48.973Z]: Producto ID 7413716680790 procesado
+LOG [2024-09-26T02:48:48.973Z]: [object Object]
+LOG [2024-09-26T02:48:49.638Z]: Producto ID 7413716549718 procesado
+LOG [2024-09-26T02:48:49.638Z]: [object Object]
+LOG [2024-09-26T02:48:51.960Z]: Producto ID 7413716877398 procesado
+LOG [2024-09-26T02:48:51.960Z]: [object Object]
+LOG [2024-09-26T02:48:52.261Z]: Producto ID 7413722841174 procesado
+LOG [2024-09-26T02:48:52.261Z]: [object Object]
+LOG [2024-09-26T02:48:52.798Z]: Producto ID 7413722480726 procesado
+LOG [2024-09-26T02:48:52.798Z]: [object Object]
+LOG [2024-09-26T02:48:53.079Z]: Producto ID 7413722120278 procesado
+LOG [2024-09-26T02:48:53.079Z]: [object Object]
+LOG [2024-09-26T02:48:53.722Z]: Producto ID 7413443428438 procesado
+LOG [2024-09-26T02:48:53.722Z]: [object Object]
+LOG [2024-09-26T02:48:54.045Z]: Producto ID 7416496554070 procesado
+LOG [2024-09-26T02:48:54.045Z]: [object Object]
+LOG [2024-09-26T02:48:54.936Z]: Producto ID 7416496619606 procesado
+LOG [2024-09-26T02:48:54.936Z]: [object Object]
+LOG [2024-09-26T02:48:56.437Z]: Producto ID 7416496783446 procesado
+LOG [2024-09-26T02:48:56.438Z]: [object Object]
+LOG [2024-09-26T02:48:56.869Z]: Producto ID 7416496685142 procesado
+LOG [2024-09-26T02:48:56.869Z]: [object Object]
+LOG [2024-09-26T02:48:57.147Z]: Producto ID 7416496750678 procesado
+LOG [2024-09-26T02:48:57.147Z]: [object Object]
+LOG [2024-09-26T02:48:57.629Z]: Producto ID 7413443395670 procesado
+LOG [2024-09-26T02:48:57.629Z]: [object Object]
+LOG [2024-09-26T02:48:59.095Z]: Producto ID 7413443362902 procesado
+LOG [2024-09-26T02:48:59.095Z]: [object Object]
+LOG [2024-09-26T02:48:59.452Z]: Producto ID 7413443330134 procesado
+LOG [2024-09-26T02:48:59.452Z]: [object Object]
+LOG [2024-09-26T02:48:59.742Z]: Producto ID 7416496422998 procesado
+LOG [2024-09-26T02:48:59.742Z]: [object Object]
+LOG [2024-09-26T02:49:00.009Z]: Producto ID 7416496521302 procesado
+LOG [2024-09-26T02:49:00.009Z]: [object Object]
+LOG [2024-09-26T02:49:00.279Z]: Producto ID 7413721432150 procesado
+LOG [2024-09-26T02:49:00.279Z]: [object Object]
+LOG [2024-09-26T02:49:00.755Z]: Producto ID 7413720612950 procesado
+LOG [2024-09-26T02:49:00.755Z]: [object Object]
+LOG [2024-09-26T02:49:02.426Z]: Producto ID 7413720711254 procesado
+LOG [2024-09-26T02:49:02.426Z]: [object Object]
+LOG [2024-09-26T02:49:02.725Z]: Producto ID 7413721071702 procesado
+LOG [2024-09-26T02:49:02.725Z]: [object Object]
+LOG [2024-09-26T02:49:02.996Z]: Producto ID 7413716844630 procesado
+LOG [2024-09-26T02:49:02.996Z]: [object Object]
+LOG [2024-09-26T02:49:03.490Z]: Producto ID 7416498290774 procesado
+LOG [2024-09-26T02:49:03.490Z]: [object Object]
+LOG [2024-09-26T02:49:03.736Z]: Producto ID 7416498225238 procesado
+LOG [2024-09-26T02:49:03.736Z]: [object Object]
+LOG [2024-09-26T02:49:04.207Z]: Producto ID 7416508612694 procesado
+LOG [2024-09-26T02:49:04.207Z]: [object Object]
+LOG [2024-09-26T02:49:04.670Z]: Producto ID 7416508579926 procesado
+LOG [2024-09-26T02:49:04.670Z]: [object Object]
+LOG [2024-09-26T02:49:05.904Z]: Producto ID 7416508481622 procesado
+LOG [2024-09-26T02:49:05.904Z]: [object Object]
+LOG [2024-09-26T02:49:06.177Z]: Producto ID 7413716582486 procesado
+LOG [2024-09-26T02:49:06.178Z]: [object Object]
+LOG [2024-09-26T02:49:06.626Z]: Producto ID 7416500748374 procesado
+LOG [2024-09-26T02:49:06.626Z]: [object Object]
+LOG [2024-09-26T02:49:06.918Z]: Producto ID 7416500682838 procesado
+LOG [2024-09-26T02:49:06.918Z]: [object Object]
+LOG [2024-09-26T02:49:08.183Z]: Producto ID 7413449031766 procesado
+LOG [2024-09-26T02:49:08.183Z]: [object Object]
+LOG [2024-09-26T02:49:09.662Z]: Producto ID 7413446377558 procesado
+LOG [2024-09-26T02:49:09.662Z]: [object Object]
+LOG [2024-09-26T02:49:09.922Z]: Producto ID 7416503795798 procesado
+LOG [2024-09-26T02:49:09.922Z]: [object Object]
+LOG [2024-09-26T02:49:10.159Z]: Producto ID 7413727756374 procesado
+LOG [2024-09-26T02:49:10.160Z]: [object Object]
+LOG [2024-09-26T02:49:10.412Z]: Producto ID 7413727789142 procesado
+LOG [2024-09-26T02:49:10.412Z]: [object Object]
+LOG [2024-09-26T02:49:10.681Z]: Producto ID 7413728280662 procesado
+LOG [2024-09-26T02:49:10.682Z]: [object Object]
+LOG [2024-09-26T02:49:11.925Z]: Producto ID 7413728313430 procesado
+LOG [2024-09-26T02:49:11.925Z]: [object Object]
+LOG [2024-09-26T02:49:12.376Z]: Producto ID 7413728346198 procesado
+LOG [2024-09-26T02:49:12.376Z]: [object Object]
+LOG [2024-09-26T02:49:12.628Z]: Producto ID 7413728411734 procesado
+LOG [2024-09-26T02:49:12.628Z]: [object Object]
+LOG [2024-09-26T02:49:13.898Z]: Producto ID 7413728772182 procesado
+LOG [2024-09-26T02:49:13.898Z]: [object Object]
+LOG [2024-09-26T02:49:14.602Z]: Producto ID 7413729329238 procesado
+LOG [2024-09-26T02:49:14.602Z]: [object Object]
+LOG [2024-09-26T02:49:16.069Z]: Producto ID 7413727690838 procesado
+LOG [2024-09-26T02:49:16.069Z]: [object Object]
+LOG [2024-09-26T02:49:16.533Z]: Producto ID 7413727723606 procesado
+LOG [2024-09-26T02:49:16.534Z]: [object Object]
+LOG [2024-09-26T02:49:16.775Z]: Producto ID 7413728215126 procesado
+LOG [2024-09-26T02:49:16.775Z]: [object Object]
+LOG [2024-09-26T02:49:17.035Z]: Producto ID 7413728247894 procesado
+LOG [2024-09-26T02:49:17.035Z]: [object Object]
+LOG [2024-09-26T02:49:17.275Z]: Producto ID 7413763866710 procesado
+LOG [2024-09-26T02:49:17.275Z]: [object Object]
+LOG [2024-09-26T02:49:20.556Z]: Producto ID 7413764128854 procesado
+LOG [2024-09-26T02:49:20.556Z]: [object Object]
+LOG [2024-09-26T02:49:20.793Z]: Producto ID 7413763702870 procesado
+LOG [2024-09-26T02:49:20.793Z]: [object Object]
+LOG [2024-09-26T02:49:21.056Z]: Producto ID 7413763997782 procesado
+LOG [2024-09-26T02:49:21.057Z]: [object Object]
+LOG [2024-09-26T02:49:21.288Z]: Producto ID 7413443919958 procesado
+LOG [2024-09-26T02:49:21.288Z]: [object Object]
+LOG [2024-09-26T02:49:21.520Z]: Producto ID 7416498094166 procesado
+LOG [2024-09-26T02:49:21.520Z]: [object Object]
+LOG [2024-09-26T02:49:21.768Z]: Producto ID 7416503074902 procesado
+LOG [2024-09-26T02:49:21.768Z]: [object Object]
+LOG [2024-09-26T02:49:22.343Z]: Producto ID 7416503173206 procesado
+LOG [2024-09-26T02:49:22.343Z]: [object Object]
+LOG [2024-09-26T02:49:22.853Z]: Producto ID 7416501436502 procesado
+LOG [2024-09-26T02:49:22.854Z]: [object Object]
+LOG [2024-09-26T02:49:23.075Z]: Producto ID 7416501502038 procesado
+LOG [2024-09-26T02:49:23.075Z]: [object Object]
+LOG [2024-09-26T02:49:23.300Z]: Producto ID 7416497995862 procesado
+LOG [2024-09-26T02:49:23.300Z]: [object Object]
+LOG [2024-09-26T02:49:23.583Z]: Producto ID 7413446148182 procesado
+LOG [2024-09-26T02:49:23.583Z]: [object Object]
+LOG [2024-09-26T02:49:23.831Z]: Producto ID 7413446180950 procesado
+LOG [2024-09-26T02:49:23.831Z]: [object Object]
+LOG [2024-09-26T02:49:24.110Z]: Producto ID 7413448835158 procesado
+LOG [2024-09-26T02:49:24.110Z]: [object Object]
+LOG [2024-09-26T02:49:24.590Z]: Producto ID 7413447163990 procesado
+LOG [2024-09-26T02:49:24.591Z]: [object Object]
+LOG [2024-09-26T02:49:24.830Z]: Producto ID 7413721464918 procesado
+LOG [2024-09-26T02:49:24.830Z]: [object Object]
+LOG [2024-09-26T02:49:25.110Z]: Producto ID 7413779529814 procesado
+LOG [2024-09-26T02:49:25.110Z]: [object Object]
+LOG [2024-09-26T02:49:27.267Z]: Producto ID 7413445361750 procesado
+LOG [2024-09-26T02:49:27.267Z]: [object Object]
+LOG [2024-09-26T02:49:27.526Z]: Producto ID 7416506384470 procesado
+LOG [2024-09-26T02:49:27.526Z]: [object Object]
+LOG [2024-09-26T02:49:27.948Z]: Producto ID 7413444051030 procesado
+LOG [2024-09-26T02:49:27.949Z]: [object Object]
+LOG [2024-09-26T02:49:28.488Z]: Producto ID 7413443952726 procesado
+LOG [2024-09-26T02:49:28.488Z]: [object Object]
+LOG [2024-09-26T02:49:28.733Z]: Producto ID 7416491442262 procesado
+LOG [2024-09-26T02:49:28.733Z]: [object Object]
+LOG [2024-09-26T02:49:28.959Z]: Producto ID 7416491409494 procesado
+LOG [2024-09-26T02:49:28.960Z]: [object Object]
+LOG [2024-09-26T02:49:29.424Z]: Producto ID 7413448540246 procesado
+LOG [2024-09-26T02:49:29.425Z]: [object Object]
+LOG [2024-09-26T02:49:29.655Z]: Producto ID 7413728182358 procesado
+LOG [2024-09-26T02:49:29.656Z]: [object Object]
+LOG [2024-09-26T02:49:30.134Z]: Producto ID 7413728149590 procesado
+LOG [2024-09-26T02:49:30.134Z]: [object Object]
+LOG [2024-09-26T02:49:30.395Z]: Producto ID 7413720285270 procesado
+LOG [2024-09-26T02:49:30.395Z]: [object Object]
+LOG [2024-09-26T02:49:30.618Z]: Producto ID 7416495964246 procesado
+LOG [2024-09-26T02:49:30.618Z]: [object Object]
+LOG [2024-09-26T02:49:31.140Z]: Producto ID 7416495931478 procesado
+LOG [2024-09-26T02:49:31.140Z]: [object Object]
+LOG [2024-09-26T02:49:31.404Z]: Producto ID 7413443231830 procesado
+LOG [2024-09-26T02:49:31.404Z]: [object Object]
+LOG [2024-09-26T02:49:31.841Z]: Producto ID 7413443199062 procesado
+LOG [2024-09-26T02:49:31.841Z]: [object Object]
+LOG [2024-09-26T02:49:32.091Z]: Producto ID 7416495243350 procesado
+LOG [2024-09-26T02:49:32.091Z]: [object Object]
+LOG [2024-09-26T02:49:33.400Z]: Producto ID 7416493703254 procesado
+LOG [2024-09-26T02:49:33.400Z]: [object Object]
+LOG [2024-09-26T02:49:36.991Z]: Producto ID 7413443297366 procesado
+LOG [2024-09-26T02:49:36.991Z]: [object Object]
+LOG [2024-09-26T02:49:37.432Z]: Producto ID 7413720416342 procesado
+LOG [2024-09-26T02:49:37.433Z]: [object Object]
+LOG [2024-09-26T02:49:38.674Z]: Producto ID 7413720383574 procesado
+LOG [2024-09-26T02:49:38.674Z]: [object Object]
+LOG [2024-09-26T02:49:39.126Z]: Producto ID 7413443756118 procesado
+LOG [2024-09-26T02:49:39.126Z]: [object Object]
+LOG [2024-09-26T02:49:39.602Z]: Producto ID 7416497864790 procesado
+LOG [2024-09-26T02:49:39.602Z]: [object Object]
+LOG [2024-09-26T02:49:40.853Z]: Producto ID 7416497897558 procesado
+LOG [2024-09-26T02:49:40.853Z]: [object Object]
+LOG [2024-09-26T02:49:41.097Z]: Producto ID 7416493768790 procesado
+LOG [2024-09-26T02:49:41.097Z]: [object Object]
+LOG [2024-09-26T02:49:41.344Z]: Producto ID 7416493834326 procesado
+LOG [2024-09-26T02:49:41.345Z]: [object Object]
+LOG [2024-09-26T02:49:42.645Z]: Producto ID 7416493899862 procesado
+LOG [2024-09-26T02:49:42.645Z]: [object Object]
+LOG [2024-09-26T02:49:43.109Z]: Producto ID 7416493998166 procesado
+LOG [2024-09-26T02:49:43.109Z]: [object Object]
+LOG [2024-09-26T02:49:43.370Z]: Producto ID 7416494030934 procesado
+LOG [2024-09-26T02:49:43.370Z]: [object Object]
+LOG [2024-09-26T02:49:43.692Z]: Producto ID 7416494096470 procesado
+LOG [2024-09-26T02:49:43.692Z]: [object Object]
+LOG [2024-09-26T02:49:44.562Z]: Producto ID 7416497963094 procesado
+LOG [2024-09-26T02:49:44.562Z]: [object Object]
+LOG [2024-09-26T02:49:45.647Z]: Producto ID 7413716484182 procesado
+LOG [2024-09-26T02:49:45.647Z]: [object Object]
+LOG [2024-09-26T02:49:46.112Z]: Producto ID 7413760000086 procesado
+LOG [2024-09-26T02:49:46.112Z]: [object Object]
+LOG [2024-09-26T02:49:48.652Z]: Producto ID 7413758656598 procesado
+LOG [2024-09-26T02:49:48.652Z]: [object Object]
+LOG [2024-09-26T02:49:49.550Z]: Producto ID 7413758951510 procesado
+LOG [2024-09-26T02:49:49.550Z]: [object Object]
+LOG [2024-09-26T02:49:49.989Z]: Producto ID 7413758525526 procesado
+LOG [2024-09-26T02:49:49.989Z]: [object Object]
+LOG [2024-09-26T02:49:50.226Z]: Producto ID 7413758820438 procesado
+LOG [2024-09-26T02:49:50.226Z]: [object Object]
+LOG [2024-09-26T02:49:51.107Z]: Producto ID 7413731852374 procesado
+LOG [2024-09-26T02:49:51.107Z]: [object Object]
+LOG [2024-09-26T02:49:51.376Z]: Producto ID 7413731688534 procesado
+LOG [2024-09-26T02:49:51.376Z]: [object Object]
+LOG [2024-09-26T02:49:51.635Z]: Producto ID 7413732180054 procesado
+LOG [2024-09-26T02:49:51.635Z]: [object Object]
+LOG [2024-09-26T02:49:51.974Z]: Producto ID 7413731065942 procesado
+LOG [2024-09-26T02:49:51.974Z]: [object Object]
+LOG [2024-09-26T02:49:54.475Z]: Producto ID 7413731426390 procesado
+LOG [2024-09-26T02:49:54.475Z]: [object Object]
+LOG [2024-09-26T02:49:54.792Z]: Producto ID 7413720350806 procesado
+LOG [2024-09-26T02:49:54.792Z]: [object Object]
+LOG [2024-09-26T02:49:55.070Z]: Producto ID 7413720252502 procesado
+LOG [2024-09-26T02:49:55.070Z]: [object Object]
+LOG [2024-09-26T02:49:56.351Z]: Producto ID 7413730967638 procesado
+LOG [2024-09-26T02:49:56.351Z]: [object Object]
+LOG [2024-09-26T02:49:56.633Z]: Producto ID 7413731000406 procesado
+LOG [2024-09-26T02:49:56.633Z]: [object Object]
+LOG [2024-09-26T02:50:00.525Z]: Producto ID 7413715337302 procesado
+LOG [2024-09-26T02:50:00.526Z]: [object Object]
+LOG [2024-09-26T02:50:01.003Z]: Producto ID 7413714780246 procesado
+LOG [2024-09-26T02:50:01.003Z]: [object Object]
+LOG [2024-09-26T02:50:01.252Z]: Producto ID 7413714747478 procesado
+LOG [2024-09-26T02:50:01.252Z]: [object Object]
+LOG [2024-09-26T02:50:02.747Z]: Producto ID 7413715075158 procesado
+LOG [2024-09-26T02:50:02.747Z]: [object Object]
+LOG [2024-09-26T02:50:03.215Z]: Producto ID 7413714845782 procesado
+LOG [2024-09-26T02:50:03.215Z]: [object Object]
+LOG [2024-09-26T02:50:04.922Z]: Producto ID 7413715238998 procesado
+LOG [2024-09-26T02:50:04.922Z]: [object Object]
+LOG [2024-09-26T02:50:05.169Z]: Producto ID 7413715271766 procesado
+LOG [2024-09-26T02:50:05.169Z]: [object Object]
+LOG [2024-09-26T02:50:05.620Z]: Producto ID 7413715304534 procesado
+LOG [2024-09-26T02:50:05.620Z]: [object Object]
+LOG [2024-09-26T02:50:06.092Z]: Producto ID 7413714878550 procesado
+LOG [2024-09-26T02:50:06.092Z]: [object Object]
+LOG [2024-09-26T02:50:06.327Z]: Producto ID 7413444083798 procesado
+LOG [2024-09-26T02:50:06.327Z]: [object Object]
+LOG [2024-09-26T02:50:06.608Z]: Producto ID 7416498880598 procesado
+LOG [2024-09-26T02:50:06.608Z]: [object Object]
+LOG [2024-09-26T02:50:06.893Z]: Producto ID 7416498454614 procesado
+LOG [2024-09-26T02:50:06.894Z]: [object Object]
+LOG [2024-09-26T02:50:08.365Z]: Producto ID 7416504189014 procesado
+LOG [2024-09-26T02:50:08.365Z]: [object Object]
+LOG [2024-09-26T02:50:10.125Z]: Producto ID 7416507990102 procesado
+LOG [2024-09-26T02:50:10.126Z]: [object Object]
+LOG [2024-09-26T02:50:10.382Z]: Producto ID 7413444116566 procesado
+LOG [2024-09-26T02:50:10.382Z]: [object Object]
+LOG [2024-09-26T02:50:10.834Z]: Producto ID 7416500879446 procesado
+LOG [2024-09-26T02:50:10.834Z]: [object Object]
+LOG [2024-09-26T02:50:11.086Z]: Producto ID 7413449130070 procesado
+LOG [2024-09-26T02:50:11.087Z]: [object Object]
+LOG [2024-09-26T02:50:11.368Z]: Producto ID 7413446475862 procesado
+LOG [2024-09-26T02:50:11.369Z]: [object Object]
+LOG [2024-09-26T02:50:11.681Z]: Producto ID 7416508088406 procesado
+LOG [2024-09-26T02:50:11.681Z]: [object Object]
+LOG [2024-09-26T02:50:11.963Z]: Producto ID 7416492851286 procesado
+LOG [2024-09-26T02:50:11.963Z]: [object Object]
+LOG [2024-09-26T02:50:12.192Z]: Producto ID 7416492916822 procesado
+LOG [2024-09-26T02:50:12.193Z]: [object Object]
+LOG [2024-09-26T02:50:12.500Z]: Producto ID 7416492949590 procesado
+LOG [2024-09-26T02:50:12.500Z]: [object Object]
+LOG [2024-09-26T02:50:12.755Z]: Producto ID 7416493015126 procesado
+LOG [2024-09-26T02:50:12.755Z]: [object Object]
+LOG [2024-09-26T02:50:13.224Z]: Producto ID 7416493441110 procesado
+LOG [2024-09-26T02:50:13.224Z]: [object Object]
+LOG [2024-09-26T02:50:13.458Z]: Producto ID 7416503337046 procesado
+LOG [2024-09-26T02:50:13.459Z]: [object Object]
+LOG [2024-09-26T02:50:15.952Z]: Producto ID 7416503271510 procesado
+LOG [2024-09-26T02:50:15.952Z]: [object Object]
+LOG [2024-09-26T02:50:16.191Z]: Producto ID 7413755412566 procesado
+LOG [2024-09-26T02:50:16.192Z]: [object Object]
+LOG [2024-09-26T02:50:17.640Z]: Producto ID 7413755576406 procesado
+LOG [2024-09-26T02:50:17.640Z]: [object Object]
+LOG [2024-09-26T02:50:18.100Z]: Producto ID 7413762555990 procesado
+LOG [2024-09-26T02:50:18.100Z]: [object Object]
+LOG [2024-09-26T02:50:18.752Z]: Producto ID 7413762719830 procesado
+LOG [2024-09-26T02:50:18.752Z]: [object Object]
+LOG [2024-09-26T02:50:19.121Z]: Producto ID 7416491049046 procesado
+LOG [2024-09-26T02:50:19.121Z]: [object Object]
+LOG [2024-09-26T02:50:19.404Z]: Producto ID 7413764259926 procesado
+LOG [2024-09-26T02:50:19.405Z]: [object Object]
+LOG [2024-09-26T02:50:20.653Z]: Producto ID 7413761245270 procesado
+LOG [2024-09-26T02:50:20.653Z]: [object Object]
+LOG [2024-09-26T02:50:20.911Z]: Producto ID 7413760557142 procesado
+LOG [2024-09-26T02:50:20.911Z]: [object Object]
+LOG [2024-09-26T02:50:21.379Z]: Producto ID 7413760393302 procesado
+LOG [2024-09-26T02:50:21.379Z]: [object Object]
+LOG [2024-09-26T02:50:21.633Z]: Producto ID 7413761048662 procesado
+LOG [2024-09-26T02:50:21.634Z]: [object Object]
+LOG [2024-09-26T02:50:22.911Z]: Producto ID 7413760786518 procesado
+LOG [2024-09-26T02:50:22.911Z]: [object Object]
+LOG [2024-09-26T02:50:23.169Z]: Producto ID 7413760131158 procesado
+LOG [2024-09-26T02:50:23.169Z]: [object Object]
+LOG [2024-09-26T02:50:23.636Z]: Producto ID 7413760655446 procesado
+LOG [2024-09-26T02:50:23.636Z]: [object Object]
+LOG [2024-09-26T02:50:23.896Z]: Producto ID 7413760884822 procesado
+LOG [2024-09-26T02:50:23.896Z]: [object Object]
+LOG [2024-09-26T02:50:25.158Z]: Producto ID 7413760294998 procesado
+LOG [2024-09-26T02:50:25.158Z]: [object Object]
+LOG [2024-09-26T02:50:25.668Z]: Producto ID 7413759344726 procesado
+LOG [2024-09-26T02:50:25.668Z]: [object Object]
+LOG [2024-09-26T02:50:26.013Z]: Producto ID 7413759508566 procesado
+LOG [2024-09-26T02:50:26.013Z]: [object Object]
+LOG [2024-09-26T02:50:26.271Z]: Producto ID 7413759213654 procesado
+LOG [2024-09-26T02:50:26.271Z]: [object Object]
+LOG [2024-09-26T02:50:26.530Z]: Producto ID 7413759049814 procesado
+LOG [2024-09-26T02:50:26.530Z]: [object Object]
+LOG [2024-09-26T02:50:26.794Z]: Producto ID 7413775040598 procesado
+LOG [2024-09-26T02:50:26.794Z]: [object Object]
+LOG [2024-09-26T02:50:27.051Z]: Producto ID 7413776613462 procesado
+LOG [2024-09-26T02:50:27.051Z]: [object Object]
+LOG [2024-09-26T02:50:27.309Z]: Producto ID 7413764882518 procesado
+LOG [2024-09-26T02:50:27.309Z]: [object Object]
+LOG [2024-09-26T02:50:27.981Z]: Producto ID 7413775335510 procesado
+LOG [2024-09-26T02:50:27.981Z]: [object Object]
+LOG [2024-09-26T02:50:28.256Z]: Producto ID 7413775171670 procesado
+LOG [2024-09-26T02:50:28.256Z]: [object Object]
+LOG [2024-09-26T02:50:28.745Z]: Producto ID 7413765144662 procesado
+LOG [2024-09-26T02:50:28.746Z]: [object Object]
+LOG [2024-09-26T02:50:29.004Z]: Producto ID 7413765013590 procesado
+LOG [2024-09-26T02:50:29.004Z]: [object Object]
+LOG [2024-09-26T02:50:29.455Z]: Producto ID 7413751939158 procesado
+LOG [2024-09-26T02:50:29.456Z]: [object Object]
+LOG [2024-09-26T02:50:30.935Z]: Producto ID 7413752397910 procesado
+LOG [2024-09-26T02:50:30.935Z]: [object Object]
+LOG [2024-09-26T02:50:31.162Z]: Producto ID 7413752102998 procesado
+LOG [2024-09-26T02:50:31.162Z]: [object Object]
+LOG [2024-09-26T02:50:31.413Z]: Producto ID 7413752266838 procesado
+LOG [2024-09-26T02:50:31.413Z]: [object Object]
+LOG [2024-09-26T02:50:31.857Z]: Producto ID 7413756395606 procesado
+LOG [2024-09-26T02:50:31.857Z]: [object Object]
+LOG [2024-09-26T02:50:32.129Z]: Producto ID 7413756133462 procesado
+LOG [2024-09-26T02:50:32.129Z]: [object Object]
+LOG [2024-09-26T02:50:32.398Z]: Producto ID 7413756264534 procesado
+LOG [2024-09-26T02:50:32.398Z]: [object Object]
+LOG [2024-09-26T02:50:32.665Z]: Producto ID 7413756035158 procesado
+LOG [2024-09-26T02:50:32.665Z]: [object Object]
+LOG [2024-09-26T02:50:32.912Z]: Producto ID 7413755871318 procesado
+LOG [2024-09-26T02:50:32.912Z]: [object Object]
+LOG [2024-09-26T02:50:34.371Z]: Producto ID 7413753512022 procesado
+LOG [2024-09-26T02:50:34.371Z]: [object Object]
+LOG [2024-09-26T02:50:35.629Z]: Producto ID 7413753872470 procesado
+LOG [2024-09-26T02:50:35.629Z]: [object Object]
+LOG [2024-09-26T02:50:37.420Z]: Producto ID 7413753643094 procesado
+LOG [2024-09-26T02:50:37.420Z]: [object Object]
+LOG [2024-09-26T02:50:37.927Z]: Producto ID 7413753774166 procesado
+LOG [2024-09-26T02:50:37.927Z]: [object Object]
+LOG [2024-09-26T02:50:38.160Z]: Producto ID 7413449850966 procesado
+LOG [2024-09-26T02:50:38.160Z]: [object Object]
+LOG [2024-09-26T02:50:38.406Z]: Producto ID 7416497537110 procesado
+LOG [2024-09-26T02:50:38.406Z]: [object Object]
+LOG [2024-09-26T02:50:38.662Z]: Producto ID 7413730934870 procesado
+LOG [2024-09-26T02:50:38.662Z]: [object Object]
+LOG [2024-09-26T02:50:39.104Z]: Producto ID 7413729689686 procesado
+LOG [2024-09-26T02:50:39.104Z]: [object Object]
+LOG [2024-09-26T02:50:40.365Z]: Producto ID 7413729558614 procesado
+LOG [2024-09-26T02:50:40.365Z]: [object Object]
+LOG [2024-09-26T02:50:41.077Z]: Producto ID 7413730803798 procesado
+LOG [2024-09-26T02:50:41.077Z]: [object Object]
+LOG [2024-09-26T02:50:41.529Z]: Producto ID 7413727461462 procesado
+LOG [2024-09-26T02:50:41.530Z]: [object Object]
+LOG [2024-09-26T02:50:42.831Z]: Producto ID 7413727363158 procesado
+LOG [2024-09-26T02:50:42.831Z]: [object Object]
+LOG [2024-09-26T02:50:43.519Z]: Producto ID 7413727330390 procesado
+LOG [2024-09-26T02:50:43.520Z]: [object Object]
+LOG [2024-09-26T02:50:43.759Z]: Producto ID 7413727494230 procesado
+LOG [2024-09-26T02:50:43.760Z]: [object Object]
+LOG [2024-09-26T02:50:44.075Z]: Producto ID 7413727297622 procesado
+LOG [2024-09-26T02:50:44.075Z]: [object Object]
+LOG [2024-09-26T02:50:44.503Z]: Producto ID 7416508350550 procesado
+LOG [2024-09-26T02:50:44.503Z]: [object Object]
+LOG [2024-09-26T02:50:44.761Z]: Producto ID 7416500584534 procesado
+LOG [2024-09-26T02:50:44.762Z]: [object Object]
+LOG [2024-09-26T02:50:45.001Z]: Producto ID 7416503697494 procesado
+LOG [2024-09-26T02:50:45.001Z]: [object Object]
+LOG [2024-09-26T02:50:45.328Z]: Producto ID 7413448704086 procesado
+LOG [2024-09-26T02:50:45.328Z]: [object Object]
+LOG [2024-09-26T02:50:46.812Z]: Producto ID 7416498913366 procesado
+LOG [2024-09-26T02:50:46.812Z]: [object Object]
+LOG [2024-09-26T02:50:49.102Z]: Producto ID 7416498978902 procesado
+LOG [2024-09-26T02:50:49.102Z]: [object Object]
+LOG [2024-09-26T02:50:49.341Z]: Producto ID 7416499208278 procesado
+LOG [2024-09-26T02:50:49.342Z]: [object Object]
+LOG [2024-09-26T02:50:49.793Z]: Producto ID 7416499273814 procesado
+LOG [2024-09-26T02:50:49.793Z]: [object Object]
+LOG [2024-09-26T02:50:50.029Z]: Producto ID 7416499044438 procesado
+LOG [2024-09-26T02:50:50.029Z]: [object Object]
+LOG [2024-09-26T02:50:51.518Z]: Producto ID 7416499175510 procesado
+LOG [2024-09-26T02:50:51.518Z]: [object Object]
+LOG [2024-09-26T02:50:51.758Z]: Producto ID 7413720809558 procesado
+LOG [2024-09-26T02:50:51.758Z]: [object Object]
+LOG [2024-09-26T02:50:52.221Z]: Producto ID 7413444313174 procesado
+LOG [2024-09-26T02:50:52.221Z]: [object Object]
+LOG [2024-09-26T02:50:52.493Z]: Producto ID 7413444280406 procesado
+LOG [2024-09-26T02:50:52.493Z]: [object Object]
+LOG [2024-09-26T02:50:52.962Z]: Producto ID 7413444968534 procesado
+LOG [2024-09-26T02:50:52.962Z]: [object Object]
+LOG [2024-09-26T02:50:53.196Z]: Producto ID 7413444345942 procesado
+LOG [2024-09-26T02:50:53.196Z]: [object Object]
+LOG [2024-09-26T02:50:54.458Z]: Producto ID 7413444378710 procesado
+LOG [2024-09-26T02:50:54.458Z]: [object Object]
+LOG [2024-09-26T02:50:54.725Z]: Producto ID 7413444575318 procesado
+LOG [2024-09-26T02:50:54.725Z]: [object Object]
+LOG [2024-09-26T02:50:55.200Z]: Producto ID 7416501895254 procesado
+LOG [2024-09-26T02:50:55.200Z]: [object Object]
+LOG [2024-09-26T02:50:55.445Z]: Producto ID 7413444444246 procesado
+LOG [2024-09-26T02:50:55.446Z]: [object Object]
+LOG [2024-09-26T02:50:55.694Z]: Producto ID 7416508383318 procesado
+LOG [2024-09-26T02:50:55.694Z]: [object Object]
+LOG [2024-09-26T02:50:56.961Z]: Producto ID 7416501534806 procesado
+LOG [2024-09-26T02:50:56.961Z]: [object Object]
+LOG [2024-09-26T02:50:57.421Z]: Producto ID 7416501600342 procesado
+LOG [2024-09-26T02:50:57.422Z]: [object Object]
+LOG [2024-09-26T02:50:57.885Z]: Producto ID 7416501665878 procesado
+LOG [2024-09-26T02:50:57.885Z]: [object Object]
+LOG [2024-09-26T02:50:58.366Z]: Producto ID 7416508776534 procesado
+LOG [2024-09-26T02:50:58.366Z]: [object Object]
+LOG [2024-09-26T02:50:58.956Z]: Producto ID 7413444477014 procesado
+LOG [2024-09-26T02:50:58.956Z]: [object Object]
+LOG [2024-09-26T02:51:01.520Z]: Producto ID 7416501698646 procesado
+LOG [2024-09-26T02:51:01.521Z]: [object Object]
+LOG [2024-09-26T02:51:01.968Z]: Producto ID 7416501764182 procesado
+LOG [2024-09-26T02:51:01.968Z]: [object Object]
+LOG [2024-09-26T02:51:02.219Z]: Producto ID 7416501829718 procesado
+LOG [2024-09-26T02:51:02.219Z]: [object Object]
+LOG [2024-09-26T02:51:03.460Z]: Producto ID 7416508710998 procesado
+LOG [2024-09-26T02:51:03.460Z]: [object Object]
+LOG [2024-09-26T02:51:05.992Z]: Producto ID 7413444509782 procesado
+LOG [2024-09-26T02:51:05.992Z]: [object Object]
+LOG [2024-09-26T02:51:06.306Z]: Producto ID 7413444542550 procesado
+LOG [2024-09-26T02:51:06.306Z]: [object Object]
+LOG [2024-09-26T02:51:06.968Z]: Producto ID 7416504451158 procesado
+LOG [2024-09-26T02:51:06.969Z]: [object Object]
+LOG [2024-09-26T02:51:08.268Z]: Producto ID 7416505139286 procesado
+LOG [2024-09-26T02:51:08.268Z]: [object Object]
+LOG [2024-09-26T02:51:08.498Z]: Producto ID 7413445197910 procesado
+LOG [2024-09-26T02:51:08.498Z]: [object Object]
+LOG [2024-09-26T02:51:09.791Z]: Producto ID 7416504516694 procesado
+LOG [2024-09-26T02:51:09.791Z]: [object Object]
+LOG [2024-09-26T02:51:11.712Z]: Producto ID 7416504385622 procesado
+LOG [2024-09-26T02:51:11.712Z]: [object Object]
+LOG [2024-09-26T02:51:11.995Z]: Producto ID 7416505172054 procesado
+LOG [2024-09-26T02:51:11.995Z]: [object Object]
+LOG [2024-09-26T02:51:12.469Z]: Producto ID 7416506417238 procesado
+LOG [2024-09-26T02:51:12.469Z]: [object Object]
+LOG [2024-09-26T02:51:12.949Z]: Producto ID 7416506515542 procesado
+LOG [2024-09-26T02:51:12.949Z]: [object Object]
+LOG [2024-09-26T02:51:13.198Z]: Producto ID 7413448966230 procesado
+LOG [2024-09-26T02:51:13.198Z]: [object Object]
+LOG [2024-09-26T02:51:14.478Z]: Producto ID 7416503205974 procesado
+LOG [2024-09-26T02:51:14.478Z]: [object Object]
+LOG [2024-09-26T02:51:15.162Z]: Producto ID 7413449064534 procesado
+LOG [2024-09-26T02:51:15.162Z]: [object Object]
+LOG [2024-09-26T02:51:16.701Z]: Producto ID 7413715402838 procesado
+LOG [2024-09-26T02:51:16.701Z]: [object Object]
+LOG [2024-09-26T02:51:17.018Z]: Producto ID 7413715009622 procesado
+LOG [2024-09-26T02:51:17.018Z]: [object Object]
+LOG [2024-09-26T02:51:17.287Z]: Producto ID 7413724414038 procesado
+LOG [2024-09-26T02:51:17.287Z]: [object Object]
+LOG [2024-09-26T02:51:17.570Z]: Producto ID 7413724741718 procesado
+LOG [2024-09-26T02:51:17.570Z]: [object Object]
+LOG [2024-09-26T02:51:18.031Z]: Producto ID 7413447458902 procesado
+LOG [2024-09-26T02:51:18.031Z]: [object Object]
+LOG [2024-09-26T02:51:18.276Z]: Producto ID 7413447393366 procesado
+LOG [2024-09-26T02:51:18.276Z]: [object Object]
+LOG [2024-09-26T02:51:18.537Z]: Producto ID 7413447426134 procesado
+LOG [2024-09-26T02:51:18.537Z]: [object Object]
+LOG [2024-09-26T02:51:18.780Z]: Producto ID 7413447262294 procesado
+LOG [2024-09-26T02:51:18.781Z]: [object Object]
+LOG [2024-09-26T02:51:19.031Z]: Producto ID 7413447295062 procesado
+LOG [2024-09-26T02:51:19.032Z]: [object Object]
+LOG [2024-09-26T02:51:21.332Z]: Producto ID 7413447360598 procesado
+LOG [2024-09-26T02:51:21.333Z]: [object Object]
+LOG [2024-09-26T02:51:21.861Z]: Producto ID 7416493113430 procesado
+LOG [2024-09-26T02:51:21.861Z]: [object Object]
+LOG [2024-09-26T02:51:23.251Z]: Producto ID 7413726871638 procesado
+LOG [2024-09-26T02:51:23.251Z]: [object Object]
+LOG [2024-09-26T02:51:23.736Z]: Producto ID 7413725528150 procesado
+LOG [2024-09-26T02:51:23.737Z]: [object Object]
+LOG [2024-09-26T02:51:24.291Z]: Producto ID 7413726806102 procesado
+LOG [2024-09-26T02:51:24.291Z]: [object Object]
+LOG [2024-09-26T02:51:24.572Z]: Producto ID 7413726707798 procesado
+LOG [2024-09-26T02:51:24.572Z]: [object Object]
+LOG [2024-09-26T02:51:26.037Z]: Producto ID 7413726019670 procesado
+LOG [2024-09-26T02:51:26.037Z]: [object Object]
+LOG [2024-09-26T02:51:26.496Z]: Producto ID 7413726904406 procesado
+LOG [2024-09-26T02:51:26.497Z]: [object Object]
+LOG [2024-09-26T02:51:26.953Z]: Producto ID 7413726412886 procesado
+LOG [2024-09-26T02:51:26.954Z]: [object Object]
+LOG [2024-09-26T02:51:27.833Z]: Producto ID 7413723693142 procesado
+LOG [2024-09-26T02:51:27.833Z]: [object Object]
+LOG [2024-09-26T02:51:29.071Z]: Producto ID 7413724053590 procesado
+LOG [2024-09-26T02:51:29.072Z]: [object Object]
+LOG [2024-09-26T02:51:29.522Z]: Producto ID 7413725134934 procesado
+LOG [2024-09-26T02:51:29.523Z]: [object Object]
+LOG [2024-09-26T02:51:29.812Z]: Producto ID 7413447917654 procesado
+LOG [2024-09-26T02:51:29.812Z]: [object Object]
+LOG [2024-09-26T02:51:31.468Z]: Producto ID 7413447557206 procesado
+LOG [2024-09-26T02:51:31.468Z]: [object Object]
+LOG [2024-09-26T02:51:32.164Z]: Producto ID 7413447589974 procesado
+LOG [2024-09-26T02:51:32.164Z]: [object Object]
+LOG [2024-09-26T02:51:32.394Z]: Producto ID 7413448179798 procesado
+LOG [2024-09-26T02:51:32.394Z]: [object Object]
+LOG [2024-09-26T02:51:33.071Z]: Producto ID 7413447622742 procesado
+LOG [2024-09-26T02:51:33.072Z]: [object Object]
+LOG [2024-09-26T02:51:33.322Z]: Producto ID 7413447950422 procesado
+LOG [2024-09-26T02:51:33.323Z]: [object Object]
+LOG [2024-09-26T02:51:33.580Z]: Producto ID 7413448147030 procesado
+LOG [2024-09-26T02:51:33.580Z]: [object Object]
+LOG [2024-09-26T02:51:35.335Z]: Producto ID 7413447983190 procesado
+LOG [2024-09-26T02:51:35.335Z]: [object Object]
+LOG [2024-09-26T02:51:37.732Z]: Producto ID 7413448048726 procesado
+LOG [2024-09-26T02:51:37.732Z]: [object Object]
+LOG [2024-09-26T02:51:37.984Z]: Producto ID 7413447688278 procesado
+LOG [2024-09-26T02:51:37.984Z]: [object Object]
+LOG [2024-09-26T02:51:38.232Z]: Producto ID 7413447721046 procesado
+LOG [2024-09-26T02:51:38.233Z]: [object Object]
+LOG [2024-09-26T02:51:38.892Z]: Producto ID 7413448081494 procesado
+LOG [2024-09-26T02:51:38.892Z]: [object Object]
+LOG [2024-09-26T02:51:40.357Z]: Producto ID 7413448114262 procesado
+LOG [2024-09-26T02:51:40.357Z]: [object Object]
+LOG [2024-09-26T02:51:40.899Z]: Producto ID 7413447753814 procesado
+LOG [2024-09-26T02:51:40.899Z]: [object Object]
+LOG [2024-09-26T02:51:41.153Z]: Producto ID 7413720907862 procesado
+LOG [2024-09-26T02:51:41.153Z]: [object Object]
+LOG [2024-09-26T02:51:41.625Z]: Producto ID 7413727232086 procesado
+LOG [2024-09-26T02:51:41.625Z]: [object Object]
+LOG [2024-09-26T02:51:41.866Z]: Producto ID 7413726740566 procesado
+LOG [2024-09-26T02:51:41.866Z]: [object Object]
+LOG [2024-09-26T02:51:42.328Z]: Producto ID 7413727101014 procesado
+LOG [2024-09-26T02:51:42.328Z]: [object Object]
+LOG [2024-09-26T02:51:42.586Z]: Producto ID 7413721038934 procesado
+LOG [2024-09-26T02:51:42.586Z]: [object Object]
+LOG [2024-09-26T02:51:43.063Z]: Producto ID 7413727166550 procesado
+LOG [2024-09-26T02:51:43.063Z]: [object Object]
+LOG [2024-09-26T02:51:44.565Z]: Producto ID 7413726937174 procesado
+LOG [2024-09-26T02:51:44.565Z]: [object Object]
+LOG [2024-09-26T02:51:45.388Z]: Producto ID 7413727035478 procesado
+LOG [2024-09-26T02:51:45.388Z]: [object Object]
+LOG [2024-09-26T02:51:45.621Z]: Producto ID 7413727133782 procesado
+LOG [2024-09-26T02:51:45.621Z]: [object Object]
+LOG [2024-09-26T02:51:45.855Z]: Producto ID 7413445165142 procesado
+LOG [2024-09-26T02:51:45.855Z]: [object Object]
+LOG [2024-09-26T02:51:46.090Z]: Producto ID 7416504320086 procesado
+LOG [2024-09-26T02:51:46.090Z]: [object Object]
+LOG [2024-09-26T02:51:47.322Z]: Producto ID 7413446017110 procesado
+LOG [2024-09-26T02:51:47.323Z]: [object Object]
+LOG [2024-09-26T02:51:47.659Z]: Producto ID 7413445066838 procesado
+LOG [2024-09-26T02:51:47.659Z]: [object Object]
+LOG [2024-09-26T02:51:47.926Z]: Producto ID 7413445984342 procesado
+LOG [2024-09-26T02:51:47.926Z]: [object Object]
+LOG [2024-09-26T02:51:48.159Z]: Producto ID 7413445099606 procesado
+LOG [2024-09-26T02:51:48.159Z]: [object Object]
+LOG [2024-09-26T02:51:48.408Z]: Producto ID 7413446967382 procesado
+LOG [2024-09-26T02:51:48.408Z]: [object Object]
+LOG [2024-09-26T02:51:48.844Z]: Producto ID 7413445034070 procesado
+LOG [2024-09-26T02:51:48.844Z]: [object Object]
+LOG [2024-09-26T02:51:49.124Z]: Producto ID 7416504254550 procesado
+LOG [2024-09-26T02:51:49.124Z]: [object Object]
+LOG [2024-09-26T02:51:50.598Z]: Producto ID 7413447065686 procesado
+LOG [2024-09-26T02:51:50.598Z]: [object Object]
+LOG [2024-09-26T02:51:50.868Z]: Producto ID 7413446049878 procesado
+LOG [2024-09-26T02:51:50.868Z]: [object Object]
+LOG [2024-09-26T02:51:51.422Z]: Producto ID 7413447786582 procesado
+LOG [2024-09-26T02:51:51.422Z]: [object Object]
+LOG [2024-09-26T02:51:54.882Z]: Producto ID 7413447884886 procesado
+LOG [2024-09-26T02:51:54.882Z]: [object Object]
+LOG [2024-09-26T02:51:55.124Z]: Producto ID 7413445001302 procesado
+LOG [2024-09-26T02:51:55.124Z]: [object Object]
+LOG [2024-09-26T02:51:56.405Z]: Producto ID 7416492130390 procesado
+LOG [2024-09-26T02:51:56.405Z]: [object Object]
+LOG [2024-09-26T02:51:56.643Z]: Producto ID 7416492228694 procesado
+LOG [2024-09-26T02:51:56.643Z]: [object Object]
+LOG [2024-09-26T02:51:56.908Z]: Producto ID 7416492195926 procesado
+LOG [2024-09-26T02:51:56.908Z]: [object Object]
+LOG [2024-09-26T02:51:57.154Z]: Producto ID 7416505925718 procesado
+LOG [2024-09-26T02:51:57.154Z]: [object Object]
+LOG [2024-09-26T02:51:57.404Z]: Producto ID 7416505860182 procesado
+LOG [2024-09-26T02:51:57.404Z]: [object Object]
+LOG [2024-09-26T02:51:57.647Z]: Producto ID 7416505794646 procesado
+LOG [2024-09-26T02:51:57.647Z]: [object Object]
+LOG [2024-09-26T02:51:58.884Z]: Producto ID 7416490721366 procesado
+LOG [2024-09-26T02:51:58.884Z]: [object Object]
+LOG [2024-09-26T02:51:59.108Z]: Producto ID 7416490623062 procesado
+LOG [2024-09-26T02:51:59.109Z]: [object Object]
+LOG [2024-09-26T02:52:00.393Z]: Producto ID 7413715173462 procesado
+LOG [2024-09-26T02:52:00.393Z]: [object Object]
+LOG [2024-09-26T02:52:00.635Z]: Producto ID 7416508416086 procesado
+LOG [2024-09-26T02:52:00.635Z]: [object Object]
+LOG [2024-09-26T02:52:02.393Z]: Producto ID 7416499961942 procesado
+LOG [2024-09-26T02:52:02.393Z]: [object Object]
+LOG [2024-09-26T02:52:02.692Z]: Producto ID 7413445296214 procesado
+LOG [2024-09-26T02:52:02.692Z]: [object Object]
+LOG [2024-09-26T02:52:03.823Z]: Producto ID 7416491769942 procesado
+LOG [2024-09-26T02:52:03.823Z]: [object Object]
+LOG [2024-09-26T02:52:04.096Z]: Producto ID 7416504713302 procesado
+LOG [2024-09-26T02:52:04.096Z]: [object Object]
+LOG [2024-09-26T02:52:04.598Z]: Producto ID 7413445328982 procesado
+LOG [2024-09-26T02:52:04.599Z]: [object Object]
+LOG [2024-09-26T02:52:04.850Z]: Producto ID 7413444608086 procesado
+LOG [2024-09-26T02:52:04.850Z]: [object Object]
+LOG [2024-09-26T02:52:05.101Z]: Producto ID 7413444673622 procesado
+LOG [2024-09-26T02:52:05.101Z]: [object Object]
+LOG [2024-09-26T02:52:06.560Z]: Producto ID 7416502091862 procesado
+LOG [2024-09-26T02:52:06.561Z]: [object Object]
+LOG [2024-09-26T02:52:07.639Z]: Producto ID 7413444706390 procesado
+LOG [2024-09-26T02:52:07.640Z]: [object Object]
+LOG [2024-09-26T02:52:07.917Z]: Producto ID 7413448474710 procesado
+LOG [2024-09-26T02:52:07.917Z]: [object Object]
+LOG [2024-09-26T02:52:08.209Z]: Producto ID 7413442674774 procesado
+LOG [2024-09-26T02:52:08.209Z]: [object Object]
+LOG [2024-09-26T02:52:08.458Z]: Producto ID 7416504778838 procesado
+LOG [2024-09-26T02:52:08.459Z]: [object Object]
+LOG [2024-09-26T02:52:08.929Z]: Producto ID 7416504909910 procesado
+LOG [2024-09-26T02:52:08.929Z]: [object Object]
+LOG [2024-09-26T02:52:09.583Z]: Producto ID 7413445230678 procesado
+LOG [2024-09-26T02:52:09.584Z]: [object Object]
+LOG [2024-09-26T02:52:09.839Z]: Producto ID 7416506941526 procesado
+LOG [2024-09-26T02:52:09.839Z]: [object Object]
+LOG [2024-09-26T02:52:10.078Z]: Producto ID 7413446246486 procesado
+LOG [2024-09-26T02:52:10.078Z]: [object Object]
+LOG [2024-09-26T02:52:10.346Z]: Producto ID 7416507269206 procesado
+LOG [2024-09-26T02:52:10.347Z]: [object Object]
+LOG [2024-09-26T02:52:11.496Z]: Producto ID 7413445951574 procesado
+LOG [2024-09-26T02:52:11.496Z]: [object Object]
+LOG [2024-09-26T02:52:11.736Z]: Producto ID 7416493473878 procesado
+LOG [2024-09-26T02:52:11.736Z]: [object Object]
+LOG [2024-09-26T02:52:11.994Z]: Producto ID 7416493146198 procesado
+LOG [2024-09-26T02:52:11.994Z]: [object Object]
+LOG [2024-09-26T02:52:12.236Z]: Producto ID 7413443002454 procesado
+LOG [2024-09-26T02:52:12.236Z]: [object Object]
+LOG [2024-09-26T02:52:12.471Z]: Producto ID 7413442740310 procesado
+LOG [2024-09-26T02:52:12.471Z]: [object Object]
+LOG [2024-09-26T02:52:12.916Z]: Producto ID 7413442773078 procesado
+LOG [2024-09-26T02:52:12.916Z]: [object Object]
+LOG [2024-09-26T02:52:13.169Z]: Producto ID 7416491573334 procesado
+LOG [2024-09-26T02:52:13.169Z]: [object Object]
+LOG [2024-09-26T02:52:13.417Z]: Producto ID 7413442805846 procesado
+LOG [2024-09-26T02:52:13.417Z]: [object Object]
+LOG [2024-09-26T02:52:13.884Z]: Producto ID 7416491147350 procesado
+LOG [2024-09-26T02:52:13.884Z]: [object Object]
+LOG [2024-09-26T02:52:14.575Z]: Producto ID 7416491737174 procesado
+LOG [2024-09-26T02:52:14.576Z]: [object Object]
+LOG [2024-09-26T02:52:14.822Z]: Producto ID 7413446803542 procesado
+LOG [2024-09-26T02:52:14.822Z]: [object Object]
+LOG [2024-09-26T02:52:15.313Z]: Producto ID 7413446770774 procesado
+LOG [2024-09-26T02:52:15.314Z]: [object Object]
+LOG [2024-09-26T02:52:16.594Z]: Producto ID 7413446836310 procesado
+LOG [2024-09-26T02:52:16.594Z]: [object Object]
+LOG [2024-09-26T02:52:16.853Z]: Producto ID 7413446705238 procesado
+LOG [2024-09-26T02:52:16.853Z]: [object Object]
+LOG [2024-09-26T02:52:18.145Z]: Producto ID 7413446672470 procesado
+LOG [2024-09-26T02:52:18.145Z]: [object Object]
+LOG [2024-09-26T02:52:18.518Z]: Producto ID 7416505335894 procesado
+LOG [2024-09-26T02:52:18.518Z]: [object Object]
+LOG [2024-09-26T02:52:18.784Z]: Producto ID 7413446541398 procesado
+LOG [2024-09-26T02:52:18.784Z]: [object Object]
+LOG [2024-09-26T02:52:19.034Z]: Producto ID 7416504483926 procesado
+LOG [2024-09-26T02:52:19.034Z]: [object Object]
+LOG [2024-09-26T02:52:20.321Z]: Producto ID 7416504942678 procesado
+LOG [2024-09-26T02:52:20.321Z]: [object Object]
+LOG [2024-09-26T02:52:22.574Z]: Producto ID 7416504614998 procesado
+LOG [2024-09-26T02:52:22.574Z]: [object Object]
+LOG [2024-09-26T02:52:23.074Z]: Producto ID 7416491606102 procesado
+LOG [2024-09-26T02:52:23.074Z]: [object Object]
+LOG [2024-09-26T02:52:23.597Z]: Producto ID 7413445263446 procesado
+LOG [2024-09-26T02:52:23.597Z]: [object Object]
+LOG [2024-09-26T02:52:23.865Z]: Producto ID 7416502157398 procesado
+LOG [2024-09-26T02:52:23.866Z]: [object Object]
+LOG [2024-09-26T02:52:24.120Z]: Producto ID 7416505696342 procesado
+LOG [2024-09-26T02:52:24.120Z]: [object Object]
+LOG [2024-09-26T02:52:24.585Z]: Producto ID 7416505663574 procesado
+LOG [2024-09-26T02:52:24.585Z]: [object Object]
+LOG [2024-09-26T02:52:25.943Z]: Producto ID 7413442904150 procesado
+LOG [2024-09-26T02:52:25.944Z]: [object Object]
+LOG [2024-09-26T02:52:26.179Z]: Producto ID 7416491671638 procesado
+LOG [2024-09-26T02:52:26.179Z]: [object Object]
+LOG [2024-09-26T02:52:26.648Z]: Producto ID 7413442936918 procesado
+LOG [2024-09-26T02:52:26.648Z]: [object Object]
+LOG [2024-09-26T02:52:26.887Z]: Producto ID 7413442969686 procesado
+LOG [2024-09-26T02:52:26.887Z]: [object Object]
+LOG [2024-09-26T02:52:27.132Z]: Producto ID 7416491802710 procesado
+LOG [2024-09-26T02:52:27.132Z]: [object Object]
+LOG [2024-09-26T02:52:28.448Z]: Producto ID 7413443067990 procesado
+LOG [2024-09-26T02:52:28.448Z]: [object Object]
+LOG [2024-09-26T02:52:28.733Z]: Producto ID 7413443035222 procesado
+LOG [2024-09-26T02:52:28.734Z]: [object Object]
+LOG [2024-09-26T02:52:29.384Z]: Producto ID 7416491835478 procesado
+LOG [2024-09-26T02:52:29.384Z]: [object Object]
+LOG [2024-09-26T02:52:30.617Z]: Producto ID 7413446934614 procesado
+LOG [2024-09-26T02:52:30.617Z]: [object Object]
+LOG [2024-09-26T02:52:31.260Z]: Producto ID 7416506548310 procesado
+LOG [2024-09-26T02:52:31.260Z]: [object Object]
+LOG [2024-09-26T02:52:31.713Z]: Producto ID 7416506843222 procesado
+LOG [2024-09-26T02:52:31.714Z]: [object Object]
+LOG [2024-09-26T02:52:31.959Z]: Producto ID 7416506810454 procesado
+LOG [2024-09-26T02:52:31.959Z]: [object Object]
+LOG [2024-09-26T02:52:32.218Z]: Producto ID 7416506581078 procesado
+LOG [2024-09-26T02:52:32.218Z]: [object Object]
+LOG [2024-09-26T02:52:32.529Z]: Producto ID 7416506646614 procesado
+LOG [2024-09-26T02:52:32.529Z]: [object Object]
+LOG [2024-09-26T02:52:35.788Z]: Producto ID 7416506744918 procesado
+LOG [2024-09-26T02:52:35.788Z]: [object Object]
+LOG [2024-09-26T02:52:36.022Z]: Producto ID 7416506122326 procesado
+LOG [2024-09-26T02:52:36.022Z]: [object Object]
+LOG [2024-09-26T02:52:36.270Z]: Producto ID 7416492720214 procesado
+LOG [2024-09-26T02:52:36.270Z]: [object Object]
+LOG [2024-09-26T02:52:36.729Z]: Producto ID 7416492654678 procesado
+LOG [2024-09-26T02:52:36.729Z]: [object Object]
+LOG [2024-09-26T02:52:37.103Z]: Producto ID 7416505401430 procesado
+LOG [2024-09-26T02:52:37.103Z]: [object Object]
+LOG [2024-09-26T02:52:37.788Z]: Producto ID 7416505073750 procesado
+LOG [2024-09-26T02:52:37.788Z]: [object Object]
+LOG [2024-09-26T02:52:39.137Z]: Producto ID 7416505008214 procesado
+LOG [2024-09-26T02:52:39.137Z]: [object Object]
+LOG [2024-09-26T02:52:39.416Z]: Producto ID 7416505237590 procesado
+LOG [2024-09-26T02:52:39.417Z]: [object Object]
+LOG [2024-09-26T02:52:39.655Z]: Producto ID 7416492818518 procesado
+LOG [2024-09-26T02:52:39.655Z]: [object Object]
+LOG [2024-09-26T02:52:39.892Z]: Producto ID 7416507695190 procesado
+LOG [2024-09-26T02:52:39.893Z]: [object Object]
+LOG [2024-09-26T02:52:40.325Z]: Producto ID 7416504647766 procesado
+LOG [2024-09-26T02:52:40.325Z]: [object Object]
+LOG [2024-09-26T02:52:40.981Z]: Producto ID 7416492064854 procesado
+LOG [2024-09-26T02:52:40.981Z]: [object Object]
+LOG [2024-09-26T02:52:42.276Z]: Producto ID 7413442871382 procesado
+LOG [2024-09-26T02:52:42.276Z]: [object Object]
+LOG [2024-09-26T02:52:42.509Z]: Producto ID 7416491901014 procesado
+LOG [2024-09-26T02:52:42.509Z]: [object Object]
+LOG [2024-09-26T02:52:42.850Z]: Producto ID 7416507007062 procesado
+LOG [2024-09-26T02:52:42.850Z]: [object Object]
+LOG [2024-09-26T02:52:43.110Z]: Producto ID 7416507138134 procesado
+LOG [2024-09-26T02:52:43.110Z]: [object Object]
+LOG [2024-09-26T02:52:43.342Z]: Producto ID 7416507072598 procesado
+LOG [2024-09-26T02:52:43.342Z]: [object Object]
+LOG [2024-09-26T02:52:43.596Z]: Producto ID 7416507203670 procesado
+LOG [2024-09-26T02:52:43.596Z]: [object Object]
+LOG [2024-09-26T02:52:43.821Z]: Producto ID 7416500944982 procesado
+LOG [2024-09-26T02:52:43.821Z]: [object Object]
+LOG [2024-09-26T02:52:44.283Z]: Producto ID 7416505598038 procesado
+LOG [2024-09-26T02:52:44.283Z]: [object Object]
+LOG [2024-09-26T02:52:44.545Z]: Producto ID 7413735358550 procesado
+LOG [2024-09-26T02:52:44.546Z]: [object Object]
+LOG [2024-09-26T02:52:44.850Z]: Producto ID 7413735391318 procesado
+LOG [2024-09-26T02:52:44.850Z]: [object Object]
+LOG [2024-09-26T02:52:45.113Z]: Producto ID 7413442642006 procesado
+LOG [2024-09-26T02:52:45.113Z]: [object Object]
+LOG [2024-09-26T02:52:45.557Z]: Producto ID 7416490950742 procesado
+LOG [2024-09-26T02:52:45.557Z]: [object Object]
+LOG [2024-09-26T02:52:45.814Z]: Producto ID 7416490885206 procesado
+LOG [2024-09-26T02:52:45.814Z]: [object Object]
+LOG [2024-09-26T02:52:46.045Z]: Producto ID 7416506089558 procesado
+LOG [2024-09-26T02:52:46.045Z]: [object Object]
+LOG [2024-09-26T02:52:46.517Z]: Producto ID 7416506187862 procesado
+LOG [2024-09-26T02:52:46.517Z]: [object Object]
+LOG [2024-09-26T02:52:46.950Z]: Producto ID 7416506024022 procesado
+LOG [2024-09-26T02:52:46.950Z]: [object Object]
+LOG [2024-09-26T02:52:47.456Z]: Producto ID 7413442478166 procesado
+LOG [2024-09-26T02:52:47.456Z]: [object Object]
+LOG [2024-09-26T02:52:47.686Z]: Producto ID 7413442543702 procesado
+LOG [2024-09-26T02:52:47.686Z]: [object Object]
+LOG [2024-09-26T02:52:49.632Z]: Producto ID 7413442609238 procesado
+LOG [2024-09-26T02:52:49.632Z]: [object Object]
+LOG [2024-09-26T02:52:49.869Z]: Producto ID 7413442445398 procesado
+LOG [2024-09-26T02:52:49.869Z]: [object Object]
+LOG [2024-09-26T02:52:51.136Z]: Producto ID 7413442510934 procesado
+LOG [2024-09-26T02:52:51.137Z]: [object Object]
+LOG [2024-09-26T02:52:51.398Z]: Producto ID 7416490819670 procesado
+LOG [2024-09-26T02:52:51.398Z]: [object Object]
+LOG [2024-09-26T02:52:51.864Z]: Producto ID 7413716025430 procesado
+LOG [2024-09-26T02:52:51.864Z]: [object Object]
+LOG [2024-09-26T02:52:53.328Z]: Producto ID 7413716516950 procesado
+LOG [2024-09-26T02:52:53.328Z]: [object Object]
+LOG [2024-09-26T02:52:53.788Z]: Producto ID 7413716418646 procesado
+LOG [2024-09-26T02:52:53.788Z]: [object Object]
+LOG [2024-09-26T02:52:57.278Z]: Producto ID 7413721301078 procesado
+LOG [2024-09-26T02:52:57.278Z]: [object Object]
+LOG [2024-09-26T02:52:57.533Z]: Producto ID 7413778808918 procesado
+LOG [2024-09-26T02:52:57.533Z]: [object Object]
+LOG [2024-09-26T02:52:58.004Z]: Producto ID 7413721170006 procesado
+LOG [2024-09-26T02:52:58.004Z]: [object Object]
+LOG [2024-09-26T02:52:58.439Z]: Producto ID 7413721235542 procesado
+LOG [2024-09-26T02:52:58.439Z]: [object Object]
+LOG [2024-09-26T02:52:58.671Z]: Producto ID 7413446901846 procesado
+LOG [2024-09-26T02:52:58.672Z]: [object Object]
+LOG [2024-09-26T02:52:58.939Z]: Producto ID 7413778939990 procesado
+LOG [2024-09-26T02:52:58.939Z]: [object Object]
+LOG [2024-09-26T02:52:59.183Z]: Producto ID 7416497406038 procesado
+LOG [2024-09-26T02:52:59.183Z]: [object Object]
+LOG [2024-09-26T02:52:59.412Z]: Producto ID 7413443592278 procesado
+LOG [2024-09-26T02:52:59.412Z]: [object Object]
+LOG [2024-09-26T02:52:59.642Z]: Producto ID 7413732474966 procesado
+LOG [2024-09-26T02:52:59.642Z]: [object Object]
+LOG [2024-09-26T02:53:00.123Z]: Producto ID 7413776875606 procesado
+LOG [2024-09-26T02:53:00.123Z]: [object Object]
+LOG [2024-09-26T02:53:00.367Z]: Producto ID 7413776711766 procesado
+LOG [2024-09-26T02:53:00.367Z]: [object Object]
+LOG [2024-09-26T02:53:00.890Z]: Producto ID 7413754789974 procesado
+LOG [2024-09-26T02:53:00.890Z]: [object Object]
+LOG [2024-09-26T02:53:01.393Z]: Producto ID 7413735456854 procesado
+LOG [2024-09-26T02:53:01.394Z]: [object Object]
+LOG [2024-09-26T02:53:01.644Z]: Producto ID 7413735325782 procesado
+LOG [2024-09-26T02:53:01.645Z]: [object Object]
+LOG [2024-09-26T02:53:05.118Z]: Producto ID 7413735522390 procesado
+LOG [2024-09-26T02:53:05.118Z]: [object Object]
+LOG [2024-09-26T02:53:05.383Z]: Producto ID 7413753348182 procesado
+LOG [2024-09-26T02:53:05.384Z]: [object Object]
+LOG [2024-09-26T02:53:06.633Z]: Producto ID 7413752496214 procesado
+LOG [2024-09-26T02:53:06.633Z]: [object Object]
+LOG [2024-09-26T02:53:06.883Z]: Producto ID 7413762359382 procesado
+LOG [2024-09-26T02:53:06.884Z]: [object Object]
+LOG [2024-09-26T02:53:08.141Z]: Producto ID 7413762195542 procesado
+LOG [2024-09-26T02:53:08.141Z]: [object Object]
+LOG [2024-09-26T02:53:08.386Z]: Producto ID 7413758066774 procesado
+LOG [2024-09-26T02:53:08.386Z]: [object Object]
+LOG [2024-09-26T02:53:09.887Z]: Producto ID 7413757935702 procesado
+LOG [2024-09-26T02:53:09.887Z]: [object Object]
+LOG [2024-09-26T02:53:13.448Z]: Producto ID 7413735489622 procesado
+LOG [2024-09-26T02:53:13.448Z]: [object Object]
+LOG [2024-09-26T02:53:14.898Z]: Producto ID 7413735293014 procesado
+LOG [2024-09-26T02:53:14.898Z]: [object Object]
+LOG [2024-09-26T02:53:15.564Z]: Producto ID 7413735260246 procesado
+LOG [2024-09-26T02:53:15.564Z]: [object Object]
+LOG [2024-09-26T02:53:16.841Z]: Producto ID 7413778710614 procesado
+LOG [2024-09-26T02:53:16.842Z]: [object Object]
+LOG [2024-09-26T02:53:17.102Z]: Producto ID 7413778579542 procesado
+LOG [2024-09-26T02:53:17.102Z]: [object Object]
+LOG [2024-09-26T02:53:17.352Z]: Producto ID 7413780185174 procesado
+LOG [2024-09-26T02:53:17.352Z]: [object Object]
+LOG [2024-09-26T02:53:17.603Z]: Producto ID 7413751742550 procesado
+LOG [2024-09-26T02:53:17.603Z]: [object Object]
+LOG [2024-09-26T02:53:17.849Z]: Producto ID 7413751382102 procesado
+LOG [2024-09-26T02:53:17.849Z]: [object Object]
+LOG [2024-09-26T02:53:18.127Z]: Producto ID 7413751513174 procesado
+LOG [2024-09-26T02:53:18.127Z]: [object Object]
+LOG [2024-09-26T02:53:19.194Z]: Producto ID 7413751644246 procesado
+LOG [2024-09-26T02:53:19.194Z]: [object Object]
+LOG [2024-09-26T02:53:19.469Z]: Producto ID 7413751840854 procesado
+LOG [2024-09-26T02:53:19.469Z]: [object Object]
+LOG [2024-09-26T02:53:19.711Z]: Producto ID 7413780316246 procesado
+LOG [2024-09-26T02:53:19.711Z]: [object Object]
+LOG [2024-09-26T02:53:20.011Z]: Producto ID 7413779923030 procesado
+LOG [2024-09-26T02:53:20.011Z]: [object Object]
+LOG [2024-09-26T02:53:22.069Z]: Producto ID 7413780054102 procesado
+LOG [2024-09-26T02:53:22.070Z]: [object Object]
+LOG [2024-09-26T02:53:22.323Z]: Producto ID 7416494850134 procesado
+LOG [2024-09-26T02:53:22.324Z]: [object Object]
+LOG [2024-09-26T02:53:22.769Z]: Producto ID 7416507793494 procesado
+LOG [2024-09-26T02:53:22.770Z]: [object Object]
+LOG [2024-09-26T02:53:23.237Z]: Producto ID 7416502517846 procesado
+LOG [2024-09-26T02:53:23.237Z]: [object Object]
+LOG [2024-09-26T02:53:23.478Z]: Producto ID 7416501010518 procesado
+LOG [2024-09-26T02:53:23.478Z]: [object Object]
+LOG [2024-09-26T02:53:23.749Z]: Producto ID 7416507367510 procesado
+LOG [2024-09-26T02:53:23.750Z]: [object Object]
+LOG [2024-09-26T02:53:24.033Z]: Producto ID 7413448245334 procesado
+LOG [2024-09-26T02:53:24.033Z]: [object Object]
+LOG [2024-09-26T02:53:25.717Z]: Producto ID 7416508121174 procesado
+LOG [2024-09-26T02:53:25.717Z]: [object Object]
+LOG [2024-09-26T02:53:25.954Z]: Producto ID 7413445787734 procesado
+LOG [2024-09-26T02:53:25.954Z]: [object Object]
+LOG [2024-09-26T02:53:26.420Z]: Producto ID 7413445853270 procesado
+LOG [2024-09-26T02:53:26.420Z]: [object Object]
+LOG [2024-09-26T02:53:26.855Z]: Producto ID 7413445460054 procesado
+LOG [2024-09-26T02:53:26.855Z]: [object Object]
+LOG [2024-09-26T02:53:27.105Z]: Producto ID 7413445656662 procesado
+LOG [2024-09-26T02:53:27.106Z]: [object Object]
+LOG [2024-09-26T02:53:27.366Z]: Producto ID 7413448409174 procesado
+LOG [2024-09-26T02:53:27.366Z]: [object Object]
+LOG [2024-09-26T02:53:27.837Z]: Producto ID 7413448441942 procesado
+LOG [2024-09-26T02:53:27.837Z]: [object Object]
+LOG [2024-09-26T02:53:28.091Z]: Producto ID 7413445492822 procesado
+LOG [2024-09-26T02:53:28.091Z]: [object Object]
+LOG [2024-09-26T02:53:28.843Z]: Producto ID 7413445525590 procesado
+LOG [2024-09-26T02:53:28.843Z]: [object Object]
+LOG [2024-09-26T02:53:29.095Z]: Producto ID 7416508907606 procesado
+LOG [2024-09-26T02:53:29.095Z]: [object Object]
+LOG [2024-09-26T02:53:29.334Z]: Producto ID 7413445722198 procesado
+LOG [2024-09-26T02:53:29.335Z]: [object Object]
+LOG [2024-09-26T02:53:31.019Z]: Producto ID 7413445394518 procesado
+LOG [2024-09-26T02:53:31.020Z]: [object Object]
+LOG [2024-09-26T02:53:31.495Z]: Producto ID 7413445623894 procesado
+LOG [2024-09-26T02:53:31.496Z]: [object Object]
+LOG [2024-09-26T02:53:32.397Z]: Producto ID 7416508842070 procesado
+LOG [2024-09-26T02:53:32.397Z]: [object Object]
+LOG [2024-09-26T02:53:32.857Z]: Producto ID 7413445820502 procesado
+LOG [2024-09-26T02:53:32.858Z]: [object Object]
+LOG [2024-09-26T02:53:33.126Z]: Producto ID 7413447131222 procesado
+LOG [2024-09-26T02:53:33.126Z]: [object Object]
+LOG [2024-09-26T02:53:33.356Z]: Producto ID 7413447098454 procesado
+LOG [2024-09-26T02:53:33.357Z]: [object Object]
+LOG [2024-09-26T02:53:33.599Z]: Producto ID 7416504057942 procesado
+LOG [2024-09-26T02:53:33.599Z]: [object Object]
+LOG [2024-09-26T02:53:33.838Z]: Producto ID 7416504123478 procesado
+LOG [2024-09-26T02:53:33.838Z]: [object Object]
+LOG [2024-09-26T02:53:34.367Z]: Producto ID 7416503992406 procesado
+LOG [2024-09-26T02:53:34.368Z]: [object Object]
+LOG [2024-09-26T02:53:34.646Z]: Producto ID 7416503926870 procesado
+LOG [2024-09-26T02:53:34.646Z]: [object Object]
+LOG [2024-09-26T02:53:34.955Z]: Producto ID 7416503861334 procesado
+LOG [2024-09-26T02:53:34.955Z]: [object Object]
+LOG [2024-09-26T02:53:36.199Z]: Producto ID 7413448310870 procesado
+LOG [2024-09-26T02:53:36.199Z]: [object Object]
+LOG [2024-09-26T02:53:36.443Z]: Producto ID 7413734211670 procesado
+LOG [2024-09-26T02:53:36.443Z]: [object Object]
+LOG [2024-09-26T02:53:36.929Z]: Producto ID 7413734113366 procesado
+LOG [2024-09-26T02:53:36.929Z]: [object Object]
+LOG [2024-09-26T02:53:37.172Z]: Producto ID 7413733949526 procesado
+LOG [2024-09-26T02:53:37.172Z]: [object Object]
+LOG [2024-09-26T02:53:37.423Z]: Producto ID 7413734178902 procesado
+LOG [2024-09-26T02:53:37.423Z]: [object Object]
+LOG [2024-09-26T02:53:37.699Z]: Producto ID 7413734047830 procesado
+LOG [2024-09-26T02:53:37.699Z]: [object Object]
+LOG [2024-09-26T02:53:38.943Z]: Producto ID 7413733916758 procesado
+LOG [2024-09-26T02:53:38.943Z]: [object Object]
+LOG [2024-09-26T02:53:39.395Z]: Producto ID 7413734080598 procesado
+LOG [2024-09-26T02:53:39.395Z]: [object Object]
+LOG [2024-09-26T02:53:39.922Z]: Producto ID 7413734244438 procesado
+LOG [2024-09-26T02:53:39.922Z]: [object Object]
+LOG [2024-09-26T02:53:40.171Z]: Producto ID 7413734146134 procesado
+LOG [2024-09-26T02:53:40.171Z]: [object Object]
+LOG [2024-09-26T02:53:40.578Z]: Producto ID 7413734015062 procesado
+LOG [2024-09-26T02:53:40.578Z]: [object Object]
+LOG [2024-09-26T02:53:41.841Z]: Producto ID 7413732540502 procesado
+LOG [2024-09-26T02:53:41.841Z]: [object Object]
+LOG [2024-09-26T02:53:42.100Z]: Producto ID 7413733425238 procesado
+LOG [2024-09-26T02:53:42.100Z]: [object Object]
+LOG [2024-09-26T02:53:42.373Z]: Producto ID 7413733458006 procesado
+LOG [2024-09-26T02:53:42.374Z]: [object Object]
+LOG [2024-09-26T02:53:43.629Z]: Producto ID 7413733687382 procesado
+LOG [2024-09-26T02:53:43.629Z]: [object Object]
+LOG [2024-09-26T02:53:43.869Z]: Producto ID 7413732573270 procesado
+LOG [2024-09-26T02:53:43.869Z]: [object Object]
+LOG [2024-09-26T02:53:44.153Z]: Producto ID 7413732606038 procesado
+LOG [2024-09-26T02:53:44.154Z]: [object Object]
+LOG [2024-09-26T02:53:44.399Z]: Producto ID 7413733720150 procesado
+LOG [2024-09-26T02:53:44.399Z]: [object Object]
+LOG [2024-09-26T02:53:44.644Z]: Producto ID 7413733228630 procesado
+LOG [2024-09-26T02:53:44.644Z]: [object Object]
+LOG [2024-09-26T02:53:45.912Z]: Producto ID 7413733359702 procesado
+LOG [2024-09-26T02:53:45.912Z]: [object Object]
+LOG [2024-09-26T02:53:46.149Z]: Producto ID 7413733392470 procesado
+LOG [2024-09-26T02:53:46.149Z]: [object Object]
+LOG [2024-09-26T02:53:47.393Z]: Producto ID 7413733752918 procesado
+LOG [2024-09-26T02:53:47.394Z]: [object Object]
+LOG [2024-09-26T02:53:50.869Z]: Producto ID 7413733785686 procesado
+LOG [2024-09-26T02:53:50.869Z]: [object Object]
+LOG [2024-09-26T02:53:51.324Z]: Producto ID 7413734277206 procesado
+LOG [2024-09-26T02:53:51.324Z]: [object Object]
+LOG [2024-09-26T02:53:51.611Z]: Producto ID 7413734441046 procesado
+LOG [2024-09-26T02:53:51.611Z]: [object Object]
+LOG [2024-09-26T02:53:52.067Z]: Producto ID 7413733851222 procesado
+LOG [2024-09-26T02:53:52.067Z]: [object Object]
+LOG [2024-09-26T02:53:52.572Z]: Producto ID 7413734342742 procesado
+LOG [2024-09-26T02:53:52.573Z]: [object Object]
+LOG [2024-09-26T02:53:52.836Z]: Producto ID 7413734539350 procesado
+LOG [2024-09-26T02:53:52.836Z]: [object Object]
+LOG [2024-09-26T02:53:54.149Z]: Producto ID 7413734309974 procesado
+LOG [2024-09-26T02:53:54.149Z]: [object Object]
+LOG [2024-09-26T02:53:54.418Z]: Producto ID 7413733556310 procesado
+LOG [2024-09-26T02:53:54.418Z]: [object Object]
+LOG [2024-09-26T02:53:54.697Z]: Producto ID 7413734572118 procesado
+LOG [2024-09-26T02:53:54.697Z]: [object Object]
+LOG [2024-09-26T02:53:54.966Z]: Producto ID 7413734506582 procesado
+LOG [2024-09-26T02:53:54.966Z]: [object Object]
+LOG [2024-09-26T02:53:55.219Z]: Producto ID 7413733654614 procesado
+LOG [2024-09-26T02:53:55.219Z]: [object Object]
+LOG [2024-09-26T02:53:55.454Z]: Producto ID 7413734408278 procesado
+LOG [2024-09-26T02:53:55.454Z]: [object Object]
+LOG [2024-09-26T02:53:56.765Z]: Producto ID 7413733883990 procesado
+LOG [2024-09-26T02:53:56.765Z]: [object Object]
+LOG [2024-09-26T02:53:57.055Z]: Producto ID 7413734473814 procesado
+LOG [2024-09-26T02:53:57.055Z]: [object Object]
+LOG [2024-09-26T02:53:57.381Z]: Producto ID 7413733490774 procesado
+LOG [2024-09-26T02:53:57.381Z]: [object Object]
+LOG [2024-09-26T02:53:57.835Z]: Producto ID 7413733589078 procesado
+LOG [2024-09-26T02:53:57.836Z]: [object Object]
+LOG [2024-09-26T02:53:58.108Z]: Producto ID 7413734899798 procesado
+LOG [2024-09-26T02:53:58.108Z]: [object Object]
+LOG [2024-09-26T02:53:59.367Z]: Producto ID 7413734998102 procesado
+LOG [2024-09-26T02:53:59.368Z]: [object Object]
+LOG [2024-09-26T02:54:01.296Z]: Producto ID 7413735161942 procesado
+LOG [2024-09-26T02:54:01.296Z]: [object Object]
+LOG [2024-09-26T02:54:02.566Z]: Producto ID 7413721759830 procesado
+LOG [2024-09-26T02:54:02.566Z]: [object Object]
+LOG [2024-09-26T02:54:02.855Z]: Producto ID 7413759672406 procesado
+LOG [2024-09-26T02:54:02.855Z]: [object Object]
+LOG [2024-09-26T02:54:03.130Z]: Producto ID 7413759770710 procesado
+LOG [2024-09-26T02:54:03.130Z]: [object Object]
+LOG [2024-09-26T02:54:03.637Z]: Producto ID 7413761310806 procesado
+LOG [2024-09-26T02:54:03.637Z]: [object Object]
+LOG [2024-09-26T02:54:04.301Z]: Producto ID 7413732507734 procesado
+LOG [2024-09-26T02:54:04.302Z]: [object Object]
+LOG [2024-09-26T02:54:04.550Z]: Producto ID 7413754429526 procesado
+LOG [2024-09-26T02:54:04.550Z]: [object Object]
+LOG [2024-09-26T02:54:04.826Z]: Producto ID 7413754036310 procesado
+LOG [2024-09-26T02:54:04.827Z]: [object Object]
+LOG [2024-09-26T02:54:05.063Z]: Producto ID 7413754527830 procesado
+LOG [2024-09-26T02:54:05.064Z]: [object Object]
+LOG [2024-09-26T02:54:05.503Z]: Producto ID 7413754658902 procesado
+LOG [2024-09-26T02:54:05.503Z]: [object Object]
+LOG [2024-09-26T02:54:05.824Z]: Producto ID 7413754200150 procesado
+LOG [2024-09-26T02:54:05.825Z]: [object Object]
+LOG [2024-09-26T02:54:07.305Z]: Producto ID 7413761736790 procesado
+LOG [2024-09-26T02:54:07.305Z]: [object Object]
+LOG [2024-09-26T02:54:07.556Z]: Producto ID 7413762064470 procesado
+LOG [2024-09-26T02:54:07.556Z]: [object Object]
+LOG [2024-09-26T02:54:08.818Z]: Producto ID 7413761900630 procesado
+LOG [2024-09-26T02:54:08.818Z]: [object Object]
+LOG [2024-09-26T02:54:09.082Z]: Producto ID 7413761507414 procesado
+LOG [2024-09-26T02:54:09.083Z]: [object Object]
+LOG [2024-09-26T02:54:09.330Z]: Producto ID 7413778481238 procesado
+LOG [2024-09-26T02:54:09.330Z]: [object Object]
+LOG [2024-09-26T02:54:09.570Z]: Producto ID 7416501370966 procesado
+LOG [2024-09-26T02:54:09.570Z]: [object Object]
+LOG [2024-09-26T02:54:09.830Z]: Producto ID 7413446869078 procesado
+LOG [2024-09-26T02:54:09.831Z]: [object Object]
+LOG [2024-09-26T02:54:10.097Z]: Producto ID 7416507662422 procesado
+LOG [2024-09-26T02:54:10.097Z]: [object Object]
+LOG [2024-09-26T02:54:10.332Z]: Producto ID 7416508219478 procesado
+LOG [2024-09-26T02:54:10.332Z]: [object Object]
+LOG [2024-09-26T02:54:10.838Z]: Producto ID 7413715468374 procesado
+LOG [2024-09-26T02:54:10.838Z]: [object Object]
+LOG [2024-09-26T02:54:11.087Z]: Producto ID 7413781463126 procesado
+LOG [2024-09-26T02:54:11.088Z]: [object Object]
+LOG [2024-09-26T02:54:11.553Z]: Producto ID 7413754298454 procesado
+LOG [2024-09-26T02:54:11.553Z]: [object Object]
+LOG [2024-09-26T02:54:11.796Z]: Producto ID 7413775466582 procesado
+LOG [2024-09-26T02:54:11.796Z]: [object Object]
+LOG [2024-09-26T02:54:12.077Z]: Producto ID 7413775794262 procesado
+LOG [2024-09-26T02:54:12.077Z]: [object Object]
+LOG [2024-09-26T02:54:12.517Z]: Producto ID 7413775958102 procesado
+LOG [2024-09-26T02:54:12.517Z]: [object Object]
+LOG [2024-09-26T02:54:12.779Z]: Producto ID 7413775630422 procesado
+LOG [2024-09-26T02:54:12.779Z]: [object Object]
+LOG [2024-09-26T02:54:15.324Z]: Producto ID 7413764784214 procesado
+LOG [2024-09-26T02:54:15.325Z]: [object Object]
+LOG [2024-09-26T02:54:15.838Z]: Producto ID 7413764522070 procesado
+LOG [2024-09-26T02:54:15.838Z]: [object Object]
+LOG [2024-09-26T02:54:16.946Z]: Producto ID 7413764423766 procesado
+LOG [2024-09-26T02:54:16.946Z]: [object Object]
+LOG [2024-09-26T02:54:17.417Z]: Producto ID 7413764653142 procesado
+LOG [2024-09-26T02:54:17.417Z]: [object Object]
+LOG [2024-09-26T02:54:17.671Z]: Producto ID 7413757804630 procesado
+LOG [2024-09-26T02:54:17.671Z]: [object Object]
+LOG [2024-09-26T02:54:17.939Z]: Producto ID 7413732409430 procesado
+LOG [2024-09-26T02:54:17.939Z]: [object Object]
+LOG [2024-09-26T02:54:19.035Z]: Producto ID 7413732442198 procesado
+LOG [2024-09-26T02:54:19.035Z]: [object Object]
+LOG [2024-09-26T02:54:20.490Z]: Producto ID 7413732376662 procesado
+LOG [2024-09-26T02:54:20.490Z]: [object Object]
+LOG [2024-09-26T02:54:21.745Z]: Producto ID 7413759869014 procesado
+LOG [2024-09-26T02:54:21.745Z]: [object Object]
+LOG [2024-09-26T02:54:21.972Z]: Producto ID 7413763211350 procesado
+LOG [2024-09-26T02:54:21.972Z]: [object Object]
+LOG [2024-09-26T02:54:22.224Z]: Producto ID 7413763539030 procesado
+LOG [2024-09-26T02:54:22.224Z]: [object Object]
+LOG [2024-09-26T02:54:22.491Z]: Producto ID 7413763407958 procesado
+LOG [2024-09-26T02:54:22.491Z]: [object Object]
+LOG [2024-09-26T02:54:22.968Z]: Producto ID 7413718319190 procesado
+LOG [2024-09-26T02:54:22.968Z]: [object Object]
+LOG [2024-09-26T02:54:25.220Z]: Producto ID 7413719662678 procesado
+LOG [2024-09-26T02:54:25.220Z]: [object Object]
+LOG [2024-09-26T02:54:25.508Z]: Producto ID 7413720121430 procesado
+LOG [2024-09-26T02:54:25.508Z]: [object Object]
+LOG [2024-09-26T02:54:26.154Z]: Producto ID 7416494948438 procesado
+LOG [2024-09-26T02:54:26.154Z]: [object Object]
+LOG [2024-09-26T02:54:26.414Z]: Producto ID 7416495013974 procesado
+LOG [2024-09-26T02:54:26.414Z]: [object Object]
+LOG [2024-09-26T02:54:26.698Z]: Producto ID 7413720088662 procesado
+LOG [2024-09-26T02:54:26.698Z]: [object Object]
+LOG [2024-09-26T02:54:26.950Z]: Producto ID 7413719040086 procesado
+LOG [2024-09-26T02:54:26.950Z]: [object Object]
+LOG [2024-09-26T02:54:27.220Z]: Producto ID 7413717958742 procesado
+LOG [2024-09-26T02:54:27.220Z]: [object Object]
+LOG [2024-09-26T02:54:27.497Z]: Producto ID 7413719236694 procesado
+LOG [2024-09-26T02:54:27.497Z]: [object Object]
+LOG [2024-09-26T02:54:27.774Z]: Producto ID 7413718057046 procesado
+LOG [2024-09-26T02:54:27.774Z]: [object Object]
+LOG [2024-09-26T02:54:29.117Z]: Producto ID 7413718089814 procesado
+LOG [2024-09-26T02:54:29.117Z]: [object Object]
+LOG [2024-09-26T02:54:29.358Z]: Producto ID 7413718974550 procesado
+LOG [2024-09-26T02:54:29.359Z]: [object Object]
+LOG [2024-09-26T02:54:29.870Z]: Producto ID 7413718024278 procesado
+LOG [2024-09-26T02:54:29.870Z]: [object Object]
+LOG [2024-09-26T02:54:30.150Z]: Producto ID 7413719302230 procesado
+LOG [2024-09-26T02:54:30.150Z]: [object Object]
+LOG [2024-09-26T02:54:30.391Z]: Producto ID 7413443264598 procesado
+LOG [2024-09-26T02:54:30.391Z]: [object Object]
+LOG [2024-09-26T02:54:32.104Z]: Producto ID 7416495538262 procesado
+LOG [2024-09-26T02:54:32.104Z]: [object Object]
+LOG [2024-09-26T02:54:33.363Z]: Producto ID 7416495767638 procesado
+LOG [2024-09-26T02:54:33.363Z]: [object Object]
+LOG [2024-09-26T02:54:33.611Z]: Producto ID 7416495276118 procesado
+LOG [2024-09-26T02:54:33.611Z]: [object Object]
+LOG [2024-09-26T02:54:33.876Z]: Producto ID 7416495341654 procesado
+LOG [2024-09-26T02:54:33.876Z]: [object Object]
+LOG [2024-09-26T02:54:35.640Z]: Producto ID 7416495439958 procesado
+LOG [2024-09-26T02:54:35.640Z]: [object Object]
+LOG [2024-09-26T02:54:36.089Z]: Producto ID 7416495407190 procesado
+LOG [2024-09-26T02:54:36.090Z]: [object Object]
+LOG [2024-09-26T02:54:36.341Z]: Producto ID 7413734834262 procesado
+LOG [2024-09-26T02:54:36.341Z]: [object Object]
+LOG [2024-09-26T02:54:36.612Z]: Producto ID 7413727526998 procesado
+LOG [2024-09-26T02:54:36.613Z]: [object Object]
+LOG [2024-09-26T02:54:37.501Z]: Producto ID 7413734867030 procesado
+LOG [2024-09-26T02:54:37.502Z]: [object Object]
+LOG [2024-09-26T02:54:37.956Z]: Producto ID 7413735129174 procesado
+LOG [2024-09-26T02:54:37.956Z]: [object Object]
+LOG [2024-09-26T02:54:39.193Z]: Producto ID 7413727264854 procesado
+LOG [2024-09-26T02:54:39.194Z]: [object Object]
+LOG [2024-09-26T02:54:40.467Z]: Producto ID 7413448867926 procesado
+LOG [2024-09-26T02:54:40.467Z]: [object Object]
+LOG [2024-09-26T02:54:40.948Z]: Producto ID 7413448900694 procesado
+LOG [2024-09-26T02:54:40.948Z]: [object Object]
+LOG [2024-09-26T02:54:42.419Z]: Producto ID 7413448933462 procesado
+LOG [2024-09-26T02:54:42.419Z]: [object Object]
+LOG [2024-09-26T02:54:42.716Z]: Producto ID 7413727428694 procesado
+LOG [2024-09-26T02:54:42.716Z]: [object Object]
+LOG [2024-09-26T02:54:43.979Z]: Producto ID 7416498749526 procesado
+LOG [2024-09-26T02:54:43.979Z]: [object Object]
+LOG [2024-09-26T02:54:45.467Z]: Producto ID 7416498815062 procesado
+LOG [2024-09-26T02:54:45.467Z]: [object Object]
+LOG [2024-09-26T02:54:45.710Z]: Producto ID 7416503730262 procesado
+LOG [2024-09-26T02:54:45.710Z]: [object Object]
+LOG [2024-09-26T02:54:46.408Z]: Producto ID 7413735063638 procesado
+LOG [2024-09-26T02:54:46.408Z]: [object Object]
+LOG [2024-09-26T02:54:47.657Z]: Producto ID 7413735096406 procesado
+LOG [2024-09-26T02:54:47.657Z]: [object Object]
+LOG [2024-09-26T02:54:48.154Z]: Producto ID 7413735194710 procesado
+LOG [2024-09-26T02:54:48.155Z]: [object Object]
+LOG [2024-09-26T02:54:48.427Z]: Producto ID 7413727592534 procesado
+LOG [2024-09-26T02:54:48.427Z]: [object Object]
+LOG [2024-09-26T02:54:50.741Z]: Producto ID 7416506253398 procesado
+LOG [2024-09-26T02:54:50.741Z]: [object Object]
+LOG [2024-09-26T02:54:52.194Z]: Producto ID 7416491114582 procesado
+LOG [2024-09-26T02:54:52.194Z]: [object Object]
+LOG [2024-09-26T02:54:53.441Z]: Producto ID 7416491016278 procesado
+LOG [2024-09-26T02:54:53.441Z]: [object Object]
+LOG [2024-09-26T02:54:53.902Z]: Producto ID 7413448573014 procesado
+LOG [2024-09-26T02:54:53.903Z]: [object Object]
+LOG [2024-09-26T02:54:54.138Z]: Producto ID 7416497569878 procesado
+LOG [2024-09-26T02:54:54.138Z]: [object Object]
+LOG [2024-09-26T02:54:55.407Z]: Producto ID 7413443625046 procesado
+LOG [2024-09-26T02:54:55.407Z]: [object Object]
+LOG [2024-09-26T02:54:55.666Z]: Producto ID 7416497602646 procesado
+LOG [2024-09-26T02:54:55.667Z]: [object Object]
+LOG [2024-09-26T02:54:56.189Z]: Producto ID 7413443690582 procesado
+LOG [2024-09-26T02:54:56.189Z]: [object Object]
+LOG [2024-09-26T02:54:56.474Z]: Producto ID 7416503435350 procesado
+LOG [2024-09-26T02:54:56.474Z]: [object Object]
+LOG [2024-09-26T02:54:58.306Z]: Producto ID 7413449949270 procesado
+LOG [2024-09-26T02:54:58.306Z]: [object Object]
+LOG [2024-09-26T02:54:58.570Z]: Producto ID 7413449982038 procesado
+LOG [2024-09-26T02:54:58.570Z]: [object Object]
+LOG [2024-09-26T02:54:58.810Z]: Producto ID 7416499601494 procesado
+LOG [2024-09-26T02:54:58.810Z]: [object Object]
+LOG [2024-09-26T02:54:59.249Z]: Producto ID 7413444182102 procesado
+LOG [2024-09-26T02:54:59.250Z]: [object Object]
+LOG [2024-09-26T02:54:59.500Z]: Producto ID 7416499765334 procesado
+LOG [2024-09-26T02:54:59.500Z]: [object Object]
+LOG [2024-09-26T02:54:59.779Z]: Producto ID 7416499339350 procesado
+LOG [2024-09-26T02:54:59.779Z]: [object Object]
+LOG [2024-09-26T02:55:02.256Z]: Producto ID 7416499404886 procesado
+LOG [2024-09-26T02:55:02.256Z]: [object Object]
+LOG [2024-09-26T02:55:02.476Z]: Producto ID 7416508285014 procesado
+LOG [2024-09-26T02:55:02.476Z]: [object Object]
+LOG [2024-09-26T02:55:02.945Z]: Producto ID 7416499470422 procesado
+LOG [2024-09-26T02:55:02.945Z]: [object Object]
+LOG [2024-09-26T02:55:03.187Z]: Producto ID 7416499798102 procesado
+LOG [2024-09-26T02:55:03.187Z]: [object Object]
+LOG [2024-09-26T02:55:03.459Z]: Producto ID 7416499863638 procesado
+LOG [2024-09-26T02:55:03.459Z]: [object Object]
+LOG [2024-09-26T02:55:03.737Z]: Producto ID 7416499503190 procesado
+LOG [2024-09-26T02:55:03.737Z]: [object Object]
+LOG [2024-09-26T02:55:04.004Z]: Producto ID 7413444149334 procesado
+LOG [2024-09-26T02:55:04.004Z]: [object Object]
+LOG [2024-09-26T02:55:05.252Z]: Producto ID 7413779169366 procesado
+LOG [2024-09-26T02:55:05.252Z]: [object Object]
+LOG [2024-09-26T02:55:05.497Z]: Producto ID 7413779038294 procesado
+LOG [2024-09-26T02:55:05.497Z]: [object Object]
+LOG [2024-09-26T02:55:05.835Z]: Producto ID 7413446410326 procesado
+LOG [2024-09-26T02:55:05.835Z]: [object Object]
+LOG [2024-09-26T02:55:08.162Z]: Producto ID 7416498389078 procesado
+LOG [2024-09-26T02:55:08.162Z]: [object Object]
+LOG [2024-09-26T02:55:08.409Z]: Producto ID 7413443100758 procesado
+LOG [2024-09-26T02:55:08.409Z]: [object Object]
+LOG [2024-09-26T02:55:09.872Z]: Producto ID 7413450047574 procesado
+LOG [2024-09-26T02:55:09.872Z]: [object Object]
+LOG [2024-09-26T02:55:10.550Z]: Producto ID 7413450080342 procesado
+LOG [2024-09-26T02:55:10.550Z]: [object Object]
+LOG [2024-09-26T02:55:10.801Z]: Producto ID 7413450113110 procesado
+LOG [2024-09-26T02:55:10.801Z]: [object Object]
+LOG [2024-09-26T02:55:11.074Z]: Producto ID 7413450145878 procesado
+LOG [2024-09-26T02:55:11.074Z]: [object Object]
+LOG [2024-09-26T02:55:12.319Z]: Producto ID 7413450244182 procesado
+LOG [2024-09-26T02:55:12.319Z]: [object Object]
+LOG [2024-09-26T02:55:13.618Z]: Producto ID 7416497471574 procesado
+LOG [2024-09-26T02:55:13.619Z]: [object Object]
+LOG [2024-09-26T02:55:15.549Z]: Producto ID 7413449916502 procesado
+LOG [2024-09-26T02:55:15.549Z]: [object Object]
+LOG [2024-09-26T02:55:16.820Z]: Producto ID 7413446115414 procesado
+LOG [2024-09-26T02:55:16.820Z]: [object Object]
+LOG [2024-09-26T02:55:17.065Z]: Producto ID 7416491475030 procesado
+LOG [2024-09-26T02:55:17.065Z]: [object Object]
+LOG [2024-09-26T02:55:17.519Z]: Producto ID 7413442838614 procesado
+LOG [2024-09-26T02:55:17.519Z]: [object Object]
+LOG [2024-09-26T02:55:17.738Z]: Producto ID 7416493244502 procesado
+LOG [2024-09-26T02:55:17.739Z]: [object Object]
+LOG [2024-09-26T02:55:18.022Z]: Producto ID 7416493310038 procesado
+LOG [2024-09-26T02:55:18.022Z]: [object Object]
+LOG [2024-09-26T02:55:18.293Z]: Producto ID 7416493178966 procesado
+LOG [2024-09-26T02:55:18.293Z]: [object Object]
+LOG [2024-09-26T02:55:18.537Z]: Producto ID 7416493342806 procesado
+LOG [2024-09-26T02:55:18.537Z]: [object Object]
+LOG [2024-09-26T02:55:19.025Z]: Producto ID 7413448671318 procesado
+LOG [2024-09-26T02:55:19.025Z]: [object Object]
+LOG [2024-09-26T02:55:19.258Z]: Producto ID 7416502354006 procesado
+LOG [2024-09-26T02:55:19.258Z]: [object Object]
+LOG [2024-09-26T02:55:19.928Z]: Producto ID 7413715697750 procesado
+LOG [2024-09-26T02:55:19.929Z]: [object Object]
+LOG [2024-09-26T02:55:20.163Z]: Producto ID 7416498487382 procesado
+LOG [2024-09-26T02:55:20.163Z]: [object Object]
+LOG [2024-09-26T02:55:21.045Z]: Producto ID 7413443133526 procesado
+LOG [2024-09-26T02:55:21.045Z]: [object Object]
+LOG [2024-09-26T02:55:21.296Z]: Producto ID 7416500387926 procesado
+LOG [2024-09-26T02:55:21.296Z]: [object Object]
+LOG [2024-09-26T02:55:23.042Z]: Producto ID 7416506318934 procesado
+LOG [2024-09-26T02:55:23.042Z]: [object Object]
+LOG [2024-09-26T02:55:23.298Z]: Producto ID 7416490197078 procesado
+LOG [2024-09-26T02:55:23.298Z]: [object Object]
+LOG [2024-09-26T02:55:23.553Z]: Producto ID 7416507727958 procesado
+LOG [2024-09-26T02:55:23.553Z]: [object Object]
+LOG [2024-09-26T02:55:23.822Z]: Producto ID 7416498716758 procesado
+LOG [2024-09-26T02:55:23.822Z]: [object Object]
+LOG [2024-09-26T02:55:24.282Z]: Producto ID 7416502190166 procesado
+LOG [2024-09-26T02:55:24.282Z]: [object Object]
+LOG [2024-09-26T02:55:24.524Z]: Producto ID 7416502255702 procesado
+LOG [2024-09-26T02:55:24.524Z]: [object Object]
+LOG [2024-09-26T02:55:24.873Z]: Producto ID 7416501272662 procesado
+LOG [2024-09-26T02:55:24.873Z]: [object Object]
+LOG [2024-09-26T02:55:25.143Z]: Producto ID 7416501076054 procesado
+LOG [2024-09-26T02:55:25.143Z]: [object Object]
+LOG [2024-09-26T02:55:26.603Z]: Producto ID 7416501174358 procesado
+LOG [2024-09-26T02:55:26.603Z]: [object Object]
+LOG [2024-09-26T02:55:26.854Z]: Producto ID 7416498651222 procesado
+LOG [2024-09-26T02:55:26.854Z]: [object Object]
+LOG [2024-09-26T02:55:28.118Z]: Producto ID 7416505958486 procesado
+LOG [2024-09-26T02:55:28.118Z]: [object Object]
+LOG [2024-09-26T02:55:28.363Z]: Producto ID 7416490459222 procesado
+LOG [2024-09-26T02:55:28.363Z]: [object Object]
+LOG [2024-09-26T02:55:29.265Z]: Producto ID 7416490328150 procesado
+LOG [2024-09-26T02:55:29.265Z]: [object Object]
+LOG [2024-09-26T02:55:29.501Z]: Producto ID 7416490590294 procesado
+LOG [2024-09-26T02:55:29.502Z]: [object Object]
+LOG [2024-09-26T02:55:29.754Z]: Producto ID 7416490360918 procesado
+LOG [2024-09-26T02:55:29.755Z]: [object Object]
+LOG [2024-09-26T02:55:30.702Z]: Producto ID 7416490524758 procesado
+LOG [2024-09-26T02:55:30.703Z]: [object Object]
+LOG [2024-09-26T02:55:30.962Z]: Producto ID 7416490426454 procesado
+LOG [2024-09-26T02:55:30.962Z]: [object Object]
+LOG [2024-09-26T02:55:31.212Z]: Producto ID 7413720580182 procesado
+LOG [2024-09-26T02:55:31.213Z]: [object Object]
+LOG [2024-09-26T02:55:31.458Z]: Producto ID 7416500813910 procesado
+LOG [2024-09-26T02:55:31.458Z]: [object Object]
+LOG [2024-09-26T02:55:31.843Z]: Producto ID 7413449719894 procesado
+LOG [2024-09-26T02:55:31.844Z]: [object Object]
+LOG [2024-09-26T02:55:32.101Z]: Producto ID 7413757640790 procesado
+LOG [2024-09-26T02:55:32.101Z]: [object Object]
+LOG [2024-09-26T02:55:32.348Z]: Producto ID 7413755707478 procesado
+LOG [2024-09-26T02:55:32.348Z]: [object Object]
+LOG [2024-09-26T02:55:32.611Z]: Producto ID 7416503566422 procesado
+LOG [2024-09-26T02:55:32.611Z]: [object Object]
+LOG [2024-09-26T02:55:32.890Z]: Producto ID 7416507465814 procesado
+LOG [2024-09-26T02:55:32.891Z]: [object Object]
+LOG [2024-09-26T02:55:34.214Z]: Producto ID 7416507564118 procesado
+LOG [2024-09-26T02:55:34.214Z]: [object Object]
+LOG [2024-09-26T02:55:35.667Z]: Producto ID 7416507531350 procesado
+LOG [2024-09-26T02:55:35.667Z]: [object Object]
+LOG [2024-09-26T02:55:35.944Z]: Producto ID 7416505499734 procesado
+LOG [2024-09-26T02:55:35.944Z]: [object Object]
+LOG [2024-09-26T02:55:36.180Z]: Producto ID 7413720481878 procesado
+LOG [2024-09-26T02:55:36.180Z]: [object Object]
+LOG [2024-09-26T02:55:36.463Z]: Producto ID 7413720514646 procesado
+LOG [2024-09-26T02:55:36.463Z]: [object Object]
+LOG [2024-09-26T02:55:36.700Z]: Producto ID 7413716910166 procesado
+LOG [2024-09-26T02:55:36.700Z]: [object Object]
+LOG [2024-09-26T02:55:36.979Z]: Producto ID 7416507957334 procesado
+LOG [2024-09-26T02:55:36.979Z]: [object Object]
+LOG [2024-09-26T02:55:37.217Z]: Producto ID 7416507334742 procesado
+LOG [2024-09-26T02:55:37.217Z]: [object Object]
+LOG [2024-09-26T02:55:37.495Z]: Producto ID 7413445591126 procesado
+LOG [2024-09-26T02:55:37.495Z]: [object Object]
+LOG [2024-09-26T02:55:38.956Z]: Producto ID 7413445558358 procesado
+LOG [2024-09-26T02:55:38.956Z]: [object Object]
+LOG [2024-09-26T02:55:39.646Z]: Producto ID 7413445754966 procesado
+LOG [2024-09-26T02:55:39.646Z]: [object Object]
+LOG [2024-09-26T02:55:40.102Z]: Producto ID 7413445886038 procesado
+LOG [2024-09-26T02:55:40.102Z]: [object Object]
+LOG [2024-09-26T02:55:40.436Z]: Producto ID 7413443723350 procesado
+LOG [2024-09-26T02:55:40.436Z]: [object Object]
+LOG [2024-09-26T02:55:40.891Z]: Producto ID 7416500125782 procesado
+LOG [2024-09-26T02:55:40.891Z]: [object Object]
+LOG [2024-09-26T02:55:42.173Z]: Producto ID 7413732343894 procesado
+LOG [2024-09-26T02:55:42.173Z]: [object Object]
+LOG [2024-09-26T02:55:43.468Z]: Producto ID 7413762850902 procesado
+LOG [2024-09-26T02:55:43.468Z]: [object Object]
+LOG [2024-09-26T02:55:44.795Z]: Producto ID 7413762981974 procesado
+LOG [2024-09-26T02:55:44.795Z]: [object Object]
+LOG [2024-09-26T02:55:45.028Z]: Producto ID 7413763178582 procesado
+LOG [2024-09-26T02:55:45.028Z]: [object Object]
+LOG [2024-09-26T02:55:46.510Z]: Producto ID 7416493670486 procesado
+LOG [2024-09-26T02:55:46.510Z]: [object Object]
+LOG [2024-09-26T02:55:46.948Z]: Producto ID 7416493572182 procesado
+LOG [2024-09-26T02:55:46.948Z]: [object Object]
+LOG [2024-09-26T02:55:47.195Z]: Producto ID 7416493604950 procesado
+LOG [2024-09-26T02:55:47.195Z]: [object Object]
+LOG [2024-09-26T02:55:47.665Z]: Producto ID 7413776515158 procesado
+LOG [2024-09-26T02:55:47.665Z]: [object Object]
+LOG [2024-09-26T02:55:47.899Z]: Producto ID 7413776384086 procesado
+LOG [2024-09-26T02:55:47.899Z]: [object Object]
+LOG [2024-09-26T02:55:48.139Z]: Producto ID 7413776253014 procesado
+LOG [2024-09-26T02:55:48.139Z]: [object Object]
+LOG [2024-09-26T02:55:48.378Z]: Producto ID 7413776089174 procesado
+LOG [2024-09-26T02:55:48.378Z]: [object Object]
+LOG [2024-09-26T02:55:48.831Z]: Producto ID 7416497012822 procesado
+LOG [2024-09-26T02:55:48.831Z]: [object Object]
+LOG [2024-09-26T02:55:51.318Z]: Producto ID 7416497078358 procesado
+LOG [2024-09-26T02:55:51.319Z]: [object Object]
+LOG [2024-09-26T02:55:51.853Z]: Producto ID 7416497176662 procesado
+LOG [2024-09-26T02:55:51.853Z]: [object Object]
+LOG [2024-09-26T02:55:52.124Z]: Producto ID 7416496914518 procesado
+LOG [2024-09-26T02:55:52.124Z]: [object Object]
+LOG [2024-09-26T02:55:52.563Z]: Producto ID 7416496095318 procesado
+LOG [2024-09-26T02:55:52.563Z]: [object Object]
+LOG [2024-09-26T02:55:52.833Z]: Producto ID 7416497143894 procesado
+LOG [2024-09-26T02:55:52.833Z]: [object Object]
+LOG [2024-09-26T02:55:55.178Z]: Producto ID 7416496980054 procesado
+LOG [2024-09-26T02:55:55.179Z]: [object Object]
+LOG [2024-09-26T02:55:55.486Z]: Producto ID 7413757444182 procesado
+LOG [2024-09-26T02:55:55.486Z]: [object Object]
+LOG [2024-09-26T02:55:56.722Z]: Producto ID 7413757345878 procesado
+LOG [2024-09-26T02:55:56.722Z]: [object Object]
+LOG [2024-09-26T02:55:57.977Z]: Producto ID 7413757083734 procesado
+LOG [2024-09-26T02:55:57.978Z]: [object Object]
+LOG [2024-09-26T02:55:58.309Z]: Producto ID 7413756493910 procesado
+LOG [2024-09-26T02:55:58.309Z]: [object Object]
+LOG [2024-09-26T02:55:58.800Z]: Producto ID 7413757214806 procesado
+LOG [2024-09-26T02:55:58.800Z]: [object Object]
+LOG [2024-09-26T02:56:00.055Z]: Producto ID 7413756592214 procesado
+LOG [2024-09-26T02:56:00.055Z]: [object Object]
+LOG [2024-09-26T02:56:00.291Z]: Producto ID 7413756919894 procesado
+LOG [2024-09-26T02:56:00.291Z]: [object Object]
+LOG [2024-09-26T02:56:00.529Z]: Producto ID 7413756756054 procesado
+LOG [2024-09-26T02:56:00.529Z]: [object Object]
+LOG [2024-09-26T02:56:01.194Z]: Producto ID 7413715435606 procesado
+LOG [2024-09-26T02:56:01.194Z]: [object Object]
+LOG [2024-09-26T02:56:02.433Z]: Producto ID 7413715664982 procesado
+LOG [2024-09-26T02:56:02.433Z]: [object Object]
+LOG [2024-09-26T02:56:03.720Z]: Producto ID 7416494817366 procesado
+LOG [2024-09-26T02:56:03.720Z]: [object Object]
+LOG [2024-09-26T02:56:04.010Z]: Producto ID 7413449588822 procesado
+LOG [2024-09-26T02:56:04.010Z]: [object Object]
+LOG [2024-09-26T02:56:04.558Z]: Producto ID 7413449392214 procesado
+LOG [2024-09-26T02:56:04.558Z]: [object Object]
+LOG [2024-09-26T02:56:05.823Z]: Producto ID 7413449228374 procesado
+LOG [2024-09-26T02:56:05.823Z]: [object Object]
+LOG [2024-09-26T02:56:06.142Z]: Producto ID 7416494194774 procesado
+LOG [2024-09-26T02:56:06.142Z]: [object Object]
+LOG [2024-09-26T02:56:06.839Z]: Producto ID 7416494227542 procesado
+LOG [2024-09-26T02:56:06.839Z]: [object Object]
+LOG [2024-09-26T02:56:07.090Z]: Producto ID 7416494325846 procesado
+LOG [2024-09-26T02:56:07.091Z]: [object Object]
+LOG [2024-09-26T02:56:07.331Z]: Producto ID 7416494522454 procesado
+LOG [2024-09-26T02:56:07.331Z]: [object Object]
+LOG [2024-09-26T02:56:07.594Z]: Producto ID 7413734932566 procesado
+LOG [2024-09-26T02:56:07.594Z]: [object Object]
+LOG [2024-09-26T02:56:07.892Z]: Producto ID 7413735030870 procesado
+LOG [2024-09-26T02:56:07.892Z]: [object Object]
+LOG [2024-09-26T02:56:08.974Z]: Producto ID 7413735227478 procesado
+LOG [2024-09-26T02:56:08.974Z]: [object Object]
+LOG [2024-09-26T02:56:11.292Z]: Producto ID 7416494456918 procesado
+LOG [2024-09-26T02:56:11.293Z]: [object Object]
+LOG [2024-09-26T02:56:11.566Z]: Producto ID 7416494391382 procesado
+LOG [2024-09-26T02:56:11.566Z]: [object Object]
+LOG [2024-09-26T02:56:11.798Z]: Producto ID 7416494653526 procesado
+LOG [2024-09-26T02:56:11.798Z]: [object Object]
+LOG [2024-09-26T02:56:13.096Z]: Producto ID 7416494555222 procesado
+LOG [2024-09-26T02:56:13.096Z]: [object Object]
+LOG [2024-09-26T02:56:13.328Z]: Producto ID 7416494293078 procesado
+LOG [2024-09-26T02:56:13.328Z]: [object Object]
+LOG [2024-09-26T02:56:14.199Z]: Producto ID 7416494620758 procesado
+LOG [2024-09-26T02:56:14.199Z]: [object Object]
+LOG [2024-09-26T02:56:14.962Z]: Producto ID 7416494784598 procesado
+LOG [2024-09-26T02:56:14.962Z]: [object Object]
+LOG [2024-09-26T02:56:15.209Z]: Producto ID 7416498421846 procesado
+LOG [2024-09-26T02:56:15.210Z]: [object Object]
+LOG [2024-09-26T02:56:16.465Z]: Producto ID 7416502616150 procesado
+LOG [2024-09-26T02:56:16.465Z]: [object Object]
+LOG [2024-09-26T02:56:16.943Z]: Producto ID 7416502714454 procesado
+LOG [2024-09-26T02:56:16.944Z]: [object Object]
+LOG [2024-09-26T02:56:17.197Z]: Producto ID 7416502681686 procesado
+LOG [2024-09-26T02:56:17.197Z]: [object Object]
+LOG [2024-09-26T02:56:17.468Z]: Producto ID 7416491999318 procesado
+LOG [2024-09-26T02:56:17.468Z]: [object Object]
+LOG [2024-09-26T02:56:17.715Z]: Producto ID 7416492032086 procesado
+LOG [2024-09-26T02:56:17.715Z]: [object Object]
+LOG [2024-09-26T02:56:17.984Z]: Producto ID 7413727559766 procesado
+LOG [2024-09-26T02:56:17.984Z]: [object Object]
+LOG [2024-09-26T02:56:18.452Z]: Producto ID 7413727625302 procesado
+LOG [2024-09-26T02:56:18.452Z]: [object Object]
+LOG [2024-09-26T02:56:18.686Z]: Producto ID 7413727658070 procesado
+LOG [2024-09-26T02:56:18.687Z]: [object Object]
+LOG [2024-09-26T02:56:18.919Z]: Producto ID 7413450014806 procesado
+LOG [2024-09-26T02:56:18.919Z]: [object Object]
+LOG [2024-09-26T02:56:19.372Z]: Producto ID 7413750005846 procesado
+LOG [2024-09-26T02:56:19.372Z]: [object Object]
+LOG [2024-09-26T02:56:19.627Z]: Producto ID 7413750136918 procesado
+LOG [2024-09-26T02:56:19.627Z]: [object Object]
+LOG [2024-09-26T02:56:20.172Z]: Producto ID 7413749809238 procesado
+LOG [2024-09-26T02:56:20.172Z]: [object Object]
+LOG [2024-09-26T02:56:20.621Z]: Producto ID 7413749678166 procesado
+LOG [2024-09-26T02:56:20.622Z]: [object Object]
+LOG [2024-09-26T02:56:20.881Z]: Producto ID 7413749907542 procesado
+LOG [2024-09-26T02:56:20.881Z]: [object Object]
+LOG [2024-09-26T02:56:21.323Z]: Producto ID 7413777530966 procesado
+LOG [2024-09-26T02:56:21.324Z]: [object Object]
+LOG [2024-09-26T02:56:21.850Z]: Producto ID 7413777956950 procesado
+LOG [2024-09-26T02:56:21.850Z]: [object Object]
+LOG [2024-09-26T02:56:22.085Z]: Producto ID 7413777825878 procesado
+LOG [2024-09-26T02:56:22.085Z]: [object Object]
+LOG [2024-09-26T02:56:22.800Z]: Producto ID 7413777694806 procesado
+LOG [2024-09-26T02:56:22.800Z]: [object Object]
+LOG [2024-09-26T02:56:23.917Z]: Producto ID 7413750825046 procesado
+LOG [2024-09-26T02:56:23.917Z]: [object Object]
+LOG [2024-09-26T02:56:24.217Z]: Producto ID 7413750956118 procesado
+LOG [2024-09-26T02:56:24.217Z]: [object Object]
+LOG [2024-09-26T02:56:24.481Z]: Producto ID 7413750693974 procesado
+LOG [2024-09-26T02:56:24.481Z]: [object Object]
+LOG [2024-09-26T02:56:24.733Z]: Producto ID 7413750562902 procesado
+LOG [2024-09-26T02:56:24.733Z]: [object Object]
+LOG [2024-09-26T02:56:26.005Z]: Producto ID 7413751087190 procesado
+LOG [2024-09-26T02:56:26.005Z]: [object Object]
+LOG [2024-09-26T02:56:26.291Z]: Producto ID 7413750267990 procesado
+LOG [2024-09-26T02:56:26.292Z]: [object Object]
+LOG [2024-09-26T02:56:27.770Z]: Producto ID 7413750333526 procesado
+LOG [2024-09-26T02:56:27.770Z]: [object Object]
+LOG [2024-09-26T02:56:28.221Z]: Producto ID 7413715107926 procesado
+LOG [2024-09-26T02:56:28.222Z]: [object Object]
+LOG [2024-09-26T02:56:28.652Z]: Producto ID 7416496848982 procesado
+LOG [2024-09-26T02:56:28.652Z]: [object Object]
+LOG [2024-09-26T02:56:29.115Z]: Producto ID 7413448376406 procesado
+LOG [2024-09-26T02:56:29.116Z]: [object Object]
+LOG [2024-09-26T02:56:30.391Z]: Producto ID 7413780742230 procesado
+LOG [2024-09-26T02:56:30.391Z]: [object Object]
+LOG [2024-09-26T02:56:30.617Z]: Producto ID 7413780447318 procesado
+LOG [2024-09-26T02:56:30.617Z]: [object Object]
+LOG [2024-09-26T02:56:31.859Z]: Producto ID 7413781168214 procesado
+LOG [2024-09-26T02:56:31.859Z]: [object Object]
+LOG [2024-09-26T02:56:32.093Z]: Producto ID 7413781037142 procesado
+LOG [2024-09-26T02:56:32.094Z]: [object Object]
+LOG [2024-09-26T02:56:32.340Z]: Producto ID 7413754986582 procesado
+LOG [2024-09-26T02:56:32.340Z]: [object Object]
+LOG [2024-09-26T02:56:33.592Z]: Producto ID 7413754888278 procesado
+LOG [2024-09-26T02:56:33.592Z]: [object Object]
+LOG [2024-09-26T02:56:33.856Z]: Producto ID 7413751251030 procesado
+LOG [2024-09-26T02:56:33.856Z]: [object Object]
+LOG [2024-09-26T02:56:35.111Z]: Producto ID 7413758165078 procesado
+LOG [2024-09-26T02:56:35.111Z]: [object Object]
+LOG [2024-09-26T02:56:35.559Z]: Producto ID 7413758263382 procesado
+LOG [2024-09-26T02:56:35.559Z]: [object Object]
+LOG [2024-09-26T02:56:35.788Z]: Producto ID 7413758394454 procesado
+LOG [2024-09-26T02:56:35.788Z]: [object Object]
+LOG [2024-09-26T02:56:36.299Z]: Producto ID 7413755150422 procesado
+LOG [2024-09-26T02:56:36.299Z]: [object Object]
+LOG [2024-09-26T02:56:36.565Z]: Producto ID 7413449621590 procesado
+LOG [2024-09-26T02:56:36.565Z]: [object Object]
+LOG [2024-09-26T02:56:36.794Z]: Producto ID 7413449687126 procesado
+LOG [2024-09-26T02:56:36.794Z]: [object Object]
+LOG [2024-09-26T02:56:37.055Z]: Producto ID 7413449654358 procesado
+LOG [2024-09-26T02:56:37.055Z]: [object Object]
+LOG [2024-09-26T02:56:37.305Z]: Producto ID 7413450309718 procesado
+LOG [2024-09-26T02:56:37.305Z]: [object Object]
+LOG [2024-09-26T02:56:37.594Z]: Producto ID 7416497733718 procesado
+LOG [2024-09-26T02:56:37.594Z]: [object Object]
+LOG [2024-09-26T02:56:38.060Z]: Producto ID 7416497799254 procesado
+LOG [2024-09-26T02:56:38.060Z]: [object Object]
+LOG [2024-09-26T02:56:39.793Z]: Producto ID 7416497700950 procesado
+LOG [2024-09-26T02:56:39.793Z]: [object Object]
+LOG [2024-09-26T02:56:40.250Z]: Producto ID 7413777170518 procesado
+LOG [2024-09-26T02:56:40.250Z]: [object Object]
+LOG [2024-09-26T02:56:40.493Z]: Producto ID 7413777039446 procesado
+LOG [2024-09-26T02:56:40.494Z]: [object Object]
+LOG [2024-09-26T02:56:42.756Z]: Producto ID 7413735424086 procesado
+LOG [2024-09-26T02:56:42.756Z]: [object Object]
+LOG [2024-09-26T02:56:43.003Z]: Producto ID 7413449785430 procesado
+LOG [2024-09-26T02:56:43.003Z]: [object Object]
+LOG [2024-09-26T02:56:43.359Z]: Producto ID 7413449818198 procesado
+LOG [2024-09-26T02:56:43.359Z]: [object Object]
+LOG [2024-09-26T02:56:43.600Z]: Producto ID 7413719957590 procesado
+LOG [2024-09-26T02:56:43.601Z]: [object Object]
+LOG [2024-09-26T02:56:46.062Z]: Producto ID 7413718417494 procesado
+LOG [2024-09-26T02:56:46.062Z]: [object Object]
+LOG [2024-09-26T02:56:46.526Z]: Producto ID 7413717925974 procesado
+LOG [2024-09-26T02:56:46.526Z]: [object Object]
+LOG [2024-09-26T02:56:47.012Z]: Producto ID 7413717893206 procesado
+LOG [2024-09-26T02:56:47.012Z]: [object Object]
+LOG [2024-09-26T02:56:47.262Z]: Producto ID 7413717794902 procesado
+LOG [2024-09-26T02:56:47.262Z]: [object Object]
+LOG [2024-09-26T02:56:47.743Z]: Producto ID 7413717827670 procesado
+LOG [2024-09-26T02:56:47.743Z]: [object Object]
+LOG [2024-09-26T02:56:48.977Z]: Producto ID 7413446574166 procesado
+LOG [2024-09-26T02:56:48.977Z]: [object Object]
+LOG [2024-09-26T02:56:49.245Z]: Producto ID 7413717762134 procesado
+LOG [2024-09-26T02:56:49.246Z]: [object Object]
+LOG [2024-09-26T02:56:49.562Z]: Producto ID 7413717696598 procesado
+LOG [2024-09-26T02:56:49.563Z]: [object Object]
+LOG [2024-09-26T02:56:49.871Z]: Producto ID 7416646074454 procesado
+LOG [2024-09-26T02:56:49.872Z]: [object Object]
+LOG [2024-09-26T02:56:50.119Z]: Producto ID 7413449162838 procesado
+LOG [2024-09-26T02:56:50.119Z]: [object Object]
+LOG [2024-09-26T02:56:51.583Z]: Producto ID 7416507826262 procesado
+LOG [2024-09-26T02:56:51.584Z]: [object Object]
+LOG [2024-09-26T02:56:52.099Z]: Producto ID 7413444739158 procesado
+LOG [2024-09-26T02:56:52.100Z]: [object Object]
+LOG [2024-09-26T02:56:54.018Z]: Producto ID 7416502419542 procesado
+LOG [2024-09-26T02:56:54.018Z]: [object Object]
+LOG [2024-09-26T02:56:54.272Z]: Producto ID 7416498192470 procesado
+LOG [2024-09-26T02:56:54.272Z]: [object Object]
+LOG [2024-09-26T02:56:54.725Z]: Producto ID 7413446606934 procesado
+LOG [2024-09-26T02:56:54.726Z]: [object Object]
+LOG [2024-09-26T02:56:54.960Z]: Producto ID 7416507891798 procesado
+LOG [2024-09-26T02:56:54.960Z]: [object Object]
+LOG [2024-09-26T02:56:56.216Z]: Producto ID 7416492326998 procesado
+LOG [2024-09-26T02:56:56.216Z]: [object Object]
+LOG [2024-09-26T02:56:58.518Z]: Producto ID 7416492589142 procesado
+LOG [2024-09-26T02:56:58.518Z]: [object Object]
+LOG [2024-09-26T02:56:58.753Z]: Producto ID 7416492359766 procesado
+LOG [2024-09-26T02:56:58.753Z]: [object Object]
+LOG [2024-09-26T02:57:01.556Z]: Producto ID 7416492392534 procesado
+LOG [2024-09-26T02:57:01.556Z]: [object Object]
+LOG [2024-09-26T02:57:01.794Z]: Producto ID 7416492458070 procesado
+LOG [2024-09-26T02:57:01.794Z]: [object Object]
+LOG [2024-09-26T02:57:02.068Z]: Producto ID 7416496291926 procesado
+LOG [2024-09-26T02:57:02.068Z]: [object Object]
+LOG [2024-09-26T02:57:02.318Z]: Producto ID 7416496324694 procesado
+LOG [2024-09-26T02:57:02.318Z]: [object Object]
+LOG [2024-09-26T02:57:02.795Z]: Producto ID 7416496160854 procesado
+LOG [2024-09-26T02:57:02.795Z]: [object Object]
+LOG [2024-09-26T02:57:04.338Z]: Producto ID 7416496226390 procesado
+LOG [2024-09-26T02:57:04.338Z]: [object Object]
+LOG [2024-09-26T02:57:05.814Z]: Producto ID 7413714944086 procesado
+LOG [2024-09-26T02:57:05.814Z]: [object Object]
+LOG [2024-09-26T02:57:07.110Z]: Producto ID 7413714911318 procesado
+LOG [2024-09-26T02:57:07.110Z]: [object Object]
+LOG [2024-09-26T02:57:08.393Z]: Producto ID 7413729427542 procesado
+LOG [2024-09-26T02:57:08.393Z]: [object Object]
+LOG [2024-09-26T02:57:10.697Z]: Producto ID 7413446312022 procesado
+LOG [2024-09-26T02:57:10.697Z]: [object Object]
+LOG [2024-09-26T02:57:11.367Z]: Producto ID 7413447196758 procesado
+LOG [2024-09-26T02:57:11.368Z]: [object Object]
+LOG [2024-09-26T02:57:11.640Z]: Producto ID 7416502878294 procesado
+LOG [2024-09-26T02:57:11.640Z]: [object Object]
+LOG [2024-09-26T02:57:12.102Z]: Producto ID 7416502779990 procesado
+LOG [2024-09-26T02:57:12.102Z]: [object Object]
+LOG [2024-09-26T02:57:12.579Z]: Producto ID 7416503042134 procesado
+LOG [2024-09-26T02:57:12.580Z]: [object Object]
+LOG [2024-09-26T02:57:13.040Z]: Producto ID 7416502943830 procesado
+LOG [2024-09-26T02:57:13.040Z]: [object Object]
+LOG [2024-09-26T02:57:13.304Z]: Producto ID 7416502911062 procesado
+LOG [2024-09-26T02:57:13.304Z]: [object Object]
+LOG [2024-09-26T02:57:15.549Z]: Producto ID 7413446279254 procesado
+LOG [2024-09-26T02:57:15.549Z]: [object Object]
+LOG [2024-09-26T02:57:18.033Z]: Producto ID 7413444902998 procesado
+LOG [2024-09-26T02:57:18.034Z]: [object Object]
+LOG [2024-09-26T02:57:18.304Z]: Producto ID 7413446639702 procesado
+LOG [2024-09-26T02:57:18.304Z]: [object Object]
+LOG [2024-09-26T02:57:18.548Z]: Producto ID 7413444804694 procesado
+LOG [2024-09-26T02:57:18.548Z]: [object Object]
+LOG [2024-09-26T02:57:18.797Z]: Producto ID 7413444870230 procesado
+LOG [2024-09-26T02:57:18.798Z]: [object Object]
+LOG [2024-09-26T02:57:19.256Z]: Producto ID 7413446082646 procesado
+LOG [2024-09-26T02:57:19.256Z]: [object Object]
+LOG [2024-09-26T02:57:19.945Z]: Producto ID 7416503468118 procesado
+LOG [2024-09-26T02:57:19.945Z]: [object Object]
+LOG [2024-09-26T02:57:20.207Z]: Producto ID 7416503533654 procesado
+LOG [2024-09-26T02:57:20.207Z]: [object Object]
+LOG [2024-09-26T02:57:21.506Z]: Producto ID 7413452505174 procesado
+LOG [2024-09-26T02:57:21.507Z]: [object Object]
+LOG [2024-09-26T02:57:21.730Z]: Producto ID 7413452439638 procesado
+LOG [2024-09-26T02:57:21.730Z]: [object Object]
+LOG [2024-09-26T02:57:22.606Z]: Producto ID 7413450735702 procesado
+LOG [2024-09-26T02:57:22.606Z]: [object Object]
+LOG [2024-09-26T02:57:22.852Z]: Producto ID 7413450702934 procesado
+LOG [2024-09-26T02:57:22.852Z]: [object Object]
+LOG [2024-09-26T02:57:23.523Z]: Producto ID 7413450768470 procesado
+LOG [2024-09-26T02:57:23.523Z]: [object Object]
+LOG [2024-09-26T02:57:23.966Z]: Producto ID 7413450801238 procesado
+LOG [2024-09-26T02:57:23.966Z]: [object Object]
+LOG [2024-09-26T02:57:24.518Z]: Producto ID 7413452013654 procesado
+LOG [2024-09-26T02:57:24.518Z]: [object Object]
+LOG [2024-09-26T02:57:24.789Z]: Producto ID 7413451292758 procesado
+LOG [2024-09-26T02:57:24.789Z]: [object Object]
+LOG [2024-09-26T02:57:25.102Z]: Producto ID 7413714321494 procesado
+LOG [2024-09-26T02:57:25.103Z]: [object Object]
+LOG [2024-09-26T02:57:25.564Z]: Producto ID 7413713862742 procesado
+LOG [2024-09-26T02:57:25.564Z]: [object Object]
+LOG [2024-09-26T02:57:26.003Z]: Producto ID 7413453652054 procesado
+LOG [2024-09-26T02:57:26.004Z]: [object Object]
+LOG [2024-09-26T02:57:26.711Z]: Producto ID 7413453684822 procesado
+LOG [2024-09-26T02:57:26.711Z]: [object Object]
+LOG [2024-09-26T02:57:27.179Z]: Producto ID 7413453619286 procesado
+LOG [2024-09-26T02:57:27.180Z]: [object Object]
+LOG [2024-09-26T02:57:28.427Z]: Producto ID 7413453586518 procesado
+LOG [2024-09-26T02:57:28.428Z]: [object Object]
+LOG [2024-09-26T02:57:28.693Z]: Producto ID 7413453160534 procesado
+LOG [2024-09-26T02:57:28.693Z]: [object Object]
+LOG [2024-09-26T02:57:28.942Z]: Producto ID 7413714583638 procesado
+LOG [2024-09-26T02:57:28.942Z]: [object Object]
+LOG [2024-09-26T02:57:29.388Z]: Producto ID 7413714616406 procesado
+LOG [2024-09-26T02:57:29.388Z]: [object Object]
+LOG [2024-09-26T02:57:29.634Z]: Producto ID 7413713502294 procesado
+LOG [2024-09-26T02:57:29.634Z]: [object Object]
+LOG [2024-09-26T02:57:30.116Z]: Producto ID 7413713469526 procesado
+LOG [2024-09-26T02:57:30.116Z]: [object Object]
+LOG [2024-09-26T02:57:30.591Z]: Producto ID 7413450408022 procesado
+LOG [2024-09-26T02:57:30.591Z]: [object Object]
+LOG [2024-09-26T02:57:30.832Z]: Producto ID 7413452898390 procesado
+LOG [2024-09-26T02:57:30.832Z]: [object Object]
+LOG [2024-09-26T02:57:31.079Z]: Producto ID 7413452669014 procesado
+LOG [2024-09-26T02:57:31.079Z]: [object Object]
+LOG [2024-09-26T02:57:32.523Z]: Producto ID 7413453226070 procesado
+LOG [2024-09-26T02:57:32.523Z]: [object Object]
+LOG [2024-09-26T02:57:33.151Z]: Producto ID 7413453258838 procesado
+LOG [2024-09-26T02:57:33.151Z]: [object Object]
+LOG [2024-09-26T02:57:33.627Z]: Producto ID 7413713403990 procesado
+LOG [2024-09-26T02:57:33.627Z]: [object Object]
+LOG [2024-09-26T02:57:34.091Z]: Producto ID 7413713436758 procesado
+LOG [2024-09-26T02:57:34.091Z]: [object Object]
+LOG [2024-09-26T02:57:34.577Z]: Producto ID 7413452996694 procesado
+LOG [2024-09-26T02:57:34.577Z]: [object Object]
+LOG [2024-09-26T02:57:34.833Z]: Producto ID 7413713338454 procesado
+LOG [2024-09-26T02:57:34.833Z]: [object Object]
+LOG [2024-09-26T02:57:35.343Z]: Producto ID 7413453094998 procesado
+LOG [2024-09-26T02:57:35.343Z]: [object Object]
+LOG [2024-09-26T02:57:35.594Z]: Producto ID 7413713371222 procesado
+LOG [2024-09-26T02:57:35.594Z]: [object Object]
+LOG [2024-09-26T02:57:36.883Z]: Producto ID 7413453422678 procesado
+LOG [2024-09-26T02:57:36.883Z]: [object Object]
+LOG [2024-09-26T02:57:38.138Z]: Producto ID 7413713305686 procesado
+LOG [2024-09-26T02:57:38.139Z]: [object Object]
+LOG [2024-09-26T02:57:38.415Z]: Producto ID 7413453029462 procesado
+LOG [2024-09-26T02:57:38.415Z]: [object Object]
+LOG [2024-09-26T02:57:38.868Z]: Producto ID 7413713829974 procesado
+LOG [2024-09-26T02:57:38.868Z]: [object Object]
+LOG [2024-09-26T02:57:39.135Z]: Producto ID 7413452767318 procesado
+LOG [2024-09-26T02:57:39.135Z]: [object Object]
+LOG [2024-09-26T02:57:39.374Z]: Producto ID 7413452537942 procesado
+LOG [2024-09-26T02:57:39.375Z]: [object Object]
+LOG [2024-09-26T02:57:40.841Z]: Producto ID 7413452800086 procesado
+LOG [2024-09-26T02:57:40.841Z]: [object Object]
+LOG [2024-09-26T02:57:41.309Z]: Producto ID 7413453291606 procesado
+LOG [2024-09-26T02:57:41.310Z]: [object Object]
+LOG [2024-09-26T02:57:41.561Z]: Producto ID 7413713698902 procesado
+LOG [2024-09-26T02:57:41.561Z]: [object Object]
+LOG [2024-09-26T02:57:41.811Z]: Producto ID 7413713666134 procesado
+LOG [2024-09-26T02:57:41.812Z]: [object Object]
+LOG [2024-09-26T02:57:43.081Z]: Producto ID 7413713567830 procesado
+LOG [2024-09-26T02:57:43.081Z]: [object Object]
+LOG [2024-09-26T02:57:43.563Z]: Producto ID 7413713928278 procesado
+LOG [2024-09-26T02:57:43.563Z]: [object Object]
+LOG [2024-09-26T02:57:43.822Z]: Producto ID 7413713535062 procesado
+LOG [2024-09-26T02:57:43.822Z]: [object Object]
+LOG [2024-09-26T02:57:44.067Z]: Producto ID 7413713633366 procesado
+LOG [2024-09-26T02:57:44.067Z]: [object Object]
+LOG [2024-09-26T02:57:44.330Z]: Producto ID 7413713600598 procesado
+LOG [2024-09-26T02:57:44.331Z]: [object Object]
+LOG [2024-09-26T02:57:44.855Z]: Producto ID 7413452374102 procesado
+LOG [2024-09-26T02:57:44.855Z]: [object Object]
+LOG [2024-09-26T02:57:46.075Z]: Producto ID 7413713076310 procesado
+LOG [2024-09-26T02:57:46.075Z]: [object Object]
+LOG [2024-09-26T02:57:47.153Z]: Producto ID 7413713109078 procesado
+LOG [2024-09-26T02:57:47.153Z]: [object Object]
+LOG [2024-09-26T02:57:48.086Z]: Producto ID 7413450637398 procesado
+LOG [2024-09-26T02:57:48.086Z]: [object Object]
+LOG [2024-09-26T02:57:48.314Z]: Producto ID 7413450670166 procesado
+LOG [2024-09-26T02:57:48.314Z]: [object Object]
+LOG [2024-09-26T02:57:48.558Z]: Producto ID 7413450604630 procesado
+LOG [2024-09-26T02:57:48.558Z]: [object Object]
+LOG [2024-09-26T02:57:49.039Z]: Producto ID 7413714288726 procesado
+LOG [2024-09-26T02:57:49.040Z]: [object Object]
+LOG [2024-09-26T02:57:56.299Z]: Producto ID 7413714255958 procesado
+LOG [2024-09-26T02:57:56.299Z]: [object Object]
+LOG [2024-09-26T02:57:56.551Z]: Producto ID 7413450571862 procesado
+LOG [2024-09-26T02:57:56.551Z]: [object Object]
+LOG [2024-09-26T02:57:56.796Z]: Producto ID 7413452603478 procesado
+LOG [2024-09-26T02:57:56.796Z]: [object Object]
+LOG [2024-09-26T02:57:57.047Z]: Producto ID 7413451948118 procesado
+LOG [2024-09-26T02:57:57.047Z]: [object Object]
+LOG [2024-09-26T02:57:57.279Z]: Producto ID 7413713207382 procesado
+LOG [2024-09-26T02:57:57.279Z]: [object Object]
+LOG [2024-09-26T02:57:57.762Z]: Producto ID 7413713174614 procesado
+LOG [2024-09-26T02:57:57.762Z]: [object Object]
+LOG [2024-09-26T02:57:58.032Z]: Producto ID 7413713240150 procesado
+LOG [2024-09-26T02:57:58.032Z]: [object Object]
+LOG [2024-09-26T02:57:58.486Z]: Producto ID 7413452570710 procesado
+LOG [2024-09-26T02:57:58.486Z]: [object Object]
+LOG [2024-09-26T02:57:58.720Z]: Producto ID 7413714354262 procesado
+LOG [2024-09-26T02:57:58.720Z]: [object Object]
+LOG [2024-09-26T02:57:59.180Z]: Producto ID 7413714714710 procesado
+LOG [2024-09-26T02:57:59.180Z]: [object Object]
+LOG [2024-09-26T02:58:00.432Z]: Producto ID 7413714681942 procesado
+LOG [2024-09-26T02:58:00.432Z]: [object Object]
+LOG [2024-09-26T02:58:00.656Z]: Producto ID 7413713797206 procesado
+LOG [2024-09-26T02:58:00.656Z]: [object Object]
+LOG [2024-09-26T02:58:02.114Z]: Producto ID 7413713764438 procesado
+LOG [2024-09-26T02:58:02.114Z]: [object Object]
+LOG [2024-09-26T02:58:02.571Z]: Producto ID 7413713731670 procesado
+LOG [2024-09-26T02:58:02.571Z]: [object Object]
+LOG [2024-09-26T02:58:04.910Z]: Producto ID 7413714550870 procesado
+LOG [2024-09-26T02:58:04.911Z]: [object Object]
+LOG [2024-09-26T02:58:06.163Z]: Producto ID 7413451325526 procesado
+LOG [2024-09-26T02:58:06.163Z]: [object Object]
+LOG [2024-09-26T02:58:06.451Z]: Producto ID 7413451423830 procesado
+LOG [2024-09-26T02:58:06.451Z]: [object Object]
+LOG [2024-09-26T02:58:06.890Z]: Producto ID 7413450932310 procesado
+LOG [2024-09-26T02:58:06.891Z]: [object Object]
+LOG [2024-09-26T02:58:08.125Z]: Producto ID 7413450899542 procesado
+LOG [2024-09-26T02:58:08.125Z]: [object Object]
+LOG [2024-09-26T02:58:08.377Z]: Producto ID 7413450997846 procesado
+LOG [2024-09-26T02:58:08.377Z]: [object Object]
+LOG [2024-09-26T02:58:10.455Z]: Producto ID 7413451096150 procesado
+LOG [2024-09-26T02:58:10.456Z]: [object Object]
+LOG [2024-09-26T02:58:10.917Z]: Producto ID 7413452079190 procesado
+LOG [2024-09-26T02:58:10.917Z]: [object Object]
+LOG [2024-09-26T02:58:11.153Z]: Producto ID 7413450342486 procesado
+LOG [2024-09-26T02:58:11.153Z]: [object Object]
+LOG [2024-09-26T02:58:12.604Z]: Producto ID 7413713961046 procesado
+LOG [2024-09-26T02:58:12.604Z]: [object Object]
+LOG [2024-09-26T02:58:13.064Z]: Producto ID 7413452177494 procesado
+LOG [2024-09-26T02:58:13.064Z]: [object Object]
+LOG [2024-09-26T02:58:13.323Z]: Producto ID 7413450506326 procesado
+LOG [2024-09-26T02:58:13.323Z]: [object Object]
+LOG [2024-09-26T02:58:14.037Z]: Producto ID 7413450539094 procesado
+LOG [2024-09-26T02:58:14.037Z]: [object Object]
+LOG [2024-09-26T02:58:14.507Z]: Producto ID 7413452931158 procesado
+LOG [2024-09-26T02:58:14.507Z]: [object Object]
+LOG [2024-09-26T02:58:14.979Z]: Producto ID 7413451227222 procesado
+LOG [2024-09-26T02:58:14.979Z]: [object Object]
+LOG [2024-09-26T02:58:17.257Z]: Producto ID 7413451489366 procesado
+LOG [2024-09-26T02:58:17.258Z]: [object Object]
+LOG [2024-09-26T02:58:17.523Z]: Producto ID 7413451587670 procesado
+LOG [2024-09-26T02:58:17.523Z]: [object Object]
+LOG [2024-09-26T02:58:17.780Z]: Producto ID 7413451522134 procesado
+LOG [2024-09-26T02:58:17.780Z]: [object Object]
+LOG [2024-09-26T02:58:18.030Z]: Producto ID 7413451620438 procesado
+LOG [2024-09-26T02:58:18.030Z]: [object Object]
+LOG [2024-09-26T02:58:18.609Z]: Producto ID 7413451653206 procesado
+LOG [2024-09-26T02:58:18.609Z]: [object Object]
+LOG [2024-09-26T02:58:19.299Z]: Producto ID 7413451882582 procesado
+LOG [2024-09-26T02:58:19.299Z]: [object Object]
+LOG [2024-09-26T02:58:21.050Z]: Producto ID 7413453455446 procesado
+LOG [2024-09-26T02:58:21.050Z]: [object Object]
+LOG [2024-09-26T02:58:21.314Z]: Producto ID 7413450440790 procesado
+LOG [2024-09-26T02:58:21.315Z]: [object Object]
+LOG [2024-09-26T02:58:21.850Z]: Producto ID 7413450473558 procesado
+LOG [2024-09-26T02:58:21.850Z]: [object Object]
+LOG [2024-09-26T02:58:22.521Z]: Producto ID 7413714419798 procesado
+LOG [2024-09-26T02:58:22.521Z]: [object Object]
+LOG [2024-09-26T02:58:22.996Z]: Producto ID 7413714387030 procesado
+LOG [2024-09-26T02:58:22.997Z]: [object Object]
+LOG [2024-09-26T02:58:23.254Z]: Producto ID 7413714518102 procesado
+LOG [2024-09-26T02:58:23.254Z]: [object Object]
+LOG [2024-09-26T02:58:23.487Z]: Producto ID 7413714485334 procesado
+LOG [2024-09-26T02:58:23.487Z]: [object Object]
+LOG [2024-09-26T02:58:23.766Z]: Producto ID 7413714452566 procesado
+LOG [2024-09-26T02:58:23.767Z]: [object Object]
+LOG [2024-09-26T02:58:24.223Z]: Producto ID 7413713043542 procesado
+LOG [2024-09-26T02:58:24.223Z]: [object Object]
+LOG [2024-09-26T02:58:24.708Z]: Producto ID 7413716058198 procesado
+LOG [2024-09-26T02:58:24.708Z]: [object Object]
+LOG [2024-09-26T02:58:24.972Z]: Producto ID 7413716385878 procesado
+LOG [2024-09-26T02:58:24.972Z]: [object Object]
+LOG [2024-09-26T02:58:26.251Z]: Producto ID 7413715632214 procesado
+LOG [2024-09-26T02:58:26.251Z]: [object Object]
+LOG [2024-09-26T02:58:26.517Z]: Producto ID 7413715828822 procesado
+LOG [2024-09-26T02:58:26.517Z]: [object Object]
+LOG [2024-09-26T02:58:27.059Z]: Producto ID 7413715861590 procesado
+LOG [2024-09-26T02:58:27.059Z]: [object Object]
+LOG [2024-09-26T02:58:27.301Z]: Producto ID 7413715894358 procesado
+LOG [2024-09-26T02:58:27.302Z]: [object Object]
+LOG [2024-09-26T02:58:28.454Z]: Producto ID 7413715927126 procesado
+LOG [2024-09-26T02:58:28.455Z]: [object Object]
+LOG [2024-09-26T02:58:28.688Z]: Producto ID 7413715992662 procesado
+LOG [2024-09-26T02:58:28.688Z]: [object Object]
+LOG [2024-09-26T02:58:29.134Z]: Producto ID 7413715796054 procesado
+LOG [2024-09-26T02:58:29.135Z]: [object Object]
+LOG [2024-09-26T02:58:29.388Z]: Producto ID 7413715599446 procesado
+LOG [2024-09-26T02:58:29.388Z]: [object Object]
+LOG [2024-09-26T02:58:30.891Z]: Producto ID 7413715533910 procesado
+LOG [2024-09-26T02:58:30.892Z]: [object Object]
+LOG [2024-09-26T02:58:31.166Z]: Producto ID 7413715501142 procesado
+LOG [2024-09-26T02:58:31.166Z]: [object Object]
+LOG [2024-09-26T02:58:32.678Z]: Producto ID 7413715566678 procesado
+LOG [2024-09-26T02:58:32.678Z]: [object Object]
+LOG [2024-09-26T02:58:33.124Z]: Producto ID 7413720219734 procesado
+LOG [2024-09-26T02:58:33.124Z]: [object Object]
+LOG [2024-09-26T02:58:33.379Z]: Producto ID 7413719269462 procesado
+LOG [2024-09-26T02:58:33.379Z]: [object Object]
+LOG [2024-09-26T02:58:33.667Z]: Producto ID 7413719498838 procesado
+LOG [2024-09-26T02:58:33.668Z]: [object Object]
+LOG [2024-09-26T02:58:33.931Z]: Producto ID 7413718515798 procesado
+LOG [2024-09-26T02:58:33.931Z]: [object Object]
+LOG [2024-09-26T02:58:34.405Z]: Producto ID 7413718450262 procesado
+LOG [2024-09-26T02:58:34.405Z]: [object Object]
+LOG [2024-09-26T02:58:34.868Z]: Producto ID 7413719990358 procesado
+LOG [2024-09-26T02:58:34.868Z]: [object Object]
+LOG [2024-09-26T02:58:36.106Z]: Producto ID 7413719105622 procesado
+LOG [2024-09-26T02:58:36.106Z]: [object Object]
+LOG [2024-09-26T02:58:36.822Z]: Producto ID 7413718483030 procesado
+LOG [2024-09-26T02:58:36.822Z]: [object Object]
+LOG [2024-09-26T02:58:37.113Z]: Producto ID 7413443166294 procesado
+LOG [2024-09-26T02:58:37.113Z]: [object Object]
+LOG [2024-09-26T02:58:37.353Z]: Producto ID 7416496029782 procesado
+LOG [2024-09-26T02:58:37.354Z]: [object Object]
+LOG [2024-09-26T02:58:37.598Z]: Producto ID 7416495046742 procesado
+LOG [2024-09-26T02:58:37.598Z]: [object Object]
+LOG [2024-09-26T02:58:38.851Z]: Producto ID 7416495210582 procesado
+LOG [2024-09-26T02:58:38.851Z]: [object Object]
+LOG [2024-09-26T02:58:39.338Z]: Producto ID 7416495112278 procesado
+LOG [2024-09-26T02:58:39.338Z]: [object Object]
+LOG [2024-09-26T02:58:39.813Z]: Producto ID 7413716942934 procesado
+LOG [2024-09-26T02:58:39.813Z]: [object Object]
+LOG [2024-09-26T02:58:40.049Z]: Producto ID 7413716975702 procesado
+LOG [2024-09-26T02:58:40.049Z]: [object Object]
+LOG [2024-09-26T02:58:40.290Z]: Producto ID 7413717074006 procesado
+LOG [2024-09-26T02:58:40.290Z]: [object Object]
+LOG [2024-09-26T02:58:40.523Z]: Producto ID 7413717008470 procesado
+LOG [2024-09-26T02:58:40.523Z]: [object Object]
+LOG [2024-09-26T02:58:41.010Z]: Producto ID 7413717041238 procesado
+LOG [2024-09-26T02:58:41.010Z]: [object Object]
+LOG [2024-09-26T02:58:41.358Z]: Producto ID 7413719629910 procesado
+LOG [2024-09-26T02:58:41.359Z]: [object Object]
+LOG [2024-09-26T02:58:41.825Z]: Producto ID 7413718384726 procesado
+LOG [2024-09-26T02:58:41.825Z]: [object Object]
+LOG [2024-09-26T02:58:42.074Z]: Producto ID 7413719334998 procesado
+LOG [2024-09-26T02:58:42.074Z]: [object Object]
+LOG [2024-09-26T02:58:42.541Z]: Producto ID 7413717106774 procesado
+LOG [2024-09-26T02:58:42.541Z]: [object Object]
+LOG [2024-09-26T02:58:42.780Z]: Producto ID 7413717172310 procesado
+LOG [2024-09-26T02:58:42.781Z]: [object Object]
+LOG [2024-09-26T02:58:43.017Z]: Producto ID 7413718122582 procesado
+LOG [2024-09-26T02:58:43.017Z]: [object Object]
+LOG [2024-09-26T02:58:43.685Z]: Producto ID 7413717139542 procesado
+LOG [2024-09-26T02:58:43.685Z]: [object Object]
+LOG [2024-09-26T02:58:43.959Z]: Producto ID 7413720678486 procesado
+LOG [2024-09-26T02:58:43.959Z]: [object Object]
+LOG [2024-09-26T02:58:44.230Z]: Producto ID 7416495079510 procesado
+LOG [2024-09-26T02:58:44.231Z]: [object Object]
+LOG [2024-09-26T02:58:46.474Z]: Producto ID 7416495472726 procesado
+LOG [2024-09-26T02:58:46.474Z]: [object Object]
+LOG [2024-09-26T02:58:46.936Z]: Producto ID 7416495669334 procesado
+LOG [2024-09-26T02:58:46.936Z]: [object Object]
+LOG [2024-09-26T02:58:47.392Z]: Producto ID 7416495636566 procesado
+LOG [2024-09-26T02:58:47.392Z]: [object Object]
+LOG [2024-09-26T02:58:48.763Z]: Producto ID 7413717565526 procesado
+LOG [2024-09-26T02:58:48.763Z]: [object Object]
+LOG [2024-09-26T02:58:49.030Z]: Producto ID 7413719859286 procesado
+LOG [2024-09-26T02:58:49.030Z]: [object Object]
+LOG [2024-09-26T02:58:49.844Z]: Producto ID 7413719728214 procesado
+LOG [2024-09-26T02:58:49.844Z]: [object Object]
+LOG [2024-09-26T02:58:50.095Z]: Producto ID 7413717532758 procesado
+LOG [2024-09-26T02:58:50.095Z]: [object Object]
+LOG [2024-09-26T02:58:52.646Z]: Producto ID 7413720186966 procesado
+LOG [2024-09-26T02:58:52.646Z]: [object Object]
+LOG [2024-09-26T02:58:52.924Z]: Producto ID 7413717499990 procesado
+LOG [2024-09-26T02:58:52.924Z]: [object Object]
+LOG [2024-09-26T02:58:55.228Z]: Producto ID 7413718220886 procesado
+LOG [2024-09-26T02:58:55.228Z]: [object Object]
+LOG [2024-09-26T02:58:56.493Z]: Producto ID 7413718941782 procesado
+LOG [2024-09-26T02:58:56.493Z]: [object Object]
+LOG [2024-09-26T02:58:56.955Z]: Producto ID 7413719171158 procesado
+LOG [2024-09-26T02:58:56.955Z]: [object Object]
+LOG [2024-09-26T02:58:57.432Z]: Producto ID 7413718253654 procesado
+LOG [2024-09-26T02:58:57.433Z]: [object Object]
+LOG [2024-09-26T02:58:57.704Z]: Producto ID 7413718188118 procesado
+LOG [2024-09-26T02:58:57.704Z]: [object Object]
+LOG [2024-09-26T02:58:57.934Z]: Producto ID 7413719924822 procesado
+LOG [2024-09-26T02:58:57.934Z]: [object Object]
+LOG [2024-09-26T02:58:58.254Z]: Producto ID 7413719138390 procesado
+LOG [2024-09-26T02:58:58.254Z]: [object Object]
+LOG [2024-09-26T02:58:58.491Z]: Producto ID 7413720055894 procesado
+LOG [2024-09-26T02:58:58.491Z]: [object Object]
+LOG [2024-09-26T02:58:59.107Z]: Producto ID 7413781332054 procesado
+LOG [2024-09-26T02:58:59.108Z]: [object Object]
+LOG [2024-09-26T02:59:00.875Z]: Producto ID 7413719564374 procesado
+LOG [2024-09-26T02:59:00.875Z]: [object Object]
+LOG [2024-09-26T02:59:01.181Z]: Producto ID 7413719433302 procesado
+LOG [2024-09-26T02:59:01.181Z]: [object Object]
+LOG [2024-09-26T02:59:01.420Z]: Producto ID 7413719531606 procesado
+LOG [2024-09-26T02:59:01.421Z]: [object Object]
+LOG [2024-09-26T02:59:02.326Z]: Producto ID 7413719203926 procesado
+LOG [2024-09-26T02:59:02.326Z]: [object Object]
+LOG [2024-09-26T02:59:02.806Z]: Producto ID 7413717663830 procesado
+LOG [2024-09-26T02:59:02.806Z]: [object Object]
+LOG [2024-09-26T02:59:03.128Z]: Producto ID 7413717598294 procesado
+LOG [2024-09-26T02:59:03.128Z]: [object Object]
+LOG [2024-09-26T02:59:03.568Z]: Producto ID 7413719597142 procesado
+LOG [2024-09-26T02:59:03.569Z]: [object Object]
+LOG [2024-09-26T02:59:03.814Z]: Producto ID 7413717631062 procesado
+LOG [2024-09-26T02:59:03.815Z]: [object Object]
+LOG [2024-09-26T02:59:03.817Z]: [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+LOG [2024-09-26T02:59:03.836Z]: Cantidad Productos Shopify 1054
+LOG [2024-09-26T03:00:09.195Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-26T03:00:09.800Z]: Conexión exitosa a MongoDB

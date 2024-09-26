@@ -76,13 +76,13 @@ exports.listProducts = async () => {
         //     owner_id: product.id
         //   }
         // });
-        const metafields = [{}]
+        //const metafields = [{}]
 
         // Mostrar metacampos por consola
         return {
           product: {
             id: product.id,
-            lumps: metafields[0].value ? metafields[0].value : 0,
+            //lumps: metafields[0].value ? metafields[0].value : 0,
             title: product.title,
             variants: [{
               sku: product.variants[0].sku,
@@ -437,11 +437,18 @@ exports.getProductsWithCollections = async () => {
         productsWithCollections.push({
           id: product.id,
           title: product.title,
-          sku: product.variants[0].sku,
           collections: filteredCollections,
+          variants: [{
+            sku: product.variants[0].sku,
+            price: product.variants[0].price,
+            compare_at_price: product.variants[0].compare_at_price,
+            inventory_management: product.variants[0].inventory_management,
+            inventory_quantity: product.variants[0].inventory_quantity,
+          }]
         });
 
         console.log(`Producto ID ${product.id} procesado`);
+        console.log(product)
       } catch (error) {
         console.error(`Error al obtener colecciones para el producto ${product.id}:`, error);
       }
