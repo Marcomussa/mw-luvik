@@ -1,0 +1,552 @@
+{
+  "updated": [
+    {
+      "product": {
+        "lumps": 24,
+        "collection": [],
+        "title": "CHAMPIGNON CUMANA ENTERO 400 Grs",
+        "vendor": "CUMANA",
+        "variants": [
+          {
+            "price": "3247.98",
+            "sku": "40111",
+            "inventory_management": "shopify",
+            "inventory_quantity": 240
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 12,
+        "collection": [],
+        "title": "PALMITO BAHIA TROZO 800 Grs",
+        "vendor": "BAHIA",
+        "variants": [
+          {
+            "price": "3964.93",
+            "sku": "40143",
+            "inventory_management": "shopify",
+            "inventory_quantity": 0
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 24,
+        "collection": [],
+        "title": "PALMITO CUMANA ENTERO 396 Grs",
+        "vendor": "CUMANA",
+        "variants": [
+          {
+            "price": "3530.41",
+            "sku": "40152",
+            "inventory_management": "shopify",
+            "inventory_quantity": 240
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 24,
+        "collection": [],
+        "title": "PALMITO CUMANA TROZO 396 Grs",
+        "vendor": "CUMANA",
+        "variants": [
+          {
+            "price": "1509.93",
+            "sku": "40153",
+            "inventory_management": "shopify",
+            "inventory_quantity": 192
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 12,
+        "collection": [],
+        "title": "POSTRE RAVANA VAINILLA 120 Grs",
+        "vendor": "RAVANA",
+        "variants": [
+          {
+            "price": "131.44",
+            "sku": "40546",
+            "inventory_management": "shopify",
+            "inventory_quantity": 0
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 12,
+        "collection": [],
+        "title": "MOUSSE RAVANA CHOCOLATE 100 Grs",
+        "vendor": "RAVANA",
+        "variants": [
+          {
+            "price": "525.76",
+            "sku": "40558",
+            "inventory_management": "shopify",
+            "inventory_quantity": 0
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 24,
+        "collection": [],
+        "title": "JARDINERA CUMANA 350 Grs",
+        "vendor": "CUMANA",
+        "variants": [
+          {
+            "price": "1075.42",
+            "sku": "40670",
+            "inventory_management": "shopify",
+            "inventory_quantity": 232
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 12,
+        "collection": [],
+        "title": "DURAZNO CUMANA MITADES 820 Grs",
+        "vendor": "CUMANA",
+        "variants": [
+          {
+            "price": "1835.81",
+            "sku": "40724",
+            "inventory_management": "shopify",
+            "inventory_quantity": 116
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "JUGO CEPITA NARANJA 1 Lt.",
+        "vendor": "CEPITA",
+        "variants": [
+          {
+            "compare_at_price": "1140.60",
+            "price": "1085.19",
+            "sku": "41199",
+            "inventory_management": "shopify",
+            "inventory_quantity": 10056
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "JUGO CEPITA MULTIFRUTA 1 Lt.",
+        "vendor": "CEPITA",
+        "variants": [
+          {
+            "compare_at_price": "1140.60",
+            "price": "1085.19",
+            "sku": "41200",
+            "inventory_management": "shopify",
+            "inventory_quantity": 2128
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "JUGO CEPITA MANZANA 1 Lt.",
+        "vendor": "CEPITA",
+        "variants": [
+          {
+            "price": "1140.60",
+            "sku": "41201",
+            "inventory_management": "shopify",
+            "inventory_quantity": 0
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 12,
+        "collection": [],
+        "title": "PAN RALLADO MORIXE 500 Grs",
+        "vendor": "MORIXE",
+        "variants": [
+          {
+            "price": "858.16",
+            "sku": "41250",
+            "inventory_management": "shopify",
+            "inventory_quantity": 12080
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 6,
+        "collection": [],
+        "title": "SIDRA 1888 750 CC.",
+        "vendor": "1888",
+        "variants": [
+          {
+            "compare_at_price": "5420.54",
+            "price": "5213.06",
+            "sku": "70500",
+            "inventory_management": "shopify",
+            "inventory_quantity": 248
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 15,
+        "collection": [],
+        "title": "GELAT. EXQUISITA NARANJA 50 Grs",
+        "vendor": "EXQUISITA",
+        "variants": [
+          {
+            "price": "651.77",
+            "sku": "120170",
+            "inventory_management": "shopify",
+            "inventory_quantity": 510
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 15,
+        "collection": [],
+        "title": "FID. DON VICENTE TIRABUZON 500 Grs",
+        "vendor": "VICENTE",
+        "variants": [
+          {
+            "price": "1900.99",
+            "sku": "120243",
+            "inventory_management": "shopify",
+            "inventory_quantity": 1600
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "MAYONESA HELLMANS D/P 950 Grs",
+        "vendor": "HELLMANS",
+        "variants": [
+          {
+            "price": "2704.84",
+            "sku": "140113",
+            "inventory_management": "shopify",
+            "inventory_quantity": 0
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 20,
+        "collection": [],
+        "title": "MAYONESA NATURA SACHET 125 Grs",
+        "vendor": "NATURA",
+        "variants": [
+          {
+            "price": "499.69",
+            "sku": "220483",
+            "inventory_management": "shopify",
+            "inventory_quantity": 70753
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 12,
+        "collection": [],
+        "title": "ANTITRANSP. REXONA ODORONO 60 Grs",
+        "vendor": "REXONA",
+        "variants": [
+          {
+            "price": "1411.08",
+            "sku": "230208",
+            "inventory_management": "shopify",
+            "inventory_quantity": 2988
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 24,
+        "collection": [],
+        "title": "ACOND. SEDAL CERAMIDAS 10 ml.",
+        "vendor": "SEDAL",
+        "variants": [
+          {
+            "price": "146.65",
+            "sku": "230232",
+            "inventory_management": "shopify",
+            "inventory_quantity": 64
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 24,
+        "collection": [],
+        "title": "ACOND. SEDAL BALANCE 10 ml.",
+        "vendor": "SEDAL",
+        "variants": [
+          {
+            "price": "146.65",
+            "sku": "230233",
+            "inventory_management": "shopify",
+            "inventory_quantity": 232
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 24,
+        "collection": [],
+        "title": "SHAMPOO SEDAL CERAMIDAS 10 ml.",
+        "vendor": "SEDAL",
+        "variants": [
+          {
+            "price": "146.65",
+            "sku": "230234",
+            "inventory_management": "shopify",
+            "inventory_quantity": 576
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 24,
+        "collection": [],
+        "title": "SHAMPOO SEDAL BALANCE 10 ml.",
+        "vendor": "SEDAL",
+        "variants": [
+          {
+            "price": "146.65",
+            "sku": "230235",
+            "inventory_management": "shopify",
+            "inventory_quantity": 496
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 12,
+        "collection": [],
+        "title": "SUAVIZANTE VIVERE PLANCHA 810 ml.",
+        "vendor": "VIVERE",
+        "variants": [
+          {
+            "compare_at_price": "1954.22",
+            "price": "1802.14",
+            "sku": "230321",
+            "inventory_management": "shopify",
+            "inventory_quantity": 592
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "ACOND. SUAVE CERAMIDAS 930 ml.",
+        "vendor": "SUAVE",
+        "variants": [
+          {
+            "price": "2388.73",
+            "sku": "260180",
+            "inventory_management": "shopify",
+            "inventory_quantity": 936
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "ACOND. SUAVE JAZMIN 930 ml.",
+        "vendor": "SUAVE",
+        "variants": [
+          {
+            "price": "2388.73",
+            "sku": "260181",
+            "inventory_management": "shopify",
+            "inventory_quantity": 621
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "ACOND. SUAVE FRUTAL 930 ml.",
+        "vendor": "SUAVE",
+        "variants": [
+          {
+            "price": "2388.73",
+            "sku": "260182",
+            "inventory_management": "shopify",
+            "inventory_quantity": 941
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "ACOND. SUAVE DELICIOSA 930 ml.",
+        "vendor": "SUAVE",
+        "variants": [
+          {
+            "price": "2388.73",
+            "sku": "260183",
+            "inventory_management": "shopify",
+            "inventory_quantity": 941
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "SHAMPOO SUAVE CERAMIDAS 930 ml.",
+        "vendor": "SUAVE",
+        "variants": [
+          {
+            "price": "2388.73",
+            "sku": "260184",
+            "inventory_management": "shopify",
+            "inventory_quantity": 941
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "SHAMPOO SUAVE JAZMIN 930 ml.",
+        "vendor": "SUAVE",
+        "variants": [
+          {
+            "price": "2388.73",
+            "sku": "260185",
+            "inventory_management": "shopify",
+            "inventory_quantity": 941
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "SHAMPOO SUAVE FRUTAL 930 ml.",
+        "vendor": "SUAVE",
+        "variants": [
+          {
+            "price": "2388.73",
+            "sku": "260186",
+            "inventory_management": "shopify",
+            "inventory_quantity": 960
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 8,
+        "collection": [],
+        "title": "SHAMPOO SUAVE DELICIOSA 930 ml.",
+        "vendor": "SUAVE",
+        "variants": [
+          {
+            "price": "2388.73",
+            "sku": "260187",
+            "inventory_management": "shopify",
+            "inventory_quantity": 725
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 12,
+        "collection": [],
+        "title": "SHAMPOO PLUSBELLE NUT. COCO 700 ml.",
+        "vendor": "PLUSBELLE",
+        "variants": [
+          {
+            "price": "2497.36",
+            "sku": "260191",
+            "inventory_management": "shopify",
+            "inventory_quantity": 136
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 16,
+        "collection": [],
+        "title": "JABON TOCADOR DOVE ORIGINAL 3x90 Grs",
+        "vendor": "DOVE",
+        "variants": [
+          {
+            "price": "3421.79",
+            "sku": "270152",
+            "inventory_management": "shopify",
+            "inventory_quantity": 298
+          }
+        ]
+      }
+    },
+    {
+      "product": {
+        "lumps": 1,
+        "collection": [],
+        "title": "Descuento",
+        "vendor": "",
+        "variants": [
+          {
+            "price": "0.00",
+            "sku": "999999",
+            "inventory_management": "shopify",
+            "inventory_quantity": 0
+          }
+        ]
+      }
+    }
+  ]
+}
