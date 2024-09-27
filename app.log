@@ -17242,3 +17242,29 @@ LOG [2024-09-26T21:24:32.964Z]: Conexión exitosa a MongoDB
 LOG [2024-09-26T21:25:23.286Z]: Servidor en Linea. Puerto: 3000
 LOG [2024-09-26T21:25:23.705Z]: Conexión exitosa a MongoDB
 LOG [2024-09-26T21:25:56.094Z]: 1053
+LOG [2024-09-27T14:34:06.667Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-27T14:34:07.531Z]: Conexión exitosa a MongoDB
+LOG [2024-09-27T14:35:04.621Z]: true
+LOG [2024-09-27T14:35:07.510Z]: Producto YERBA LA MERCED CAMPO MONT 500 Grs insertado correctamente en DB.
+LOG [2024-09-27T14:35:07.510Z]: Asignando producto 7417634652246 a colección 280600281174
+LOG [2024-09-27T14:35:07.902Z]: Asignado exitosamente a colección 280600281174
+LOG [2024-09-27T14:35:07.902Z]: Asignando producto 7417634652246 a colección 282433814614
+LOG [2024-09-27T14:35:08.252Z]: Asignado exitosamente a colección 282433814614
+LOG [2024-09-27T14:35:08.623Z]: Producto creado: YERBA LA MERCED CAMPO MONT 500 Grs
+LOG [2024-09-27T14:35:34.747Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-27T14:35:35.642Z]: Conexión exitosa a MongoDB
+LOG [2024-09-27T14:35:39.727Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-27T14:35:40.407Z]: Conexión exitosa a MongoDB
+LOG [2024-09-27T14:35:43.436Z]: Error Creando Producto. shopifyClient.  Cannot read property '0' of undefined
+LOG [2024-09-27T14:35:43.436Z]: Error al crear producto YERBA LA MERCED CAMPO MONT 500 Grs: Cannot read property '0' of undefined
+LOG [2024-09-27T14:36:10.916Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-27T14:36:11.790Z]: Conexión exitosa a MongoDB
+LOG [2024-09-27T14:36:12.536Z]: Producto 100146 Ya Creado
+LOG [2024-09-27T14:36:12.536Z]: Producto creado: YERBA LA MERCED CAMPO MONT 500 Grs
+LOG [2024-09-27T14:36:59.238Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-27T14:37:00.193Z]: Conexión exitosa a MongoDB
+LOG [2024-09-27T14:37:17.725Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-09-27T14:37:18.637Z]: Conexión exitosa a MongoDB
+LOG [2024-09-27T14:37:19.190Z]: Producto 100146 Ya Creado
+LOG [2024-09-27T14:39:02.563Z]: DB: 1052
+LOG [2024-09-27T14:39:02.563Z]: Shopify: 1053

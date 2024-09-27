@@ -9,6 +9,11 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    sku: {
+        type: String,
+        required: true,
+        unique: false
+    },
     collections: [{
         id: {
             type: Number,

@@ -1,8 +1,11 @@
-const productService = require('../services/productService')
-const shopifyClient = require('../clients/shopifyClient')
-const Product = require("../models/Product")
-const Collection = require("../models/Collection")
-const mongoose = require('mongoose');
+const productService = require("../services/productService");
+const shopifyClient = require("../clients/shopifyClient");
+const Product = require("../models/Product");
+const Collection = require("../models/Collection");
+const mongoose = require("mongoose");
+const path = require("path");
+const fs = require("fs");
+const localDataPath = path.join(__dirname, "../JSON_examples/productList.json");
 
 
 exports.postCollectionsToDB = async () => {
@@ -12,39 +15,40 @@ exports.postCollectionsToDB = async () => {
 
     await Collection.deleteMany({});
     await Collection.insertMany(collections, { ordered: false });
-
   } catch (error) {
-    console.error('Error guardando producto en la base de datos:', error);
+    console.error("Error guardando producto en la base de datos:", error);
   }
 };
 
 exports.postProductToDB = async (product, collection) => {
   try {
-    const productId = product.id
-    const productTitle = product.title
-    const collections = collection.map(id => ({
-      id: id
+    const productID = product.id;
+    const productTitle = product.title;
+    const productSKU = product.variants[0].sku
+    const collections = collection.map((id) => ({
+      id: id,
     }));
 
     const newProduct = new Product({
-      id: productId,
+      id: productID,
       title: productTitle,
-      collections: collections
+      collections: collections,
+      sku: productSKU
     });
 
     await newProduct.save();
 
     console.log(`Producto ${productTitle} insertado correctamente en DB.`);
   } catch (error) {
-    console.error('Error guardando colecciones en la base de datos:', error);
+    console.error("Error guardando colecciones en la base de datos:", error);
   }
 };
 
 exports.updateProductToDB = async (product) => {
   try {
-    const productId = product.product.id
-    const newCollection = product.product.newCollection
-    const deleteCollection = product.product.deleteCollection
+    const productId = product.product.id;
+    const newCollection = product.product.newCollection;
+    const deleteCollection = product.product.deleteCollection;
 
     const existingProduct = await Product.findOne({ id: productId });
 
@@ -59,9 +63,9 @@ exports.updateProductToDB = async (product) => {
         {
           $addToSet: {
             collections: {
-              $each: newCollection.map(id => ({ id }))
-            }
-          }
+              $each: newCollection.map((id) => ({ id })),
+            },
+          },
         }
       );
     }
@@ -73,17 +77,17 @@ exports.updateProductToDB = async (product) => {
           $pull: {
             collections: {
               id: {
-                $in: deleteCollection
-              }
-            }
-          }
+                $in: deleteCollection,
+              },
+            },
+          },
         }
       );
     }
 
     console.log(`Producto ${productId} Actualizado Correctamente en DB.`);
   } catch (error) {
-    console.error('Error guardando colecciones en la base de datos:', error);
+    console.error("Error guardando colecciones en la base de datos:", error);
   }
 };
 
@@ -101,14 +105,40 @@ exports.deleteProductFromDB = async (productId) => {
   }
 };
 
+async function updateSKUToDb() {
+  const fileContent = fs.readFileSync(localDataPath, "utf-8");
+  const localData = JSON.parse(fileContent);
+
+  await mongoose.connect(process.env.MONGO_URI);
+  console.log('Conexión exitosa a MongoDB');
+
+  for (const item of localData) {
+    const { id, variants } = item;
+    const newSku = variants[0]?.sku;
+    const product = await Product.findOne({ id });
+
+    if (product) {
+      product.sku = newSku; 
+      await product.save();
+      console.log(`Producto con ID ${id} actualizado con SKU: ${newSku}`);
+    } else {
+      console.log(`No se encontró producto con ID: ${id}`);
+    }
+  }
+}
+
 exports.handleBatch = async (req, res) => {
   try {
-    const { created, updated, deleted } = req.body
-    const createdProductIds = await productService.handleBatch(created, updated, deleted);
+    const { created, updated, deleted } = req.body;
+    const createdProductIds = await productService.handleBatch(
+      created,
+      updated,
+      deleted
+    );
 
     // Determina si se han creado nuevos productos para incluir en la respuesta
     const response = {
-      message: 'Batch Ok'
+      message: "Batch Ok",
     };
 
     if (created && created.length > 0) {
@@ -116,32 +146,35 @@ exports.handleBatch = async (req, res) => {
     }
     res.status(200).json(response);
   } catch (error) {
-    res.status(500).json({ message: error })
-    console.log('Error en Batch (Productos). productController.js')
-    console.log(error.message)
+    res.status(500).json({ message: error });
+    console.log("Error en Batch (Productos). productController.js");
+    console.log(error.message);
   }
-}
+};
 
 exports.listProducts = async (req, res) => {
   try {
-    const response = await shopifyClient.listProducts()
-    console.log(response.data.length)
-    res.status(200).json(response)
+    const response = await shopifyClient.listProducts();
+    console.log(response.data.length);
+    res.status(200).json(response);
   } catch (error) {
-    console.log('Error Listando Productos. productController.js', error.message)
+    console.log(
+      "Error Listando Productos. productController.js",
+      error.message
+    );
   }
-}
+};
 
 exports.getProductsWithCollections = async (req, res) => {
   try {
-    const response = await shopifyClient.getProductsWithCollections()
+    const response = await shopifyClient.getProductsWithCollections();
     //! POST Product a DB
     // for (let i = 0; i < response.length; i++) {
     //   const productId = response[i].id
     //   const productTitle = response[i].title
     //   const collections = response[i].collections.map(collection => ({
-    //     id: collection.id, 
-    //     title: collection.title 
+    //     id: collection.id,
+    //     title: collection.title
     //   }));
 
     //   const newProduct = new Product({
@@ -153,76 +186,90 @@ exports.getProductsWithCollections = async (req, res) => {
     //   await newProduct.save();
     // }
 
-    console.log(response)
-    console.log("Cantidad Productos Shopify", response.length)
-    res.status(200).json(response)
+    console.log(response);
+    console.log("Cantidad Productos Shopify", response.length);
+    res.status(200).json(response);
   } catch (error) {
-    console.log('Error Listando Productos con Colecciones. productController.js', error.message)
+    console.log(
+      "Error Listando Productos con Colecciones. productController.js",
+      error.message
+    );
   }
-}
+};
 
 async function countProducts() {
   try {
     const productCountInDb = await Product.countDocuments();
-    const productCountInShopify = await shopifyClient.getTotalProducts()
+    const productCountInShopify = await shopifyClient.getTotalProducts();
 
-    console.log("DB:", productCountInDb)
-    console.log("Shopify:", productCountInShopify)
+    console.log("DB:", productCountInDb);
+    console.log("Shopify:", productCountInShopify);
 
-    return { "DB": productCountInDb, "SHOPIFY": productCountInShopify }
+    return { DB: productCountInDb, SHOPIFY: productCountInShopify };
   } catch (error) {
-    console.error('Error counting products:', error);
+    console.error("Error counting products:", error);
   }
 }
 
 exports.countProducts = async (req, res) => {
   try {
-    const productCount = await countProducts()
-    return res.status(200).json(productCount)
+    const productCount = await countProducts();
+    return res.status(200).json(productCount);
   } catch (error) {
-    console.error('Error counting products:', error);
+    console.error("Error counting products:", error);
   }
-}
-
+};
 
 exports.listProductByID = async (req, res) => {
-  const { id } = req.params
+  const { id } = req.params;
   try {
-    const response = await shopifyClient.listProductByID(id)
-    res.status(200).json(response)
+    const response = await shopifyClient.listProductByID(id);
+    res.status(200).json(response);
   } catch (error) {
-    console.log('Error Listando Productos. productController.js', error.message)
+    console.log(
+      "Error Listando Productos. productController.js",
+      error.message
+    );
   }
-}
+};
 
 exports.listProductIDsByName = async (req, res) => {
-  const { name } = req.params
+  const { name } = req.params;
   try {
-    const response = await shopifyClient.listProductIDsByName(name)
-    res.status(200).json(response)
+    const response = await shopifyClient.listProductIDsByName(name);
+    res.status(200).json(response);
   } catch (error) {
-    console.log(`Error Obteniendo ID de ${name}. productController.js`, error.message)
+    console.log(
+      `Error Obteniendo ID de ${name}. productController.js`,
+      error.message
+    );
   }
-}
+};
 
 exports.listCollections = async (req, res) => {
   try {
-    const response = await shopifyClient.listCollections()
-    res.status(200).json(response)
+    const response = await shopifyClient.listCollections();
+    res.status(200).json(response);
   } catch (error) {
-    console.log('Error Listando Productos. productController.js', error.message)
+    console.log(
+      "Error Listando Productos. productController.js",
+      error.message
+    );
   }
-}
+};
 
 //! "inventory_management" = "shopify"
 exports.updateProductStock = async (req, res) => {
   try {
-    const { id, newStock } = req.params
+    const { id, newStock } = req.params;
     const newStockParsed = parseInt(newStock, 10); // Convertir newStock a número
-    const response = await shopifyClient.updateProductStock(id, newStockParsed)
-    res.status(200).json(response)
+    const response = await shopifyClient.updateProductStock(id, newStockParsed);
+    res.status(200).json(response);
   } catch (error) {
-    console.log('Error Actualizando Stock. productController.js', error.message)
-    res.status(500).json({ error: error.message })
+    console.log(
+      "Error Actualizando Stock. productController.js",
+      error.message
+    );
+    res.status(500).json({ error: error.message });
   }
-}
+};

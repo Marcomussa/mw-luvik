@@ -20,7 +20,6 @@ exports.handleBatch = async (created, updated, deleted) => {
           createdProductIds.push(response.product.id);
         }
 
-        console.log(`Producto creado: ${product.product.title}`);
       } catch (error) {
         console.log(`Error al crear producto ${product.product.title}: ${error.message}`);
       }

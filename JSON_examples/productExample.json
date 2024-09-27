@@ -1,0 +1,33 @@
+[
+    {
+      "id": 7413720842326,
+      "title": "ACEITE AEROSOL FRITOLIM 120 CC.",
+      "collections": [
+        {
+          "id": 278872490070,
+          "title": "Aceites"
+        },
+        {
+          "id": 278872522838,
+          "title": "Aerosol"
+        },
+        {
+          "id": 278872457302,
+          "title": "Almacén"
+        },
+        {
+          "id": 282433814614,
+          "title": "Ofertas"
+        }
+      ],
+      "variants": [
+        {
+          "sku": "120054",
+          "price": "21514.08",
+          "compare_at_price": "23333.28",
+          "inventory_management": "shopify",
+          "inventory_quantity": 0
+        }
+      ]
+    }
+]

@@ -209,35 +209,43 @@ exports.listProductIDsByName = async (productName) => {
 //todo: Implementar validacion de producto existente
 exports.createProduct = async (productData) => {
   try {
-    productData.product.images = [{
-      src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}.jpg`
-    }]
+    const productExists = await checkIfProductIsCreatedUsingSKU(productData.product.variants[0].sku);
 
-    // No existe oferta
-    if (productData.product.lumps) {
-      productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps
+    if(!productExists){
+      productData.product.images = [{
+        src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}.jpg`
+      }]
+  
+      // No existe oferta
+      if (productData.product.lumps) {
+        productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps
+      }
+  
+      // Existe oferta
+      if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
+        productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps
+        productData.product.collection.push(282433814614)
+      }
+  
+      const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
+      const productId = response.data.product.id
+  
+      await productController.postProductToDB(response.data.product, productData.product.collection);
+  
+      if (productData.product.collection && productData.product.collection.length > 0) {
+        await assignNewProductToCollections(productId, productData.product.collection)
+      }
+  
+      if (productData.product.lumps) {
+        await addBultMetafield(productId, productData.product.lumps)
+      }
+
+      console.log(`Producto ${productId} Creado Exitosamente`)
+      return response.data
+
+    } else {
+      console.log(`Producto ${productData.product.variants[0].sku} Ya Creado`)
     }
-
-    // Existe oferta
-    if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
-      productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps
-      productData.product.collection.push(282433814614)
-    }
-
-    const response = await axios.post(`${SHOPIFY_STORE_URL}/products.json`, productData, { headers })
-    const productId = response.data.product.id
-
-    await productController.postProductToDB(response.data.product, productData.product.collection);
-
-    if (productData.product.collection && productData.product.collection.length > 0) {
-      await assignNewProductToCollections(productId, productData.product.collection)
-    }
-
-    if (productData.product.lumps) {
-      await addBultMetafield(productId, productData.product.lumps)
-    }
-
-    return response.data
   } catch (error) {
     console.log('Error Creando Producto. shopifyClient. ', error.message)
     throw error
@@ -389,6 +397,18 @@ const checkIfProductIsCreated = async (productId) => {
     return !!product;
   } catch (error) {
     console.error(`Error buscando el producto con ID ${productId}:`, error);
+    throw error;
+  }
+};
+
+const checkIfProductIsCreatedUsingSKU = async (sku) => {
+  try {
+    const product = await Product.findOne({ sku: 
+      `${sku}`
+    });
+    return !!product;
+  } catch (error) {
+    console.error(`Error buscando el producto con SKU ${sku}:`, error);
     throw error;
   }
 };
