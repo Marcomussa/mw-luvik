@@ -455,6 +455,8 @@ exports.getProductsWithCollections = async () => {
           title: collection.title,
         }));
 
+        console.log(product)
+
         productsWithCollections.push({
           id: product.id,
           title: product.title,
