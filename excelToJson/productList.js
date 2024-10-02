@@ -1,28 +1,50 @@
-const xlsx = require('xlsx');
-const fs = require('fs');
-const path = require('path')
+const fs = require("fs");
+const xlsx = require("xlsx");
+const path = require("path");
 
-const convertProductListToExcel = (productList, outputFilePath) => {
-  try {
-    const worksheetData = [
-      ['ID', 'Title', 'SKU'] 
-    ];
+const jsonFilePath = path.join(__dirname, "../JSON_examples/productList.json");
+const jsonData = JSON.parse(fs.readFileSync(jsonFilePath, "utf-8"));
 
-    productList.forEach(product => {
-      worksheetData.push([product.id, product.title, product.sku]);
-    });
+function generateExcelFromJSON(jsonData) {
+  const excelData = [];
 
-    const workbook = xlsx.utils.book_new();
-    const worksheet = xlsx.utils.aoa_to_sheet(worksheetData);
-    xlsx.utils.book_append_sheet(workbook, worksheet, 'Products');
+  jsonData.forEach((item) => {
+    const collectionsTitles = item.collections
+      .map((collection) => collection.title)
+      .join(", ");
+    const {
+      sku,
+      price,
+      compare_at_price,
+      inventory_management,
+      inventory_quantity,
+    } = item.variants[0];
 
-    xlsx.writeFile(workbook, outputFilePath);
+    const row = {
+      ID: item.id,
+      Title: item.title,
+      Collections: collectionsTitles,
+      SKU: sku,
+      Price: price,
+      CompareAtPrice: compare_at_price,
+      InventoryManagement: inventory_management,
+      InventoryQuantity: inventory_quantity,
+    };
 
-    console.log(`Excel generado exitosamente en: ${outputFilePath}`);
-  } catch (error) {
-    console.error(`Error generando el archivo Excel: ${error.message}`);
-  }
-};
+    excelData.push(row);
+  });
 
-const productList = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../JSON_examples/productList.json'), 'utf8'));
-convertProductListToExcel(productList, './products.xlsx');
+  const workbook = xlsx.utils.book_new();
+
+  const worksheet = xlsx.utils.json_to_sheet(excelData);
+
+  xlsx.utils.book_append_sheet(workbook, worksheet, "Products");
+
+  const outputFilePath = path.join(__dirname, "products.xlsx");
+  xlsx.writeFile(workbook, outputFilePath);
+
+  console.log(`Archivo Excel generado exitosamente en: ${outputFilePath}`);
+}
+
+// Llamar a la función para generar el Excel
+generateExcelFromJSON(jsonData);
