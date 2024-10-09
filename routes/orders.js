@@ -114,9 +114,9 @@ router.post("/new", async (req, res) => {
 
     data.customer.note = extractedData;
 
-    console.log(data)
-
     await axios.post("http://informes.luvik.com.ar/shopify_pedido.php", data);
+
+    //! UPDATE DE STOCK
 
     console.log("Webhook recibido:", data);
     res.status(200).json({ message: "Webhook procesado correctamente" });

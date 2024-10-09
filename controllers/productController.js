@@ -44,6 +44,27 @@ exports.postProductToDB = async (product, collection) => {
   }
 };
 
+exports.addSubIDProductToDB = async (id, childId) => {
+  console.log(id)
+  console.log(childId)
+  try {
+    const product = await Product.findOne({ id: id });
+
+    if (!product) {
+      console.log(`Producto ${id} no encontrado`);
+      return;
+    }
+
+    product.child_id = childId; 
+
+    await product.save();
+
+    console.log('Producto actualizado:', id);
+  } catch (error) {
+    console.error('Error al actualizar el producto:', error);
+  }
+}
+
 exports.updateProductToDB = async (product) => {
   try {
     const productId = product.product.id;
@@ -156,6 +177,18 @@ exports.listProducts = async (req, res) => {
   try {
     const response = await shopifyClient.listProducts();
     console.log(response.data.length);
+    res.status(200).json(response);
+  } catch (error) {
+    console.log(
+      "Error Listando Productos. productController.js",
+      error.message
+    );
+  }
+};
+
+exports.listProductsWithMissingMetafields = async (req, res) => {
+  try {
+    const response = await shopifyClient.listProductsWithMissingMetafields();
     res.status(200).json(response);
   } catch (error) {
     console.log(

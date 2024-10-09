@@ -18,4 +18,6 @@ router.get('/get-id-by-name/:name', productController.listProductIDsByName)
 
 router.get("/count",  productController.countProducts)
 
+router.get('/list-without-metafields', productController.listProductsWithMissingMetafields)
+
 module.exports = router

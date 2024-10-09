@@ -1,0 +1,84 @@
+[
+  {
+    "product": {
+      "id": 7413735555158,
+      "title": "ACOND. DOVE COCO 200 ml.",
+      "newCollection": [
+        "279199383638",
+        "279199350870",
+        "278925410390"
+      ],
+      "variants": [
+        {
+          "sku": "230090",
+          "price": 2150,
+          "inventory_management": "shopify",
+          "inventory_quantity": 172
+        }
+      ],
+      "tags": "amba"
+    }
+  },
+  {
+    "product": {
+      "id": 7413765144662,
+      "title": "DESINF. LYSOFORM MONTAÑA 380 CC.",
+      "newCollection": [
+        "279199940694",
+        "279198433366",
+        "278925312086"
+      ],
+      "variants": [
+        {
+          "sku": "250121",
+          "price": 2099,
+          "inventory_management": "shopify",
+          "inventory_quantity": 1332,
+          "compare_at_price": "2350.00"
+        }
+      ],
+      "tags": "amba"
+    }
+  },
+  {
+    "product": {
+      "id": 7416508907606,
+      "title": "JUGO BAGGIO MULTIFRUTA 200 CC.",
+      "newCollection": [
+        "282437976150",
+        "279992238166",
+        "279198203990"
+      ],
+      "variants": [
+        {
+          "sku": "40760",
+          "price": 350,
+          "inventory_management": "shopify",
+          "inventory_quantity": 0
+        }
+      ],
+      "tags": "amba"
+    }
+  },
+  {
+    "product": {
+      "id": 7413453684822,
+      "title": "VINO C.MADERO MALBEC 750 CC.",
+      "newCollection": [
+        "282437976150",
+        "278927999062",
+        "278927704150"
+      ],
+      "variants": [
+        {
+          "sku": "61062",
+          "price": 2399,
+          "inventory_management": "shopify",
+          "inventory_quantity": 128,
+          "compare_at_price": "2590.00"
+        }
+      ],
+      "tags": "amba"
+    }
+  }
+]
