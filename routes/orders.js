@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const router = express.Router();
+const shopifyClient = require('../clients/shopifyClient')
 
 router.post("/new", async (req, res) => {
   try {
@@ -116,7 +117,13 @@ router.post("/new", async (req, res) => {
 
     await axios.post("http://informes.luvik.com.ar/shopify_pedido.php", data);
 
-    //! UPDATE DE STOCK
+    //todo: UPDATE DE STOCK EN SHOPIFY
+    //! 1) Parsear JSON obteniendo IDs de productos comprados
+    //! 2) Recorrer conjunto. Para cada item del conjunto:
+    //! 3) const childProduct = productController.getProduct(child_id)
+    //! 4) shopifyClient.updateProductStock(child_id, newStock)
+
+    //todo: Resolver como obtener el stock de id
 
     console.log("Webhook recibido:", data);
     res.status(200).json({ message: "Webhook procesado correctamente" });

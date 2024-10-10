@@ -48533,3 +48533,74 @@ LOG [2024-10-09T17:44:56.897Z]: Asignando producto 7423059492950 a colección 28
 LOG [2024-10-09T17:44:57.162Z]: Asignado exitosamente a colección 282433814614
 LOG [2024-10-09T17:44:57.550Z]: Producto 7423059492950 Creado Exitosamente
 LOG [2024-10-09T17:51:59.610Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-09T18:09:01.829Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-09T18:09:03.976Z]: Conexión exitosa a MongoDB
+LOG [2024-10-09T19:07:51.201Z]: DB: 2736
+LOG [2024-10-09T19:07:51.202Z]: Shopify: 2745
+LOG [2024-10-09T19:09:26.581Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-09T19:09:28.231Z]: Conexión exitosa a MongoDB
+LOG [2024-10-09T19:52:44.447Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-09T19:52:46.046Z]: Conexión exitosa a MongoDB
+LOG [2024-10-09T23:53:36.802Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-09T23:53:39.626Z]: Conexión exitosa a MongoDB
+LOG [2024-10-09T23:53:44.846Z]: Producto actualizado: 7413720842326
+LOG [2024-10-09T23:53:44.847Z]: Asignando producto 7423226380374 a colección 278872490070
+LOG [2024-10-09T23:53:45.280Z]: Asignado exitosamente a colección 278872490070
+LOG [2024-10-09T23:53:45.280Z]: Asignando producto 7423226380374 a colección 278872522838
+LOG [2024-10-09T23:53:45.681Z]: Asignado exitosamente a colección 278872522838
+LOG [2024-10-09T23:53:45.681Z]: Asignando producto 7423226380374 a colección 278872457302
+LOG [2024-10-09T23:53:46.166Z]: Asignado exitosamente a colección 278872457302
+LOG [2024-10-09T23:53:46.166Z]: Asignando producto 7423226380374 a colección 282433814614
+LOG [2024-10-09T23:53:46.514Z]: Asignado exitosamente a colección 282433814614
+LOG [2024-10-09T23:53:46.876Z]: Producto 7423226380374 Creado Exitosamente
+LOG [2024-10-09T23:56:54.640Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-09T23:56:57.013Z]: Conexión exitosa a MongoDB
+LOG [2024-10-09T23:58:32.065Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-09T23:58:33.783Z]: Conexión exitosa a MongoDB
+LOG [2024-10-09T23:59:05.045Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-09T23:59:07.477Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:03:11.372Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:03:15.453Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:06:10.109Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:06:13.899Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:06:25.978Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:06:29.428Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:20:52.374Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:20:56.225Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:25:18.777Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:25:32.804Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:27:31.029Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:27:34.433Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:31:07.534Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:31:24.116Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:31:27.872Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:31:31.625Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:31:34.366Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:31:36.864Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:31:54.513Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:31:58.313Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:37:19.948Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:37:23.491Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:37:26.656Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:37:31.356Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:37:37.080Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:37:40.453Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:38:12.253Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:38:23.285Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:40:11.805Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:40:20.545Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:42:43.267Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:42:47.288Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:46:44.405Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:46:46.876Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:46:48.331Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:46:50.782Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:48:13.594Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:48:17.407Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:48:37.910Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:48:40.002Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:50:48.717Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:50:50.597Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:50:53.247Z]: Conexión exitosa a MongoDB
+LOG [2024-10-10T00:51:06.859Z]: Servidor en Linea. Puerto: 3000
+LOG [2024-10-10T00:51:10.195Z]: Conexión exitosa a MongoDB

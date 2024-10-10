@@ -44,9 +44,8 @@ exports.postProductToDB = async (product, collection) => {
   }
 };
 
+//todo: MODIFICAR ID POR "SKU"
 exports.addSubIDProductToDB = async (id, childId) => {
-  console.log(id)
-  console.log(childId)
   try {
     const product = await Product.findOne({ id: id });
 

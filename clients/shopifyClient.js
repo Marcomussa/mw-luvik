@@ -92,6 +92,7 @@ exports.listProducts = async () => {
             //lumps: metafields[0].value ? metafields[0].value : 0,
             title: product.title,
             //tags: product.tags,
+            vendor: product.vendor,
             sku: product.variants[0].sku,
             // variants: [{
             // sku: product.variants[0].sku,
@@ -311,6 +312,7 @@ exports.createProduct = async (productData) => {
       productData.product.variants[0].sku
     );
 
+    //! AGREGAR ! UNA VEZ TERMINADO LOS CREATED DE LISTA INTERIRO
     if (productExists) {
       productData.product.images = [
         {
@@ -342,6 +344,12 @@ exports.createProduct = async (productData) => {
       );
       const productId = response.data.product.id;
 
+      // await productController.postProductToDB(
+      //   response.data.product,
+      //   productData.product.collection
+      // );
+
+      //todo: MODIFICAR PRIMER PARAMETRO POR "SKU"
       await productController.addSubIDProductToDB(
         productData.product.id,
         response.data.product.id
@@ -393,12 +401,15 @@ exports.updateProduct = async (id, productData) => {
     const productExists = await checkIfProductIsCreated(productData.product.id);
 
     if (productExists) {
+      //todo: UPDATE DE PRODUCTO LISTA INTERIOR.
       const response = await axios.put(
         `${SHOPIFY_STORE_URL}/products/${id}.json`,
         productData,
         { headers }
       );
       const productId = response.data.product.id;
+
+      //!) Obtener child_id
 
       // Coleccion de Oferta
       const isCollectionInProduct = await checkIfCollectionIsOnProduct(
@@ -410,6 +421,7 @@ exports.updateProduct = async (id, productData) => {
         !isCollectionInProduct &&
         productData.product.variants[0].compare_at_price
       ) {
+        //! Pasar como parametro child_id
         await assignProductToCollections(productId, [282433814614]);
         await Product.updateOne(
           { id: productId },
@@ -427,6 +439,7 @@ exports.updateProduct = async (id, productData) => {
         isCollectionInProduct &&
         !productData.product.variants[0].compare_at_price
       ) {
+        //! Pasar como parametro child_id
         await removeProductFromCollections(productId, [282433814614]);
         await Product.updateOne(
           { id: productId },
@@ -444,6 +457,7 @@ exports.updateProduct = async (id, productData) => {
         productData.product.newCollection &&
         productData.product.newCollection.length > 0
       ) {
+        //! Pasar como parametro child_id
         await assignProductToCollections(
           productId,
           productData.product.newCollection
@@ -454,13 +468,12 @@ exports.updateProduct = async (id, productData) => {
         productData.product.deleteCollection &&
         productData.product.deleteCollection.length > 0
       ) {
+        //! Pasar como parametro child_id
         await removeProductFromCollections(
           productId,
           productData.product.deleteCollection
         );
       }
-
-      console.log(productData.product.variants[0].price);
 
       return response.data;
     } else {
@@ -474,21 +487,18 @@ exports.updateProduct = async (id, productData) => {
 
 exports.updateProductStock = async (id, newStock) => {
   try {
-    // Obtener el ID del item de inventario y location_id
     const product = await axios.get(
       `${SHOPIFY_STORE_URL}/products/${id}.json`,
       { headers }
     );
     const inventoryItemId = product.data.product.variants[0].inventory_item_id;
 
-    // Obtener todas las locations de la tienda
     const locationsResponse = await axios.get(
       `${SHOPIFY_STORE_URL}/locations.json`,
       { headers }
     );
     const locationId = locationsResponse.data.locations[0].id;
 
-    // Actualizar el inventario
     const inventoryUpdateResponse = await axios.post(
       `${SHOPIFY_STORE_URL}/inventory_levels/set.json`,
       {
@@ -506,21 +516,47 @@ exports.updateProductStock = async (id, newStock) => {
   }
 };
 
+//! updateProductStock Nueva Version. PENDIENTE DE TESTEAR
+exports.updateProductStockV2 = async (id, newStock) => {
+  try {
+    const product = await shopify.product.get(id);
+    const inventoryItemId = product.variants[0].inventory_item_id;
+
+    const locations = await shopify.location.list();
+    const locationId = locations[0].id;
+
+    const inventoryUpdateResponse = await shopify.inventoryLevel.set({
+      location_id: locationId,
+      inventory_item_id: inventoryItemId,
+      available: newStock
+    });
+
+    return inventoryUpdateResponse;
+  } catch (error) {
+    console.error("Error actualizando stock en Shopify", error.message);
+    throw error;
+  }
+};
+
 exports.deleteProduct = async (id) => {
   try {
     const productExists = await checkIfProductIsCreated(id);
 
+    //! const product = productController.getProduct(id)
+    //! product.child_id
+    //! shopify.product.delete(child_id);
+
     if (!productExists) {
-      console.log(`Producto con ID ${id} no existe en la base de datos.`);
+      console.log(`Producto ${id} no existe en la base de datos.`);
       return null;
     }
 
     const response = await shopify.product.delete(id);
-    console.log(`Producto con ID ${id} eliminado correctamente en Shopify.`);
+    console.log(`Producto ${id} eliminado correctamente en Shopify.`);
 
     return response;
   } catch (error) {
-    console.error(`Error eliminando el producto con ID ${id}:`, error.message);
+    console.error(`Error eliminando el producto ${id}:`, error.message);
     throw error;
   }
 };
@@ -664,6 +700,7 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
         );
 
         if (!isCollectionInProduct) {
+          //! Replicar funcionalidad con child_id
           await shopify.collect.create({
             product_id: productId,
             collection_id: collectionId,
