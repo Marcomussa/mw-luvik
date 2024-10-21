@@ -85,15 +85,15 @@ exports.listProducts = async () => {
           //   },
           // });
           //const metafields = [{}];
-          console.log(product.id);
-          // Mostrar metacampos por consola
+
+          console.log(product.id)
           return {
             id: product.id,
             //lumps: metafields[0].value ? metafields[0].value : 0,
-            title: product.title,
+            //title: product.title,
             //tags: product.tags,
             vendor: product.vendor,
-            sku: product.variants[0].sku,
+            //sku: product.variants[0].sku,
             // variants: [{
             // sku: product.variants[0].sku,
             // inventory_management: product.variants[0].inventory_management,

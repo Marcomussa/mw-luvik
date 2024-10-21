@@ -119,9 +119,13 @@ router.post("/new", async (req, res) => {
 
     //todo: UPDATE DE STOCK EN SHOPIFY
     //! 1) Parsear JSON obteniendo IDs de productos comprados
-    //! 2) Recorrer conjunto. Para cada item del conjunto:
+    //! 2) Recorrer conjunto. Verificar de que lista son y para cada item del conjunto:
+    //? Si es lista interior:
     //! 3) const childProduct = productController.getProduct(child_id)
     //! 4) shopifyClient.updateProductStock(child_id, newStock)
+    //? Si es lista amba
+    //! 3) const childProduct = productController.getProduct(id)
+    //! 4) shopifyClient.updateProductStock(id, newStock)
 
     //todo: Resolver como obtener el stock de id
 
