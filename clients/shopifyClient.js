@@ -399,19 +399,25 @@ exports.updateProduct = async (id, productData) => {
 			}
     }
 
-    productData.product.variants[0].inventory_quantity = productData.product.variants[0].inventory_quantity * 0.7
-    childProductData.product.variants[0].inventory_quantity = childProductData.product.variants[0].inventory_quantity * 0.3
+    // Control de stock
+    if(productData.product.variants[0].inventory_quantity > 2){
+      productData.product.variants[0].inventory_quantity = Math.ceil(productData.product.variants[0].inventory_quantity * 0.7)
+      childProductData.product.variants[0].inventory_quantity = Math.ceil(childProductData.product.variants[0].inventory_quantity * 0.3)
+    } else {
+      productData.product.variants[0].inventory_quantity = 0
+      childProductData.product.variants[0].inventory_quantity = 0
+    }
     
     // No existe oferta
     if (productData.product.lumps) {
       productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
-      childProductData.product.variants[0].price = (childProductData.product.variants[0].price * productData.product.lumps * 1.06).toFixed(2)
+      childProductData.product.variants[0].price = Number((childProductData.product.variants[0].price * productData.product.lumps * 1.06).toFixed(2))
     }
 
     // Existe oferta
     if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
       productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps;
-      childProductData.product.variants[0].compare_at_price = childProductData.product.variants[0].compare_at_price * productData.product.lumps;
+      childProductData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price
     }
 
     const productExists = await checkIfProductIsCreated(productData.product.id);
@@ -421,24 +427,23 @@ exports.updateProduct = async (id, productData) => {
       const child_id = mongoProduct.child_id;
       childProductData.product.id = child_id
 
-      console.log(childProductData.product.variants)
-      console.log('---')
-      console.log(productData.product.variants)
-
       const response = await axios.put(
         `${SHOPIFY_STORE_URL}/products/${id}.json`,
         productData,
         { headers }
       );
-      const productId = response.data.product.id;
-
-      await axios.put(
+      
+      const childReponse = await axios.put(
         `${SHOPIFY_STORE_URL}/products/${child_id}.json`,
         childProductData,
         { headers }
       );
+      
+      console.log(`Parent: ${response.status}`)
+      console.log(`Child: ${childReponse.status}`)
 
       // Coleccion de Oferta
+      const productId = response.data.product.id;
       const isCollectionInProduct = await checkIfCollectionIsOnProduct(
         productId,
         282433814614
@@ -517,7 +522,7 @@ exports.updateProduct = async (id, productData) => {
       console.log(`Producto ${productData.product.id} no existe`);
     }
   } catch (error) {
-    console.log("Error Actualizando Producto. Shopifyclient ", error.message);
+    console.log("Error Actualizando Producto. Shopifyclient ", error);
     throw error;
   }
 };
