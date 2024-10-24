@@ -86,7 +86,7 @@ exports.listProducts = async () => {
           // });
           //const metafields = [{}];
 
-          console.log(product.id)
+          console.log(product.id);
           return {
             id: product.id,
             //lumps: metafields[0].value ? metafields[0].value : 0,
@@ -313,7 +313,7 @@ exports.createProduct = async (productData) => {
     );
 
     //! AGREGAR ! UNA VEZ TERMINADO LOS CREATED DE LISTA INTERIRO
-    if (productExists) {
+    if (!productExists) {
       productData.product.images = [
         {
           src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}.jpg`,
@@ -382,26 +382,49 @@ exports.createProduct = async (productData) => {
 
 exports.updateProduct = async (id, productData) => {
   try {
+    let childProductData = {
+      "product": {
+				"lumps": productData.product.lumps,
+				"id": productData.product.id,
+				"tags": "interior",
+				"vendor": productData.product.vendor,
+				"variants": [
+					{
+						"price": productData.product.variants[0].price,
+						"sku": productData.product.variants[0].sku,
+						"inventory_management": "shopify",
+						"inventory_quantity": productData.product.variants[0].inventory_quantity
+					}
+				]
+			}
+    }
+
+    productData.product.variants[0].inventory_quantity = productData.product.variants[0].inventory_quantity * 0.7
+    childProductData.product.variants[0].inventory_quantity = childProductData.product.variants[0].inventory_quantity * 0.3
+    
     // No existe oferta
     if (productData.product.lumps) {
-      productData.product.variants[0].price =
-        productData.product.variants[0].price * productData.product.lumps;
+      productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
+      childProductData.product.variants[0].price = (childProductData.product.variants[0].price * productData.product.lumps * 1.06).toFixed(2)
     }
 
     // Existe oferta
-    if (
-      productData.product.lumps &&
-      productData.product.variants[0].compare_at_price
-    ) {
-      productData.product.variants[0].compare_at_price =
-        productData.product.variants[0].compare_at_price *
-        productData.product.lumps;
+    if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
+      productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps;
+      childProductData.product.variants[0].compare_at_price = childProductData.product.variants[0].compare_at_price * productData.product.lumps;
     }
 
     const productExists = await checkIfProductIsCreated(productData.product.id);
 
     if (productExists) {
-      //todo: UPDATE DE PRODUCTO LISTA INTERIOR.
+      const mongoProduct = await Product.findOne({ id: id });
+      const child_id = mongoProduct.child_id;
+      childProductData.product.id = child_id
+
+      console.log(childProductData.product.variants)
+      console.log('---')
+      console.log(productData.product.variants)
+
       const response = await axios.put(
         `${SHOPIFY_STORE_URL}/products/${id}.json`,
         productData,
@@ -409,7 +432,11 @@ exports.updateProduct = async (id, productData) => {
       );
       const productId = response.data.product.id;
 
-      //!) Obtener child_id
+      await axios.put(
+        `${SHOPIFY_STORE_URL}/products/${child_id}.json`,
+        childProductData,
+        { headers }
+      );
 
       // Coleccion de Oferta
       const isCollectionInProduct = await checkIfCollectionIsOnProduct(
@@ -423,6 +450,7 @@ exports.updateProduct = async (id, productData) => {
       ) {
         //! Pasar como parametro child_id
         await assignProductToCollections(productId, [282433814614]);
+        await assignProductToCollections(child_id, [282433814614]);
         await Product.updateOne(
           { id: productId },
           {
@@ -441,6 +469,7 @@ exports.updateProduct = async (id, productData) => {
       ) {
         //! Pasar como parametro child_id
         await removeProductFromCollections(productId, [282433814614]);
+        await removeProductFromCollections(child_id, [282433814614]);
         await Product.updateOne(
           { id: productId },
           {
@@ -462,6 +491,10 @@ exports.updateProduct = async (id, productData) => {
           productId,
           productData.product.newCollection
         );
+        await assignProductToCollections(
+          child_id,
+          productData.product.newCollection
+        );
       }
 
       if (
@@ -471,6 +504,10 @@ exports.updateProduct = async (id, productData) => {
         //! Pasar como parametro child_id
         await removeProductFromCollections(
           productId,
+          productData.product.deleteCollection
+        );
+        await removeProductFromCollections(
+          child_id,
           productData.product.deleteCollection
         );
       }
@@ -528,7 +565,7 @@ exports.updateProductStockV2 = async (id, newStock) => {
     const inventoryUpdateResponse = await shopify.inventoryLevel.set({
       location_id: locationId,
       inventory_item_id: inventoryItemId,
-      available: newStock
+      available: newStock,
     });
 
     return inventoryUpdateResponse;
@@ -700,12 +737,13 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
         );
 
         if (!isCollectionInProduct) {
-          //! Replicar funcionalidad con child_id
           await shopify.collect.create({
             product_id: productId,
             collection_id: collectionId,
-          });
+          });          
+
           console.log(`Asignado exitosamente a colección ${collectionId}`);
+          
           await delay(100);
         } else {
           console.log(`Producto ya existente en coleccion ${collectionId}`);
@@ -754,7 +792,18 @@ const assignNewProductToCollections = async (productId, newCollectionIds) => {
 //! Checkiar si una coleccion ya esta en un producto
 const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
   try {
-    const product = await Product.findOne({ id: productId });
+    let product = await Product.findOne({ id: productId });
+
+    if (!product) {
+      console.log('1')
+      product = await Product.findOne({ child_id: productId });
+    }
+
+    if (!product) {
+      return false;
+    }
+
+
     const collectionExists = product.collections.some(
       (collection) => collection.id == collectionId
     );
@@ -768,6 +817,7 @@ const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
     throw error;
   }
 };
+
 
 //! DEPRECATED !//
 const checkIfCollectionIsOnProductUsingAPI = async (
