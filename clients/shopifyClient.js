@@ -305,14 +305,13 @@ exports.listProductIDsByName = async (productName) => {
   }
 };
 
-//todo: Implementar validacion de producto existente
+//todo: CREAR CHILD PRODUCT
 exports.createProduct = async (productData) => {
   try {
     const productExists = await checkIfProductIsCreatedUsingSKU(
       productData.product.variants[0].sku
     );
 
-    //! AGREGAR ! UNA VEZ TERMINADO LOS CREATED DE LISTA INTERIRO
     if (!productExists) {
       productData.product.images = [
         {
@@ -344,10 +343,10 @@ exports.createProduct = async (productData) => {
       );
       const productId = response.data.product.id;
 
-      // await productController.postProductToDB(
-      //   response.data.product,
-      //   productData.product.collection
-      // );
+      await productController.postProductToDB(
+         response.data.product,
+         productData.product.collection
+      );
 
       //todo: MODIFICAR PRIMER PARAMETRO POR "SKU"
       await productController.addSubIDProductToDB(

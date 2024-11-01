@@ -121,13 +121,13 @@ router.post("/new", async (req, res) => {
     //! 1) Parsear JSON obteniendo IDs de productos comprados
     //! 2) Recorrer conjunto. Verificar de que lista son y para cada item del conjunto:
     //? Si es lista interior:
-    //! 3) const childProduct = productController.getProduct(child_id)
-    //! 4) shopifyClient.updateProductStock(child_id, newStock)
-    //? Si es lista amba
     //! 3) const childProduct = productController.getProduct(id)
     //! 4) shopifyClient.updateProductStock(id, newStock)
+    //? Si es lista amba
+    //! 3) const childProduct = productController.getProduct(id)
+    //! 4) shopifyClient.updateProductStock(child_id, newStock)
 
-    //todo: Resolver como obtener el stock de id
+    //* obtener: ID's de la lista que no fue adquirida --> Stock de estos --> Proceder a realizar la operacion
 
     console.log("Webhook recibido:", data);
     res.status(200).json({ message: "Webhook procesado correctamente" });
