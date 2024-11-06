@@ -117,7 +117,7 @@ router.post("/new", async (req, res) => {
 
     // data.customer.note = extractedData;
 
-    //await axios.post("http://informes.luvik.com.ar/shopify_pedido.php", data);
+    await axios.post("http://informes.luvik.com.ar/shopify_pedido.php", data);
 
     //todo: UPDATE DE STOCK EN SHOPIFY
     async function getIdOrChildId(value, searchBy) {
@@ -157,9 +157,7 @@ router.post("/new", async (req, res) => {
           const actualStock = getProduct.variants[0].inventory_quantity;
     
           await shopifyClient.updateProductStock(id, actualStock - product.quantity);
-    
-          console.log(id)
-          console.log(product)
+          
           console.log(`Stock actualizado para el producto ID: ${id}`);
         } catch (error) {
           console.error(`Error al procesar el producto ID: ${product.product_id}`, error);

@@ -431,7 +431,7 @@ exports.updateProduct = async (id, productData) => {
 						"price": productData.product.variants[0].price,
 						"sku": productData.product.variants[0].sku,
 						"inventory_management": "shopify",
-						"inventory_quantity": productData.product.variants[0].inventory_quantity
+						"inventory_quantity": productData.product.variants[0].inventory_quantity 
 					}
 				]
 			}
@@ -597,6 +597,64 @@ exports.updateProductStock = async (id, newStock) => {
     return inventoryUpdateResponse.data;
   } catch (error) {
     console.error("Error actualizando stock. shopifyClient ", error.message);
+    throw error;
+  }
+};
+
+//todo: Ver update stock y precio en lista interior
+exports.updateProductStockAndPrice = async (id, newStock, price, compare_at_price) => {
+  try {
+    const product = await axios.get(
+      `${SHOPIFY_STORE_URL}/products/${id}.json`,
+      { headers }
+    );
+    const inventoryItemId = product.data.product.variants[0].inventory_item_id;
+    const variantId = product.data.product.variants[0].id;
+
+    const locationsResponse = await axios.get(
+      `${SHOPIFY_STORE_URL}/locations.json`,
+      { headers }
+    );
+    const locationId = locationsResponse.data.locations[0].id;
+
+    const inventoryUpdateResponse = await axios.post(
+      `${SHOPIFY_STORE_URL}/inventory_levels/set.json`,
+      {
+        location_id: locationId,
+        inventory_item_id: inventoryItemId,
+        available: newStock,
+      },
+      { headers }
+    );
+
+    const priceUpdatePayload = {
+      variant: {
+        id: variantId,
+        price: price,
+      }
+    };
+
+    if (compare_at_price !== undefined) {
+      priceUpdatePayload.variant.compare_at_price = compare_at_price;
+    }
+
+    const priceUpdateResponse = await axios.put(
+      `${SHOPIFY_STORE_URL}/variants/${variantId}.json`,
+      priceUpdatePayload,
+      { headers }
+    );
+
+    console.log("Stock y precio actualizados correctamente", {
+      stockUpdate: inventoryUpdateResponse.data,
+      priceUpdate: priceUpdateResponse.data,
+    });
+
+    return {
+      stockUpdate: inventoryUpdateResponse.data,
+      priceUpdate: priceUpdateResponse.data,
+    };
+  } catch (error) {
+    console.error("Error actualizando stock y precio. shopifyClient ", error.message);
     throw error;
   }
 };

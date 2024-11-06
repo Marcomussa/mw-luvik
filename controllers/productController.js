@@ -291,6 +291,24 @@ exports.listCollections = async (req, res) => {
   }
 };
 
+exports.updateProductStockAndPrice = async (req, res) => {
+  try {
+    const { id, newStock, price, compare_at_price } = req.params;
+    const newStockParsed = parseInt(newStock, 10); 
+    const priceParsed = parseInt(price, 10); 
+    const compareAtPriceParsed = parseInt(compare_at_price, 10); 
+
+    const response = await shopifyClient.updateProductStockAndPrice(id, newStockParsed, priceParsed, compareAtPriceParsed);
+    res.status(200).json(response);
+  } catch (error) {
+    console.log(
+      "Error Actualizando Stock. productController.js",
+      error.message
+    );
+    res.status(500).json({ error: error.message });
+  }
+}
+
 //! "inventory_management" = "shopify"
 exports.updateProductStock = async (req, res) => {
   try {

@@ -20,4 +20,6 @@ router.get("/count",  productController.countProducts)
 
 router.get('/list-without-metafields', productController.listProductsWithMissingMetafields)
 
+router.post('/update-stock-and-price/:id/:newStock/:price/:compare_at_price?', productController.updateProductStockAndPrice)
+
 module.exports = router
