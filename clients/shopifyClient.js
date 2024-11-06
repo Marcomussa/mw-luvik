@@ -399,7 +399,7 @@ exports.updateProduct = async (id, productData) => {
     }
 
     // Control de stock
-    if(productData.product.variants[0].inventory_quantity > 2){
+    if(productData.product.variants[0].inventory_quantity > 4){
       productData.product.variants[0].inventory_quantity = Math.ceil(productData.product.variants[0].inventory_quantity * 0.7)
       childProductData.product.variants[0].inventory_quantity = Math.ceil(childProductData.product.variants[0].inventory_quantity * 0.3)
     } else {
@@ -408,7 +408,7 @@ exports.updateProduct = async (id, productData) => {
     }
     
     // No existe oferta
-    if (productData.product.lumps) {
+    if (productData.product.lumps && !productData.product.variants[0].compare_at_price) {
       productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
       childProductData.product.variants[0].price = Number((childProductData.product.variants[0].price * productData.product.lumps * 1.06).toFixed(2))
     }
@@ -416,7 +416,10 @@ exports.updateProduct = async (id, productData) => {
     // Existe oferta
     if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
       productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps;
-      childProductData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price
+      productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
+
+      childProductData.product.variants[0].compare_at_price = Number((productData.product.variants[0].compare_at_price * 1.06).toFixed(2));
+      childProductData.product.variants[0].price = productData.product.variants[0].price;
     }
 
     const productExists = await checkIfProductIsCreated(productData.product.id);
