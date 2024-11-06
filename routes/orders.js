@@ -73,7 +73,6 @@ router.post("/new", async (req, res) => {
 
     data.line_items.forEach((item) => {
       delete item.attributed_staffs
-      delete item.current_quantity
       delete item.fulfillable_quantity
       delete item.fulfillment_service
       delete item.fulfillment_status
@@ -102,23 +101,37 @@ router.post("/new", async (req, res) => {
     delete data.shipping_lines[0].is_removed
     delete data.shipping_lines[0].current_discounted_price_set
 
-    const lines = data.customer.note.split("\n");
-    const extractedData = {};
+    // const lines = data.customer.note.split("\n");
+    // const extractedData = {};
 
-    lines.forEach((line) => {
-      const trimmedLine = line.trim();
-      if (trimmedLine && trimmedLine.includes(":")) {
-        const [key, value] = trimmedLine.split(/:(.+)/);
-        extractedData[key.trim()] = value.trim();
-      }
-    });
+    // lines.forEach((line) => {
+    //   const trimmedLine = line.trim();
+    //   if (trimmedLine && trimmedLine.includes(":")) {
+    //     const [key, value] = trimmedLine.split(/:(.+)/);
+    //     extractedData[key.trim()] = value.trim();
+    //   }
+    // });
 
-    data.customer.note = extractedData;
+    // data.customer.note = extractedData;
 
-    await axios.post("http://informes.luvik.com.ar/shopify_pedido.php", data);
+    //await axios.post("http://informes.luvik.com.ar/shopify_pedido.php", data);
 
     //todo: UPDATE DE STOCK EN SHOPIFY
+    //! Obtener tipo de cliente
     //! 1) Parsear JSON obteniendo IDs de productos comprados
+
+    const ids = data.line_items.map(item => item.id);
+
+    if(data.customer.tags.includes("amba")){
+      console.log("amba")
+      console.log(ids)
+    } 
+    
+    if(data.customer.tags.includes("interior")){
+      console.log("interior")
+      console.log(ids)
+    }
+
     //! 2) Recorrer conjunto. Verificar de que lista son y para cada item del conjunto:
     //? Si es lista interior:
     //! 3) const childProduct = productController.getProduct(id)
