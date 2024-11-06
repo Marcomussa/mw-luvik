@@ -1,4 +1,6 @@
 require("dotenv").config();
+const Product = require("../models/Product");
+const mongoose = require("mongoose");
 const express = require("express");
 const axios = require("axios");
 const router = express.Router();
@@ -73,6 +75,7 @@ router.post("/new", async (req, res) => {
 
     data.line_items.forEach((item) => {
       delete item.attributed_staffs
+      delete item.current_quantity
       delete item.fulfillable_quantity
       delete item.fulfillment_service
       delete item.fulfillment_status
@@ -120,16 +123,40 @@ router.post("/new", async (req, res) => {
     //! Obtener tipo de cliente
     //! 1) Parsear JSON obteniendo IDs de productos comprados
 
+    async function getIdOrChildId(value, searchBy) {
+      try {
+        let product;
+    
+        if (searchBy === 'id') {
+          product = await Product.findOne({ id: value });
+        } else if (searchBy === 'child_id') {
+          product = await Product.findOne({ child_id: value });
+        } else {
+          throw new Error('Parámetro de búsqueda inválido. Usa "id" o "child_id".');
+        }
+    
+        if (!product) {
+          throw new Error('Producto no encontrado');
+        }
+    
+        return searchBy === 'id' ? product.child_id : product.id;
+      } catch (error) {
+        console.error('Error al buscar el producto:', error.message);
+        throw error;
+      }
+    }
+
     const ids = data.line_items.map(item => item.id);
 
     if(data.customer.tags.includes("amba")){
-      console.log("amba")
-      console.log(ids)
+      const childId = await getIdOrChildId(123, 'id');
     } 
     
     if(data.customer.tags.includes("interior")){
-      console.log("interior")
-      console.log(ids)
+      for (const child_id of ids) {
+        const id = await getIdOrChildId(child_id, 'child_id');
+        console.log(id)
+      }
     }
 
     //! 2) Recorrer conjunto. Verificar de que lista son y para cada item del conjunto:
