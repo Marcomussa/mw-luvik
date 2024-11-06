@@ -1,10 +1,10 @@
 require("dotenv").config();
 const Product = require("../models/Product");
 const mongoose = require("mongoose");
+const shopifyClient = require("../clients/shopifyClient");
 const express = require("express");
 const axios = require("axios");
 const router = express.Router();
-const shopifyClient = require('../clients/shopifyClient')
 
 router.post("/new", async (req, res) => {
   try {
@@ -146,18 +146,32 @@ router.post("/new", async (req, res) => {
       }
     }
 
-    const ids = data.line_items.map(item => item.product_id);
-
+    const products = data.line_items.map(item => ({
+      product_id: item.product_id,
+      quantity: item.quantity
+    })); 
+    
+    if(data.customer.tags.includes("interior")){
+      for (const product of products) {
+        try {
+          const id = await getIdOrChildId(product.product_id, 'child_id');
+    
+          const getProduct = await shopifyClient.listProductByID(id);
+          const actualStock = getProduct.variants[0].inventory_quantity;
+    
+          await shopifyClient.updateProductStock(id, actualStock - product.quantity);
+    
+          console.log(product)
+          console.log(`Stock actualizado para el producto ID: ${id}`);
+        } catch (error) {
+          console.error(`Error al procesar el producto ID: ${product.product_id}`, error);
+        }
+      }
+    }
+    
     if(data.customer.tags.includes("amba")){
       const childId = await getIdOrChildId(123, 'id');
     } 
-    
-    if(data.customer.tags.includes("interior")){
-      for (const child_id of ids) {
-        const id = await getIdOrChildId(child_id, 'child_id');
-        console.log(id)
-      }
-    }
 
     //! 2) Recorrer conjunto. Verificar de que lista son y para cada item del conjunto:
     //? Si es lista interior:

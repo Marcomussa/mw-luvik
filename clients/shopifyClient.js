@@ -553,6 +553,7 @@ exports.updateProductStock = async (id, newStock) => {
       { headers }
     );
 
+    console.log("Stock Actualizado Correctamente", inventoryUpdateResponse.data)
     return inventoryUpdateResponse.data;
   } catch (error) {
     console.error("Error actualizando stock. shopifyClient ", error.message);

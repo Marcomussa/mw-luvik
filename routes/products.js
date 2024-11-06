@@ -6,7 +6,7 @@ router.post('/batch', productController.handleBatch)
 
 router.post('/update-stock/:id/:newStock', productController.updateProductStock)
 
-router.get('/list-by-id/:id', productController.listProducts)
+router.get('/list-by-id/:id', productController.listProductByID)
 
 router.get('/list', productController.listProducts)
 
