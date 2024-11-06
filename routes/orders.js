@@ -120,9 +120,6 @@ router.post("/new", async (req, res) => {
     //await axios.post("http://informes.luvik.com.ar/shopify_pedido.php", data);
 
     //todo: UPDATE DE STOCK EN SHOPIFY
-    //! Obtener tipo de cliente
-    //! 1) Parsear JSON obteniendo IDs de productos comprados
-
     async function getIdOrChildId(value, searchBy) {
       try {
         let product;
@@ -161,6 +158,7 @@ router.post("/new", async (req, res) => {
     
           await shopifyClient.updateProductStock(id, actualStock - product.quantity);
     
+          console.log(id)
           console.log(product)
           console.log(`Stock actualizado para el producto ID: ${id}`);
         } catch (error) {
@@ -170,7 +168,21 @@ router.post("/new", async (req, res) => {
     }
     
     if(data.customer.tags.includes("amba")){
-      const childId = await getIdOrChildId(123, 'id');
+      for (const product of products) {
+        try {
+          const id = await getIdOrChildId(product.product_id, 'id');
+    
+          const getProduct = await shopifyClient.listProductByID(id);
+          const actualStock = getProduct.variants[0].inventory_quantity;
+    
+          await shopifyClient.updateProductStock(id, actualStock - product.quantity);
+    
+          console.log(product)
+          console.log(`Stock actualizado para el producto ID: ${id}`);
+        } catch (error) {
+          console.error(`Error al procesar el producto ID: ${product.product_id}`, error);
+        }
+      }
     } 
 
     //! 2) Recorrer conjunto. Verificar de que lista son y para cada item del conjunto:
