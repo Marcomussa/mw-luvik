@@ -305,7 +305,7 @@ exports.listProductIDsByName = async (productName) => {
   }
 };
 
-//todo: CREAR CHILD PRODUCT
+//todo: CREAR CHILD PRODUCT CON SUS PRECIOS Y STOCK ASOCIADO
 exports.createProduct = async (productData) => {
   try {
     const productExists = await checkIfProductIsCreatedUsingSKU(
@@ -319,39 +319,73 @@ exports.createProduct = async (productData) => {
         },
       ];
 
+      let childProductData = {
+        "product": {
+          "lumps": productData.product.lumps,
+          "collection": productData.product.collection,
+          "title": productData.product.title,
+          "tags": "interior",
+          "vendor": productData.product.vendor,
+          "variants": [
+            {
+              "price": productData.product.variants[0].price,
+              "sku": productData.product.variants[0].sku,
+              "inventory_management": "shopify",
+              "inventory_quantity": productData.product.variants[0].inventory_quantity
+            }
+          ]
+        }
+      }
+  
+      // Control de stock
+      if(productData.product.variants[0].inventory_quantity > 4){
+        productData.product.variants[0].inventory_quantity = Math.ceil(productData.product.variants[0].inventory_quantity * 0.7)
+        childProductData.product.variants[0].inventory_quantity = Math.ceil(childProductData.product.variants[0].inventory_quantity * 0.3)
+      } else {
+        productData.product.variants[0].inventory_quantity = 0
+        childProductData.product.variants[0].inventory_quantity = 0
+      }
+      
       // No existe oferta
-      if (productData.product.lumps) {
-        productData.product.variants[0].price =
-          productData.product.variants[0].price * productData.product.lumps;
+      if (productData.product.lumps && !productData.product.variants[0].compare_at_price) {
+        productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
+        childProductData.product.variants[0].price = Number((childProductData.product.variants[0].price * productData.product.lumps * 1.06).toFixed(2))
       }
-
+  
       // Existe oferta
-      if (
-        productData.product.lumps &&
-        productData.product.variants[0].compare_at_price
-      ) {
-        productData.product.variants[0].compare_at_price =
-          productData.product.variants[0].compare_at_price *
-          productData.product.lumps;
-        productData.product.collection.push(282433814614);
+      if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
+        productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps;
+        productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
+  
+        childProductData.product.variants[0].compare_at_price = Number((productData.product.variants[0].compare_at_price * 1.06).toFixed(2));
+        childProductData.product.variants[0].price = productData.product.variants[0].price;
       }
 
-      const response = await axios.post(
+      console.log(productData)
+      console.log(childProductData)
+
+      const amba = await axios.post(
         `${SHOPIFY_STORE_URL}/products.json`,
         productData,
         { headers }
       );
-      const productId = response.data.product.id;
+
+      const interior = await axios.post(
+        `${SHOPIFY_STORE_URL}/products.json`,
+        childProductData,
+        { headers }
+      );
+      
+      const productId = amba.data.product.id;
+      const childId = interior.data.product.id
+
+      console.log(productId)
+      console.log(childId)
 
       await productController.postProductToDB(
-         response.data.product,
-         productData.product.collection
-      );
-
-      //todo: MODIFICAR PRIMER PARAMETRO POR "SKU"
-      await productController.addSubIDProductToDB(
-        productData.product.id,
-        response.data.product.id
+        amba.data.product,
+        productData.product.collection,
+        childId
       );
 
       if (
@@ -362,14 +396,19 @@ exports.createProduct = async (productData) => {
           productId,
           productData.product.collection
         );
+        await assignNewProductToCollections(
+          childId,
+          productData.product.collection
+        );
       }
 
       if (productData.product.lumps) {
         await addBultMetafield(productId, productData.product.lumps);
+        await addBultMetafield(childId, productData.product.lumps);
       }
 
       console.log(`Producto ${productId} Creado Exitosamente`);
-      return response.data;
+      return amba.data;
     } else {
       console.log(`Producto ${productData.product.variants[0].sku} Ya Creado`);
     }
@@ -423,8 +462,9 @@ exports.updateProduct = async (id, productData) => {
     }
 
     const productExists = await checkIfProductIsCreated(productData.product.id);
+    const isStructureValid = validateUpdateProductStructure(productData)
 
-    if (productExists) {
+    if (productExists && isStructureValid) {
       const mongoProduct = await Product.findOne({ id: id });
       const child_id = mongoProduct.child_id;
       childProductData.product.id = child_id
@@ -521,10 +561,10 @@ exports.updateProduct = async (id, productData) => {
 
       return response.data;
     } else {
-      console.log(`Producto ${productData.product.id} no existe`);
+      console.log(`Producto ${productData.product.id} no existe o no cumple con la estructura necesaria.`);
     }
   } catch (error) {
-    console.log("Error Actualizando Producto. Shopifyclient ", error);
+    console.log(`Error ${productData.product.id} Actualizando Producto. Shopifyclient`, error);
     throw error;
   }
 };
@@ -781,7 +821,7 @@ const assignNewProductToCollections = async (productId, newCollectionIds) => {
           product_id: productId,
           collection_id: collectionId,
         });
-
+        
         console.log(`Asignado exitosamente a colección ${collectionId}`);
       } catch (err) {
         console.log(
@@ -803,7 +843,6 @@ const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
     let product = await Product.findOne({ id: productId });
 
     if (!product) {
-      console.log('1')
       product = await Product.findOne({ child_id: productId });
     }
 
@@ -991,5 +1030,45 @@ exports.deleteUser = async (userId) => {
   );
   return response.data;
 };
+
+function validateUpdateProductStructure(json) {
+  if (
+    json.hasOwnProperty('product') &&
+    json.product.hasOwnProperty('lumps') &&
+    json.product.hasOwnProperty('id') &&
+    json.product.hasOwnProperty('tags') &&
+    json.product.hasOwnProperty('vendor') &&
+    json.product.hasOwnProperty('variants') &&
+    Array.isArray(json.product.variants) &&
+    json.product.variants.every(variant => 
+        variant.hasOwnProperty('price') &&
+        variant.hasOwnProperty('sku') &&
+        variant.hasOwnProperty('inventory_management') &&
+        variant.hasOwnProperty('inventory_quantity')
+    )) {
+      return true;
+    }
+  return false;
+}
+
+function validateCreatedProductStructure(json) {
+  if (
+    json.hasOwnProperty('product') &&
+    json.product.hasOwnProperty('lumps') &&
+    json.product.hasOwnProperty('collection') &&
+    json.product.hasOwnProperty('tags') &&
+    json.product.hasOwnProperty('vendor') &&
+    json.product.hasOwnProperty('variants') &&
+    Array.isArray(json.product.variants) &&
+    json.product.variants.every(variant => 
+        variant.hasOwnProperty('price') &&
+        variant.hasOwnProperty('sku') &&
+        variant.hasOwnProperty('inventory_management') &&
+        variant.hasOwnProperty('inventory_quantity')
+    )) {
+      return true;
+    }
+  return false;
+}
 
 //* -- -- Order -- -- */

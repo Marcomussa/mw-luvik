@@ -20,7 +20,7 @@ exports.postCollectionsToDB = async () => {
   }
 };
 
-exports.postProductToDB = async (product, collection) => {
+exports.postProductToDB = async (product, collection, child_id) => {
   try {
     const productID = product.id;
     const productTitle = product.title;
@@ -33,7 +33,8 @@ exports.postProductToDB = async (product, collection) => {
       id: productID,
       title: productTitle,
       collections: collections,
-      sku: productSKU
+      sku: productSKU,
+      child_id
     });
 
     await newProduct.save();
@@ -44,7 +45,7 @@ exports.postProductToDB = async (product, collection) => {
   }
 };
 
-//todo: MODIFICAR ID POR "SKU"
+//! DEPRECATED
 exports.addSubIDProductToDB = async (id, childId) => {
   try {
     const product = await Product.findOne({ id: id });
