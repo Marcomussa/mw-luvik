@@ -146,7 +146,7 @@ router.post("/new", async (req, res) => {
       }
     }
 
-    const ids = data.line_items.map(item => item.id);
+    const ids = data.line_items.map(item => item.product_id);
 
     if(data.customer.tags.includes("amba")){
       const childId = await getIdOrChildId(123, 'id');
