@@ -312,7 +312,9 @@ exports.createProduct = async (productData) => {
       productData.product.variants[0].sku
     );
 
-    if (!productExists) {
+    const isStructureValid = validateCreatedProductStructure(productData)
+
+    if (!productExists && isStructureValid) {
       productData.product.images = [
         {
           src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}.jpg`,
@@ -361,9 +363,6 @@ exports.createProduct = async (productData) => {
         childProductData.product.variants[0].price = productData.product.variants[0].price;
       }
 
-      console.log(productData)
-      console.log(childProductData)
-
       const amba = await axios.post(
         `${SHOPIFY_STORE_URL}/products.json`,
         productData,
@@ -378,9 +377,6 @@ exports.createProduct = async (productData) => {
       
       const productId = amba.data.product.id;
       const childId = interior.data.product.id
-
-      console.log(productId)
-      console.log(childId)
 
       await productController.postProductToDB(
         amba.data.product,
@@ -464,7 +460,7 @@ exports.updateProduct = async (id, productData) => {
     const productExists = await checkIfProductIsCreated(productData.product.id);
     const isStructureValid = validateUpdateProductStructure(productData)
 
-    if (productExists && isStructureValid) {
+    if (!productExists && isStructureValid) {
       const mongoProduct = await Product.findOne({ id: id });
       const child_id = mongoProduct.child_id;
       childProductData.product.id = child_id
@@ -495,7 +491,6 @@ exports.updateProduct = async (id, productData) => {
         !isCollectionInProduct &&
         productData.product.variants[0].compare_at_price
       ) {
-        //! Pasar como parametro child_id
         await assignProductToCollections(productId, [282433814614]);
         await assignProductToCollections(child_id, [282433814614]);
         await Product.updateOne(
@@ -514,7 +509,6 @@ exports.updateProduct = async (id, productData) => {
         isCollectionInProduct &&
         !productData.product.variants[0].compare_at_price
       ) {
-        //! Pasar como parametro child_id
         await removeProductFromCollections(productId, [282433814614]);
         await removeProductFromCollections(child_id, [282433814614]);
         await Product.updateOne(
@@ -533,7 +527,6 @@ exports.updateProduct = async (id, productData) => {
         productData.product.newCollection &&
         productData.product.newCollection.length > 0
       ) {
-        //! Pasar como parametro child_id
         await assignProductToCollections(
           productId,
           productData.product.newCollection
@@ -548,8 +541,7 @@ exports.updateProduct = async (id, productData) => {
         productData.product.deleteCollection &&
         productData.product.deleteCollection.length > 0
       ) {
-        //! Pasar como parametro child_id
-        await removeProductFromCollections(
+         await removeProductFromCollections(
           productId,
           productData.product.deleteCollection
         );
