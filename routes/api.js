@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Log = require('../models/LogErrorProduct'); // Importa el modelo Log
 
-
 router.get('/update-error-logs', async (req, res) => {
     try {
         const logs = await Log.find();
@@ -12,7 +11,7 @@ router.get('/update-error-logs', async (req, res) => {
             delete logObject.__v;
             return logObject;
         });
-        
+
         res.status(200).json(sanitizedLogs);
     } catch (err) {
         console.error('Error leyendo logs de MongoDB:', err);
