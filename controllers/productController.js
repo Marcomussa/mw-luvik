@@ -293,12 +293,13 @@ exports.listCollections = async (req, res) => {
 
 exports.updateProductStockAndPrice = async (req, res) => {
   try {
-    const { id, newStock, price, compare_at_price } = req.params;
+    const { id, lumps, newStock, price, compare_at_price } = req.params;
+    const lumpsParsed = parseInt(lumps, 10)
     const newStockParsed = parseInt(newStock, 10); 
     const priceParsed = parseInt(price, 10); 
     const compareAtPriceParsed = parseInt(compare_at_price, 10); 
 
-    const response = await shopifyClient.updateProductStockAndPrice(id, newStockParsed, priceParsed, compareAtPriceParsed);
+    const response = await shopifyClient.updateProductStockAndPrice(id, lumpsParsed, newStockParsed, priceParsed, compareAtPriceParsed);
     res.status(200).json(response);
   } catch (error) {
     console.log(
@@ -315,6 +316,21 @@ exports.updateProductStock = async (req, res) => {
     const { id, newStock } = req.params;
     const newStockParsed = parseInt(newStock, 10); // Convertir newStock a número
     const response = await shopifyClient.updateProductStock(id, newStockParsed);
+    res.status(200).json(response);
+  } catch (error) {
+    console.log(
+      "Error Actualizando Stock. productController.js",
+      error.message
+    );
+    res.status(500).json({ error: error.message });
+  }
+};
+
+exports.updateProductStockV2 = async (req, res) => {
+  try {
+    const { id, newStock } = req.params;
+    const newStockParsed = parseInt(newStock, 10); // Convertir newStock a número
+    const response = await shopifyClient.updateProductStockV2(id, newStockParsed);
     res.status(200).json(response);
   } catch (error) {
     console.log(

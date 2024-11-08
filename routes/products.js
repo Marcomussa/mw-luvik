@@ -6,6 +6,8 @@ router.post('/batch', productController.handleBatch)
 
 router.post('/update-stock/:id/:newStock', productController.updateProductStock)
 
+router.post('/update-stock-v2/:id/:newStock', productController.updateProductStockV2)
+
 router.get('/list-by-id/:id', productController.listProductByID)
 
 router.get('/list', productController.listProducts)
@@ -20,6 +22,6 @@ router.get("/count",  productController.countProducts)
 
 router.get('/list-without-metafields', productController.listProductsWithMissingMetafields)
 
-router.post('/update-stock-and-price/:id/:newStock/:price/:compare_at_price?', productController.updateProductStockAndPrice)
+router.post('/update-stock-and-price/:id/:lumps/:newStock/:price/:compare_at_price?', productController.updateProductStockAndPrice)
 
 module.exports = router

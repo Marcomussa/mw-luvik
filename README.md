@@ -23,3 +23,5 @@ Headers:
 TO FIX
 - Propiedad Variants por mas que se desee actualizar una sola propiedad, deben pasarse todas, sino todas salvo la pasada vuelven a 0.
 Solucion: Cargar la totalidad de cada producto en Mongo y hacer ...props. Lo que pasa es que se sobreescribe la totalidad de variants: [{}]
+
+- order.js --> 
