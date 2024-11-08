@@ -5,12 +5,14 @@ const XLSX = require("xlsx");
 const fs = require("fs");
 const path = require("path");
 const Product = require("../models/Product");
+const LogErrorProduct = require("../models/LogErrorProduct");
 const productController = require("../controllers/productController");
 
 const SHOPIFY_STORE_URL = `https://${process.env.SHOPIFY_STORE_URL}/admin/api/2024-04`;
 const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY;
 const SHOPIFY_API_SECRET_KEY = process.env.SHOPIFY_API_SECRET_KEY;
 const SHOPIFY_ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN;
+const ROUTE = process.env.ROUTE;
 
 const headers = {
   "Content-Type": "application/json",
@@ -414,6 +416,174 @@ exports.createProduct = async (productData) => {
   }
 };
 
+//todo: Validacion de producto existente
+exports.updateProductStockAndPrice = async (id, lumps, newStock, price, compare_at_price) => {
+  try {
+    // Control de stock
+    let ambaStock = 0
+    let interiorStock = 0
+
+    if(newStock > 4){
+      ambaStock = Math.ceil(newStock * 0.7)
+      interiorStock = Math.ceil(newStock * 0.3)
+    } 
+
+    // Obtener child product
+    const mongoProduct = await Product.findOne({ id: id });
+    const child_id = mongoProduct.child_id;
+
+    // Obtener ambos productos
+    const product = await shopify.product.get(id);
+    const childProduct = await shopify.product.get(child_id);
+
+    // Variants de ambos
+    const inventoryItemId = product.variants[0].inventory_item_id;
+    const childInventoryItemId = childProduct.variants[0].inventory_item_id;
+
+    // locations
+    const locations = await shopify.location.list();
+    const locationId = locations[0].id;
+
+    // Stock update
+    const inventoryUpdateResponse = await shopify.inventoryLevel.set({
+      location_id: locationId,
+      inventory_item_id: inventoryItemId,
+      available: ambaStock,
+    });
+    const childInventoryUpdateResponse = await shopify.inventoryLevel.set({
+      location_id: locationId,
+      inventory_item_id: childInventoryItemId,
+      available: interiorStock,
+    });
+
+    // Price update
+    const priceUpdate = await updateProductPrice(id, lumps, price, compare_at_price)
+
+    return {
+      ['AMBA']: {
+        id: Number(id),
+        stock: inventoryUpdateResponse.available, 
+        precio: priceUpdate.priceUpdateResponse.price,
+        precioComparacion: priceUpdate.priceUpdateResponse.compare_at_price,
+        tieneDescuento: priceUpdate.priceUpdateResponse.tieneDescuento
+      },
+      ['INTERIOR']: {
+        id: child_id,
+        stock: childInventoryUpdateResponse.available, 
+        precio: priceUpdate.childPriceUpdateResponse.price,
+        precioComparacion: priceUpdate.childPriceUpdateResponse.compare_at_price,
+        tieneDescuento: priceUpdate.childPriceUpdateResponse.tieneDescuento
+      }
+    }
+  } catch (error) {
+    console.error("Error actualizando stock en Shopify", error.message);
+    throw error;
+  }
+};
+
+//todo: Collection oferta
+const updateProductPrice = async (id, lumps, price, compare_at_price) => {
+  price = price * lumps;
+  if (compare_at_price) {
+    compare_at_price = compare_at_price * lumps;
+  }
+
+  try {
+    let amba = { price, compare_at_price };
+    let interior = { price, compare_at_price };
+    let isProductInOffer = false
+
+    // Obtener el producto principal y el producto hijo desde Shopify
+    const product = await shopify.product.get(id);
+    const mongoProduct = await Product.findOne({ id: id });
+    const child_id = mongoProduct.child_id;
+    const childProduct = await shopify.product.get(child_id);
+
+    const variantId = product.variants[0].id;
+    const childVariantId = childProduct.variants[0].id;
+
+    //! Coleccion de oferta
+    const isCollectionInProduct = await checkIfCollectionIsOnProduct(id, 282433814614);
+    if (!isCollectionInProduct && compare_at_price) {
+      await assignProductToCollections(id, [282433814614]);
+      await assignProductToCollections(child_id, [282433814614]);
+      await Product.updateOne(
+        { id: id },
+        {
+          $push: {
+            collections: {
+              id: 282433814614,
+            },
+          },
+        }
+      );
+    }
+
+    if (isCollectionInProduct && !compare_at_price) {
+      await removeProductFromCollections(id, [282433814614]);
+      await removeProductFromCollections(child_id, [282433814614]);
+      await Product.updateOne(
+        { id: id },
+        {
+          $pull: {
+            collections: {
+              id: 282433814614,
+            },
+          },
+        }
+      );
+    }
+
+    // Manejo de Precios
+    if (!compare_at_price) {
+      interior.price = Number((price * 1.06).toFixed(2));
+      interior.compare_at_price = null; 
+    } else {
+      isProductInOffer = true
+
+      amba.compare_at_price = compare_at_price;
+      amba.price = price;
+
+      interior.compare_at_price = Number((compare_at_price * 1.06).toFixed(2));
+      interior.price = price;
+    }
+
+    // Actualizar precios de las variantes en el producto principal
+    const variant = product.variants.find(v => v.id === variantId);
+    variant.price = amba.price;
+    variant.compare_at_price = amba.compare_at_price || null; 
+
+    // Actualizar precios de las variantes en el producto hijo
+    const childVariant = childProduct.variants.find(v => v.id === childVariantId);
+    childVariant.price = interior.price;
+    childVariant.compare_at_price = interior.compare_at_price || null; 
+
+    const priceUpdateResponse = await shopify.product.update(product.id, {
+      variants: product.variants,
+    });
+    const childPriceUpdateResponse = await shopify.product.update(childProduct.id, {
+      variants: childProduct.variants,
+    });
+
+    return {
+      priceUpdateResponse: {
+        price: priceUpdateResponse.variants[0].price,
+        compare_at_price: priceUpdateResponse.variants[0].compare_at_price ? priceUpdateResponse.variants[0].compare_at_price : 'No definido',
+        tieneDescuento: isProductInOffer
+      }, 
+      childPriceUpdateResponse: {
+        price: childPriceUpdateResponse.variants[0].price,
+        compare_at_price: childPriceUpdateResponse.variants[0].compare_at_price ? childPriceUpdateResponse.variants[0].compare_at_price : 'No definido',
+        tieneDescuento: isProductInOffer
+      }
+    };
+  } catch (error) {
+    console.error("Error actualizando el precio en Shopify", error);
+    throw error;
+  }
+};
+
+
 exports.updateProduct = async (id, productData) => {
   try {
     let childProductData = {
@@ -544,7 +714,7 @@ exports.updateProduct = async (id, productData) => {
          await removeProductFromCollections(
           productId,
           productData.product.deleteCollection
-        );
+        );git
         await removeProductFromCollections(
           child_id,
           productData.product.deleteCollection
@@ -557,101 +727,11 @@ exports.updateProduct = async (id, productData) => {
     }
   } catch (error) {
     console.log(`Error ${productData.product.id} Actualizando Producto. Shopifyclient`, error);
+    postErrorLogsToAPI(error, 'update', productData)
     throw error;
   }
 };
 
-exports.updateProductStock = async (id, newStock) => {
-  try {
-    const product = await axios.get(
-      `${SHOPIFY_STORE_URL}/products/${id}.json`,
-      { headers }
-    );
-    const inventoryItemId = product.data.product.variants[0].inventory_item_id;
-
-    const locationsResponse = await axios.get(
-      `${SHOPIFY_STORE_URL}/locations.json`,
-      { headers }
-    );
-    const locationId = locationsResponse.data.locations[0].id;
-
-    const inventoryUpdateResponse = await axios.post(
-      `${SHOPIFY_STORE_URL}/inventory_levels/set.json`,
-      {
-        location_id: locationId,
-        inventory_item_id: inventoryItemId,
-        available: newStock,
-      },
-      { headers }
-    );
-
-    console.log("Stock Actualizado Correctamente", inventoryUpdateResponse.data)
-    return inventoryUpdateResponse.data;
-  } catch (error) {
-    console.error("Error actualizando stock. shopifyClient ", error.message);
-    throw error;
-  }
-};
-
-//todo: Ver update stock y precio en lista interior
-exports.updateProductStockAndPrice = async (id, newStock, price, compare_at_price) => {
-  try {
-    const product = await axios.get(
-      `${SHOPIFY_STORE_URL}/products/${id}.json`,
-      { headers }
-    );
-    const inventoryItemId = product.data.product.variants[0].inventory_item_id;
-    const variantId = product.data.product.variants[0].id;
-
-    const locationsResponse = await axios.get(
-      `${SHOPIFY_STORE_URL}/locations.json`,
-      { headers }
-    );
-    const locationId = locationsResponse.data.locations[0].id;
-
-    const inventoryUpdateResponse = await axios.post(
-      `${SHOPIFY_STORE_URL}/inventory_levels/set.json`,
-      {
-        location_id: locationId,
-        inventory_item_id: inventoryItemId,
-        available: newStock,
-      },
-      { headers }
-    );
-
-    const priceUpdatePayload = {
-      variant: {
-        id: variantId,
-        price: price,
-      }
-    };
-
-    if (compare_at_price !== undefined) {
-      priceUpdatePayload.variant.compare_at_price = compare_at_price;
-    }
-
-    const priceUpdateResponse = await axios.put(
-      `${SHOPIFY_STORE_URL}/variants/${variantId}.json`,
-      priceUpdatePayload,
-      { headers }
-    );
-
-    console.log("Stock y precio actualizados correctamente", {
-      stockUpdate: inventoryUpdateResponse.data,
-      priceUpdate: priceUpdateResponse.data,
-    });
-
-    return {
-      stockUpdate: inventoryUpdateResponse.data,
-      priceUpdate: priceUpdateResponse.data,
-    };
-  } catch (error) {
-    console.error("Error actualizando stock y precio. shopifyClient ", error.message);
-    throw error;
-  }
-};
-
-//! updateProductStock Nueva Version. PENDIENTE DE TESTEAR
 exports.updateProductStockV2 = async (id, newStock) => {
   try {
     const product = await shopify.product.get(id);
@@ -673,6 +753,7 @@ exports.updateProductStockV2 = async (id, newStock) => {
   }
 };
 
+//TODO
 exports.deleteProduct = async (id) => {
   try {
     const productExists = await checkIfProductIsCreated(id);
@@ -692,32 +773,6 @@ exports.deleteProduct = async (id) => {
     return response;
   } catch (error) {
     console.error(`Error eliminando el producto ${id}:`, error.message);
-    throw error;
-  }
-};
-
-//! Checkiar si un producto ya existe.
-//! DEPRECATED
-const checkIfProductIsCreatedUsingAPI = async (sku) => {
-  try {
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-    const products = await shopifyClient.product.list();
-
-    for (const product of products) {
-      const variant = product.variants.find((variant) => variant.sku === sku);
-      if (variant) {
-        console.log(
-          `Producto con SKU ${sku} ya existe. ID de producto: ${product.id}`
-        );
-        return true;
-      }
-      await delay(250);
-    }
-    console.log(`Producto con SKU ${sku} no existe.`);
-    return false;
-  } catch (error) {
-    console.log("Error al verificar si el producto existe: ", error.message);
     throw error;
   }
 };
@@ -915,31 +970,6 @@ const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
   }
 };
 
-
-//! DEPRECATED !//
-const checkIfCollectionIsOnProductUsingAPI = async (
-  productId,
-  collectionId
-) => {
-  try {
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-    const customCollections = await shopify.customCollection.list({
-      product_id: productId,
-    });
-    const isInCollection = customCollections.some(
-      (collection) => collection.id.toString() === collectionId.toString()
-    );
-
-    await delay(200);
-
-    return isInCollection;
-  } catch (error) {
-    console.error("Error al consultar el producto:", error.message);
-    return false;
-  }
-};
-
 //! Eliminar Colecciones
 const removeProductFromCollections = async (
   productId,
@@ -1081,6 +1111,7 @@ exports.deleteUser = async (userId) => {
   return response.data;
 };
 
+//* Aux Funcs
 function validateUpdateProductStructure(json) {
   if (
     json.hasOwnProperty('product') &&
@@ -1121,4 +1152,104 @@ function validateCreatedProductStructure(json) {
   return false;
 }
 
-//* -- -- Order -- -- */
+const postErrorLogsToAPI = async (error, type, productData) => {
+  const errorPayload = {
+    type,
+    productId: productData.product.id,
+    message: error.message,
+    additionalInfo: {
+      ...productData.product,
+    },
+  };
+
+  try {
+    const log = new LogErrorProduct(errorPayload);
+    await log.save();
+    console.log('Log de error guardado correctamente en MongoDB');
+  } catch (err) {
+    console.error('Error guardando en MongoDB:', err);
+  }
+};
+
+
+//! DEPRECATED
+exports.updateProductStock = async (id, newStock) => {
+  try {
+    const product = await axios.get(
+      `${SHOPIFY_STORE_URL}/products/${id}.json`,
+      { headers }
+    );
+    const inventoryItemId = product.data.product.variants[0].inventory_item_id;
+
+    const locationsResponse = await axios.get(
+      `${SHOPIFY_STORE_URL}/locations.json`,
+      { headers }
+    );
+    const locationId = locationsResponse.data.locations[0].id;
+
+    const inventoryUpdateResponse = await axios.post(
+      `${SHOPIFY_STORE_URL}/inventory_levels/set.json`,
+      {
+        location_id: locationId,
+        inventory_item_id: inventoryItemId,
+        available: newStock,
+      },
+      { headers }
+    );
+
+    console.log("Stock Actualizado Correctamente", inventoryUpdateResponse.data)
+    return inventoryUpdateResponse.data;
+  } catch (error) {
+    console.error("Error actualizando stock. shopifyClient ", error.message);
+    throw error;
+  }
+};
+
+//! DEPRECATED
+const checkIfProductIsCreatedUsingAPI = async (sku) => {
+  try {
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const products = await shopifyClient.product.list();
+
+    for (const product of products) {
+      const variant = product.variants.find((variant) => variant.sku === sku);
+      if (variant) {
+        console.log(
+          `Producto con SKU ${sku} ya existe. ID de producto: ${product.id}`
+        );
+        return true;
+      }
+      await delay(250);
+    }
+    console.log(`Producto con SKU ${sku} no existe.`);
+    return false;
+  } catch (error) {
+    console.log("Error al verificar si el producto existe: ", error.message);
+    throw error;
+  }
+};
+
+//! DEPRECATED
+const checkIfCollectionIsOnProductUsingAPI = async (
+  productId,
+  collectionId
+) => {
+  try {
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const customCollections = await shopify.customCollection.list({
+      product_id: productId,
+    });
+    const isInCollection = customCollections.some(
+      (collection) => collection.id.toString() === collectionId.toString()
+    );
+
+    await delay(200);
+
+    return isInCollection;
+  } catch (error) {
+    console.error("Error al consultar el producto:", error.message);
+    return false;
+  }
+};

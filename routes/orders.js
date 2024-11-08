@@ -156,7 +156,7 @@ router.post("/new", async (req, res) => {
           const getProduct = await shopifyClient.listProductByID(id);
           const actualStock = getProduct.variants[0].inventory_quantity;
     
-          await shopifyClient.updateProductStock(id, actualStock - product.quantity);
+          await shopifyClient.updateProductStockV2(id, actualStock - product.quantity);
           
           console.log(`Stock actualizado para el producto ID: ${id}`);
         } catch (error) {
@@ -173,7 +173,7 @@ router.post("/new", async (req, res) => {
           const getProduct = await shopifyClient.listProductByID(id);
           const actualStock = getProduct.variants[0].inventory_quantity;
     
-          await shopifyClient.updateProductStock(id, actualStock - product.quantity);
+          await shopifyClient.updateProductStockV2(id, actualStock - product.quantity);
     
           console.log(product)
           console.log(`Stock actualizado para el producto ID: ${id}`);

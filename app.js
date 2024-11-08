@@ -10,6 +10,7 @@ const crypto = require('crypto')
 const productRoutes = require('./routes/products')
 const userRoutes = require("./routes/customers")
 const orderRoutes = require('./routes/orders')
+const APIRoutes = require('./routes/api')
 const axios = require('axios')
 const mongoose = require("mongoose")
 const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
@@ -111,6 +112,8 @@ app.use("/product/delete", express.raw({ type: 'application/json' }), validateSi
 })
 
 app.use("/orders", express.raw({ type: 'application/json' }), validateSignature, orderRoutes)
+
+app.use('/api', express.raw({ type: 'application/json' }), APIRoutes)
 
 //* SERVER *//
 app.listen(PORT, () => {
