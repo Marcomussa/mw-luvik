@@ -20,5 +20,10 @@
     "raw-body": "^3.0.0",
     "shopify-api-node": "^3.14.0",
     "xlsx": "^0.18.5"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "logs/update.json"
+    ]
   }
 }

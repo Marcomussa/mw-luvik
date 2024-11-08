@@ -5,12 +5,14 @@ const XLSX = require("xlsx");
 const fs = require("fs");
 const path = require("path");
 const Product = require("../models/Product");
+const LogErrorProduct = require("../models/LogErrorProduct");
 const productController = require("../controllers/productController");
 
 const SHOPIFY_STORE_URL = `https://${process.env.SHOPIFY_STORE_URL}/admin/api/2024-04`;
 const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY;
 const SHOPIFY_API_SECRET_KEY = process.env.SHOPIFY_API_SECRET_KEY;
 const SHOPIFY_ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN;
+const ROUTE = process.env.ROUTE;
 
 const headers = {
   "Content-Type": "application/json",
@@ -731,6 +733,7 @@ exports.updateProduct = async (id, productData) => {
     }
   } catch (error) {
     console.log(`Error ${productData.product.id} Actualizando Producto. Shopifyclient`, error);
+    postErrorLogsToAPI(error, 'update', productData)
     throw error;
   }
 };
@@ -1114,6 +1117,7 @@ exports.deleteUser = async (userId) => {
   return response.data;
 };
 
+//* Aux Funcs
 function validateUpdateProductStructure(json) {
   if (
     json.hasOwnProperty('product') &&
@@ -1153,6 +1157,25 @@ function validateCreatedProductStructure(json) {
     }
   return false;
 }
+
+const postErrorLogsToAPI = async (error, type, productData) => {
+  const errorPayload = {
+    type,
+    productId: productData.product.id,
+    message: error.message,
+    additionalInfo: {
+      ...productData.product,
+    },
+  };
+
+  try {
+    const log = new LogErrorProduct(errorPayload);
+    await log.save();
+    console.log('Log de error guardado correctamente en MongoDB');
+  } catch (err) {
+    console.error('Error guardando en MongoDB:', err);
+  }
+};
 
 
 //! DEPRECATED
