@@ -5,6 +5,7 @@ const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 const auth = require('./middleware/auth')
+const cron = require('node-cron');
 const PORT = process.env.PORT
 const crypto = require('crypto')
 const productRoutes = require('./routes/products')
@@ -13,6 +14,7 @@ const orderRoutes = require('./routes/orders')
 const APIRoutes = require('./routes/api')
 const axios = require('axios')
 const mongoose = require("mongoose")
+const Log = require('./models/LogErrorProduct'); 
 const SHOPIFY_SECRET = process.env.WEBHOOK_SECRET
 
 //! DB Externa para reducir rate-limit de validaciones de productos
@@ -114,6 +116,17 @@ app.use("/product/delete", express.raw({ type: 'application/json' }), validateSi
 app.use("/orders", express.raw({ type: 'application/json' }), validateSignature, orderRoutes)
 
 app.use('/api', express.raw({ type: 'application/json' }), APIRoutes)
+
+cron.schedule('0 0 */2 * *', async () => {
+    try {
+        console.log('Ejecutando limpieza de la base de datos...');
+        await Log.deleteMany({}); 
+  
+        console.log('Limpieza de la base de datos completada.');
+    } catch (err) {
+        console.error('Error al limpiar la base de datos:', err);
+    }
+  });
 
 //* SERVER *//
 app.listen(PORT, () => {

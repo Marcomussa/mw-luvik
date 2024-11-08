@@ -151,25 +151,20 @@ async function updateSKUToDb() {
 exports.handleBatch = async (req, res) => {
   try {
     const { created, updated, deleted } = req.body;
-    const createdProductIds = await productService.handleBatch(
-      created,
-      updated,
-      deleted
-    );
 
-    // Determina si se han creado nuevos productos para incluir en la respuesta
-    const response = {
-      message: "Batch Ok",
-    };
+    res.status(200).json({ message: "Batch received. Processing in background." });
 
-    if (created && created.length > 0) {
-      response.createdProductIds = createdProductIds;
-    }
-    res.status(200).json(response);
+    setImmediate(async () => {
+      try {
+        const createdProductIds = await productService.handleBatch(created, updated, deleted);
+        console.log("Batch processing completed. Created product IDs:", createdProductIds);
+      } catch (error) {
+        console.error("Error processing batch in background:", error);
+      }
+    });
   } catch (error) {
-    res.status(500).json({ message: error });
-    console.log("Error en Batch (Productos). productController.js");
-    console.log(error.message);
+    res.status(500).json({ message: "Failed to receive batch." });
+    console.error("Error en Batch (Productos). productController.js:", error.message);
   }
 };
 
