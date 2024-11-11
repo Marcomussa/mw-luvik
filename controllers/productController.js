@@ -156,8 +156,9 @@ exports.handleBatch = async (req, res) => {
 
     setImmediate(async () => {
       try {
-        const createdProductIds = await productService.handleBatch(created, updated, deleted);
-        console.log("Batch processing completed. Created product IDs:", createdProductIds);
+        //todo createdProductsIds
+        await productService.handleBatch(created, updated, deleted);
+        console.log("Batch processing completed" );
       } catch (error) {
         console.error("Error processing batch in background:", error);
       }

@@ -9,6 +9,7 @@ router.get('/update-error-logs', async (req, res) => {
             const logObject = log.toObject();
             delete logObject._id;
             delete logObject.__v;
+            delete logObject.additionalInfo;
             return logObject;
         });
 

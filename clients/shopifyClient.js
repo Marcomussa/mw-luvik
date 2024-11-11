@@ -481,7 +481,6 @@ exports.updateProductStockAndPrice = async (id, lumps, newStock, price, compare_
   }
 };
 
-//todo: Collection oferta
 const updateProductPrice = async (id, lumps, price, compare_at_price) => {
   price = price * lumps;
   if (compare_at_price) {
@@ -630,7 +629,7 @@ exports.updateProduct = async (id, productData) => {
     const productExists = await checkIfProductIsCreated(productData.product.id);
     const isStructureValid = validateUpdateProductStructure(productData)
 
-    if (!productExists && isStructureValid) {
+    if (productExists && isStructureValid) {
       const mongoProduct = await Product.findOne({ id: id });
       const child_id = mongoProduct.child_id;
       childProductData.product.id = child_id
@@ -723,7 +722,9 @@ exports.updateProduct = async (id, productData) => {
 
       return response.data;
     } else {
-      console.log(`Producto ${productData.product.id} no existe o no cumple con la estructura necesaria.`);
+      let msg = `Producto ${productData.product.id} no existe o no cumple con la estructura necesaria.`
+      console.log(msg);
+      postErrorLogsToAPI(msg, 'update', productData)
     }
   } catch (error) {
     console.log(`Error ${productData.product.id} Actualizando Producto. Shopifyclient`, error);
@@ -1156,7 +1157,7 @@ const postErrorLogsToAPI = async (error, type, productData) => {
   const errorPayload = {
     type,
     productId: productData.product.id,
-    message: error.message,
+    message: error.message ? error.message : error,
     additionalInfo: {
       ...productData.product,
     },
