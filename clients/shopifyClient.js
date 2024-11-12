@@ -723,11 +723,10 @@ exports.updateProduct = async (id, productData) => {
       return response.data;
     } else {
       let msg = `Producto ${productData.product.id} no existe o no cumple con la estructura necesaria.`
-      console.log(msg);
       postErrorLogsToAPI(msg, 'update', productData)
     }
   } catch (error) {
-    console.log(`Error ${productData.product.id} Actualizando Producto. Shopifyclient`, error);
+    console.log(`Error ${productData.product.id} Actualizando Producto. Shopifyclient`, error.message);
     postErrorLogsToAPI(error, 'update', productData)
     throw error;
   }

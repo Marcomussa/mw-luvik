@@ -7,6 +7,7 @@ router.get('/update-error-logs', async (req, res) => {
         const logs = await Log.find();
         const sanitizedLogs = logs.map(log => {
             const logObject = log.toObject();
+            logObject.productId = Number(logObject.productId)
             delete logObject._id;
             delete logObject.__v;
             delete logObject.additionalInfo;
