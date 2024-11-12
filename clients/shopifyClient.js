@@ -759,22 +759,23 @@ exports.updateProductStockV2 = async (id, newStock) => {
   }
 };
 
-//TODO
 exports.deleteProduct = async (id) => {
   try {
     const productExists = await checkIfProductIsCreated(id);
 
-    //! const product = productController.getProduct(id)
-    //! product.child_id
-    //! shopify.product.delete(child_id);
+    const mongoProduct = await Product.findOne({ id: id });
+    const child_id = mongoProduct.child_id;
 
     if (!productExists) {
       console.log(`Producto ${id} no existe en la base de datos.`);
       return null;
     }
 
-    const response = await shopify.product.delete(id);
-    console.log(`Producto ${id} eliminado correctamente en Shopify.`);
+    await shopify.product.delete(id);
+    await shopify.product.delete(child_id);
+    await Product.deleteOne(id)
+
+    console.log(`Producto ${id} eliminado correctamente.`);
 
     return response;
   } catch (error) {
