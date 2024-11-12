@@ -314,7 +314,9 @@ exports.createProduct = async (productData) => {
       productData.product.variants[0].sku
     );
 
-    if (!productExists) {
+    const isStructureValid = validateCreatedProductStructure(productData)
+
+    if (!productExists && isStructureValid) {
       productData.product.images = [
         {
           src: `https://cdn.shopify.com/s/files/1/0586/0117/7174/files/${productData.product.variants[0].sku}.jpg`,
@@ -363,9 +365,6 @@ exports.createProduct = async (productData) => {
         childProductData.product.variants[0].price = productData.product.variants[0].price;
       }
 
-      console.log(productData)
-      console.log(childProductData)
-
       const amba = await axios.post(
         `${SHOPIFY_STORE_URL}/products.json`,
         productData,
@@ -380,9 +379,6 @@ exports.createProduct = async (productData) => {
       
       const productId = amba.data.product.id;
       const childId = interior.data.product.id
-
-      console.log(productId)
-      console.log(childId)
 
       await productController.postProductToDB(
         amba.data.product,
@@ -485,7 +481,6 @@ exports.updateProductStockAndPrice = async (id, lumps, newStock, price, compare_
   }
 };
 
-//todo: Collection oferta
 const updateProductPrice = async (id, lumps, price, compare_at_price) => {
   price = price * lumps;
   if (compare_at_price) {
@@ -665,7 +660,6 @@ exports.updateProduct = async (id, productData) => {
         !isCollectionInProduct &&
         productData.product.variants[0].compare_at_price
       ) {
-        //! Pasar como parametro child_id
         await assignProductToCollections(productId, [282433814614]);
         await assignProductToCollections(child_id, [282433814614]);
         await Product.updateOne(
@@ -684,7 +678,6 @@ exports.updateProduct = async (id, productData) => {
         isCollectionInProduct &&
         !productData.product.variants[0].compare_at_price
       ) {
-        //! Pasar como parametro child_id
         await removeProductFromCollections(productId, [282433814614]);
         await removeProductFromCollections(child_id, [282433814614]);
         await Product.updateOne(
@@ -717,10 +710,10 @@ exports.updateProduct = async (id, productData) => {
         productData.product.deleteCollection &&
         productData.product.deleteCollection.length > 0
       ) {
-        await removeProductFromCollections(
+         await removeProductFromCollections(
           productId,
           productData.product.deleteCollection
-        );
+        );git
         await removeProductFromCollections(
           child_id,
           productData.product.deleteCollection
@@ -729,7 +722,9 @@ exports.updateProduct = async (id, productData) => {
 
       return response.data;
     } else {
-      console.log(`Producto ${productData.product.id} no existe o no cumple con la estructura necesaria.`);
+      let msg = `Producto ${productData.product.id} no existe o no cumple con la estructura necesaria.`
+      console.log(msg);
+      postErrorLogsToAPI(msg, 'update', productData)
     }
   } catch (error) {
     console.log(`Error ${productData.product.id} Actualizando Producto. Shopifyclient`, error);
@@ -1163,7 +1158,7 @@ const postErrorLogsToAPI = async (error, type, productData) => {
   const errorPayload = {
     type,
     productId: productData.product.id,
-    message: error.message,
+    message: error.message ? error.message : error,
     additionalInfo: {
       ...productData.product,
     },

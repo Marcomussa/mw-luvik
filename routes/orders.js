@@ -117,9 +117,11 @@ router.post("/new", async (req, res) => {
 
     // data.customer.note = extractedData;
 
+    console.log("Webhook recibido:", data);
+
     await axios.post("http://informes.luvik.com.ar/shopify_pedido.php", data);
 
-    //todo: UPDATE DE STOCK EN SHOPIFY
+    //! UPDATE DE STOCK EN SHOPIFY
     async function getIdOrChildId(value, searchBy) {
       try {
         let product;
@@ -183,17 +185,6 @@ router.post("/new", async (req, res) => {
       }
     } 
 
-    //! 2) Recorrer conjunto. Verificar de que lista son y para cada item del conjunto:
-    //? Si es lista interior:
-    //! 3) const childProduct = productController.getProduct(id)
-    //! 4) shopifyClient.updateProductStock(id, newStock)
-    //? Si es lista amba
-    //! 3) const childProduct = productController.getProduct(id)
-    //! 4) shopifyClient.updateProductStock(child_id, newStock)
-
-    //* obtener: ID's de la lista que no fue adquirida --> Stock de estos --> Proceder a realizar la operacion
-
-    console.log("Webhook recibido:", data);
     res.status(200).json({ message: "Webhook procesado correctamente" });
   } catch (error) {
     console.error("Error procesando el webhook:", error.message);
