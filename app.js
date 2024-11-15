@@ -129,14 +129,14 @@ cron.schedule('0 0 */2 * *', async () => {
   });
 
 
-//    (async () => {
-//      try {
-//          console.log('Ejecutando limpieza de la base de datos... (ejecución inmediata)');
-//          await Log.deleteMany({});
-//          console.log('Limpieza de la base de datos completada.');
-//      } catch (err) {
-//          console.error('Error al limpiar la base de datos (ejecución inmediata):', err);
-//      }
+//   (async () => {
+//     try {
+//         console.log('Ejecutando limpieza de la base de datos... (ejecución inmediata)');
+//         await Log.deleteMany({});
+//         console.log('Limpieza de la base de datos completada.');
+//     } catch (err) {
+//         console.error('Error al limpiar la base de datos (ejecución inmediata):', err);
+//     }
 // })();
 
 //* SERVER *//
