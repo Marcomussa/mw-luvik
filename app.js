@@ -117,16 +117,16 @@ app.use("/orders", express.raw({ type: 'application/json' }), validateSignature,
 
 app.use('/api', express.raw({ type: 'application/json' }), APIRoutes)
 
-cron.schedule('0 0 */2 * *', async () => {
-    try {
-        console.log('Ejecutando limpieza de la base de datos...');
-        await Log.deleteMany({}); 
+// cron.schedule('0 0 */2 * *', async () => {
+//     try {
+//         console.log('Ejecutando limpieza de la base de datos...');
+//         await Log.deleteMany({}); 
   
-        console.log('Limpieza de la base de datos completada.');
-    } catch (err) {
-        console.error('Error al limpiar la base de datos:', err);
-    }
-  });
+//         console.log('Limpieza de la base de datos completada.');
+//     } catch (err) {
+//         console.error('Error al limpiar la base de datos:', err);
+//     }
+//   });
 
 
 //   (async () => {
