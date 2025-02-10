@@ -307,14 +307,13 @@ exports.listProductIDsByName = async (productName) => {
   }
 };
 
-//todo: CREAR CHILD PRODUCT CON SUS PRECIOS Y STOCK ASOCIADO
 exports.createProduct = async (productData) => {
   try {
     const productExists = await checkIfProductIsCreatedUsingSKU(
       productData.product.variants[0].sku
     );
 
-    const isStructureValid = validateCreatedProductStructure(productData)
+    const isStructureValid = validateCreatedProductStructure(productData);
 
     if (!productExists && isStructureValid) {
       productData.product.images = [
@@ -324,45 +323,69 @@ exports.createProduct = async (productData) => {
       ];
 
       let childProductData = {
-        "product": {
-          "lumps": productData.product.lumps,
-          "collection": productData.product.collection,
-          "title": productData.product.title,
-          "tags": "interior",
-          "vendor": productData.product.vendor,
-          "variants": [
+        product: {
+          lumps: productData.product.lumps,
+          collection: productData.product.collection,
+          title: productData.product.title,
+          tags: "interior",
+          vendor: productData.product.vendor,
+          variants: [
             {
-              "price": productData.product.variants[0].price,
-              "sku": productData.product.variants[0].sku,
-              "inventory_management": "shopify",
-              "inventory_quantity": productData.product.variants[0].inventory_quantity
-            }
-          ]
-        }
-      }
-  
+              price: productData.product.variants[0].price,
+              sku: productData.product.variants[0].sku,
+              inventory_management: "shopify",
+              inventory_quantity:
+                productData.product.variants[0].inventory_quantity,
+            },
+          ],
+        },
+      };
+
       // Control de stock
-      if(productData.product.variants[0].inventory_quantity > 4){
-        productData.product.variants[0].inventory_quantity = Math.ceil(productData.product.variants[0].inventory_quantity * 0.7)
-        childProductData.product.variants[0].inventory_quantity = Math.ceil(childProductData.product.variants[0].inventory_quantity * 0.3)
+      if (productData.product.variants[0].inventory_quantity > 4) {
+        productData.product.variants[0].inventory_quantity = Math.ceil(
+          productData.product.variants[0].inventory_quantity * 0.7
+        );
+        childProductData.product.variants[0].inventory_quantity = Math.ceil(
+          childProductData.product.variants[0].inventory_quantity * 0.3
+        );
       } else {
-        productData.product.variants[0].inventory_quantity = 0
-        childProductData.product.variants[0].inventory_quantity = 0
+        productData.product.variants[0].inventory_quantity = 0;
+        childProductData.product.variants[0].inventory_quantity = 0;
       }
-      
+
       // No existe oferta
-      if (productData.product.lumps && !productData.product.variants[0].compare_at_price) {
-        productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
-        childProductData.product.variants[0].price = Number((childProductData.product.variants[0].price * productData.product.lumps * 1.06).toFixed(2))
+      if (
+        productData.product.lumps &&
+        !productData.product.variants[0].compare_at_price
+      ) {
+        productData.product.variants[0].price =
+          productData.product.variants[0].price * productData.product.lumps;
+        childProductData.product.variants[0].price = Number(
+          (
+            childProductData.product.variants[0].price *
+            productData.product.lumps *
+            1.06
+          ).toFixed(2)
+        );
       }
-  
+
       // Existe oferta
-      if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
-        productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps;
-        productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
-  
-        childProductData.product.variants[0].compare_at_price = Number((productData.product.variants[0].compare_at_price * 1.06).toFixed(2));
-        childProductData.product.variants[0].price = productData.product.variants[0].price;
+      if (
+        productData.product.lumps &&
+        productData.product.variants[0].compare_at_price
+      ) {
+        productData.product.variants[0].compare_at_price =
+          productData.product.variants[0].compare_at_price *
+          productData.product.lumps;
+        productData.product.variants[0].price =
+          productData.product.variants[0].price * productData.product.lumps;
+
+        childProductData.product.variants[0].compare_at_price = Number(
+          (productData.product.variants[0].compare_at_price * 1.06).toFixed(2)
+        );
+        childProductData.product.variants[0].price =
+          productData.product.variants[0].price;
       }
 
       const amba = await axios.post(
@@ -376,9 +399,9 @@ exports.createProduct = async (productData) => {
         childProductData,
         { headers }
       );
-      
+
       const productId = amba.data.product.id;
-      const childId = interior.data.product.id
+      const childId = interior.data.product.id;
 
       await productController.postProductToDB(
         amba.data.product,
@@ -417,16 +440,22 @@ exports.createProduct = async (productData) => {
 };
 
 //todo: Validacion de producto existente
-exports.updateProductStockAndPrice = async (id, lumps, newStock, price, compare_at_price) => {
+exports.updateProductStockAndPrice = async (
+  id,
+  lumps,
+  newStock,
+  price,
+  compare_at_price
+) => {
   try {
     // Control de stock
-    let ambaStock = 0
-    let interiorStock = 0
+    let ambaStock = 0;
+    let interiorStock = 0;
 
-    if(newStock > 4){
-      ambaStock = Math.ceil(newStock * 0.7)
-      interiorStock = Math.ceil(newStock * 0.3)
-    } 
+    if (newStock > 4) {
+      ambaStock = Math.ceil(newStock * 0.7);
+      interiorStock = Math.ceil(newStock * 0.3);
+    }
 
     // Obtener child product
     const mongoProduct = await Product.findOne({ id: id });
@@ -457,24 +486,30 @@ exports.updateProductStockAndPrice = async (id, lumps, newStock, price, compare_
     });
 
     // Price update
-    const priceUpdate = await updateProductPrice(id, lumps, price, compare_at_price)
+    const priceUpdate = await updateProductPrice(
+      id,
+      lumps,
+      price,
+      compare_at_price
+    );
 
     return {
-      ['AMBA']: {
+      ["AMBA"]: {
         id: Number(id),
-        stock: inventoryUpdateResponse.available, 
+        stock: inventoryUpdateResponse.available,
         precio: priceUpdate.priceUpdateResponse.price,
         precioComparacion: priceUpdate.priceUpdateResponse.compare_at_price,
-        tieneDescuento: priceUpdate.priceUpdateResponse.tieneDescuento
+        tieneDescuento: priceUpdate.priceUpdateResponse.tieneDescuento,
       },
-      ['INTERIOR']: {
+      ["INTERIOR"]: {
         id: child_id,
-        stock: childInventoryUpdateResponse.available, 
+        stock: childInventoryUpdateResponse.available,
         precio: priceUpdate.childPriceUpdateResponse.price,
-        precioComparacion: priceUpdate.childPriceUpdateResponse.compare_at_price,
-        tieneDescuento: priceUpdate.childPriceUpdateResponse.tieneDescuento
-      }
-    }
+        precioComparacion:
+          priceUpdate.childPriceUpdateResponse.compare_at_price,
+        tieneDescuento: priceUpdate.childPriceUpdateResponse.tieneDescuento,
+      },
+    };
   } catch (error) {
     console.error("Error actualizando stock en Shopify", error.message);
     throw error;
@@ -490,7 +525,7 @@ const updateProductPrice = async (id, lumps, price, compare_at_price) => {
   try {
     let amba = { price, compare_at_price };
     let interior = { price, compare_at_price };
-    let isProductInOffer = false
+    let isProductInOffer = false;
 
     // Obtener el producto principal y el producto hijo desde Shopify
     const product = await shopify.product.get(id);
@@ -502,7 +537,10 @@ const updateProductPrice = async (id, lumps, price, compare_at_price) => {
     const childVariantId = childProduct.variants[0].id;
 
     //! Coleccion de oferta
-    const isCollectionInProduct = await checkIfCollectionIsOnProduct(id, 282433814614);
+    const isCollectionInProduct = await checkIfCollectionIsOnProduct(
+      id,
+      282433814614
+    );
     if (!isCollectionInProduct && compare_at_price) {
       await assignProductToCollections(id, [282433814614]);
       await assignProductToCollections(child_id, [282433814614]);
@@ -536,9 +574,9 @@ const updateProductPrice = async (id, lumps, price, compare_at_price) => {
     // Manejo de Precios
     if (!compare_at_price) {
       interior.price = Number((price * 1.06).toFixed(2));
-      interior.compare_at_price = null; 
+      interior.compare_at_price = null;
     } else {
-      isProductInOffer = true
+      isProductInOffer = true;
 
       amba.compare_at_price = compare_at_price;
       amba.price = price;
@@ -548,33 +586,42 @@ const updateProductPrice = async (id, lumps, price, compare_at_price) => {
     }
 
     // Actualizar precios de las variantes en el producto principal
-    const variant = product.variants.find(v => v.id === variantId);
+    const variant = product.variants.find((v) => v.id === variantId);
     variant.price = amba.price;
-    variant.compare_at_price = amba.compare_at_price || null; 
+    variant.compare_at_price = amba.compare_at_price || null;
 
     // Actualizar precios de las variantes en el producto hijo
-    const childVariant = childProduct.variants.find(v => v.id === childVariantId);
+    const childVariant = childProduct.variants.find(
+      (v) => v.id === childVariantId
+    );
     childVariant.price = interior.price;
-    childVariant.compare_at_price = interior.compare_at_price || null; 
+    childVariant.compare_at_price = interior.compare_at_price || null;
 
     const priceUpdateResponse = await shopify.product.update(product.id, {
       variants: product.variants,
     });
-    const childPriceUpdateResponse = await shopify.product.update(childProduct.id, {
-      variants: childProduct.variants,
-    });
+    const childPriceUpdateResponse = await shopify.product.update(
+      childProduct.id,
+      {
+        variants: childProduct.variants,
+      }
+    );
 
     return {
       priceUpdateResponse: {
         price: priceUpdateResponse.variants[0].price,
-        compare_at_price: priceUpdateResponse.variants[0].compare_at_price ? priceUpdateResponse.variants[0].compare_at_price : 'No definido',
-        tieneDescuento: isProductInOffer
-      }, 
+        compare_at_price: priceUpdateResponse.variants[0].compare_at_price
+          ? priceUpdateResponse.variants[0].compare_at_price
+          : "No definido",
+        tieneDescuento: isProductInOffer,
+      },
       childPriceUpdateResponse: {
         price: childPriceUpdateResponse.variants[0].price,
-        compare_at_price: childPriceUpdateResponse.variants[0].compare_at_price ? childPriceUpdateResponse.variants[0].compare_at_price : 'No definido',
-        tieneDescuento: isProductInOffer
-      }
+        compare_at_price: childPriceUpdateResponse.variants[0].compare_at_price
+          ? childPriceUpdateResponse.variants[0].compare_at_price
+          : "No definido",
+        tieneDescuento: isProductInOffer,
+      },
     };
   } catch (error) {
     console.error("Error actualizando el precio en Shopify", error);
@@ -582,72 +629,95 @@ const updateProductPrice = async (id, lumps, price, compare_at_price) => {
   }
 };
 
-
 exports.updateProduct = async (id, productData) => {
   try {
     let childProductData = {
-      "product": {
-				"lumps": productData.product.lumps,
-				"id": productData.product.id,
-				"tags": "interior",
-				"vendor": productData.product.vendor,
-				"variants": [
-					{
-						"price": productData.product.variants[0].price,
-						"sku": productData.product.variants[0].sku,
-						"inventory_management": "shopify",
-						"inventory_quantity": productData.product.variants[0].inventory_quantity 
-					}
-				]
-			}
-    }
+      product: {
+        lumps: productData.product.lumps,
+        id: productData.product.id,
+        tags: "interior",
+        vendor: productData.product.vendor,
+        variants: [
+          {
+            price: productData.product.variants[0].price,
+            sku: productData.product.variants[0].sku,
+            inventory_management: "shopify",
+            inventory_quantity:
+              productData.product.variants[0].inventory_quantity,
+          },
+        ],
+      },
+    };
 
     // Control de stock
-    if(productData.product.variants[0].inventory_quantity > 4){
-      productData.product.variants[0].inventory_quantity = Math.ceil(productData.product.variants[0].inventory_quantity * 0.7)
-      childProductData.product.variants[0].inventory_quantity = Math.ceil(childProductData.product.variants[0].inventory_quantity * 0.3)
+    if (productData.product.variants[0].inventory_quantity > 4) {
+      productData.product.variants[0].inventory_quantity = Math.ceil(
+        productData.product.variants[0].inventory_quantity * 0.7
+      );
+      childProductData.product.variants[0].inventory_quantity = Math.ceil(
+        childProductData.product.variants[0].inventory_quantity * 0.3
+      );
     } else {
-      productData.product.variants[0].inventory_quantity = 0
-      childProductData.product.variants[0].inventory_quantity = 0
+      productData.product.variants[0].inventory_quantity = 0;
+      childProductData.product.variants[0].inventory_quantity = 0;
     }
-    
+
     // No existe oferta
-    if (productData.product.lumps && !productData.product.variants[0].compare_at_price) {
-      productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
-      childProductData.product.variants[0].price = Number((childProductData.product.variants[0].price * productData.product.lumps * 1.06).toFixed(2))
+    if (
+      productData.product.lumps &&
+      !productData.product.variants[0].compare_at_price
+    ) {
+      productData.product.variants[0].price =
+        productData.product.variants[0].price * productData.product.lumps;
+      childProductData.product.variants[0].price = Number(
+        (
+          childProductData.product.variants[0].price *
+          productData.product.lumps *
+          1.06
+        ).toFixed(2)
+      );
     }
 
     // Existe oferta
-    if (productData.product.lumps && productData.product.variants[0].compare_at_price) {
-      productData.product.variants[0].compare_at_price = productData.product.variants[0].compare_at_price * productData.product.lumps;
-      productData.product.variants[0].price = productData.product.variants[0].price * productData.product.lumps;
+    if (
+      productData.product.lumps &&
+      productData.product.variants[0].compare_at_price
+    ) {
+      productData.product.variants[0].compare_at_price =
+        productData.product.variants[0].compare_at_price *
+        productData.product.lumps;
+      productData.product.variants[0].price =
+        productData.product.variants[0].price * productData.product.lumps;
 
-      childProductData.product.variants[0].compare_at_price = Number((productData.product.variants[0].compare_at_price * 1.06).toFixed(2));
-      childProductData.product.variants[0].price = productData.product.variants[0].price;
+      childProductData.product.variants[0].compare_at_price = Number(
+        (productData.product.variants[0].compare_at_price * 1.06).toFixed(2)
+      );
+      childProductData.product.variants[0].price =
+        productData.product.variants[0].price;
     }
 
     const productExists = await checkIfProductIsCreated(productData.product.id);
-    const isStructureValid = validateUpdateProductStructure(productData)
+    const isStructureValid = validateUpdateProductStructure(productData);
 
     if (productExists && isStructureValid) {
       const mongoProduct = await Product.findOne({ id: id });
       const child_id = mongoProduct.child_id;
-      childProductData.product.id = child_id
+      childProductData.product.id = child_id;
 
       const response = await axios.put(
         `${SHOPIFY_STORE_URL}/products/${id}.json`,
         productData,
         { headers }
       );
-      
+
       const childReponse = await axios.put(
         `${SHOPIFY_STORE_URL}/products/${child_id}.json`,
         childProductData,
         { headers }
       );
-      
-      console.log(`Parent: ${response.status}`)
-      console.log(`Child: ${childReponse.status}`)
+
+      console.log(`Parent: ${response.status}`);
+      console.log(`Child: ${childReponse.status}`);
 
       // Coleccion de Oferta
       const productId = response.data.product.id;
@@ -710,10 +780,11 @@ exports.updateProduct = async (id, productData) => {
         productData.product.deleteCollection &&
         productData.product.deleteCollection.length > 0
       ) {
-         await removeProductFromCollections(
+        await removeProductFromCollections(
           productId,
           productData.product.deleteCollection
-        );git
+        );
+        git;
         await removeProductFromCollections(
           child_id,
           productData.product.deleteCollection
@@ -722,12 +793,15 @@ exports.updateProduct = async (id, productData) => {
 
       return response.data;
     } else {
-      let msg = `Producto ${productData.product.id} no existe o no cumple con la estructura necesaria.`
-      postErrorLogsToAPI(msg, 'update', productData)
+      let msg = `Producto ${productData.product.id} no existe o no cumple con la estructura necesaria.`;
+      postErrorLogsToAPI(msg, "update", productData);
     }
   } catch (error) {
-    console.log(`Error ${productData.product.id} Actualizando Producto. Shopifyclient`, error.message);
-    postErrorLogsToAPI(error, 'update', productData)
+    console.log(
+      `Error ${productData.product.id} Actualizando Producto. Shopifyclient`,
+      error.message
+    );
+    postErrorLogsToAPI(error, "update", productData);
     throw error;
   }
 };
@@ -767,7 +841,7 @@ exports.deleteProduct = async (id) => {
 
     await shopify.product.delete(id);
     await shopify.product.delete(child_id);
-    await Product.deleteOne(id)
+    await Product.deleteOne(id);
 
     console.log(`Producto ${id} eliminado correctamente.`);
 
@@ -894,10 +968,10 @@ const assignProductToCollections = async (productId, newCollectionIds) => {
           await shopify.collect.create({
             product_id: productId,
             collection_id: collectionId,
-          });          
+          });
 
           console.log(`Asignado exitosamente a colección ${collectionId}`);
-          
+
           await delay(100);
         } else {
           console.log(`Producto ya existente en coleccion ${collectionId}`);
@@ -927,7 +1001,7 @@ const assignNewProductToCollections = async (productId, newCollectionIds) => {
           product_id: productId,
           collection_id: collectionId,
         });
-        
+
         console.log(`Asignado exitosamente a colección ${collectionId}`);
       } catch (err) {
         console.log(
@@ -955,7 +1029,6 @@ const checkIfCollectionIsOnProduct = async (productId, collectionId) => {
     if (!product) {
       return false;
     }
-
 
     const collectionExists = product.collections.some(
       (collection) => collection.id == collectionId
@@ -1115,41 +1188,45 @@ exports.deleteUser = async (userId) => {
 //* Aux Funcs
 function validateUpdateProductStructure(json) {
   if (
-    json.hasOwnProperty('product') &&
-    json.product.hasOwnProperty('lumps') &&
-    json.product.hasOwnProperty('id') &&
-    json.product.hasOwnProperty('tags') &&
-    json.product.hasOwnProperty('vendor') &&
-    json.product.hasOwnProperty('variants') &&
+    json.hasOwnProperty("product") &&
+    json.product.hasOwnProperty("lumps") &&
+    json.product.hasOwnProperty("id") &&
+    json.product.hasOwnProperty("tags") &&
+    json.product.hasOwnProperty("vendor") &&
+    json.product.hasOwnProperty("variants") &&
     Array.isArray(json.product.variants) &&
-    json.product.variants.every(variant => 
-        variant.hasOwnProperty('price') &&
-        variant.hasOwnProperty('sku') &&
-        variant.hasOwnProperty('inventory_management') &&
-        variant.hasOwnProperty('inventory_quantity')
-    )) {
-      return true;
-    }
+    json.product.variants.every(
+      (variant) =>
+        variant.hasOwnProperty("price") &&
+        variant.hasOwnProperty("sku") &&
+        variant.hasOwnProperty("inventory_management") &&
+        variant.hasOwnProperty("inventory_quantity")
+    )
+  ) {
+    return true;
+  }
   return false;
 }
 
 function validateCreatedProductStructure(json) {
   if (
-    json.hasOwnProperty('product') &&
-    json.product.hasOwnProperty('lumps') &&
-    json.product.hasOwnProperty('collection') &&
-    json.product.hasOwnProperty('tags') &&
-    json.product.hasOwnProperty('vendor') &&
-    json.product.hasOwnProperty('variants') &&
+    json.hasOwnProperty("product") &&
+    json.product.hasOwnProperty("lumps") &&
+    json.product.hasOwnProperty("collection") &&
+    json.product.hasOwnProperty("tags") &&
+    json.product.hasOwnProperty("vendor") &&
+    json.product.hasOwnProperty("variants") &&
     Array.isArray(json.product.variants) &&
-    json.product.variants.every(variant => 
-        variant.hasOwnProperty('price') &&
-        variant.hasOwnProperty('sku') &&
-        variant.hasOwnProperty('inventory_management') &&
-        variant.hasOwnProperty('inventory_quantity')
-    )) {
-      return true;
-    }
+    json.product.variants.every(
+      (variant) =>
+        variant.hasOwnProperty("price") &&
+        variant.hasOwnProperty("sku") &&
+        variant.hasOwnProperty("inventory_management") &&
+        variant.hasOwnProperty("inventory_quantity")
+    )
+  ) {
+    return true;
+  }
   return false;
 }
 
@@ -1166,12 +1243,11 @@ const postErrorLogsToAPI = async (error, type, productData) => {
   try {
     const log = new LogErrorProduct(errorPayload);
     await log.save();
-    console.log('Log de error guardado correctamente en MongoDB');
+    console.log("Log de error guardado correctamente en MongoDB");
   } catch (err) {
-    console.error('Error guardando en MongoDB:', err);
+    console.error("Error guardando en MongoDB:", err);
   }
 };
-
 
 //! DEPRECATED
 exports.updateProductStock = async (id, newStock) => {
@@ -1198,7 +1274,10 @@ exports.updateProductStock = async (id, newStock) => {
       { headers }
     );
 
-    console.log("Stock Actualizado Correctamente", inventoryUpdateResponse.data)
+    console.log(
+      "Stock Actualizado Correctamente",
+      inventoryUpdateResponse.data
+    );
     return inventoryUpdateResponse.data;
   } catch (error) {
     console.error("Error actualizando stock. shopifyClient ", error.message);
